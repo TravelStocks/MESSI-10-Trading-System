@@ -23,7 +23,7 @@
 | 时机：哪一天，弱转强或转强确认 | execution-upgrade / mode-entry-windows / opening-record |
 | 分时节点：半路或上板扫板 | execution-upgrade / worldview / opening-record；普通龙头仍执行已明确的板上或回封确认 |
 | 买卖、进出与仓位管理 | execution-upgrade / worldview / opening-record |
-| 阶段 → 模式 → 买点 → 预算（仓位）→ 卖点 | 首页 execution-upgrade / decision |
+| 天时 → 地利 → 题材 → 阶段 → 个股 → 模式 → 仓位 → 买点 → 卖点（按用户后续更正） | 首页 execution-upgrade / worldview-trading / decision |
 
 ## 二波与补涨
 
@@ -73,6 +73,7 @@
 
 ## 同步修正
 
+- 按用户后续更正统一为九步决策顺序，仓位前置于买点；首页九项说明、交易模块、决策顺序与返回链接同步更新，具体模式触发和风险比例保持不变。
 - 二波旧文“收盘突破前高”细化为上一波最高价、相对昨收5%、当天尾盘联合确认；尾盘执行后最终收盘仍可能改变。
 - 二波旧文“明显高开可以继续加仓”改为先有预写的模式内触发和风险预算，不凭次日高开弥补买少或错过。
 - 保留补涨竞争者大跌淘汰后须等次日转强确认的原规则；不与总龙二波当天尾盘买点混淆。
