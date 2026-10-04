@@ -438,6 +438,53 @@ body.handbook-edition { background: var(--bg); }
 .agriculture-day-columns > div { min-width: 0; }
 .agriculture-cycle-case .agriculture-day-columns h5 { margin: 0 0 14px; font-size: 15px; color: var(--module-link); }
 .agriculture-original { margin: 0; white-space: pre-line; overflow-wrap: anywhere; font-size: 15px; line-height: 1.85; }
+
+/* Current execution rules stay visible before the strategy directory. */
+.content > .execution-upgrade { padding: 28px 12px; border: 0; border-block: 2px solid #b4cbbb; border-radius: 0; background: transparent; box-shadow: none; }
+.execution-upgrade, .execution-upgrade *, .opening-record-fields, .opening-record-fields * { letter-spacing: 0; }
+.execution-upgrade .section-head .label { color: var(--green); }
+#execution-upgrade-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; font-size: 26px; line-height: 1.6; letter-spacing: 0; }
+#execution-upgrade-title i { color: #75837a; font-size: 18px; font-style: normal; }
+.execution-chain { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 18px; padding: 0; margin: 26px 0; list-style: none; }
+.execution-chain > li { min-width: 0; padding-top: 12px; border-top: 2px solid #99bba6; }
+.execution-chain > li:nth-child(3) { border-color: #b48840; }
+.execution-chain > li:nth-child(4) { border-color: #8e6761; }
+.execution-chain > li > span { display: block; margin-bottom: 8px; color: var(--green); font-size: 12px; font-weight: 650; }
+.execution-chain strong { font-size: 17px; line-height: 1.65; }
+.execution-chain p { margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.execution-lessons { margin: 26px 0 12px; }
+.execution-lessons > div { min-width: 0; padding: 16px 0; border-top: 1px solid #dce3de; }
+.execution-lessons dt { color: var(--ink); font-size: 18px; font-weight: 700; line-height: 1.65; }
+.execution-lessons dd { margin: 7px 0 0; color: #555b57; font-size: 15px; line-height: 1.85; }
+.execution-links { display: flex; flex-wrap: wrap; gap: 0 22px; border-top: 1px solid #dce3de; padding-top: 10px; }
+.execution-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--module-link); font-size: 14px; font-weight: 600; }
+.execution-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.execution-links a:focus-visible { outline: 3px solid var(--module-link); outline-offset: 3px; }
+.opening-record-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 26px; margin: 22px 0; }
+.opening-record-fields > div { min-width: 0; padding-top: 12px; border-top: 2px solid #d8e4f1; }
+.opening-record-fields dt { color: var(--ink); font-size: 18px; line-height: 1.65; font-weight: 700; }
+.opening-record-fields dd { margin: 8px 0 0; color: var(--muted); font-size: 15px; line-height: 1.85; }
+.mode-window-table { table-layout: fixed; }
+.mode-window-table th:first-child { width: 18%; }
+.mode-window-table th, .mode-window-table td { overflow-wrap: anywhere; vertical-align: top; font-size: 15px; }
+.mode-window-table td:first-child strong, .mode-window-table td:first-child a { display: block; }
+.mode-window-table a, #opening-record a, .execution-upgrade a, #review-quality a { color: var(--module-link); }
+.second-wave-trigger { padding-left: 16px; border-left: 3px solid #b48840; }
+@media (max-width: 1100px) {
+  .execution-chain { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+  .content > .execution-upgrade { padding: 24px 8px; }
+  #execution-upgrade-title { gap: 4px 8px; font-size: 23px; }
+  .execution-chain { grid-template-columns: 1fr; gap: 18px; margin: 22px 0; }
+  .execution-chain > li { display: grid; grid-template-columns: 96px minmax(0,1fr); gap: 6px 14px; }
+  .execution-chain > li > span { grid-column: 1; grid-row: 1 / 3; margin: 0; font-size: 12px; }
+  .execution-chain strong, .execution-chain p { grid-column: 2; margin: 0; }
+  .execution-chain p { font-size: 15px; }
+  .execution-lessons dt { font-size: 17px; }
+  .execution-links { gap: 0 16px; }
+  .opening-record-fields { grid-template-columns: 1fr; gap: 18px; }
+}
 @media (max-width: 640px) {
   .agriculture-cycle-stages, .agriculture-day-columns { grid-template-columns: 1fr; gap: 16px; }
   .agriculture-cycle-stages > li { padding: 16px; }
