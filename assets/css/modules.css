@@ -515,3 +515,45 @@ body.handbook-edition { background: var(--bg); }
   .agriculture-day > summary::after { position: absolute; right: 13px; top: 19px; }
   .agriculture-case-rule { padding-left: 14px; }
 }
+
+/* Put the decision order and repeat-error guards before the detailed handbook. */
+.handbook-intro #handbook-order { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 28px 0 14px; font-size: 32px; line-height: 1.65; letter-spacing: 0; }
+#handbook-order > span { display: inline-flex; align-items: baseline; gap: 10px; color: var(--ink); white-space: nowrap; }
+#handbook-order i { color: #6b7971; font-size: 20px; font-style: normal; }
+#handbook-order .position-step { border-bottom: 2px solid #ae2f3a; }
+.redline-jump { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 18px; color: #a32835; font-size: 15px; font-weight: 650; }
+.redline-jump:hover { text-decoration: underline; text-underline-offset: 4px; }
+.content > .recurring-errors { padding: 28px 12px; border: 0; border-top: 3px solid #ae2f3a; border-bottom: 1px solid #e4c8cb; border-radius: 0; background: transparent; box-shadow: none; }
+.recurring-errors, .recurring-errors * { letter-spacing: 0; }
+.recurring-errors .section-head .label { color: #a32835; }
+.recurring-errors .section-head h2 { font-size: 28px; }
+.redline-list { list-style: none; padding: 0; margin: 0; }
+.redline-list > li { min-width: 0; padding: 20px 0; border-top: 1px solid #e4c8cb; scroll-margin-top: 136px; }
+.redline-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; }
+.redline-number { color: #a32835; font-size: 18px; font-weight: 750; font-variant-numeric: tabular-nums; }
+.redline-heading h3 { margin: 0; color: var(--ink); font-size: 20px; line-height: 1.6; }
+.redline-frequency { color: #a32835; font-size: 13px; font-weight: 650; }
+.redline-list p { margin: 10px 0 0; font-size: 16px; line-height: 1.85; }
+.redline-stop > strong { color: #a32835; }
+.redline-action > strong { color: var(--green); }
+.redline-action a { color: var(--module-link); text-decoration: underline; text-underline-offset: 4px; }
+.redline-evidence { margin-top: 10px; }
+.redline-evidence > summary { display: list-item; min-height: 44px; width: fit-content; padding: 9px 0; color: var(--muted); font-size: 14px; font-weight: 600; cursor: pointer; }
+.redline-evidence dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px 24px; margin: 8px 0 0; padding: 16px; border-left: 2px solid #c88f96; background: #fcf5f6; }
+.redline-evidence dl > div { min-width: 0; }
+.redline-evidence dt { color: #a32835; font-size: 13px; font-weight: 650; }
+.redline-evidence dd { margin: 5px 0 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+.redline-bottom-line { margin: 16px 0; padding: 16px 0 16px 16px; border-left: 3px solid #ae2f3a; font-size: 16px; line-height: 1.85; }
+.redline-source-note { margin: 16px 0 0; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.redline-jump:focus-visible, .recurring-errors a:focus-visible, .redline-evidence > summary:focus-visible { outline: 3px solid var(--module-link); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .handbook-intro #handbook-order { font-size: 24px; gap: 6px 8px; margin-top: 22px; }
+  #handbook-order > span { gap: 8px; }
+  #handbook-order i { font-size: 18px; }
+  .content > .recurring-errors { padding: 24px 8px; }
+  .recurring-errors .section-head h2 { font-size: 24px; }
+  .redline-heading h3 { flex: 1; min-width: 0; font-size: 18px; }
+  .redline-frequency { flex-basis: 100%; padding-left: 32px; }
+  .redline-evidence dl { grid-template-columns: 1fr; padding: 14px; }
+  .redline-list p, .redline-evidence dd { overflow-wrap: anywhere; font-size: 16px; }
+}
