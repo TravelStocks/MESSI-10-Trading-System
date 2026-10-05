@@ -51,7 +51,7 @@ body.handbook-edition { background: var(--bg); }
 #resources .hero-entry-actions { gap: 16px; margin: 0 0 20px; }
 #resources .entry-link { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; min-height: 178px; padding: 26px; border: 1px solid #e7e7ec; border-radius: 20px; background: #f5f5f7; color: var(--ink); box-shadow: none; transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
 #resources .entry-link > span:first-child { gap: 10px; }
-#resources .entry-link strong { font-size: 23px; font-weight: 650; line-height: 1.35; letter-spacing: -.025em; }
+#resources .entry-link strong { font-size: 23px; font-weight: 650; line-height: 1.35; letter-spacing: 0; }
 #resources .entry-link em { font-size: 14px; font-weight: 400; line-height: 1.7; color: var(--muted); text-wrap: pretty; }
 #resources .entry-link .entry-action { display: inline-flex; align-items: center; gap: 8px; width: fit-content; min-height: 34px; margin-top: auto; padding: 5px 13px; background: var(--module-link); color: #fff; border-radius: 999px; font-size: 12px; font-weight: 500; }
 #resources .entry-action svg { width: 15px; height: 15px; }

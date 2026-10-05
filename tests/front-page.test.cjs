@@ -1,5 +1,5 @@
 const assert = require('node:assert/strict');
-const { readFileSync } = require('node:fs');
+const { existsSync, readFileSync } = require('node:fs');
 const { join } = require('node:path');
 const test = require('node:test');
 
@@ -48,4 +48,64 @@ test('new anchors resolve and do not duplicate existing ids', () => {
   assert.equal(new Set(ids).size, ids.length);
   for (const [, hash] of section.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.includes(hash), hash);
   assert.ok(html.includes('href="#recurring-errors"'));
+});
+
+test('the eight strategy entries are ordered and retain their existing destinations', () => {
+  const entries = html.match(/<div class="hero-entry-actions">([\s\S]*?)<\/div>/)[1];
+  const labels = [...entries.matchAll(/<strong>(.*?)<\/strong>/g)].map((match) => match[1]);
+  assert.deepEqual(labels, [
+    '战法1：唯一性中高位连扳龙-龙头主升2',
+    '战法2：进监管后反核龙头继续连扳-龙头主升3',
+    '战法3：低位接力-切换',
+    '战法4：机构趋势',
+    '战法5：补涨',
+    '战法6：连板龙转趋势龙-龙头二波',
+    '战法7：龙头反抽以及监管套利',
+    '战法8：总龙趋势下补涨连板龙-补涨龙中位3板'
+  ]);
+  const destinations = [...entries.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
+  assert.deepEqual(destinations, [
+    './战法1 - 龙头信仰/龙头信仰-阅读版.html',
+    './strategy-2-regulated-leader/index.html',
+    './战法2 - 低位接力/A股一进二战法手册网页版/index.html',
+    './战法3 - 机构趋势/index.html',
+    '#strategy-5',
+    './strategy-6-rebound/index.html',
+    '#strategy-7'
+  ]);
+  for (const href of destinations) {
+    if (href.startsWith('#')) assert.ok(html.includes(`id="${href.slice(1)}"`), href);
+    else assert.ok(existsSync(join(__dirname, '..', href)), href);
+  }
+  assert.match(entries, /entry-pending[\s\S]*?战法5：补涨[\s\S]*?内容待补充/);
+});
+
+test('strategy references use the new numbers without breaking legacy anchors', () => {
+  assert.match(html, /id="strategy-5"[\s\S]*?战法6 \/ 总龙二波/);
+  assert.match(html, /id="strategy-7"[\s\S]*?战法8 \/ 补涨中位/);
+  assert.match(html, /id="strategy-57-execution"/);
+  assert.doesNotMatch(html, /战法5[、与].*?战法7|战法5、7|战法5 \/ 总龙二波|战法7 \/ 补涨中位/);
+  const trend = readFileSync(join(__dirname, '..', '战法3 - 机构趋势/index.html'), 'utf8');
+  assert.match(trend, /<title>机构趋势｜战法4<\/title>/);
+  assert.match(trend, /Strategy 04 \/ Swing Trend/);
+  assert.match(trend, /战法3 低位接力/);
+  const rebound = readFileSync(join(__dirname, '..', 'strategy-6-rebound/index.html'), 'utf8');
+  assert.match(rebound, /<title>战法7：龙头反抽以及监管套利｜MESSI-10<\/title>/);
+});
+
+test('the new regulated-leader strategy separates its stage and preserves the first-day rule', () => {
+  const page = readFileSync(join(__dirname, '..', 'strategy-2-regulated-leader/index.html'), 'utf8');
+  assert.match(page, /进监管后反核龙头继续连扳-龙头主升3/);
+  assert.match(page, /第一天没拿先手就不要参与主升3/);
+  assert.match(page, /具体买卖与仓位细则待补充/);
+  assert.match(page, /战法7.*?首次调整/);
+  assert.match(page, /href="\.\.\/index.html#resources"/);
+  const ids = [...page.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(new Set(ids).size, ids.length);
+  for (const [, href] of page.matchAll(/href="([^"]+)"/g)) {
+    if (href.startsWith('#')) assert.ok(ids.includes(href.slice(1)), href);
+    else if (!href.includes('#') && href.startsWith('../')) {
+      assert.ok(existsSync(join(__dirname, '..', 'strategy-2-regulated-leader', href.split('?')[0])), href);
+    }
+  }
 });
