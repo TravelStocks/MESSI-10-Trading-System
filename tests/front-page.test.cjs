@@ -52,7 +52,7 @@ test('new anchors resolve and do not duplicate existing ids', () => {
 
 test('the eight strategy entries are ordered and retain their existing destinations', () => {
   const entries = html.match(/<div class="hero-entry-actions">([\s\S]*?)<\/div>/)[1];
-  const labels = [...entries.matchAll(/<strong>(.*?)<\/strong>/g)].map((match) => match[1]);
+  const labels = [...entries.matchAll(/<strong>(.*?)<\/strong>/g)].map((match) => match[1].replace(/<[^>]*>/g, ''));
   assert.deepEqual(labels, [
     '战法1：唯一性中高位连扳龙-龙头主升2',
     '战法2：进监管后反核龙头继续连扳-龙头主升3',
@@ -78,6 +78,8 @@ test('the eight strategy entries are ordered and retain their existing destinati
     else assert.ok(existsSync(join(__dirname, '..', href)), href);
   }
   assert.match(entries, /entry-pending[\s\S]*?战法5：补涨[\s\S]*?内容待补充/);
+  assert.match(entries, /<span class="strategy-stage">-龙头主升3<\/span>/);
+  assert.match(entries, /<span class="strategy-stage">-补涨龙中位3板<\/span>/);
 });
 
 test('strategy references use the new numbers without breaking legacy anchors', () => {
