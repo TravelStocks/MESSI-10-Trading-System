@@ -14,6 +14,8 @@
     range: document.getElementById("cycle-range"),
     sector: document.getElementById("cycle-sector"),
     title: document.getElementById("cycle-title"),
+    focus: document.querySelector(".cycle-focus"),
+    agricultureMode: document.getElementById("agriculture-mode-check"),
     oneLine: document.getElementById("cycle-one-line"),
     metrics: document.getElementById("metric-strip"),
     phaseLine: document.getElementById("phase-line"),
@@ -219,6 +221,9 @@
 
   function renderCycleFocus(cycle) {
     if (!cycle) return;
+    if (els.focus) els.focus.id = cycle.id;
+    const isAgriculture = cycle.id === "wanxiang-agri-2026-09";
+    if (els.agricultureMode) els.agricultureMode.hidden = !isAgriculture;
     setText(els.status, cycle.status);
     setText(els.range, cycle.dateRange);
     setText(els.sector, `${cycle.sector} / ${cycle.theme}`);
@@ -233,7 +238,7 @@
       ["时间周期", cycle.dateRange],
       ["量能类型", combination ? `${combination.code} · ${combination.name}` : "待归类"],
       ["标准买点", plan.standardBuy ? `${plan.standardBuy.displayDate} ${plan.standardBuy.title}` : "待复核"],
-      ["风险卖点", plan.standardSell ? `${plan.standardSell.displayDate} ${plan.standardSell.title}` : "待复核"]
+      [isAgriculture ? "全周期风险卖点" : "风险卖点", plan.standardSell ? `${plan.standardSell.displayDate} ${plan.standardSell.title}` : "待复核"]
     ];
 
     els.metrics.innerHTML = "";
@@ -1154,6 +1159,7 @@
       if (cycles.some((cycle) => cycle.id === hashId) && hashId !== state.selectedId) {
         state.selectedId = hashId;
         render();
+        els.focus?.scrollIntoView({ block: "start" });
       }
     });
 
@@ -1174,8 +1180,12 @@
     const main = document.getElementById("main");
     const systemMap = document.getElementById("system-map");
     const workspace = document.getElementById("cycles");
+    const agriculture = document.getElementById("agriculture-replay");
     if (main && systemMap && workspace && systemMap.nextElementSibling !== workspace) {
       main.insertBefore(workspace, systemMap.nextElementSibling);
+    }
+    if (main && workspace && agriculture && workspace.nextElementSibling !== agriculture) {
+      main.insertBefore(agriculture, workspace.nextElementSibling);
     }
   }
 
@@ -1198,4 +1208,8 @@
   arrangeSections();
   bindControls();
   render();
+  window.addEventListener("load", () => {
+    const hashId = decodeURIComponent(window.location.hash.replace("#", ""));
+    if (cycles.some((cycle) => cycle.id === hashId)) els.focus?.scrollIntoView({ block: "start" });
+  }, { once: true });
 })();

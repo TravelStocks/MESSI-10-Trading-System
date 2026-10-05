@@ -10,10 +10,10 @@
   <script defer src="data/cycle-updates.js"></script>
   <script defer src="data/daily-limit-ups.js"></script>
   <script defer src="data/leader-volume-analysis.js"></script>
-  <script defer src="assets/app.js?v=20260926-cycle-limit-count"></script>
-  <link rel="stylesheet" href="../assets/css/october-lessons.css?v=20261006" />
-  <script defer src="../assets/data/october-lessons.js?v=20261006"></script>
-  <script defer src="../assets/js/october-lessons.js?v=20261006"></script>
+  <script defer src="assets/app.js?v=20261006-integrated"></script>
+  <link rel="stylesheet" href="../assets/css/october-lessons.css?v=20261006-integrated" />
+  <script defer src="../assets/data/october-lessons.js?v=20261006-integrated"></script>
+  <script defer src="../assets/js/october-lessons.js?v=20261006-integrated"></script>
   <script defer src="../assets/vendor/echarts-6.0.0.min.js"></script>
   <script defer src="../assets/data/agriculture-kline.js?v=20261006"></script>
   <script defer src="../assets/js/agriculture-replay.js?v=20261006"></script>
@@ -35,8 +35,8 @@
       <span>龙头周期归纳</span>
     </a>
     <nav class="nav" aria-label="快速跳转">
-      <a href="#patterns">规律</a>
-      <a href="#cycle-latest-lessons">新规则</a>
+      <a href="#patterns">节奏</a>
+      <a href="#cycle-research">研究</a>
       <a href="#agriculture-replay">农业K线</a>
       <a href="#reference">参考</a>
       <a href="#system-map">图谱</a>
@@ -49,22 +49,20 @@
   </header>
 
   <main id="main">
-    <section class="pattern-section" id="cycle-latest-lessons">
-      <div class="pattern-copy">
-        <p class="eyebrow">2026.10.06 / 与交易手册同步</p>
-        <h2>最新节奏与交易纪律</h2>
-        <p>下方历史周期及原有详细模型继续保留；最新抽象节奏、补涨专项卖点与待验证问题分开记录，不用新规则回改旧日记。</p>
-        <div id="cycle-october-lessons" data-october-lessons></div>
-        <a href="../index.html#october-update">回到交易手册对应更新</a>
-      </div>
-    </section>
     <section class="pattern-section" id="patterns">
       <div class="pattern-copy">
-        <p class="eyebrow">Pattern Library</p>
-        <h2>共性规律</h2>
-        <p id="pattern-thesis"></p>
-        <div class="rule-grid" id="rule-grid"></div>
-        <div class="strength-system" id="strength-system" aria-label="题材强度排列组合"></div>
+        <span id="cycle-latest-lessons" class="lesson-anchor" aria-hidden="true"></span>
+        <p class="eyebrow">题材 → 阶段 → 个股量能</p>
+        <h2>题材持续性与龙头量能节奏</h2>
+        <p>两天续强看预期，分歧回流看持续性；把题材节点、个股量能与模式内买点放在同一天复核。</p>
+        <div id="cycle-october-lessons" data-october-lessons data-lesson-sections="resonance" data-lesson-rhythms data-lesson-title="量能共振与风险检查" data-lesson-source></div>
+        <details class="cycle-history-models">
+          <summary>六类历史路径与样本</summary>
+          <p id="pattern-thesis"></p>
+          <div class="rule-grid" id="rule-grid"></div>
+          <div class="strength-system" id="strength-system" aria-label="题材强度排列组合"></div>
+        </details>
+        <p class="cycle-evidence-links"><a href="../index.html#theme-volume-models">交易手册 · 同步节奏规则</a><a href="#wanxiang-agri-2026-09">万向德农 · 农业联动复核</a></p>
       </div>
     </section>
 
@@ -229,6 +227,8 @@
         <div class="trade-stats" id="trade-stats" aria-label="买卖点回测统计"></div>
       </div>
       <ol class="trade-logic" id="trade-logic"></ol>
+      <div id="cycle-position-lessons" data-october-lessons data-lesson-sections="positions" data-lesson-title="仓位预算与二波执行" data-lesson-open="true"></div>
+      <div id="cycle-trade-discipline" data-october-lessons data-lesson-sections="discipline" data-lesson-title="补涨退出与一字板纪律" data-lesson-open="true"></div>
       <div class="trade-table-wrap" tabindex="0" aria-label="九个周期买卖点推演表">
         <table class="trade-table">
           <thead>
@@ -306,6 +306,17 @@
 
           <div class="metric-strip" id="metric-strip"></div>
 
+          <section class="cycle-model-bridge" id="agriculture-mode-check" aria-labelledby="agriculture-mode-title" hidden>
+            <h3 id="agriculture-mode-title">农业联动：总龙二波 → 补涨三板</h3>
+            <div class="cycle-mode-checks">
+              <div><span>08.26–08.27 / 金健米业</span><strong>二波窗口复核</strong><p>8月26日收盘9.80元，超过上一波9.45元高点，较昨收涨5.26%。日K只是价格条件候选，仍需当天尾盘确认、补涨共振与监管空间；不能当成真实成交记录。</p></div>
+              <div><span>08.27 → 08.28 / 万向德农</span><strong>三板参与，四板兑现</strong><p>按补涨模式检查三板唯一性与可成交买点，四板优先板上兑现、快进快出。四板机会不是保证；失效提前处理，不自动延伸为五板持有。</p></div>
+              <div><span>09.07 → 09.08 / 亚盛集团</span><strong>一字三板，不补排</strong><p>9月7日三板为一字板，不假设能买到。次日四板只用于复核已有仓位的退出窗口，不能把“3→4”推演当成实际收益。</p></div>
+            </div>
+            <p>上方“全周期风险卖点”保留历史推演口径；这里是补涨模式的专项退出检查，两者不混用，也不回改原日记。</p>
+            <nav class="cycle-evidence-links" aria-label="农业模式证据"><a href="#agriculture-replay">三股K线与成交量</a><a href="#trade-points">仓位与买卖纪律</a><a href="../index.html#case-agriculture-2026">交易手册 · 农业完整原记</a></nav>
+          </section>
+
           <div class="rhythm-card" id="timeline">
             <div class="section-heading">
               <p class="eyebrow">Rhythm Path</p>
@@ -324,6 +335,15 @@
             <div class="limit-tape" id="limit-tape"></div>
           </div>
         </section>
+      </div>
+    </section>
+
+    <section class="pattern-section" id="cycle-research">
+      <div class="pattern-copy">
+        <p class="eyebrow">复盘 → 验证 → 规则</p>
+        <h2>待验证的边界与研究问题</h2>
+        <p>前置退潮穿越、妖股观察与分时触发独立验证，不把研究假设直接扩成开仓依据。</p>
+        <div id="cycle-research-lessons" data-october-lessons data-lesson-sections="crossing,speculative,questions"></div>
       </div>
     </section>
 

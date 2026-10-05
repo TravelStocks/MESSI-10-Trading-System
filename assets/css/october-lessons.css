@@ -1,20 +1,49 @@
-.october-lessons { color: #172a39; background: #fff; padding: 24px 0; letter-spacing: 0; }
-.october-lessons p { line-height: 1.85; margin: 8px 0; overflow-wrap: anywhere; }
-.october-lessons h3 { font-size: 19px; line-height: 1.6; margin: 12px 0; }
-.october-lessons .lesson-source { color: #536977; font-size: 13px; }
-.lesson-rhythms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
-.lesson-rhythm { border-top: 2px solid #17644f; padding: 12px 0 16px; min-width: 0; }
-.lesson-rhythm:nth-child(2) { border-color: #2169a0; }
-.lesson-rhythm:nth-child(3) { border-color: #bd434b; }
-.lesson-rhythm:nth-child(4) { border-color: #a57919; }
-.lesson-label { font-size: 12px; color: #536977; }
-.lesson-fold { border-top: 1px solid #d9e1e7; margin: 0; }
-.lesson-fold summary { padding: 17px 0; cursor: pointer; font-weight: 700; line-height: 1.65; overflow-wrap: anywhere; }
-.lesson-fold summary:focus-visible { outline: 2px solid #2169a0; outline-offset: 2px; }
-.lesson-points { margin: 0 0 18px; }
-.lesson-points > div { padding: 10px 0; }
-.lesson-points dt { color: #17644f; font-weight: 700; }
-.lesson-points dd { margin: 5px 0 0; line-height: 1.9; }
+.october-lessons { --lesson-accent: var(--green, #22644b); --lesson-line: var(--line, #e0e5df); color: var(--ink, #202a25); background: transparent; padding: 0; letter-spacing: 0; }
+.october-lessons p { line-height: 1.8; margin: 0; overflow-wrap: anywhere; }
+.lesson-anchor { display: block; height: 0; scroll-margin-top: 110px; }
+.theme-volume-head h3 { font-size: 26px; margin-bottom: 8px; }
+.theme-volume-head .label { margin-bottom: 6px; }
+.lesson-rhythms { margin: 18px 0 8px; border-top: 1px solid var(--lesson-line); }
+.lesson-rhythm { display: grid; grid-template-columns: 245px minmax(0, 1fr); gap: 24px; align-items: start; border-bottom: 1px solid var(--lesson-line); padding: 17px 0; min-width: 0; }
+.lesson-rhythm-identity { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; align-items: start; }
+.lesson-index { color: var(--muted, #5e6b63); font-size: 12px; padding-top: 3px; font-variant-numeric: tabular-nums; }
+.october-lessons .lesson-label { font-size: 12px; color: var(--muted, #5e6b63); margin-bottom: 7px; }
+.october-lessons .lesson-rhythm-path { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; font-size: 19px; line-height: 1.5; margin: 0; }
+.lesson-state[data-tone="strong"] { color: var(--lesson-accent); }
+.lesson-state[data-tone="weak"] { color: #a44751; }
+.lesson-arrow { color: var(--muted, #5e6b63); font-size: 14px; font-weight: 400; }
+.october-lessons .lesson-rhythm-note { font-size: 15px; color: var(--muted, #5e6b63); }
+.lesson-fold { border: 0; border-bottom: 1px solid var(--lesson-line); border-radius: 0; margin: 0; background: transparent; }
+.lesson-fold summary { padding: 15px 0; min-height: 48px; cursor: pointer; font-size: 15px; font-weight: 650; line-height: 1.65; overflow-wrap: anywhere; }
+.lesson-fold summary::marker { color: var(--lesson-accent); }
+.lesson-fold summary:focus-visible { outline: 2px solid var(--lesson-accent); outline-offset: 2px; }
+.lesson-points { margin: 0 0 14px; }
+.lesson-points > div { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 20px; padding: 12px 0; border-top: 1px solid var(--lesson-line); }
+.lesson-points dt { color: var(--lesson-accent); font-size: 14px; font-weight: 650; }
+.lesson-points dd { margin: 0; font-size: 15px; line-height: 1.85; overflow-wrap: anywhere; }
+.october-lessons .lesson-source { padding: 12px 0; font-size: 12px; color: var(--muted, #5e6b63); }
+.lesson-allocation { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 4px 0 18px; }
+.lesson-allocation > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px; min-width: 0; }
+.lesson-allocation span { flex-basis: 100%; font-size: 12px; color: var(--muted, #5e6b63); }
+.lesson-allocation strong { font-size: 28px; line-height: 1.3; color: var(--lesson-accent); font-variant-numeric: tabular-nums; }
+.lesson-allocation small { color: var(--muted, #5e6b63); font-size: 12px; }
+.lesson-allocation > div + div strong { color: #a44751; }
+#patterns > .pattern-copy, #cycle-research > .pattern-copy { border: 0; border-radius: 0; box-shadow: none; padding: 18px 0; background: transparent; }
+.cycle-history-models { border-block: 1px solid var(--line); margin-top: 20px; }
+.cycle-history-models > summary { padding: 16px 0; min-height: 48px; cursor: pointer; font-size: 15px; font-weight: 650; }
+.cycle-history-models > p { line-height: 1.8; }
+.cycle-model-bridge { border-block: 1px solid var(--line); padding: 18px 0; margin: 20px 0; }
+.cycle-model-bridge[hidden] { display: none; }
+.cycle-model-bridge h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.5; }
+.cycle-model-bridge > p { margin: 8px 0 12px; font-size: 14px; color: var(--muted); line-height: 1.8; }
+.cycle-mode-checks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.cycle-mode-checks > div { min-width: 0; border-top: 2px solid var(--green); padding-top: 10px; }
+.cycle-mode-checks span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+.cycle-mode-checks strong { display: block; font-weight: 700; font-size: 15px; }
+.cycle-mode-checks p { margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.cycle-focus { scroll-margin-top: 90px; }
+.cycle-evidence-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.cycle-evidence-links a { color: var(--blue, #075fad); min-height: 44px; display: inline-flex; align-items: center; text-underline-offset: 4px; }
 .agri-replay { margin: 24px 0; color: #172a39; background: #fff; padding: 24px 0; letter-spacing: 0; }
 .agri-replay h3 { font-size: 21px; margin: 0 0 12px; line-height: 1.6; }
 .agri-replay p { line-height: 1.85; overflow-wrap: anywhere; }
@@ -27,7 +56,7 @@
 .agri-stock h4 { font-size: 17px; margin: 10px 0; line-height: 1.5; }
 .agri-source, .agri-selection { font-size: 13px; color: #536977; }
 .agri-source a { color: #2169a0; text-decoration: underline; text-underline-offset: 3px; }
-#cycle-latest-lessons .pattern-copy, #agriculture-replay .pattern-copy { border: 0; border-radius: 0; box-shadow: none; padding: 24px 18px; background: #fff; }
+#agriculture-replay .pattern-copy { border: 0; border-radius: 0; box-shadow: none; padding: 24px 0; background: transparent; }
 .agri-selection { min-height: 44px; line-height: 1.7; }
 .agri-table-wrap { overflow-x: auto; }
 .agri-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 13px; }
@@ -36,8 +65,12 @@
 .agri-table caption { text-align: left; font-weight: 700; padding: 12px 0; }
 .agri-evidence { border-left: 3px solid #bd434b; padding-left: 14px; }
 @media (max-width: 640px) {
-  .lesson-rhythms { grid-template-columns: 1fr; }
-  .october-lessons { padding: 16px 0; }
+  .theme-volume-head h3 { font-size: 23px; }
+  .lesson-rhythm { grid-template-columns: 1fr; gap: 10px; padding: 16px 0; }
+  .lesson-rhythm-note { padding-left: 40px; }
+  .lesson-points > div { grid-template-columns: 1fr; gap: 5px; }
+  .lesson-allocation { gap: 12px; }
+  .cycle-mode-checks { grid-template-columns: 1fr; gap: 16px; }
   .agri-chart { height: 290px; }
-  #cycle-latest-lessons .pattern-copy, #agriculture-replay .pattern-copy { padding: 16px 12px; }
+  #agriculture-replay .pattern-copy { padding: 16px 0; }
 }

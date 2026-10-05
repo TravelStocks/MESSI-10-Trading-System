@@ -23,8 +23,9 @@ test('all three views consume the same lessons and retain the main rhythms plus 
   for (const file of ['index.html', 'framework-model/index.html', '资料库 - 龙头周期复盘/index.html']) {
     const html = read(file);
     assert.match(html, /data-october-lessons/);
-    assert.match(html, /assets\/data\/october-lessons.js\?v=20261006/);
-    assert.match(html, /assets\/js\/october-lessons.js\?v=20261006/);
+    assert.match(html, /assets\/data\/october-lessons.js\?v=20261006-integrated/);
+    assert.match(html, /assets\/js\/october-lessons.js\?v=20261006-integrated/);
+    assert.match(html, /assets\/css\/october-lessons.css\?v=20261006-integrated/);
   }
 });
 
@@ -103,8 +104,63 @@ class Element {
   constructor(tag) { this.tag = tag; this.children = []; this.attrs = {}; this.listeners = {}; this.classList = { add() {} }; }
   append(...nodes) { this.children.push(...nodes); }
   setAttribute(key, value) { this.attrs[key] = value; }
+  getAttribute(key) { return this.attrs[key] ?? null; }
+  hasAttribute(key) { return Object.hasOwn(this.attrs, key); }
   addEventListener(type, callback) { this.listeners[type] = callback; }
 }
+
+const descendants = (node) => [node, ...node.children.flatMap(descendants)];
+
+test('integrated chapters retain every lesson exactly once without a second update heading', () => {
+  const expected = JSON.parse(JSON.stringify(lessons.sections.flatMap((section) => section.points.map((_, index) => `${section.id}:${index}`)).sort()));
+  for (const file of ['index.html', 'framework-model/index.html', '资料库 - 龙头周期复盘/index.html']) {
+    const html = read(file);
+    const roots = [...html.matchAll(/<div\b[^>]*\bdata-october-lessons\b[^>]*>/g)].map(([tag]) => {
+      const node = new Element('div');
+      for (const [, key, value] of tag.matchAll(/([\w-]+)(?:="([^"]*)")?/g)) {
+        if (key.startsWith('data-')) node.setAttribute(key, value ?? '');
+        if (key === 'id') node.id = value;
+      }
+      return node;
+    });
+    const browser = { window: context.window, document: { createElement: (tag) => new Element(tag), querySelectorAll: () => roots } };
+    vm.runInNewContext(read('assets/js/october-lessons.js'), browser);
+    const nodes = roots.flatMap(descendants);
+    const points = nodes.filter((node) => node.hasAttribute('data-lesson-point')).map((node) => node.getAttribute('data-lesson-point')).sort();
+    assert.deepEqual(points, expected, file);
+    assert.equal(nodes.filter((node) => node.className === 'lesson-rhythm').length, 4, file);
+    assert.equal(nodes.filter((node) => node.className === 'lesson-allocation').length, 1, file);
+    assert.doesNotMatch(html, /10月更新 · 题材节奏、仓位与交易纪律|最新节奏与交易纪律/);
+  }
+});
+
+test('scoped handbook content belongs to its corresponding logic and legacy links survive', () => {
+  const placement = [
+    ['theme-volume-models', 'handbook-october-lessons'],
+    ['strategy-5', 'handbook-second-wave-lessons'],
+    ['strategy-7', 'handbook-supplement-exit'],
+    ['environment-position-plan', 'handbook-entry-position'],
+    ['appendix', 'handbook-research-boundaries']
+  ];
+  for (const [chapter, content] of placement) {
+    const chapterIndex = handbook.indexOf(`id="${chapter}"`);
+    const contentIndex = handbook.indexOf(`id="${content}"`);
+    assert.ok(chapterIndex >= 0 && contentIndex > chapterIndex, `${chapter}: ${content}`);
+  }
+  assert.match(handbook, /id="october-update" class="lesson-anchor"/);
+  const casePage = read('资料库 - 龙头周期复盘/index.html');
+  const caseApp = read('资料库 - 龙头周期复盘/assets/app.js');
+  assert.match(casePage, /id="cycle-latest-lessons" class="lesson-anchor"/);
+  assert.match(casePage, /<details class="cycle-history-models">/);
+  assert.match(casePage, /08.27 → 08.28 \/ 万向德农/);
+  assert.match(casePage, /09.07 → 09.08 \/ 亚盛集团/);
+  assert.match(casePage, /不假设能买到/);
+  assert.match(casePage, /全周期风险卖点.*历史推演口径/);
+  assert.match(caseApp, /els.focus.id = cycle.id/);
+  assert.match(caseApp, /els.agricultureMode.hidden = !isAgriculture/);
+  assert.match(caseApp, /main.insertBefore\(agriculture, workspace.nextElementSibling\)/);
+  assert.match(caseApp, /scrollIntoView\(\{ block: "start" \}\)/);
+});
 
 test('shared renderer makes six lessons and linked K/volume charts with functioning range controls', () => {
   const lessonsRoot = new Element('div');
