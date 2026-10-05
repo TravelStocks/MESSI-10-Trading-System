@@ -99,7 +99,9 @@ test('the new regulated-leader strategy separates its stage and preserves the fi
   const page = readFileSync(join(__dirname, '..', 'strategy-2-regulated-leader/index.html'), 'utf8');
   assert.match(page, /进监管后反核龙头继续连扳-龙头主升3/);
   assert.match(page, /第一天没拿先手就不要参与主升3/);
-  assert.match(page, /具体买卖与仓位细则待补充/);
+  assert.match(page, /独立买卖与仓位细则仍待补充/);
+  assert.match(page, /反核当天，最后的唯一择日窗口/);
+  assert.match(page, /竞价就要买，板上是最后买点/);
   assert.match(page, /战法7.*?首次调整/);
   assert.match(page, /href="\.\.\/index.html#resources"/);
   const ids = [...page.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
@@ -110,4 +112,15 @@ test('the new regulated-leader strategy separates its stage and preserves the fi
       assert.ok(existsSync(join(__dirname, '..', 'strategy-2-regulated-leader', href.split('?')[0])), href);
     }
   }
+});
+
+test('the full framework precedes the error guards and follows the latest weather correction', () => {
+  assert.ok(html.indexOf('id="framework-entry"') < html.indexOf('id="recurring-errors"'));
+  assert.match(html, /href="\.\/framework-model\/index.html"/);
+  assert.match(html, /天时不好慢进快出，/);
+  assert.doesNotMatch(html, /天时不好快进快出/);
+  assert.match(html, /退出节奏"><strong>慢进快出，先兑现溢价/);
+  assert.match(html, /70%–80%/);
+  assert.match(html, /30%–40%/);
+  assert.match(html, /快进慢出，让逻辑延伸/);
 });

@@ -64,7 +64,7 @@
 | 弱环境总仓70%–80%、单票30%–40%是有条件上限，不是每天用满、不是轻仓 | environment-position-plan |
 | 机会不足可更低仓或空仓 | execution-upgrade / environment-position-plan |
 | 单票比例按账户资产，不与卖出已有持仓80%的动作混淆 | environment-position-plan |
-| 弱环境快进快出：3进4确认，4进5取得溢价考虑按预案减仓 | environment-position-plan |
+| 弱环境慢进快出（按10月5日更正）：3进4确认，4进5取得溢价考虑按预案减仓 | environment-position-plan |
 | 弱环境不能因唯一性延长到强环境持有预期 | environment-position-plan |
 | 强环境条件成立总仓可至100%、单票60%–80% | environment-position-plan |
 | 强环境仍受最大亏损、模式及退出约束，不是无条件满仓 | environment-position-plan |
