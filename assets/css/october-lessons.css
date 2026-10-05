@@ -1,0 +1,43 @@
+.october-lessons { color: #172a39; background: #fff; padding: 24px 0; letter-spacing: 0; }
+.october-lessons p { line-height: 1.85; margin: 8px 0; overflow-wrap: anywhere; }
+.october-lessons h3 { font-size: 19px; line-height: 1.6; margin: 12px 0; }
+.october-lessons .lesson-source { color: #536977; font-size: 13px; }
+.lesson-rhythms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.lesson-rhythm { border-top: 2px solid #17644f; padding: 12px 0 16px; min-width: 0; }
+.lesson-rhythm:nth-child(2) { border-color: #2169a0; }
+.lesson-rhythm:nth-child(3) { border-color: #bd434b; }
+.lesson-rhythm:nth-child(4) { border-color: #a57919; }
+.lesson-label { font-size: 12px; color: #536977; }
+.lesson-fold { border-top: 1px solid #d9e1e7; margin: 0; }
+.lesson-fold summary { padding: 17px 0; cursor: pointer; font-weight: 700; line-height: 1.65; overflow-wrap: anywhere; }
+.lesson-fold summary:focus-visible { outline: 2px solid #2169a0; outline-offset: 2px; }
+.lesson-points { margin: 0 0 18px; }
+.lesson-points > div { padding: 10px 0; }
+.lesson-points dt { color: #17644f; font-weight: 700; }
+.lesson-points dd { margin: 5px 0 0; line-height: 1.9; }
+.agri-replay { margin: 24px 0; color: #172a39; background: #fff; padding: 24px 0; letter-spacing: 0; }
+.agri-replay h3 { font-size: 21px; margin: 0 0 12px; line-height: 1.6; }
+.agri-replay p { line-height: 1.85; overflow-wrap: anywhere; }
+.agri-range { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.agri-range button { border: 1px solid #cad6df; background: #fff; color: #172a39; padding: 8px 12px; border-radius: 4px; font: inherit; cursor: pointer; }
+.agri-range button[aria-pressed="true"] { background: #17644f; color: #fff; border-color: #17644f; }
+.agri-range button:focus-visible { outline: 2px solid #2169a0; outline-offset: 2px; }
+.agri-chart { width: 100%; height: 310px; min-width: 0; }
+.agri-stock { border-top: 1px solid #d9e1e7; padding: 12px 0; }
+.agri-stock h4 { font-size: 17px; margin: 10px 0; line-height: 1.5; }
+.agri-source, .agri-selection { font-size: 13px; color: #536977; }
+.agri-source a { color: #2169a0; text-decoration: underline; text-underline-offset: 3px; }
+#cycle-latest-lessons .pattern-copy, #agriculture-replay .pattern-copy { border: 0; border-radius: 0; box-shadow: none; padding: 24px 18px; background: #fff; }
+.agri-selection { min-height: 44px; line-height: 1.7; }
+.agri-table-wrap { overflow-x: auto; }
+.agri-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 13px; }
+.agri-table th, .agri-table td { padding: 10px; border-bottom: 1px solid #d9e1e7; text-align: left; vertical-align: top; line-height: 1.65; }
+.agri-table th { background: #f4f7f9; }
+.agri-table caption { text-align: left; font-weight: 700; padding: 12px 0; }
+.agri-evidence { border-left: 3px solid #bd434b; padding-left: 14px; }
+@media (max-width: 640px) {
+  .lesson-rhythms { grid-template-columns: 1fr; }
+  .october-lessons { padding: 16px 0; }
+  .agri-chart { height: 290px; }
+  #cycle-latest-lessons .pattern-copy, #agriculture-replay .pattern-copy { padding: 16px 12px; }
+}

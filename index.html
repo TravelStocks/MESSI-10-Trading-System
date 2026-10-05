@@ -7,7 +7,14 @@
 <title>MESSI-10｜交易系统手册</title>
 <meta content="MESSI-10交易系统手册：天时 → 地利 → 题材 → 阶段 → 个股 → 地位 → 模式 → 仓位（强天时还是弱天时）→ 买点（择日和分时）→ 卖点（择日和分时）。总龙二波与补涨买点分开确认，每笔开仓先写风险与失效动作。" name="description"/>
 <link href="./assets/css/styles.css?v=20260926" rel="stylesheet"/>
-<link href="./assets/css/handbook.css?v=20260927-14" rel="stylesheet"/><link href="./assets/css/modules.css?v=20261006-framework" rel="stylesheet"/></head>
+<link href="./assets/css/handbook.css?v=20260927-14" rel="stylesheet"/><link href="./assets/css/modules.css?v=20261006-framework" rel="stylesheet"/>
+<link href="./assets/css/october-lessons.css?v=20261006" rel="stylesheet"/>
+<script defer src="./assets/data/october-lessons.js?v=20261006"></script>
+<script defer src="./assets/js/october-lessons.js?v=20261006"></script>
+<script defer src="./assets/vendor/echarts-6.0.0.min.js"></script>
+<script defer src="./assets/data/agriculture-kline.js?v=20261006"></script>
+<script defer src="./assets/js/agriculture-replay.js?v=20261006"></script>
+</head>
 <body class="handbook-edition"><a class="skip-link" href="#main-content">跳至正文</a>
 <div aria-hidden="true" class="progress" id="progress"></div>
 <header class="topbar">
@@ -23,7 +30,7 @@
 <p class="label">完整框架 / 272个原始节点</p><h2 id="framework-entry-title"><a href="./framework-model/index.html">交易系统思维导图与执行模型</a></h2>
 <p>天时决定交易选择，地利与人和决定交易标的。完整保留天时、地利、人和、战法模式、交易与强弱天时分支，补充证据、预期差、量能、卡位和进出场检查。</p>
 <p class="framework-entry-tempo"><strong>天时不好慢进快出，天时好快进慢出。</strong></p>
-<nav aria-label="完整框架入口"><a href="./framework-model/index.html">查看完整框架</a><a href="./framework-model/index.html#original">查看原始导图</a><a href="./framework-model/index.html#execution">交易执行检查</a></nav>
+<nav aria-label="完整框架入口"><a href="./framework-model/index.html">查看完整框架</a><a href="./framework-model/index.html#original">查看原始导图</a><a href="./framework-model/index.html#execution">交易执行检查</a><a href="#october-update">10月规则更新</a><a href="#handbook-agriculture-replay">农业K线联动复盘</a></nav>
 </section>
 <section class="section recurring-errors" id="recurring-errors" aria-labelledby="recurring-errors-title">
 <div class="section-head"><p class="label">红线再犯 / 每次开仓与加仓前检查</p><h2 id="recurring-errors-title">这五类错误，不再用仓位买教训</h2><p>最顽固的不是“不会找股票”，而是<strong>阶段错配、错误追加与科技节奏误用</strong>反复出现。前一轮盈利，不能成为下一轮放宽规则的理由。</p></div>
@@ -720,6 +727,9 @@
 <h3 id="theme-volume-title"><span>题材持续性</span><span>与龙头量能节奏</span></h3>
 <p>先确认题材走强，再看分歧与回流，结合龙头量能确认买卖点。</p>
 </header>
+<div class="rhythm-subhead"><h4 id="october-update">10月更新 · 题材节奏、仓位与交易纪律</h4><span>手册、完整框架、周期库共用一份规则</span></div>
+<div id="handbook-october-lessons" data-october-lessons></div>
+<p class="cycle-source-note"><a href="./资料库 - 龙头周期复盘/index.html#cycle-latest-lessons">查看周期库同步规则</a> · <a href="#handbook-agriculture-replay">农业三股K线与成交量对照</a> · <a href="./framework-model/index.html#latest-lessons">完整框架对应补充</a></p>
 <nav class="cycle-model-nav" aria-label="总龙与补涨战法"><a href="#strategy-5">战法6 · 总龙二波</a><a href="#strategy-7">战法8 · 补涨中位3板</a><a href="#trend-catchup-framework">共同前提与切换</a></nav>
 <p class="cycle-source-note">下列六类量能样本保留原有连板观察。题材与龙头第一波的量能要求不放宽；题材二波以后的总龙趋势与补涨参与，按本节战法6、战法8的条件和量能例外判断。</p>
 <div class="theme-volume-alert" role="note">
@@ -890,7 +900,7 @@
 <div><dt>实际执行</dt><dd><strong>当天尾盘确认后买，不等次日再追。</strong>在最后三分钟检查突破与涨幅仍成立后执行；最终收盘结果仍可能变化。</dd></div>
 <div><dt>联动与空间</dt><dd>还需检查<strong>补涨共振、题材反馈与监管空间</strong>；价格达标不能单独覆盖这些前提。</dd></div>
 <div><dt>窗口纪律</dt><dd><strong>窗口严格，买点基本唯一确定；错过不补买、不追。</strong>不把尾盘错过变成次日高开追仓。</dd></div>
-<div class="cycle-position"><dt>仓位安排</dt><dd><strong>一般约半仓（账户资金约50%）。</strong>先参与总龙二波，预留另一半仓位；补涨龙通常较晚出现，等其符合买点后再配置。</dd></div>
+<div class="cycle-position"><dt>仓位安排</dt><dd><strong>原各半仓设想不再机械执行。</strong>补涨很强且板块效应很强时，二波首笔可在该票计划预算内提高，具体增幅未量化；次日补涨三板实际给合规机会再评估切仓。二板、三板一字可能没有机会，不强制留半仓或排一字；仍受总仓、单票、最大亏损和尾盘窗口约束。</dd></div>
 </dl>
 <p class="cycle-rule"><strong>退出看首次深水与持续走弱：</strong>首次收盘跌幅达到或超过5%，至少减掉该持仓3/4；接近风险条件也可提前走。总龙连续两天走弱，直接卖出。</p>
 <p class="cycle-rule second-wave-trigger"><strong>二波触发口径：</strong>尾盘确认价 &gt; 上一波最高价，且（尾盘确认价 ÷ 昨日收盘价 − 1）× 100% ≥ 5%。这是同一天的联合条件；既不是比前高再涨5%，也不是次日补追的依据。</p>
@@ -917,8 +927,9 @@
 <div><dt>竞争者失败</dt><dd>竞争者大跌淘汰后留下的唯一性，<strong>当天不买，次日转强确认才能买</strong>；观察涨停等转强表现。</dd></div>
 <div><dt>窗口与补买</dt><dd><strong>买点基本唯一确定，三板优先。</strong>错过后再出手一定要十分谨慎；3进4需更强唯一性与环境支持，不能把汉森盈利扩成普遍追高依据。</dd></div>
 <div><dt>退出联动</dt><dd><strong>总龙退出，补涨也退出。</strong>补涨仍封板，不能替代总龙趋势这个前提。</dd></div>
-<div class="cycle-position"><dt>仓位安排</dt><dd><strong>一般约半仓（账户资金约50%）。</strong>补涨龙通常晚于总龙二波出现，符合二进三唯一性等买点条件后，再配置预留的另一半仓位。</dd></div>
+<div class="cycle-position"><dt>仓位安排</dt><dd><strong>按合规三板机会动态配置。</strong>不默认必须留另一半；总龙二波已先提高首笔时，次日补涨三板有实际可成交买点再评估切仓，确认卖出成交后配置，不扩大同题材总风险。</dd></div>
 </dl>
+<p class="cycle-rule"><strong>最新专项卖点：三板参与，四板板上兑现，快进快出。</strong>这不是四板必达承诺；不及预期、总龙退出或模式失效可更早退出，板上委托也须确认成交。不把强天时慢出扩成补涨默认追五板。</p>
 <p class="cycle-rule"><strong>量能例外只放在题材二波以后：</strong>新补涨股自己的第一轮连板，也可豁免半放量、全放量等节奏；连续极致缩量一字、极致二连加速，不随意参与。</p>
 <details class="reading-fold"><summary><span>三板身位、量能例外与首板补涨</span><small>区分题材大小和参与阶段</small></summary><div class="fold-content">
 <h5>三板是辨识与参与节点</h5>
@@ -937,8 +948,8 @@
 
 <div class="cycle-framework cycle-execution" id="strategy-57-execution" aria-labelledby="strategy-57-execution-title">
 <div class="rhythm-subhead"><h4 id="strategy-57-execution-title">两套战法的仓位与退出</h4><span>个人仓位设想与风险承受</span></div>
-<p class="cycle-source-note"><strong>先过天时预算：</strong>以下各半仓、合计满仓的配置不能独立启用，仍受<a href="#environment-position-plan">强弱环境仓位计划</a>与盯盘条件约束。天时偏弱时不照搬满仓设想，取适用规则中更低的仓位上限。</p>
-<p>两套战法各安排约半仓：通常先以约半仓参与总龙二波，补涨龙较晚出现，符合买点后再配置预留的另一半。两者都确认时，同题材合计仓位可到100%，覆盖趋势与连板两类核心机会。两部分仓位共同依赖同一题材，题材退潮时可能同时受损；总龙退出，补涨也退出。</p>
+<p class="cycle-source-note"><strong>先过天时预算：</strong>原各半仓、合计满仓为历史设想，最新改为有条件的动态配置；仍受<a href="#environment-position-plan">强弱环境仓位计划</a>与盯盘条件约束，取适用规则中更低的仓位上限。</p>
+<p>补涨强、板块效应强时，总龙二波首笔可在计划预算内提高；次日补涨三板给实际合规机会再评估切仓，不强制预留一半。补涨二三板可能一字无机会，不能排一字或改为追二波。两者确认、强天时且各项预算允许时，同题材合计仓位才可能到100%，不是目标。两部分共同依赖同一题材，退潮可能同时受损；总龙退出，补涨也退出。</p>
 <p>一次失败约10%的账户损失，是我的风险承受预期，实际可能因无法成交而超过。超过时接受已经发生的损失，暂停该题材，等待切换。卖单未成交时继续尝试退出，发出委托后仍需确认实际成交。</p>
 <p>首次收盘跌幅达到或超过5%时，至少减掉该持仓3/4，余仓逐步退出；接近条件可以提前走。接近我关注的监管风险位置时主动退出，原述剩余约20个百分点作为个人观察余量，不赌反包和尾部利润。</p>
 <p class="cycle-source-note">监管100%和剩余约20个百分点按对应市场、期间、指数与公告确认。正式规则使用收盘涨跌幅偏离值等口径。<a href="https://docs.static.szse.cn/www/lawrules/rule/trade/current/W020260424690713155663.pdf" target="_blank" rel="noopener">查看深交所2026年交易规则</a>。</p>
@@ -973,7 +984,8 @@
 <li><div class="agriculture-stage-heading"><span>第二补涨周期</span><time>9/4—9/11</time></div><h5>金健米业＋亚盛集团</h5><p>9/4 亚盛集团二板，9/7—8 继续强化；9/7 金健米业弱转强、被板块反推上板。随后总龙高位震荡，低位核心轮动补涨。9/10 后排批量深水，9/11 原记确认板块效应结束，进入退出与观察阶段。</p></li>
 <li class="agriculture-stage-excluded"><div class="agriculture-stage-heading"><span>第三阶段 · 穿越不做</span><time>9/14—9/23</time></div><h5>总龙独自穿越，停止参与</h5><p>9/14 金健米业单独走强，9/15 补跌、9/16 原记结束；9/17 后出现反包与末尾反弹，9/22 已无板块效应，9/23 记录抱团。这段有补跌和再反包，不能当作连续无回撤的趋势，也不计为第三个补涨周期。</p></li>
 </ol>
-<div class="agriculture-case-rule"><h5>这段案例怎么用于战法6与战法8</h5><p>共同结构是<strong>总龙维持趋势＋题材再发酵＋新补涨核心出现</strong>。总龙二波和补涨中位仍分别按各自买点确认、一般各约半仓；本表用于观察周期结构，具体入场还需核对突破前高、量能与最高连板唯一性。</p><p><strong>板块效应结束后，仅总龙独自穿越，不构成这两套战法的参与机会。</strong>总龙退出，补涨也退出；不因后续反包重新把穿越阶段纳入模式。</p><nav class="cycle-model-nav" aria-label="农业案例对应战法"><a href="#strategy-5">战法6 · 总龙二波</a><a href="#strategy-7">战法8 · 补涨中位3板</a><a href="#agriculture-daily-records">查看28个日期的原记</a></nav></div>
+<div class="agriculture-case-rule"><h5>这段案例怎么用于战法6与战法8</h5><p>共同结构是<strong>总龙维持趋势＋题材再发酵＋新补涨核心出现</strong>。两种模式分别确认买点；仓位改用有条件的动态配置，不机械各半仓。二波还需核对突破前高、当日涨幅、量能与尾盘；补涨核对三板唯一性及可成交机会，按最新四板板上兑现计划复核。</p><p><strong>板块效应结束后，仅总龙独自穿越，不构成这两套战法的参与机会。</strong>总龙退出，补涨也退出；不因后续反包重新把穿越阶段纳入模式。前置退潮穿越型另列为待验证研究，不与这里混淆。</p><nav class="cycle-model-nav" aria-label="农业案例对应战法"><a href="#strategy-5">战法6 · 总龙二波</a><a href="#strategy-7">战法8 · 补涨中位3板</a><a href="#agriculture-daily-records">查看28个日期的原记</a><a href="./资料库 - 龙头周期复盘/index.html#agriculture-replay">周期库 · 同步农业K线</a></nav></div>
+<div id="handbook-agriculture-replay" data-agriculture-replay></div>
 <details class="reading-fold agriculture-daily-records" id="agriculture-daily-records"><summary><span>完整逐日复盘 · 28个日期</span><small>大盘、情绪与农业原记</small></summary><div class="fold-content">
 <p class="cycle-source-note">保留当时判断与原始数字。8/24 的大盘收盘值未记录，9/17 原记为“收9875”；板数表述与“金建”等原文称呼沿用原记。“跌停前不看结束”“只看这个票”等属于当日观察，当前参与边界按上方“穿越不做”及退出规则执行。</p>
 <details class="reading-fold agriculture-day" id="agriculture-20260817" data-date="2026-08-17">
@@ -1478,8 +1490,8 @@
 <p class="label">建仓与加仓</p>
 <ul class="check-list">
 <li>爆量弱转强后，还要检查题材、唯一性及转强确认；只在三进四、四进五的合格节点考虑第一笔。</li>
-<li>第一笔一般控制在5成仓以下，先让市场给出确认。</li>
-<li>旧仓位框架允许确认后评估加至8成仓及以上；必须重新检查环境、题材、唯一性与可参与的转强，极致缩量一字不触发加仓。</li>
+<li>最新首笔：强天时用该票计划仓位的80%，弱天时用50%，不是账户比例；先让模式内买点成立，再按预算执行。</li>
+<li>后续确认只允许评估使用剩余计划仓位，不自动加满；重新检查天时、题材、唯一性、最大亏损与可参与的转强，极致缩量一字不触发加仓。</li>
 </ul>
 </article>
 <article>
@@ -1648,7 +1660,7 @@
 <figcaption><span>阶段与模式对应原图 · 保留原始标注</span><a href="./assets/images/cycle-stage-strategies.png" target="_blank" rel="noopener">查看原图 <span aria-hidden="true">↗</span></a></figcaption>
 </figure>
 <nav class="cycle-model-nav" aria-label="阶段图对应战法"><a href="#relay">切换 · 低位接力</a><a href="#dragon">唯一性龙头</a><a href="#strategy-5">龙头二波 · 战法6</a><a href="#strategy-7">补涨中位 · 战法8</a></nav>
-<p class="cycle-source-note">图中标注用于对照阶段与模式；战法6、战法8的具体买点和约半仓安排，按对应章节执行。</p>
+<p class="cycle-source-note">图中标注用于对照阶段与模式；战法6、战法8的具体买点和最新动态仓位安排，按对应章节执行。</p>
 </section>
 <div aria-label="大环境仓位前提" class="environment-grid">
 <article>
@@ -1827,7 +1839,7 @@
 </tr>
 <tr>
 <td data-label="维度">仓位建议</td>
-<td data-label="有龙主升期：中位龙头博弈">第一笔一般5成仓以下；共同条件持续成立且出现可参与确认后，沿用原仓位框架评估加至8成仓及以上；高位出现失控爆量、反复炸板或断板按风险纪律先减半。</td>
+<td data-label="有龙主升期：中位龙头博弈">首笔按该票计划仓位：强天时80%、弱天时50%；共同条件持续成立且出现可参与确认后，才评估剩余计划仓位，取风险预算更低上限；高位出现失控爆量、反复炸板或断板按风险纪律先减半。</td>
 <td data-label="无龙混沌期：低位1进2接力">一进二试错期单票仓位不到50%，总仓位小于80%；只做前排，不集中后排杂毛。</td>
 </tr>
 <tr>
@@ -1982,6 +1994,7 @@
 <section class="market-discipline" id="environment-position-plan" aria-labelledby="environment-position-title">
 <p class="label">当前个人计划 / 强弱环境分开</p>
 <h3 id="environment-position-title">两套天时，两套预算与退出</h3>
+<p class="discipline-bottom-line"><strong>最新龙头首笔：强天时为该票计划仓位的80%，弱天时为50%。</strong>按本人已明确的分母计算，不是账户总资产的80%／50%。如计划单票占账户40%，弱天时首笔占账户20%；后续加仓须原逻辑有效且有确认，不自动补满。下方总仓与单票预算仍按账户总资产约束，取更低上限。</p>
 <p class="discipline-note">以下是个人仓位计划，不是通用仓位建议或必须完成的目标。总仓与单票比例均按账户总资产计算，分别约束组合和个股；<strong>70%–80%不属于轻仓试错，弱市也不必达到这个预算。</strong></p>
 <div class="handbook-table-wrap environment-table-wrap" role="region" aria-label="强弱环境的仓位与退出计划" tabindex="0">
 <table class="handbook-table environment-table">
@@ -2001,7 +2014,7 @@
 <p class="discipline-bottom-line"><strong>仓位不能用来修复错误：</strong>百花与西陇摊低成本属于错误动机，爱仕达弱切换重仓属于风险错配。先定最大可承受损失，再决定数量。</p>
 </section>
 <details class="reading-fold"><summary><span>分战法与历史仓位口径</span><small>叠加限制，不覆盖天时预算</small></summary><div class="fold-content">
-<p>下表保留此前的场景参考，不作为必须持有的底仓；具体战法有更低限制时继续适用。战法6、战法8的各半仓设想见<a href="#strategy-57-execution">对应章节</a>，不推广为其他模式的默认仓位。</p>
+<p>下表保留此前的场景参考，不作为必须持有的底仓；具体战法有更低限制时继续适用。战法6、战法8的原各半仓设想与最新动态配置见<a href="#strategy-57-execution">对应章节</a>，不推广为其他模式的默认仓位。</p>
 <div class="matrix">
 <div class="matrix-row matrix-head">
 <span>场景</span>

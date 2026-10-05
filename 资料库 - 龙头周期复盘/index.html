@@ -11,6 +11,12 @@
   <script defer src="data/daily-limit-ups.js"></script>
   <script defer src="data/leader-volume-analysis.js"></script>
   <script defer src="assets/app.js?v=20260926-cycle-limit-count"></script>
+  <link rel="stylesheet" href="../assets/css/october-lessons.css?v=20261006" />
+  <script defer src="../assets/data/october-lessons.js?v=20261006"></script>
+  <script defer src="../assets/js/october-lessons.js?v=20261006"></script>
+  <script defer src="../assets/vendor/echarts-6.0.0.min.js"></script>
+  <script defer src="../assets/data/agriculture-kline.js?v=20261006"></script>
+  <script defer src="../assets/js/agriculture-replay.js?v=20261006"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主体内容</a>
@@ -30,6 +36,8 @@
     </a>
     <nav class="nav" aria-label="快速跳转">
       <a href="#patterns">规律</a>
+      <a href="#cycle-latest-lessons">新规则</a>
+      <a href="#agriculture-replay">农业K线</a>
       <a href="#reference">参考</a>
       <a href="#system-map">图谱</a>
       <a href="#cycles">周期</a>
@@ -41,6 +49,15 @@
   </header>
 
   <main id="main">
+    <section class="pattern-section" id="cycle-latest-lessons">
+      <div class="pattern-copy">
+        <p class="eyebrow">2026.10.06 / 与交易手册同步</p>
+        <h2>最新节奏与交易纪律</h2>
+        <p>下方历史周期及原有详细模型继续保留；最新抽象节奏、补涨专项卖点与待验证问题分开记录，不用新规则回改旧日记。</p>
+        <div id="cycle-october-lessons" data-october-lessons></div>
+        <a href="../index.html#october-update">回到交易手册对应更新</a>
+      </div>
+    </section>
     <section class="pattern-section" id="patterns">
       <div class="pattern-copy">
         <p class="eyebrow">Pattern Library</p>
@@ -49,6 +66,10 @@
         <div class="rule-grid" id="rule-grid"></div>
         <div class="strength-system" id="strength-system" aria-label="题材强度排列组合"></div>
       </div>
+    </section>
+
+    <section class="pattern-section" id="agriculture-replay">
+      <div class="pattern-copy" data-agriculture-replay></div>
     </section>
 
     <section class="reference-section" id="reference">

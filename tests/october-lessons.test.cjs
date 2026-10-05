@@ -1,0 +1,136 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const { createHash } = require('node:crypto');
+const test = require('node:test');
+const root = path.join(__dirname, '..');
+const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
+const context = { window: {} };
+vm.runInNewContext(read('assets/data/october-lessons.js'), context);
+vm.runInNewContext(read('assets/data/agriculture-kline.js'), context);
+const lessons = context.window.M10_OCTOBER_LESSONS;
+const data = context.window.M10_AGRICULTURE_KLINE;
+const handbook = read('index.html');
+
+test('all three views consume the same lessons and retain the main rhythms plus risk comparison', () => {
+  assert.deepEqual(JSON.parse(JSON.stringify(lessons.rhythms.map((rhythm) => rhythm.path))), [
+    ['强', '弱', '强'], ['强', '强', '弱', '强'], ['强', '弱', '弱', '强'], ['一直不弱']
+  ]);
+  assert.match(lessons.rhythms[1].note, /第4个节奏节点.*不是第3天/);
+  const text = JSON.stringify(lessons);
+  for (const term of ['弱 → 强 → 弱 → 强', '第三个放量板', '五板之前', '昨日爆量弱转强', '第二天续强日', '量能起算日', '恒尚节能', '新华传媒', '西陇科学', '昊华科技', '津药药业', '万向德农', '华电辽能']) assert.ok(text.includes(term), term);
+  for (const file of ['index.html', 'framework-model/index.html', '资料库 - 龙头周期复盘/index.html']) {
+    const html = read(file);
+    assert.match(html, /data-october-lessons/);
+    assert.match(html, /assets\/data\/october-lessons.js\?v=20261006/);
+    assert.match(html, /assets\/js\/october-lessons.js\?v=20261006/);
+  }
+});
+
+test('80/50 is a fraction of planned stock allocation, with caps and the same-day wave window retained', () => {
+  const text = JSON.stringify(lessons.sections.find((section) => section.id === 'positions'));
+  assert.match(text, /该票计划仓位的80%.*该票计划仓位的50%/);
+  assert.equal(0.4 * 0.5, 0.2);
+  assert.ok(Math.abs(0.8 * 0.8 - 0.64) < 1e-12);
+  assert.match(text, /账户20%/);
+  assert.match(text, /账户64%/);
+  assert.match(text, /同题材总风险/);
+  assert.match(text, /具体.*比例|固定比例/);
+  assert.match(text, /当天尾盘确认后买/);
+  assert.match(handbook, /70%–80%/);
+  assert.match(handbook, /30%–40%/);
+  assert.doesNotMatch(handbook, /第一笔一般控制在5成仓以下|第一笔一般5成仓以下|先参与总龙二波，预留另一半仓位/);
+});
+
+test('mode-specific exits, no one-price queuing and unresolved hypotheses stay distinct', () => {
+  const text = JSON.stringify(lessons);
+  assert.match(text, /四板的板上卖点，快进快出/);
+  assert.match(text, /不是承诺一定有四板/);
+  assert.match(text, /不是全市场100%亏损统计/);
+  assert.match(text, /竞价加单.*未统一/);
+  assert.match(text, /不是已完成验证的统一买点/);
+  assert.match(text, /不是已确认地位或预测结论/);
+  assert.match(text, /原有|既有边界/);
+  assert.match(text, /晋级率只按相邻交易日同一批股票匹配/);
+  assert.match(text, /日K不能证明尾盘或板上真实可成交/);
+});
+
+test('agriculture snapshot has three aligned unadjusted price/volume series with traceable source', () => {
+  assert.equal(data.stocks.length, 3);
+  assert.equal(data.adjustment, '不复权（fqt=0）');
+  assert.equal(data.volumeUnit, '手');
+  const dates = JSON.stringify(data.stocks[0].days.map((day) => day.date));
+  for (const stock of data.stocks) {
+    assert.equal(stock.days.length, 33);
+    assert.equal(JSON.stringify(stock.days.map((day) => day.date)), dates);
+    assert.match(stock.url, /^https:\/\/push2his\.eastmoney\.com\/.*fqt=0/);
+    const seen = new Set();
+    for (const day of stock.days) {
+      assert.ok(!seen.has(day.date));
+      seen.add(day.date);
+      assert.ok(day.low > 0 && day.low <= Math.min(day.open, day.close));
+      assert.ok(day.high >= Math.max(day.open, day.close));
+      assert.ok(day.volume >= 0 && day.amount >= 0);
+    }
+  }
+  const jin = data.stocks[0];
+  const peak = Math.max(...jin.days.filter((day) => day.date >= '2026-08-17' && day.date <= '2026-08-21').map((day) => day.high));
+  assert.equal(peak, 9.45);
+  const candidate = jin.days.find((day) => day.date === '2026-08-26');
+  assert.ok(candidate.close > peak && candidate.pct >= 5);
+  const locked = data.stocks[2].days.find((day) => day.date === '2026-09-07');
+  assert.equal(locked.open, locked.close);
+  assert.equal(locked.high, locked.low);
+  assert.match(read('assets/js/agriculture-replay.js'), /不代表实际交易记录|不代表实际交易/);
+});
+
+test('all 28 agriculture diary days retain their 56 original source paragraphs', () => {
+  const original = [...handbook.matchAll(/<p class="agriculture-original"[\s\S]*?<\/p>/g)].map((match) => match[0].replace(/\r\n/g, '\n'));
+  assert.equal(original.length, 56);
+  assert.equal(createHash('sha256').update(original.join('\n')).digest('hex'), '18a34d2eb3f39aa6de5c5b5c041d187604fafa8d2456d8c7fcf321ebcc7470ba');
+  for (const page of ['index.html', '资料库 - 龙头周期复盘/index.html']) {
+    const html = read(page);
+    assert.match(html, /data-agriculture-replay/);
+    const dir = path.dirname(path.join(root, page));
+    for (const [, href] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
+      if (/^\.{1,2}\/assets\//.test(href)) assert.ok(fs.existsSync(path.resolve(dir, href.split(/[?#]/)[0])), href);
+    }
+  }
+});
+
+class Element {
+  constructor(tag) { this.tag = tag; this.children = []; this.attrs = {}; this.listeners = {}; this.classList = { add() {} }; }
+  append(...nodes) { this.children.push(...nodes); }
+  setAttribute(key, value) { this.attrs[key] = value; }
+  addEventListener(type, callback) { this.listeners[type] = callback; }
+}
+
+test('shared renderer makes six lessons and linked K/volume charts with functioning range controls', () => {
+  const lessonsRoot = new Element('div');
+  lessonsRoot.id = 'test-lessons';
+  const replayRoot = new Element('div');
+  const charts = [];
+  const browser = {
+    window: { ...context.window, addEventListener() {}, echarts: {
+      init() { const chart = { setOption(option) { this.option = option; }, on() {}, dispatchAction(action) { this.action = action; }, resize() {} }; charts.push(chart); return chart; },
+      connect(items) { assert.equal(items.length, 3); }
+    } },
+    document: { createElement: (tag) => new Element(tag), querySelectorAll: (selector) => selector === '[data-october-lessons]' ? [lessonsRoot] : [replayRoot] }
+  };
+  vm.runInNewContext(read('assets/js/october-lessons.js'), browser);
+  vm.runInNewContext(read('assets/js/agriculture-replay.js'), browser);
+  assert.equal(lessonsRoot.children.filter((child) => child.tag === 'details').length, 6);
+  assert.equal(charts.length, 3);
+  charts.forEach((chart) => {
+    assert.equal(chart.option.series[0].type, 'candlestick');
+    assert.equal(chart.option.series[1].type, 'bar');
+    assert.equal(chart.option.series[0].data.length, 33);
+    assert.equal(chart.option.series[1].data.length, 33);
+  });
+  const buttons = replayRoot.children.find((child) => child.attrs.role === 'group');
+  buttons.children[2].listeners.click();
+  assert.equal(buttons.children[2].attrs['aria-pressed'], 'true');
+  assert.equal(charts[0].action.startValue, data.stocks[0].days.findIndex((day) => day.date === '2026-08-24'));
+  assert.equal(charts[0].action.endValue, data.stocks[0].days.findIndex((day) => day.date === '2026-09-03'));
+});

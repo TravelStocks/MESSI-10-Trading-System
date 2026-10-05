@@ -49,7 +49,7 @@ test('the model page uses the latest chain, separates supplements and versions, 
   assert.match(html, /两个总仓范围的适用分界待本人确认/);
   assert.match(html, /当日相对昨收涨幅达到5%/);
   assert.match(html, /不等次日追/);
-  for (const item of ['各身位晋级率', '断板率', '炸板率', '腾落数', '进攻属性', '防御属性', '伴生龙', '补涨首板', '埋伏', '第一笔仓位就可以推到80%', '100%监管红线高度附近']) assert.ok(html.includes(item), item);
+  for (const item of ['各身位晋级率', '断板率', '炸板率', '腾落数', '进攻属性', '防御属性', '伴生龙', '补涨首板', '埋伏', '该票计划仓位的80%', '该票计划仓位的50%', '100%监管红线高度附近']) assert.ok(html.includes(item), item);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   assert.equal(ids.length, new Set(ids).size);
   for (const [, href] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
