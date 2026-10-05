@@ -4,17 +4,27 @@ const { join } = require('node:path');
 const test = require('node:test');
 
 const html = readFileSync(join(__dirname, '..', 'index.html'), 'utf8');
-const steps = ['天时', '地利', '题材', '阶段', '个股', '模式', '仓位', '买点', '卖点'];
+const steps = ['天时', '地利', '题材', '阶段', '个股', '地位', '模式', '仓位（强天时还是弱天时）', '买点（择日和分时）', '卖点（择日和分时）'];
 const section = html.match(/<section\b[^>]*id="recurring-errors"[\s\S]*?<\/section>/)[0];
 
-test('the nine-step order is the first headline and precedes the error guards', () => {
+test('the annotated ten-step order is the first headline and precedes the error guards', () => {
   const headline = html.match(/<h1 id="handbook-order">([\s\S]*?)<\/h1>/)[1];
   const labels = [...headline.matchAll(/<span\b[^>]*>([\s\S]*?)<\/span>/g)]
-    .map((match) => match[1].replace(/<i[^>]*>[\s\S]*?<\/i>/g, '').trim());
+    .map((match) => match[1].replace(/<i[^>]*>[\s\S]*?<\/i>/g, '').replace(/<[^>]*>/g, '').trim());
   assert.deepEqual(labels, steps);
   assert.equal((html.match(/<h1\b/g) || []).length, 1);
   assert.ok(html.indexOf('id="handbook-order"') < html.indexOf('id="recurring-errors"'));
   assert.ok(html.indexOf('id="recurring-errors"') < html.indexOf('id="execution-upgrade"'));
+});
+
+test('the detailed order includes status and both day and intraday exit timing', () => {
+  const chain = html.match(/<ol class="execution-chain"[\s\S]*?<\/ol>/)[0];
+  assert.equal((chain.match(/<li>/g) || []).length, 10);
+  assert.ok(chain.indexOf('06 / 地位') < chain.indexOf('07 / 模式'));
+  assert.match(chain, /08 \/ 仓位[\s\S]*?强天时还是弱天时/);
+  assert.match(chain, /09 \/ 买点[\s\S]*?择日：[\s\S]*?分时：/);
+  assert.match(chain, /10 \/ 卖点[\s\S]*?择日：[\s\S]*?分时：/);
+  assert.doesNotMatch(html, /九步/);
 });
 
 test('each of the five errors has a stop rule, alternative action, and dated evidence', () => {

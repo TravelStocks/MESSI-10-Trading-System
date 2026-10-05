@@ -5,9 +5,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>MESSI-10｜交易系统手册</title>
-<meta content="MESSI-10交易系统手册：天时 → 地利 → 题材 → 阶段 → 个股 → 模式 → 仓位 → 买点 → 卖点。总龙二波与补涨买点分开确认，每笔开仓先写风险与失效动作。" name="description"/>
+<meta content="MESSI-10交易系统手册：天时 → 地利 → 题材 → 阶段 → 个股 → 地位 → 模式 → 仓位（强天时还是弱天时）→ 买点（择日和分时）→ 卖点（择日和分时）。总龙二波与补涨买点分开确认，每笔开仓先写风险与失效动作。" name="description"/>
 <link href="./assets/css/styles.css?v=20260926" rel="stylesheet"/>
-<link href="./assets/css/handbook.css?v=20260927-14" rel="stylesheet"/><link href="./assets/css/modules.css?v=20261005-redline-checks" rel="stylesheet"/></head>
+<link href="./assets/css/handbook.css?v=20260927-14" rel="stylesheet"/><link href="./assets/css/modules.css?v=20261005-ten-step-order" rel="stylesheet"/></head>
 <body class="handbook-edition"><a class="skip-link" href="#main-content">跳至正文</a>
 <div aria-hidden="true" class="progress" id="progress"></div>
 <header class="topbar">
@@ -17,12 +17,12 @@
 <div class="layout" id="top">
 <aside aria-label="页面目录" class="sidebar"><div class="toc-head"><p>READING GUIDE</p><span>先判断，再出手</span></div><nav aria-label="章节目录" class="toc"><div class="nav-group quick-nav"><p>常用入口</p><a class="toc-link" href="#execution-upgrade">开仓总纲 2.0</a><a class="toc-link" href="#resources">战法与工具</a><a class="toc-link" href="#case-index">案例索引</a></div><div class="nav-group"><p>认知与环境</p><a class="toc-link" href="#overview"><span>01</span>执行总览</a><a class="toc-link" href="#worldview"><span>02</span>交易世界观</a><a class="toc-link" href="#speculation"><span>03</span>市场启停</a></div><div class="nav-group"><p>题材与个股</p><a class="toc-link" href="#classification"><span>04</span>题材与量能</a><a class="toc-link" href="#watchlist"><span>05</span>唯一性与票池</a><a class="toc-link" href="#decision"><span>06</span>决策顺序</a></div><div class="nav-group"><p>执行与风控</p><a class="toc-link" href="#cycle"><span>07</span>情绪周期</a><a class="toc-link" href="#dragon"><span>08</span>龙头主升</a><a class="toc-link" href="#relay"><span>09</span>低位接力</a><a class="toc-link" href="#risk"><span>10</span>回避与退出</a><a class="toc-link" href="#trade"><span>11</span>买点确认</a><a class="toc-link" href="#position"><span>12</span>仓位纪律</a></div><div class="nav-group"><p>复盘与资料</p><a class="toc-link" href="#review"><span>13</span>复盘验证</a><a class="toc-link" href="#appendix"><span>14</span>术语与原话</a></div></nav><div class="nav-footer"><a href="#source-records">21条完整原话 <span>↗</span></a></div></aside>
 <details class="mobile-contents"><summary><span>章节目录</span><small>选择阅读位置</small></summary><nav aria-label="手机章节目录"><div class="nav-group quick-nav"><p>常用入口</p><a class="toc-link" href="#execution-upgrade">开仓总纲 2.0</a><a class="toc-link" href="#resources">战法与工具</a><a class="toc-link" href="#case-index">案例索引</a></div><div class="nav-group"><p>认知与环境</p><a class="toc-link" href="#overview"><span>01</span>执行总览</a><a class="toc-link" href="#worldview"><span>02</span>交易世界观</a><a class="toc-link" href="#speculation"><span>03</span>市场启停</a></div><div class="nav-group"><p>题材与个股</p><a class="toc-link" href="#classification"><span>04</span>题材与量能</a><a class="toc-link" href="#watchlist"><span>05</span>唯一性与票池</a><a class="toc-link" href="#decision"><span>06</span>决策顺序</a></div><div class="nav-group"><p>执行与风控</p><a class="toc-link" href="#cycle"><span>07</span>情绪周期</a><a class="toc-link" href="#dragon"><span>08</span>龙头主升</a><a class="toc-link" href="#relay"><span>09</span>低位接力</a><a class="toc-link" href="#risk"><span>10</span>回避与退出</a><a class="toc-link" href="#trade"><span>11</span>买点确认</a><a class="toc-link" href="#position"><span>12</span>仓位纪律</a></div><div class="nav-group"><p>复盘与资料</p><a class="toc-link" href="#review"><span>13</span>复盘验证</a><a class="toc-link" href="#appendix"><span>14</span>术语与原话</a></div></nav><a class="mobile-source" href="#source-records">查看21条完整原话</a></details><main class="content" id="main-content"><div class="handbook-intro"><div class="intro-top"><span class="eyebrow">MESSI-10 / TRADING HANDBOOK</span><a href="#source-records">思考可追溯，规则可验证 ↗</a></div>
-<h1 id="handbook-order"><span>天时</span><span><i aria-hidden="true">→</i>地利</span><span><i aria-hidden="true">→</i>题材</span><span><i aria-hidden="true">→</i>阶段</span><span><i aria-hidden="true">→</i>个股</span><span><i aria-hidden="true">→</i>模式</span><span class="position-step"><i aria-hidden="true">→</i>仓位</span><span><i aria-hidden="true">→</i>买点</span><span><i aria-hidden="true">→</i>卖点</span></h1>
+<h1 id="handbook-order"><span>天时</span><span><i aria-hidden="true">→</i>地利</span><span><i aria-hidden="true">→</i>题材</span><span><i aria-hidden="true">→</i>阶段</span><span><i aria-hidden="true">→</i>个股</span><span><i aria-hidden="true">→</i>地位</span><span><i aria-hidden="true">→</i>模式</span><span class="position-step"><i aria-hidden="true">→</i><b>仓位<small>（强天时还是弱天时）</small></b></span><span><i aria-hidden="true">→</i><b>买点<small>（择日和分时）</small></b></span><span><i aria-hidden="true">→</i><b>卖点<small>（择日和分时）</small></b></span></h1>
 <p><strong>先判断，再出手。</strong>把确认留给市场，把执行留给规则；先定仓位与最大亏损，再等买点。</p><div class="principle-line"><span>强板块效应</span><i>＋</i><span>唯一高标</span><i>＋</i><span>合理量能</span><i>＋</i><span>中位确认</span></div><a class="redline-jump" href="#recurring-errors">开仓前先过五类红线 <span aria-hidden="true">→</span></a></div>
 <section class="section recurring-errors" id="recurring-errors" aria-labelledby="recurring-errors-title">
 <div class="section-head"><p class="label">红线再犯 / 每次开仓与加仓前检查</p><h2 id="recurring-errors-title">这五类错误，不再用仓位买教训</h2><p>最顽固的不是“不会找股票”，而是<strong>阶段错配、错误追加与科技节奏误用</strong>反复出现。前一轮盈利，不能成为下一轮放宽规则的理由。</p></div>
 <ol class="redline-list">
-<li id="redline-stage"><div class="redline-heading"><span class="redline-number">01</span><h3>阶段没认清，就套熟悉战法</h3><span class="redline-frequency">主罪 · 4个月再现</span></div><p class="redline-stop"><strong>停止：</strong>不从熟悉个股、形态或单票唯一性直接跳到开仓；不把天时与题材阶段放到买后解释。</p><p class="redline-action"><strong>替代动作：</strong>盘前先写赚钱效应、新旧题材、总龙与补涨阶段，再匹配模式。无模式内买点就等待。<a href="#execution-upgrade">按九步判断</a></p><details class="redline-evidence"><summary>6—9月阶段错配证据</summary><dl><div><dt>6月基线</dt><dd>大唐主升2没主攻，尾段与旁支参与。</dd></div><div><dt>7月</dt><dd>立新主升3无第一天先手，仍按延续龙头追。</dd></div><div><dt>8月</dt><dd>医药补涨没识别，昊华等错误科技切换。</dd></div><div><dt>9月</dt><dd>农业补涨做弱爱仕达；后段哈药不熟悉反核。</dd></div></dl></details></li>
+<li id="redline-stage"><div class="redline-heading"><span class="redline-number">01</span><h3>阶段没认清，就套熟悉战法</h3><span class="redline-frequency">主罪 · 4个月再现</span></div><p class="redline-stop"><strong>停止：</strong>不从熟悉个股、形态或单票唯一性直接跳到开仓；不把天时与题材阶段放到买后解释。</p><p class="redline-action"><strong>替代动作：</strong>盘前先写赚钱效应、新旧题材、总龙与补涨阶段，再匹配模式。无模式内买点就等待。<a href="#execution-upgrade">按十步判断</a></p><details class="redline-evidence"><summary>6—9月阶段错配证据</summary><dl><div><dt>6月基线</dt><dd>大唐主升2没主攻，尾段与旁支参与。</dd></div><div><dt>7月</dt><dd>立新主升3无第一天先手，仍按延续龙头追。</dd></div><div><dt>8月</dt><dd>医药补涨没识别，昊华等错误科技切换。</dd></div><div><dt>9月</dt><dd>农业补涨做弱爱仕达；后段哈药不熟悉反核。</dd></div></dl></details></li>
 <li id="redline-averaging"><div class="redline-heading"><span class="redline-number">02</span><h3>承接转弱后，想靠加仓降低成本</h3><span class="redline-frequency">红线再犯 · 4个月有证据</span></div><p class="redline-stop"><strong>停止：</strong>为摊低成本追加次数必须为0。价格下跌、亏损扩大或不甘心，都不是加仓信号。</p><p class="redline-action"><strong>替代动作：</strong>只有新确认出现、原逻辑仍有效、风险预算允许，才按原计划讨论加仓；失效则执行已写定退出。<a href="#opening-record">核对开仓六要素</a></p><details class="redline-evidence"><summary>6—9月错误追加证据</summary><dl><div><dt>6月基线</dt><dd>粤电力走弱后追加。</dd></div><div><dt>7月</dt><dd>科技承接被虹吸后继续摊成本。</dd></div><div><dt>8月</dt><dd>百花错过二波窗口，次日走弱仍追加。</dd></div><div><dt>9月</dt><dd>西陇9/18追加，本人明确动机是摊低成本。</dd></div></dl></details></li>
 <li id="redline-technology"><div class="redline-heading"><span class="redline-number">03</span><h3>科技节奏不匹配，非核心套连板预期</h3><span class="redline-frequency">红线再犯 · 4个月同类信号</span></div><p class="redline-stop"><strong>停止：</strong>不以放量、一次回拉或单票唯一性代替核心地位与市场主导风格；ETF也不能豁免判断。</p><p class="redline-action"><strong>替代动作：</strong>只做熟悉的科技趋势或低吸；接力例外仍须严格核验唯一性与阶段。<a href="#mode-environment-fit">核对模式边界</a></p><details class="redline-evidence"><summary>6—9月科技节奏证据</summary><dl><div><dt>6月基线</dt><dd>科技节奏与个股核心识别不稳，转ETF仍须择时。</dd></div><div><dt>7月</dt><dd>多次科技追高与承接失效追加；本人回看不能按连板做。</dd></div><div><dt>8月</dt><dd>高潮后追高、补涨期做非主导科技与ETF。</dd></div><div><dt>9月</dt><dd>西陇非唯一高标参与并追加。</dd></div></dl></details></li>
 <li id="redline-exit"><div class="redline-heading"><span class="redline-number">04</span><h3>选对龙头，却没有把天时变成兑现</h3><span class="redline-frequency">至少3个月有证据</span></div><p class="redline-stop"><strong>停止：</strong>不把“选对龙头”当成退出豁免；弱环境不沿用强环境的持有预期与风险预算。</p><p class="redline-action"><strong>替代动作：</strong>开仓前写好强弱环境退出与回撤保护。触发个人监管压力时，按该票预案的80%/20%处理，不混同账户仓位预算。<a href="#environment-position-plan">查看两套退出节奏</a></p><details class="redline-evidence"><summary>6—9月退出保护证据</summary><dl><div><dt>6月基线</dt><dd>大有周一扩大利润，次日保护不足回吐。</dd></div><div><dt>7月</dt><dd>未计独立证据。</dd></div><div><dt>8月</dt><dd>最高标弱开未及时保护，风范等样本暴露退出缺口。</dd></div><div><dt>9月</dt><dd>闽东高度压力下兑现不足；国芳尾端与爱仕达退出问题。</dd></div></dl></details></li>
@@ -32,17 +32,18 @@
 <p class="redline-source-note">来源：本人提供的6—9月再犯矩阵。统计的是有来源的覆盖月份，不是精确交易次数；同一事件可对应多类错误，类别数不能相加成闭环数。9月本人概括6次主要失误闭环，不作为6—9月总次数。“再犯”指同类行为在后续发生，不是新增虚拟亏损；不把桂林的自动回补标记升级为本人未确认的违规。80%/20%保留为个人持仓处理口径，不是通用监管规则。</p>
 </section>
 <section class="section execution-upgrade" id="execution-upgrade" aria-labelledby="execution-upgrade-title">
-<div class="section-head"><p class="label">2.0 / 开仓前的固定顺序</p><h2 id="execution-upgrade-title"><span>天时</span><span><i aria-hidden="true">→</i>地利</span><span><i aria-hidden="true">→</i>题材</span><span><i aria-hidden="true">→</i>阶段</span><span><i aria-hidden="true">→</i>个股</span><span><i aria-hidden="true">→</i>模式</span><span><i aria-hidden="true">→</i>仓位</span><span><i aria-hidden="true">→</i>买点</span><span><i aria-hidden="true">→</i>卖点</span></h2><p>先判断天时与地利，选择题材并标注阶段，再选核心个股、匹配熟悉模式。仓位预算放在买点之前；等模式内触发条件成立再执行，买前写清卖点与失效动作，不从单票唯一性直接跳到开仓。</p></div>
-<ol class="execution-chain" aria-label="每笔开仓的九步顺序">
+<div class="section-head"><p class="label">2.0 / 开仓前的固定顺序</p><h2 id="execution-upgrade-title"><span>天时</span><span><i aria-hidden="true">→</i>地利</span><span><i aria-hidden="true">→</i>题材</span><span><i aria-hidden="true">→</i>阶段</span><span><i aria-hidden="true">→</i>个股</span><span><i aria-hidden="true">→</i>地位</span><span><i aria-hidden="true">→</i>模式</span><span><i aria-hidden="true">→</i><b>仓位<small>（强天时还是弱天时）</small></b></span><span><i aria-hidden="true">→</i><b>买点<small>（择日和分时）</small></b></span><span><i aria-hidden="true">→</i><b>卖点<small>（择日和分时）</small></b></span></h2><p>先判断天时与地利，选择题材并标注阶段，再筛选个股、确认地位、匹配熟悉模式。仓位先区分强天时还是弱天时，再定风险预算；买点和卖点都要分别写清择日与分时，不从单票唯一性直接跳到开仓。</p></div>
+<ol class="execution-chain" aria-label="每笔开仓的十步顺序">
 <li><span>01 / 天时</span><strong>市场能不能做</strong><p>赚钱效应最重要，情绪周期次重要；同时检查亏钱效应、监管压力、连板高度与市场主导风格。</p></li>
 <li><span>02 / 地利</span><strong>辨清题材竞争与市场阵眼</strong><p>比较题材强度、预期、持续性与节奏，观察更强方向是否卡位，并锚定市场情绪核心。</p></li>
 <li><span>03 / 题材</span><strong>选择最有预期的方向</strong><p>在地利判断中筛选题材，结合催化、容量、梯队与核心反馈，不因单票强就跳过题材筛选。</p></li>
 <li><span>04 / 阶段</span><strong>定位后再谈参与</strong><p>分别标注新题材、旧题材、总龙与补涨所处阶段。阶段是前置条件，不是买后解释。</p></li>
-<li><span>05 / 个股</span><strong>选择被市场确认的核心</strong><p>核对龙头七维、唯一性、卡位与量能共振。同身位竞争未结束，不自封龙头。</p></li>
-<li><span>06 / 模式</span><strong>匹配熟悉战法</strong><p>结合天时、题材阶段与核心身份选择普通龙头、补涨、切换或二波。有符合条件的补涨优先做补涨。</p></li>
-<li><span>07 / 仓位</span><strong>先定最大可承受损失</strong><p>先写总仓、单票预算和最大亏损，再决定数量。预算是有条件的上限，不是每天买满的任务。</p></li>
-<li><span>08 / 买点</span><strong>分清哪一天、哪个分时点</strong><p>是弱转强日还是转强确认日？是半路还是上板扫板？按模式规定执行，没有熟悉模式内买点就等待。</p></li>
-<li><span>09 / 卖点</span><strong>买前写好失效动作</strong><p>写清离场、减仓条件及执行节点。天时偏弱先兑现溢价；天时好且逻辑有效才延长持有。</p></li>
+<li><span>05 / 个股</span><strong>从题材中筛选候选个股</strong><p>比较量能节奏、承接与题材或市场共振，选择值得继续核验的个股；个股强不等于核心地位已经成立。</p></li>
+<li><span>06 / 地位</span><strong>确认身位、核心身份与唯一性</strong><p>核对龙头七维、题材内与跨题材唯一性、市场核心地位和卡位结果。同身位竞争未结束，不自封龙头。</p></li>
+<li><span>07 / 模式</span><strong>匹配熟悉战法</strong><p>结合天时、题材阶段与确认后的个股地位选择普通龙头、补涨、切换或二波。有符合条件的补涨优先做补涨。</p></li>
+<li><span>08 / 仓位</span><strong>先区分强天时还是弱天时</strong><p>按强弱天时选择仓位与退出预算，先写总仓、单票预算和最大亏损，再决定数量。预算是有条件的上限，不是每天买满的任务。</p></li>
+<li><span>09 / 买点</span><strong>择日与分时分别确认</strong><p>择日：弱转强日还是转强确认日？分时：半路、上板扫板还是回封？按模式规定执行，没有熟悉模式内买点就等待。</p></li>
+<li><span>10 / 卖点</span><strong>择日与分时提前写清</strong><p>择日：哪一天、哪个阶段兑现或因失效退出？分时：哪个触发节点减仓或清仓？弱天时优先兑现，强天时仅在逻辑有效时延长持有。</p></li>
 </ol>
 <dl class="execution-lessons">
 <div><dt>01 · 阶段是前置条件，不是买后解释</dt><dd>每日分别标注新题材、旧题材、总龙与补涨所处阶段。有补涨优先补涨；切换例外要有更强题材效应、合适节点与较低试错仓位。</dd></div>
@@ -249,7 +250,7 @@
 <div><dt><span>01 / 天时</span>能不能做、最匹配哪种模式</dt><dd>看监管压力、连板高度限制、赚钱效应（最重要）、亏钱效应、情绪周期（次重要）、市场主导风格与短线炒作情绪，决定参与资格、战法模式与总仓预算。</dd></div>
 <div><dt><span>02 / 地利</span>选择最有预期的题材</dt><dd>比较题材强度、题材预期、持续性与节奏、题材阶段，并锚定市场情绪核心标的；不能因为单票强，就跳过题材筛选。</dd></div>
 <div><dt><span>03 / 人和</span>选择最核心的个股</dt><dd>核对龙头（或核心）量能节奏是否与题材或市场共振，再用龙头七维与唯一性检查卡位关系；个股条件再好，也不能覆盖天时给出的约束。</dd></div>
-<div><dt><span>04 / 交易</span>哪一天、哪个分时节点进出</dt><dd>沿“天时 → 地利 → 题材 → 阶段 → 个股 → 模式 → 仓位 → 买点 → 卖点”执行。仓位预算前置，再选择弱转强日或转强确认日，以及半路或上板扫板等分时节点；按对应模式进场、离场与管理仓位。</dd></div>
+<div><dt><span>04 / 交易</span>哪一天、哪个分时节点进出</dt><dd>沿“天时 → 地利 → 题材 → 阶段 → 个股 → 地位 → 模式 → 仓位（强天时还是弱天时）→ 买点（择日和分时）→ 卖点（择日和分时）”执行。先确认个股地位，按强弱天时前置仓位预算；买卖都分别选择日期、阶段和分时触发节点。</dd></div>
 </dl>
 </div>
 </section>
@@ -322,16 +323,16 @@
 <article class="worldview-pillar worldview-trading" id="worldview-trading" aria-labelledby="worldview-trading-title">
 <div class="worldview-pillar-title">
 <span>交易</span>
-<div><h3 id="worldview-trading-title">决定何时买卖、用多少仓</h3><p>天时 → 地利 → 题材 → 阶段 → 个股 → 模式 → 仓位 → 买点 → 卖点。</p></div>
+<div><h3 id="worldview-trading-title">决定何时买卖、用多少仓</h3><p>天时 → 地利 → 题材 → 阶段 → 个股 → 地位 → 模式 → 仓位（强天时还是弱天时）→ 买点（择日和分时）→ 卖点（择日和分时）。</p></div>
 </div>
 <div class="worldview-signal-list">
 <section>
 <strong>01 按顺序形成交易计划</strong>
-<p>先判断天时与地利，选择最有预期的题材，区分新旧题材、总龙与补涨阶段，再选核心个股、匹配熟悉模式。没有熟悉模式内的买点，就等待。</p>
+<p>先判断天时与地利，选择最有预期的题材，区分新旧题材、总龙与补涨阶段，再筛选个股、确认地位、匹配熟悉模式。没有熟悉模式内的买点，就等待。</p>
 </section>
 <section>
 <strong>02 先定最大亏损，再分配仓位</strong>
-<p>先写最大可承受损失，再规划建仓、加仓与减仓。弱环境总仓70%–80%、单票30%–40%；强环境条件成立时总仓可到100%、单票60%–80%，均为有条件上限，仍取模式与风控约束中的更低值。仓位不能修复错误。</p>
+<p>先区分强天时还是弱天时，写最大可承受损失，再规划建仓、加仓与减仓。弱环境总仓70%–80%、单票30%–40%；强环境条件成立时总仓可到100%、单票60%–80%，均为有条件上限，仍取模式与风控约束中的更低值。仓位不能修复错误。</p>
 </section>
 <section>
 <strong>03 哪一天、哪个分时节点进场</strong>
@@ -339,7 +340,7 @@
 </section>
 <section>
 <strong>04 卖点与失效动作提前写清</strong>
-<p>弱环境优先兑现溢价，强环境仅在逻辑有效时保留耐心。开仓前标注模式、唯一性、触发、仓位、最大亏损和失效动作；触发预案即减仓或清仓，不因买少而次日追高补仓。</p>
+<p>卖点同样分别写清择日与分时：在哪一天、哪个阶段兑现或失效，在哪个分时触发节点减仓或清仓。弱环境优先兑现溢价，强环境仅在逻辑有效时保留耐心。开仓前标注模式、唯一性、触发、仓位、最大亏损和失效动作；触发预案即执行，不因买少而次日追高补仓。</p>
 </section>
 </div>
 <nav aria-label="交易执行细则" class="worldview-trading-links">
@@ -1537,7 +1538,7 @@
 <div class="section-head">
 <p class="label">06 / 决策顺序</p>
 <h2>先判环境，再分题材，最后选动作</h2>
-<p><strong>天时 → 地利 → 题材 → 阶段 → 个股 → 模式 → 仓位 → 买点 → 卖点。</strong>先过天时与地利判断，筛选题材并标注阶段，再选核心个股、匹配模式；先安排仓位与风险预算，再等买点触发，买前写清退出条件。</p>
+<p><strong>天时 → 地利 → 题材 → 阶段 → 个股 → 地位 → 模式 → 仓位（强天时还是弱天时）→ 买点（择日和分时）→ 卖点（择日和分时）。</strong>先过天时与地利判断，筛选题材并标注阶段，再选个股、确认地位、匹配模式；按强弱天时安排仓位与风险预算，买卖分别确认择日和分时触发条件。</p>
 </div>
 <ol class="decision-checks"><li><strong>能不能做</strong><span>接力环境和次日溢价是否支持当前模式。</span></li><li><strong>值得做谁</strong><span>题材最晚四板形成强度，核心未集体失去承接。</span></li><li><strong>何时可以做</strong><span>按模式确认：主升连板看三进四／四进五；总龙二波看前高突破；补涨中位看二进三唯一性。</span></li><li><strong>什么情况退出</strong><span>先定义失效、仓位和卖点，再执行交易。</span></li></ol><details class="reading-fold"><summary><span>三类环境动作、七维定龙与共振案例</span><small></small></summary><div class="fold-content"><div class="decision-grid">
 <article class="decision-card tone-green">
@@ -1914,7 +1915,7 @@
 <div><dt>05 · 最大亏损</dt><dd>先写最大可承受损失的金额与账户比例，再决定数量，核对天时预算、模式上限与盯盘限制。</dd></div>
 <div><dt>06 · 失效动作</dt><dd>明确条件失效时减仓还是清仓、在哪个节点执行及成交检查；走弱不靠摊低成本修复错误。</dd></div>
 </dl>
-<p class="discipline-bottom-line"><strong>没有熟悉模式内买点就等待。</strong>买后复盘逐笔核对这六项，不以最后盈亏替代执行评价。<a href="#execution-upgrade">回到九步决策顺序</a></p>
+<p class="discipline-bottom-line"><strong>没有熟悉模式内买点就等待。</strong>买后复盘逐笔核对这六项，不以最后盈亏替代执行评价。<a href="#execution-upgrade">回到十步决策顺序</a></p>
 </section>
 <div class="handbook-panel" id="entry-confirmation"><p class="label">买点·两类时间分支</p><h3>高开转强可以确认，极致一字本身不买</h3><p class="rule-lead">本处主升连板买点主要为三进四、四进五；总龙二波与补涨中位分别见<a href="#strategy-5">战法5</a>、<a href="#strategy-7">战法7</a>。<strong>高开后的缩量转强确认</strong>，与<strong>极致缩量一字加速</strong>分开；高开只是信号，仍按已明确的板上或回封确认执行。</p><div class="entry-shapes"><div><span>01 / 不作为买点</span><strong>极致缩量一字加速</strong><p>板块分化后前排聚焦一字，可以体现强势，但不因此成为合适买点。</p></div><div><span>02 / 次日承接</span><strong>一字之后放量强承接</strong><p>看次日筹码交换、承接和重新转强，结合题材、唯一性与量能窗口。</p></div><div><span>03 / 当日回封</span><strong>炸板下杀后，放量承接回封</strong><p>当日已完成分歧、承接和回封确认，也可成为买点，不机械等次日。</p></div></div><p>你重视回封，是因为分歧得到承接、量能关系得到检验，获利盘与抛压经过交换，并表现出承接资金力度。具体“抛压释放充分”与“主力实力”的判断依据保留在原始解释中。</p><p><strong>华天酒店：</strong>三进四一字加速不买，同时牢记第三个半放量板的重要性。<strong>圣阳股份：</strong>保留为五板关键条件齐备后明确执行的参考。</p><details class="reading-fold explanation"><summary><span>华天酒店、四类买点形态与回封的完整解释</span><small>展开阅读</small></summary><div class="fold-content">
 <p><strong>共同前提：</strong>模式启用、题材最晚四板已展现强板块效应且当下仍有持续性、唯一身位已形成、量能合理、核心承接未触发回避。达到某个板位或某次量能计数，均不单独构成交易。</p>

@@ -467,10 +467,10 @@ body.handbook-edition { background: var(--bg); }
 #execution-upgrade-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; font-size: 26px; line-height: 1.6; letter-spacing: 0; }
 #execution-upgrade-title > span { display: inline-flex; align-items: baseline; gap: 10px; white-space: nowrap; }
 #execution-upgrade-title i { color: #75837a; font-size: 18px; font-style: normal; }
-.execution-chain { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; padding: 0; margin: 26px 0; list-style: none; }
+.execution-chain { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; padding: 0; margin: 26px 0; list-style: none; }
 .execution-chain > li { min-width: 0; padding-top: 12px; border-top: 2px solid #99bba6; }
-.execution-chain > li:nth-child(7) { border-color: #8e6761; }
-.execution-chain > li:nth-child(8) { border-color: #b48840; }
+.execution-chain > li:nth-child(8) { border-color: #8e6761; }
+.execution-chain > li:nth-child(9) { border-color: #b48840; }
 .execution-chain > li > span { display: block; margin-bottom: 8px; color: var(--green); font-size: 12px; font-weight: 650; }
 .execution-chain strong { font-size: 17px; line-height: 1.65; }
 .execution-chain p { margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.85; }
@@ -521,6 +521,8 @@ body.handbook-edition { background: var(--bg); }
 #handbook-order > span { display: inline-flex; align-items: baseline; gap: 10px; color: var(--ink); white-space: nowrap; }
 #handbook-order i { color: #6b7971; font-size: 20px; font-style: normal; }
 #handbook-order .position-step { border-bottom: 2px solid #ae2f3a; }
+#handbook-order b, #execution-upgrade-title b { display: inline-block; font: inherit; }
+#handbook-order small, #execution-upgrade-title small { display: block; max-width: 160px; color: var(--muted); font-size: 14px; line-height: 1.6; white-space: normal; }
 .redline-jump { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 18px; color: #a32835; font-size: 15px; font-weight: 650; }
 .redline-jump:hover { text-decoration: underline; text-underline-offset: 4px; }
 .content > .recurring-errors { padding: 28px 12px; border: 0; border-top: 3px solid #ae2f3a; border-bottom: 1px solid #e4c8cb; border-radius: 0; background: transparent; box-shadow: none; }
