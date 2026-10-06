@@ -23,9 +23,9 @@ test('all three views consume the same lessons and retain the main rhythms plus 
   for (const file of ['index.html', 'framework-model/index.html', '资料库 - 龙头周期复盘/index.html']) {
     const html = read(file);
     assert.match(html, /data-october-lessons/);
-    assert.match(html, /assets\/data\/october-lessons.js\?v=20261006-integrated/);
-    assert.match(html, /assets\/js\/october-lessons.js\?v=20261006-integrated/);
-    assert.match(html, /assets\/css\/october-lessons.css\?v=20261006-integrated/);
+    assert.match(html, /assets\/data\/october-lessons.js\?v=20261006-modules/);
+    assert.match(html, /assets\/js\/october-lessons.js\?v=20261006-modules/);
+    assert.match(html, /assets\/css\/october-lessons.css\?v=20261006-modules/);
   }
 });
 
@@ -130,6 +130,12 @@ test('integrated chapters retain every lesson exactly once without a second upda
     assert.deepEqual(points, expected, file);
     assert.equal(nodes.filter((node) => node.className === 'lesson-rhythm').length, 4, file);
     assert.equal(nodes.filter((node) => node.className === 'lesson-allocation').length, 1, file);
+    assert.equal(nodes.filter((node) => ['details', 'summary'].includes(node.tag)).length, 0, file);
+    for (const node of nodes.filter((node) => node.hasAttribute('data-lesson-point'))) {
+      assert.equal(node.tag, 'article');
+      assert.ok(node.hasAttribute('data-kind'));
+      assert.ok(node.children.some((child) => child.tag === 'ul' && child.children.length >= 3));
+    }
     assert.doesNotMatch(html, /10月更新 · 题材节奏、仓位与交易纪律|最新节奏与交易纪律/);
   }
 });
@@ -151,7 +157,7 @@ test('scoped handbook content belongs to its corresponding logic and legacy link
   const casePage = read('资料库 - 龙头周期复盘/index.html');
   const caseApp = read('资料库 - 龙头周期复盘/assets/app.js');
   assert.match(casePage, /id="cycle-latest-lessons" class="lesson-anchor"/);
-  assert.match(casePage, /<details class="cycle-history-models">/);
+  assert.match(casePage, /<section class="rule-section cycle-history-models">/);
   assert.match(casePage, /08.27 → 08.28 \/ 万向德农/);
   assert.match(casePage, /09.07 → 09.08 \/ 亚盛集团/);
   assert.match(casePage, /不假设能买到/);
@@ -176,7 +182,7 @@ test('shared renderer makes six lessons and linked K/volume charts with function
   };
   vm.runInNewContext(read('assets/js/october-lessons.js'), browser);
   vm.runInNewContext(read('assets/js/agriculture-replay.js'), browser);
-  assert.equal(lessonsRoot.children.filter((child) => child.tag === 'details').length, 6);
+  assert.equal(lessonsRoot.children.filter((child) => child.tag === 'section').length, 6);
   assert.equal(charts.length, 3);
   charts.forEach((chart) => {
     assert.equal(chart.option.series[0].type, 'candlestick');
@@ -189,4 +195,30 @@ test('shared renderer makes six lessons and linked K/volume charts with function
   assert.equal(buttons.children[2].attrs['aria-pressed'], 'true');
   assert.equal(charts[0].action.startValue, data.stocks[0].days.findIndex((day) => day.date === '2026-08-24'));
   assert.equal(charts[0].action.endValue, data.stocks[0].days.findIndex((day) => day.date === '2026-09-03'));
+});
+
+test('two execution models expose buy, sell, allocation and invalidation modules side by side', () => {
+  for (const id of ['strategy-5', 'strategy-7']) {
+    const start = handbook.indexOf(`<article class="cycle-method" id="${id}"`);
+    const end = handbook.indexOf('<p class="cycle-source-note">', start);
+    const model = handbook.slice(start, end);
+    assert.ok(model.includes('strategy-execution-grid'), id);
+    assert.ok(model.includes('买点 ·'), id);
+    assert.ok(model.includes('卖点 ·'), id);
+    assert.ok(model.includes('仓位 ·'), id);
+    assert.ok(model.includes('失效与禁区'), id);
+    assert.doesNotMatch(model, /<details|<summary|data-lesson-open/);
+  }
+  assert.match(handbook, /卖点 · 四板板上兑现/);
+  assert.match(handbook, /买点 · 当天尾盘确认/);
+});
+
+test('only source archives and mobile navigation retain collapse controls in the handbook', () => {
+  for (const [tag] of handbook.matchAll(/<details\b[^>]*>/g)) {
+    assert.match(tag, /mobile-contents|redline-evidence|source-collection|raw-record|agriculture-day|agriculture-daily-records/, tag);
+  }
+  assert.doesNotMatch(handbook, /id="readingToggle"/);
+  assert.doesNotMatch(handbook, /展开阅读|各节可展开查看/);
+  assert.doesNotMatch(read('assets/js/main.js'), /readingToggle|updateReadingToggle/);
+  assert.equal(Object.keys(lessons.structuredPoints).length, 22);
 });

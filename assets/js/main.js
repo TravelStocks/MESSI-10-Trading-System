@@ -7,9 +7,7 @@ const sections = [...new Set(tocLinks
 const stateCards = [...document.querySelectorAll(".state-card")];
 const modePanel = document.querySelector("#modePanel");
 const compareTable = document.querySelector("#compareTable");
-const readingToggle = document.querySelector("#readingToggle");
 const mobileContents = document.querySelector(".mobile-contents");
-const readingDetails = [...document.querySelectorAll("details.reading-fold, details.handbook-case, .details-grid details")];
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const modeCopy = {
@@ -115,29 +113,8 @@ function scrollToHashTarget() {
     target.focus({ preventScroll: true });
     updateProgress();
     updateToc();
-    updateReadingToggle();
   });
 }
-
-function updateReadingToggle() {
-  if (!readingToggle) return;
-  const expanded = readingDetails.length > 0 && readingDetails.every((detail) => detail.open);
-  readingToggle.setAttribute("aria-pressed", String(expanded));
-  readingToggle.textContent = expanded ? "收起详解" : "展开详解";
-}
-
-readingToggle?.addEventListener("click", () => {
-  const expand = !readingDetails.every((detail) => detail.open);
-  const anchor = [...sections].reverse().find((section) => section.getClientRects().length && section.getBoundingClientRect().top <= stickyHeight() + 64);
-  const oldTop = anchor?.getBoundingClientRect().top;
-  readingDetails.forEach((detail) => { detail.open = expand; });
-  requestAnimationFrame(() => {
-    if (anchor) window.scrollBy({ top: anchor.getBoundingClientRect().top - oldTop, behavior: "instant" });
-    updateReadingToggle();
-    updateProgress();
-    updateToc();
-  });
-});
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", () => {
@@ -168,7 +145,6 @@ function scheduleRender() {
     renderPending = false;
     updateProgress();
     updateToc();
-    updateReadingToggle();
   });
 }
 window.addEventListener("scroll", scheduleRender, { passive: true });
@@ -180,4 +156,3 @@ window.addEventListener("hashchange", scrollToHashTarget);
 
 updateProgress();
 updateToc();
-updateReadingToggle();

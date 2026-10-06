@@ -8,9 +8,9 @@
 <meta content="MESSI-10交易系统手册：天时 → 地利 → 题材 → 阶段 → 个股 → 地位 → 模式 → 仓位（强天时还是弱天时）→ 买点（择日和分时）→ 卖点（择日和分时）。总龙二波与补涨买点分开确认，每笔开仓先写风险与失效动作。" name="description"/>
 <link href="./assets/css/styles.css?v=20260926" rel="stylesheet"/>
 <link href="./assets/css/handbook.css?v=20260927-14" rel="stylesheet"/><link href="./assets/css/modules.css?v=20261006-framework" rel="stylesheet"/>
-<link href="./assets/css/october-lessons.css?v=20261006-integrated" rel="stylesheet"/>
-<script defer src="./assets/data/october-lessons.js?v=20261006-integrated"></script>
-<script defer src="./assets/js/october-lessons.js?v=20261006-integrated"></script>
+<link href="./assets/css/october-lessons.css?v=20261006-modules" rel="stylesheet"/>
+<script defer src="./assets/data/october-lessons.js?v=20261006-modules"></script>
+<script defer src="./assets/js/october-lessons.js?v=20261006-modules"></script>
 <script defer src="./assets/vendor/echarts-6.0.0.min.js"></script>
 <script defer src="./assets/data/agriculture-kline.js?v=20261006"></script>
 <script defer src="./assets/js/agriculture-replay.js?v=20261006"></script>
@@ -19,7 +19,7 @@
 <div aria-hidden="true" class="progress" id="progress"></div>
 <header class="topbar">
 <a aria-label="返回顶部" class="brand" href="#top"><span aria-hidden="true" class="brand-monogram">M10<span>.</span></span><span>MESSI-10 <em>交易系统手册</em></span></a>
-<div class="topbar-meta"><span class="edition-tag">2.0 / 2026.10.05</span><button aria-pressed="false" id="readingToggle" type="button">展开详解</button></div>
+<div class="topbar-meta"><span class="edition-tag">2.0 / 2026.10.05</span><a class="topbar-archive" href="#source-records">原始档案</a></div>
 </header>
 <div class="layout" id="top">
 <aside aria-label="页面目录" class="sidebar"><div class="toc-head"><p>READING GUIDE</p><span>先判断，再出手</span></div><nav aria-label="章节目录" class="toc"><div class="nav-group quick-nav"><p>常用入口</p><a class="toc-link" href="#execution-upgrade">开仓总纲 2.0</a><a class="toc-link" href="#resources">战法与工具</a><a class="toc-link" href="#case-index">案例索引</a></div><div class="nav-group"><p>认知与环境</p><a class="toc-link" href="#overview"><span>01</span>执行总览</a><a class="toc-link" href="#worldview"><span>02</span>交易世界观</a><a class="toc-link" href="#speculation"><span>03</span>市场启停</a></div><div class="nav-group"><p>题材与个股</p><a class="toc-link" href="#classification"><span>04</span>题材与量能</a><a class="toc-link" href="#watchlist"><span>05</span>唯一性与票池</a><a class="toc-link" href="#decision"><span>06</span>决策顺序</a></div><div class="nav-group"><p>执行与风控</p><a class="toc-link" href="#cycle"><span>07</span>情绪周期</a><a class="toc-link" href="#dragon"><span>08</span>龙头主升</a><a class="toc-link" href="#relay"><span>09</span>低位接力</a><a class="toc-link" href="#risk"><span>10</span>回避与退出</a><a class="toc-link" href="#trade"><span>11</span>买点确认</a><a class="toc-link" href="#position"><span>12</span>仓位纪律</a></div><div class="nav-group"><p>复盘与资料</p><a class="toc-link" href="#review"><span>13</span>复盘验证</a><a class="toc-link" href="#appendix"><span>14</span>术语与原话</a></div></nav><div class="nav-footer"><a href="#source-records">21条完整原话 <span>↗</span></a></div></aside>
@@ -143,8 +143,8 @@
 <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
 </a></div></div></section>
 <section class="section case-index" id="case-index"><div class="section-head"><p class="label">案例索引</p><h2>每个案例，回到它说明的规则</h2><p>案例按个人复盘口径保留；大唐发电的逐日资料附有来源。</p></div><div class="case-directory"><a href="#case-pk"><span>同身位PK</span><strong>华电能源、绿发电力；龙版、大晟、欢瑞</strong><i aria-hidden="true">↗</i></a><a href="#case-sanfang"><span>题材衰退</span><strong>三房巷、赤天化与首板情绪股</strong><i aria-hidden="true">↗</i></a><a href="#case-fengfan"><span>强度出现太晚</span><strong>风范股份</strong><i aria-hidden="true">↗</i></a><a href="#case-jinjian"><span>题材被卡位</span><strong>金健米业：农业与医药补涨</strong><i aria-hidden="true">↗</i></a><a href="#case-agriculture-2026"><span>总龙与两轮补涨</span><strong>农业：金健米业、万向德农、亚盛集团</strong><i aria-hidden="true">↗</i></a><a href="#volume-window"><span>小成交额与量能窗口</span><strong>百花医药、津药药业、传智教育</strong><i aria-hidden="true">↗</i></a><a href="#case-huatian"><span>一字与承接</span><strong>华天酒店</strong><i aria-hidden="true">↗</i></a><a href="#case-zhongnan"><span>连续一字风险</span><strong>中南文化</strong><i aria-hidden="true">↗</i></a><a href="#entry-confirmation"><span>五板关键条件确认</span><strong>圣阳股份</strong><i aria-hidden="true">↗</i></a><a href="#case-jintang"><span>买入后条件变化</span><strong>金螳螂</strong><i aria-hidden="true">↗</i></a><a href="#case-datang-2026"><span>接力环境降温</span><strong>2026年5月，大唐发电</strong><i aria-hidden="true">↗</i></a></div></section>
-<section aria-label="周期作战图" class="cycle-map-section section" id="overview"><div class="section-head"><p class="label">01 / 执行总览</p><h2>主攻三进四、四进五</h2><p>三板起重点观察。先过题材、唯一性与量能三道判断，再选择买点。</p></div><ol class="execution-path"><li><span>01</span><div><strong>市场允许</strong><p>中高位有溢价，失败者有承接。</p></div></li><li><span>02</span><div><strong>题材持续</strong><p>最晚四板形成强板块效应。</p></div></li><li><span>03</span><div><strong>身份明确</strong><p>至少题材内唯一，不抢未决PK。</p></div></li><li><span>04</span><div><strong>量能确认</strong><p>五板前完成必要放量，再看转强。</p></div></li></ol><p class="scope-note">本手册记录个人执行规则与复盘经验；规则的执行优先级和效果验证分别讨论。各节可展开查看完整依据、案例和对应原话。<a href="#cycle-stage-strategies">查看不同阶段对应战法的总览图</a>。</p>
-<details class="reading-fold"><summary><span>周期作战图与仓位速记</span><small>保留完整图示与五类周期动作</small></summary><div class="fold-content"><div class="top-cycle-map">
+<section aria-label="周期作战图" class="cycle-map-section section" id="overview"><div class="section-head"><p class="label">01 / 执行总览</p><h2>主攻三进四、四进五</h2><p>三板起重点观察。先过题材、唯一性与量能三道判断，再选择买点。</p></div><ol class="execution-path"><li><span>01</span><div><strong>市场允许</strong><p>中高位有溢价，失败者有承接。</p></div></li><li><span>02</span><div><strong>题材持续</strong><p>最晚四板形成强板块效应。</p></div></li><li><span>03</span><div><strong>身份明确</strong><p>至少题材内唯一，不抢未决PK。</p></div></li><li><span>04</span><div><strong>量能确认</strong><p>五板前完成必要放量，再看转强。</p></div></li></ol><p class="scope-note">本手册记录个人执行规则与复盘经验；规则的执行优先级和效果验证分别讨论。执行规则与案例直接呈现；对应原始记录保留在独立档案。<a href="#cycle-stage-strategies">查看不同阶段对应战法的总览图</a>。</p>
+<section class="rule-section"><header class="rule-section-head"><h4><span>周期作战图与仓位速记</span><small>保留完整图示与五类周期动作</small></h4></header><div class="fold-content"><div class="top-cycle-map">
 <div class="top-cycle-head">
 <div>
 <p class="label">先看这张图</p>
@@ -182,8 +182,8 @@
 <p>反弹结束要彻底出清，超跌反弹不能提前硬抢，必须等企稳缩量。</p>
 </article>
 </div>
-</div></div></details>
-<details class="reading-fold"><summary><span>总纲说明与三态参考</span><small>有龙、无龙、退潮，各按适用边界执行</small></summary><div class="fold-content"><section class="hero section">
+</div></div></section>
+<section class="rule-section"><header class="rule-section-head"><h4><span>总纲说明与三态参考</span><small>有龙、无龙、退潮，各按适用边界执行</small></h4></header><div class="fold-content"><section class="hero section">
 <div class="hero-copy">
 <p class="label">核心总纲</p>
 <h3>有龙做龙，<br/>无龙接力</h3>
@@ -244,7 +244,7 @@
 <h3>有龙：聚焦真龙，做主升浪</h3>
 </div>
 <p>只在主线明确、真龙已被七维确认时提高仓位。第一性看身位，唯一性看题材内、题材之间以及最高标抱团的唯一出口；主要做三进四、四进五；未决PK不参与，题材与量能共同确认后再执行。</p>
-</div></section></div></details></section><section aria-labelledby="worldview-title" class="worldview-section section" id="worldview">
+</div></section></div></section></section><section aria-labelledby="worldview-title" class="worldview-section section" id="worldview">
 <div class="worldview-head">
 <div>
 <p class="label">02 / 交易世界观</p>
@@ -382,7 +382,7 @@
 </dl>
 </section>
 <div class="worldview-body">
-<details class="reading-fold"><summary><span>大情绪周期的九个观察位置</span><small></small></summary><div class="fold-content"><div aria-label="短线大情绪周期" class="worldview-cycle">
+<section class="rule-section"><header class="rule-section-head"><h4><span>大情绪周期的九个观察位置</span><small></small></h4></header><div class="fold-content"><div aria-label="短线大情绪周期" class="worldview-cycle">
 <div><strong>混沌</strong><span>轻仓观察</span></div>
 <div><strong>发酵</strong><span>寻找核心</span></div>
 <div><strong>主升</strong><span>提高仓位</span></div>
@@ -392,7 +392,7 @@
 <div><strong>反弹</strong><span>验证持续性</span></div>
 <div><strong>冰点</strong><span>等待正反馈</span></div>
 <div><strong>再混沌</strong><span>重找新方向</span></div>
-</div></div></details>
+</div></div></section>
 <section class="rotation-reference" id="leader-followers-catchup" aria-labelledby="rotation-reference-title">
 <header class="rotation-reference-head"><p class="label">重点图示 / 板块内轮动</p><h3 id="rotation-reference-title">龙头、跟风与补涨</h3><p>看清启动先后、相对高度与强弱切换。</p></header>
 <div class="rotation-reference-body">
@@ -407,7 +407,7 @@
 </dl><p class="rotation-reference-key"><strong>先辨角色，再看节奏。</strong>同一板块中，龙头、跟风、补涨的启动节点与强弱变化并不相同。</p></div>
 </div>
 </section>
-<details class="reading-fold"><summary><span>龙头、补涨、切换的能力边界</span><small>主升、总龙二波与补涨中位按条件区分</small></summary><div class="fold-content"><div aria-labelledby="short-term-methods-title" class="short-term-methods">
+<section class="rule-section"><header class="rule-section-head"><h4><span>龙头、补涨、切换的能力边界</span><small>主升、总龙二波与补涨中位按条件区分</small></h4></header><div class="fold-content"><div aria-labelledby="short-term-methods-title" class="short-term-methods">
 <div class="short-term-methods-head">
 <div>
 <span>短线基本手法</span>
@@ -435,8 +435,8 @@
 <strong>现阶段：先确认旧方向退潮与新方向共振</strong>
 </article>
 </div>
-</div></div></details>
-<details class="reading-fold"><summary><span>交易：买卖点、仓位管理与执行纪律</span><small>含趋势分工与每日闭环</small></summary><div class="fold-content"><div aria-label="仓位买卖点与逻辑" class="worldview-discipline">
+</div></div></section>
+<section class="rule-section"><header class="rule-section-head"><h4><span>交易：买卖点、仓位管理与执行纪律</span><small>含趋势分工与每日闭环</small></h4></header><div class="fold-content"><div aria-label="仓位买卖点与逻辑" class="worldview-discipline">
 <article>
 <span>买点</span>
 <strong>没有好买点，就不要硬买</strong>
@@ -499,7 +499,7 @@
 <li>盘后统计：晋级率、次日溢价、炸板与断板反馈。</li>
 </ol>
 </article>
-</div></div></details>
+</div></div></section>
 </div>
 </section>
 <section aria-labelledby="speculation-title" class="speculation-section section" id="speculation">
@@ -510,9 +510,9 @@
 <p>短线投机行情不是按月份平均出现，而是由一个能打高度、能走二波的总龙打开风偏后，才可能出现一段可做窗口；历史记录约1.5到2个月，不据此预设固定持续时间。</p>
 </div>
 <p class="speculation-thesis">先找“开启行情的总龙”，再判断投机情绪是否已经打开；窗口没打开时，不要硬做月度均值，只做小仓试错和等待。</p>
-</div><div class="handbook-panel" id="regime-state"><p class="label">市场适配</p><h3>先看赚钱效应，再决定是否启用</h3><p class="rule-lead">连续四个及以上缩量一字板的高度龙，是开启观察信号；真正启用，还要看换手梯队和次日溢价。<strong>中高位负反馈严重、封板后普遍没有溢价，就暂停。</strong></p><div class="feedback-metrics"><div><span>01 / 晋级</span><p>最近一段时间，三进四、四进五的晋级表现。</p></div><div><span>02 / 成功者</span><p>昨日涨停群体，今天普遍有溢价还是亏损。</p></div><div><span>03 / 失败者</span><p>昨日炸板、断板股，今天修复还是继续大跌。</p></div></div><p>关闭判断结合赚钱效应、主导风格迁移、监管压力、高标杀跌及修复失败；不以单只高标继续上涨代替整体反馈。五月底、六月中的负反馈阶段是原有复盘提醒。</p><details class="reading-fold explanation"><summary><span>启用、观察、暂停与恢复的完整判据</span><small>展开阅读</small></summary><div class="fold-content">
-<p>当前主攻的是三进四、四进五的连续晋级模式。先识别市场正在奖励什么，再决定是否启用；中高位负反馈严重、封板后普遍没有可兑现溢价时，暂停该模式。五月底、六月中曾被记录为负反馈较重的阶段，具体日期仍待逐日复核。趋势、反包或低位轮动有机会，不代表中高位连续接力仍然适用。</p>
-<p><strong>开启观察：</strong>高度龙出现、连续四个及以上的一字缩量板向上打开空间，是个人经验中的重要信号；还要看到换手梯队晋级、题材扩散与次日溢价。负责打开空间的一字高标可以作为情绪观察对象，并不因此成为自己的买点。</p>
+</div><div class="handbook-panel" id="regime-state"><p class="label">市场适配</p><h3>先看赚钱效应，再决定是否启用</h3><p class="rule-lead">连续四个及以上缩量一字板的高度龙，是开启观察信号；真正启用，还要看换手梯队和次日溢价。<strong>中高位负反馈严重、封板后普遍没有溢价，就暂停。</strong></p><div class="feedback-metrics"><div><span>01 / 晋级</span><p>最近一段时间，三进四、四进五的晋级表现。</p></div><div><span>02 / 成功者</span><p>昨日涨停群体，今天普遍有溢价还是亏损。</p></div><div><span>03 / 失败者</span><p>昨日炸板、断板股，今天修复还是继续大跌。</p></div></div><p>关闭判断结合赚钱效应、主导风格迁移、监管压力、高标杀跌及修复失败；不以单只高标继续上涨代替整体反馈。五月底、六月中的负反馈阶段是原有复盘提醒。</p><section class="rule-section explanation"><header class="rule-section-head"><h4><span>启用、观察、暂停与恢复的完整判据</span></h4></header><div class="fold-content">
+<ul class="rule-bullets"><li>当前主攻的是三进四、四进五的连续晋级模式。先识别市场正在奖励什么，再决定是否启用；中高位负反馈严重、封板后普遍没有可兑现溢价时，暂停该模式。五月底、六月中曾被记录为负反馈较重的阶段，具体日期仍待逐日复核。趋势、反包或低位轮动有机会，不代表中高位连续接力仍然适用。</li>
+<li><strong>开启观察：</strong>高度龙出现、连续四个及以上的一字缩量板向上打开空间，是个人经验中的重要信号；还要看到换手梯队晋级、题材扩散与次日溢价。负责打开空间的一字高标可以作为情绪观察对象，并不因此成为自己的买点。</li></ul>
 <div aria-label="状态对照表" class="handbook-table-wrap" role="region" tabindex="0"><table class="handbook-table"><thead><tr><th scope="col">状态</th><th scope="col">判断依据</th><th scope="col">模式动作</th></tr></thead><tbody><tr><td data-label="状态">启用</td><td data-label="判断依据">换手梯队能够晋级；成功封板者有实际溢价；失败者亏损没有持续扩散。</td><td data-label="模式动作">仅执行已掌握、符合题材与个股条件的模式。</td></tr><tr><td data-label="状态">观察</td><td data-label="判断依据">高标失去带动作用；三进四、四进五受阻；单次大分歧后修复质量未定。</td><td data-label="模式动作">降低进攻意愿，检查当天是否恢复承接，以及次日参与者能否得到回报。</td></tr><tr><td data-label="状态">暂停</td><td data-label="判断依据">候选群体反复缺乏次日溢价，同时出现跨题材、跨层级负反馈和修复失败。</td><td data-label="模式动作">暂停中高位连板新介入；一只独立高标不足以恢复模式。</td></tr><tr><td data-label="状态">恢复观察</td><td data-label="判断依据">换手梯队与实际溢价重新出现，失败者的承接改善。</td><td data-label="模式动作">依据新证据重新评估，不仅凭又出现一只一字高标恢复进攻。</td></tr></tbody></table></div>
 <h4>五项固定记录</h4><ol>
 <li><strong>成功者反馈：</strong>昨日封板者今天有没有可兑现溢价，不用次日最高价代替实际可实现的收益。</li>
@@ -521,8 +521,8 @@
 <li><strong>失败者与扩散：</strong>昨日炸板、断板股是修复还是继续大跌；损失是否从单个竞争者扩展到不同题材、不同层级核心。</li>
 <li><strong>风格相对表现：</strong>指数、趋势或反包能修复，而连续晋级仍亏损，提示当前模式与主导风格不适配。</li></ol>
 <p class="handbook-note">监管函、严重异动与高标杀跌属于需要核对日期的背景和反馈，不能仅凭同步发生认定单一因果。关闭信号不必是一根确定的K线；先判断自己的模式是否仍有回报。阈值与观察窗口列入<a href="#research-questions">待统一口径</a>。</p>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-10">10</a><a href="#source-record-17">17</a><a href="#source-record-18">18</a><a href="#source-record-19">19</a></div></div>
-<details class="reading-fold"><summary><span>周期时间轴与历史窗口</span><small>华电辽能、大唐发电与后续窗口</small></summary><div class="fold-content"><div aria-label="3月底至9月初短线投机月份时间轴" class="speculation-month-axis">
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-10">10</a><a href="#source-record-17">17</a><a href="#source-record-18">18</a><a href="#source-record-19">19</a></div></div>
+<section class="rule-section"><header class="rule-section-head"><h4><span>周期时间轴与历史窗口</span><small>华电辽能、大唐发电与后续窗口</small></h4></header><div class="fold-content"><div aria-label="3月底至9月初短线投机月份时间轴" class="speculation-month-axis">
 <div aria-hidden="true" class="month-axis-labels">
 <span>3月末</span>
 <span>4月</span>
@@ -607,7 +607,7 @@
 <strong>信号：监管压制 + 高度打不开</strong>
 </article>
 </div>
-</div></div></details>
+</div></div></section>
 <div aria-label="短线投机周期执行落点" class="speculation-action">
 <div>
 <span>启动期</span>
@@ -625,11 +625,11 @@
 <p>大概率每个季度有一波，但时间不固定；窗口没来就防守，窗口来了要敢于聚焦。</p>
 </div>
 </div>
-<details class="reading-fold"><summary><span>大唐发电｜2026年5月的降温与修复</span><small>逐日证据、监管日期与风格分化</small></summary><div class="fold-content"><div class="handbook-panel" id="case-datang-2026"><p class="label">有来源的周期案例</p><h3>大唐发电前后：接力降温、反复修复与风格分化</h3>
+<section class="rule-section"><header class="rule-section-head"><h4><span>大唐发电｜2026年5月的降温与修复</span><small>逐日证据、监管日期与风格分化</small></h4></header><div class="fold-content"><div class="handbook-panel" id="case-datang-2026"><p class="label">有来源的周期案例</p><h3>大唐发电前后：接力降温、反复修复与风格分化</h3>
 <p>复盘范围明确为<strong>2026年5月</strong>。原有“5月中至7月初空窗”是阶段概括；下面的逐日资料说明，中间仍有修复与其他模式机会，不能据此断言全部短线机会同日关闭。</p>
 <div aria-label="日期对照表" class="handbook-table-wrap" role="region" tabindex="0"><table class="handbook-table"><thead><tr><th scope="col">日期</th><th scope="col">当时可核对的表现</th><th scope="col">对模式的提示</th></tr></thead><tbody><tr><td data-label="日期">5月14日</td><td data-label="当时可核对的表现">大唐发电六板后涨停开盘，炸板收跌2.31%；连板晋级率29.41%。华电辽能、华电能源放量收阴，众合科技、通达股份断板跌停。<a href="https://api3.cls.cn/share/article/2371414?app=&amp;os=ios&amp;sv=841" rel="noopener" target="_blank">焦点复盘</a>、<a href="https://finance.eastmoney.com/a/202605143737448278.html" rel="noopener" target="_blank">财联社当日复盘</a></td><td data-label="对模式的提示">高标接力开始产生亏损，并向其他个股扩散。</td></tr><tr><td data-label="日期">5月15日</td><td data-label="当时可核对的表现">大唐反包至8天7板，但连板晋级率25%、首板进二板成功率仅5%，多只人气股连续跌停。<a href="https://www.cls.cn/detail/2372470" rel="noopener" target="_blank">当日连板分析</a></td><td data-label="对模式的提示">个别龙头修复，不能替代整体换手梯队和溢价改善。</td></tr><tr><td data-label="日期">5月19日</td><td data-label="当时可核对的表现">连板晋级率回到55.55%，利仁科技七连板；京能电力盘中大幅修复，尾盘仍未完成四进五。<a href="https://api3.cls.cn/share/article/2375531?os=stibweb&amp;sv=835" rel="noopener" target="_blank">当日复盘</a></td><td data-label="对模式的提示">修复真实存在，但应检查不同题材与层级的修复质量。</td></tr><tr><td data-label="日期">5月19日·异动</td><td data-label="当时可核对的表现">上交所公开信息列示大唐发电十个交易日涨幅偏离累计达到100%的严重异常波动情形。<a href="https://www.sse.com.cn/disclosure/diclosure/public/inquirydata/index.shtml?secCode=601991" rel="noopener" target="_blank">交易所查询</a>、<a href="https://finance.sina.com.cn/roll/2026-05-20/doc-inhynmhu2883279.shtml" rel="noopener" target="_blank">公司公告（落款5月19日）</a></td><td data-label="对模式的提示">此日期晚于5月14日走弱，不能倒推为此前降温的全部原因。</td></tr><tr><td data-label="日期">5月21日</td><td data-label="当时可核对的表现">连板晋级率20%；利仁科技止步八板，威龙股份晋级七板但巨量分歧，达实智能盘中天地板；大唐连续两日盘中修复未果。<a href="https://www.cls.cn/detail/2378006" rel="noopener" target="_blank">当日复盘</a></td><td data-label="对模式的提示">高标、中位和修复交易同时承压，暂停依据增强。</td></tr><tr><td data-label="日期">5月22日</td><td data-label="当时可核对的表现">115股涨停，连板晋级率回升但最高高度降至三板；利仁科技、威龙股份跌停，达实智能、合百集团、川润股份反包。<a href="https://www.cls.cn/detail/2379168" rel="noopener" target="_blank">当日复盘</a></td><td data-label="对模式的提示">整体有赚钱机会，与中高位连续晋级可参与，已经明显分开。</td></tr></tbody></table></div>
 <p><strong>分析解释：</strong>前期大涨后的卖压、梯队修复不足、监管预期及科技容量等风格竞争，可能共同影响接力回报。这是基于资料的推断，未确认某一项是唯一原因，也没有把电力题材整体认定为逻辑已被证伪。全市场晋级率只能描述背景，不能直接代替自己的三进四、四进五样本收益。</p>
-</div></div></details>
+</div></div></section>
 </section>
 <section aria-labelledby="classification-title" class="classification-entry section" id="classification">
 <div class="section-head">
@@ -637,7 +637,7 @@
 <h2 id="classification-title">三板起观察，唯一性决定确认时点</h2>
 <p>强板块效应＋唯一身位的抱团高标＋合理量能节奏＋中位介入，追求高盈亏比。主要做三进四、四进五；板位提供观察区间，题材、身份和量能共同决定介入，不能预设晋级到七板。</p>
 </div>
-<details class="reading-fold"><summary><span>定龙与主升阶段的补充说明</span><small></small></summary><div class="fold-content"><div class="theme-grid">
+<section class="rule-section"><header class="rule-section-head"><h4><span>定龙与主升阶段的补充说明</span><small></small></h4></header><div class="fold-content"><div class="theme-grid">
 <article class="theme-card">
 <span>定龙节奏</span>
 <h3>唯一性与买点分别确认</h3>
@@ -656,8 +656,8 @@
 <p>三板及以上若同时出现两到三个有辨识度、带题材性的高标，不能只看单个票，要比较谁更能成为市场抱团的唯一出口。</p>
 <strong>操作：同池比较但不分仓猜胜负；同身位未决时不介入，竞价更强或先上板不等于最终胜出。</strong>
 </article>
-</div></div></details>
-<div class="handbook-panel" id="theme-feedback"><p class="label">地利·持续性</p><h3>强板块效应，最晚在第四板出现</h3><p class="rule-lead">逻辑正、涨停家数多、持续性强。强度随市场环境比较：没有特别强的题材时，可参考<strong>当日题材前三</strong>；买入当天仍要复查持续性。</p><p><strong>龙头与题材相互带动：</strong>龙头在中位领涨，带动其他个股冲击涨停、延展题材；题材逻辑遭到证伪、板块持续走弱，也会反过来拖累龙头。短期抱团独自打高度，不能作为可以持续脱离题材的依据。</p><div class="signal-pair"><div><span class="signal-label">仍有支持</span><strong>直接竞争者失败，其他核心稳定</strong><p>先理解为竞争淘汰，继续观察题材修复。</p></div><div><span class="signal-label caution">需要回避</span><strong>不同层级核心同时失去承接</strong><p>龙头上冲，后排跌停或核心深水无修复；即使最终封板，也要考虑次日溢价。</p></div></div><details class="reading-fold explanation"><summary><span>修复／警惕对照与三房巷、风范股份案例</span><small>展开阅读</small></summary><div class="fold-content"><div aria-labelledby="sector-effect-title" class="sector-effect-panel">
+</div></div></section>
+<div class="handbook-panel" id="theme-feedback"><p class="label">地利·持续性</p><h3>强板块效应，最晚在第四板出现</h3><p class="rule-lead">逻辑正、涨停家数多、持续性强。强度随市场环境比较：没有特别强的题材时，可参考<strong>当日题材前三</strong>；买入当天仍要复查持续性。</p><p><strong>龙头与题材相互带动：</strong>龙头在中位领涨，带动其他个股冲击涨停、延展题材；题材逻辑遭到证伪、板块持续走弱，也会反过来拖累龙头。短期抱团独自打高度，不能作为可以持续脱离题材的依据。</p><div class="signal-pair"><div><span class="signal-label">仍有支持</span><strong>直接竞争者失败，其他核心稳定</strong><p>先理解为竞争淘汰，继续观察题材修复。</p></div><div><span class="signal-label caution">需要回避</span><strong>不同层级核心同时失去承接</strong><p>龙头上冲，后排跌停或核心深水无修复；即使最终封板，也要考虑次日溢价。</p></div></div><section class="rule-section explanation"><header class="rule-section-head"><h4><span>修复／警惕对照与三房巷、风范股份案例</span></h4></header><div class="fold-content"><div aria-labelledby="sector-effect-title" class="sector-effect-panel">
 <div class="sector-effect-head">
 <div>
 <p class="label">龙头诞生的必要前提</p>
@@ -692,35 +692,35 @@
 <strong>先确认板块形成强赚钱效应，再从板块内部寻找最高辨识度和唯一性的龙头。</strong>
 </div>
 </div>
-<p><strong>时间门槛：</strong>强板块效应必须在龙头四板及之前表现出来，最晚是第四板。<strong>强度门槛：</strong>逻辑正、涨停家数多、跟随明确、持续性强；结合当时环境比较。没有特别强的题材时，可将当天题材强度前三名纳入考虑。</p>
-<p>题材排名衡量相对优势，不能解除中高位普遍无溢价时的暂停条件；四板前强过，也不能替代买入当日的持续性检查。此前“弱市8家、强市12—15家”的数字保留作历史观察参照，不再作为覆盖市场环境和题材排名的绝对底线。</p>
+<ul class="rule-bullets"><li><strong>时间门槛：</strong>强板块效应必须在龙头四板及之前表现出来，最晚是第四板。<strong>强度门槛：</strong>逻辑正、涨停家数多、跟随明确、持续性强；结合当时环境比较。没有特别强的题材时，可将当天题材强度前三名纳入考虑。</li>
+<li>题材排名衡量相对优势，不能解除中高位普遍无溢价时的暂停条件；四板前强过，也不能替代买入当日的持续性检查。此前“弱市8家、强市12—15家”的数字保留作历史观察参照，不再作为覆盖市场环境和题材排名的绝对底线。</li></ul>
 <h4>先区分竞争淘汰与板块衰退</h4>
-<p><strong>直接竞争者失败，其他核心股稳定：</strong>题材持续性仍有支持，不能仅凭一个对手倒下认定整条线衰退。<strong>多个不同层级核心一起失去承接：</strong>持续性明显减弱，应检查负反馈是否从中位扩散到低位和容量代表。</p>
-<p>后排跌停，或龙头开盘上冲时其他辨识度股下杀深水、迟迟不回到水上，属于“吹哨信号”。买入要争取次日溢价，不能因为龙头当天最终封板就忽略其他层级失去承接。</p>
+<ul class="rule-bullets"><li><strong>直接竞争者失败，其他核心股稳定：</strong>题材持续性仍有支持，不能仅凭一个对手倒下认定整条线衰退。<strong>多个不同层级核心一起失去承接：</strong>持续性明显减弱，应检查负反馈是否从中位扩散到低位和容量代表。</li>
+<li>后排跌停，或龙头开盘上冲时其他辨识度股下杀深水、迟迟不回到水上，属于“吹哨信号”。买入要争取次日溢价，不能因为龙头当天最终封板就忽略其他层级失去承接。</li></ul>
 <div aria-label="观察点对照表" class="handbook-table-wrap" role="region" tabindex="0"><table class="handbook-table"><thead><tr><th scope="col">观察点</th><th scope="col">更支持修复</th><th scope="col">更值得警惕</th></tr></thead><tbody><tr><td data-label="观察点">龙头上冲前后</td><td data-label="更支持修复">核心停止创新低、跌幅收窄。</td><td data-label="更值得警惕">核心继续创新低。</td></tr><tr><td data-label="观察点">板块参与范围</td><td data-label="更支持修复">跟随上涨的个股增加。</td><td data-label="更值得警惕">只剩高标独自上涨。</td></tr><tr><td data-label="观察点">分歧后承接</td><td data-label="更支持修复">核心收复分时均价，修复能够维持。</td><td data-label="更值得警惕">反抽很快回落，跌停个股增加。</td></tr><tr><td data-label="观察点">昨日涨停梯队</td><td data-label="更支持修复">多个层级仍有承接。</td><td data-label="更值得警惕">中位与低位同时出现明显负反馈。</td></tr></tbody></table></div>
-<p>观察变化过程：从−8%修复到−2%仍在水下，但方向改善；从+3%下跌到+0.2%仍在水上，却在走弱。水上水下只是一个参考。盘前固定同催化的核心换手股、容量代表和昨日涨停梯队，避免事后挑选弱股证明结论；修复观察时点仍需预先定义。</p>
-<details class="handbook-case" id="case-sanfang"><summary>三房巷：唯一五板高标与题材持续性背离</summary>
-<p>按个人复盘，化工从三房巷首板起经历<strong>中等强度启动 → 续强 → 分化 → 分歧 → 分歧大延续</strong>。中位龙头曾领涨并带动其他个股冲击涨停，但题材也接受逻辑与持续性检验。</p>
-<p>三房巷成为市场唯一五板高标、具备抱团辨识度时，题材已经连续三天分化分歧、板块效应消退；之后冲击六板失败并走出A杀。要研究的是三进四、四进五当时能否识别风险，不能以最终下跌倒推当时结论已确定。</p>
-<p>外部：化工分歧时电力以更强强度启动，化工分歧大延续时电力再次续强。内部：三房巷最终上板，但前一日同样涨停的中位三板赤天化与首板情绪股“璐化科技”下杀深水，未见回到水上的修复。不同层级同时失去承接，是本体系回避硬上高标的依据。</p>
-<p class="handbook-note">“璐化科技”保留原述，名称待核对。案例行情和逻辑证伪的独立依据尚未逐项核验；价格走弱不自动等于题材逻辑被证伪。</p></details>
-<details class="handbook-case" id="case-fengfan"><summary>风范股份：四板前没有建立相对领先的板块效应</summary><p>按个人复盘，风范股份四板及之前未出现符合要求的强板块效应，题材PK持续处于下风，未跻身主线前三的考虑范围。因此即使个股继续走高，也不属于该套龙头模式的候选。具体日期与题材排名待核对。</p></details>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-08">08</a><a href="#source-record-10">10</a><a href="#source-record-21">21</a></div></div>
-<div class="handbook-panel" id="theme-competition"><p class="label">地利·外部竞争</p><h3>防止更强题材把原方向卡掉</h3><p class="rule-lead">比较逻辑认可度、板块效应和持续性。新题材至少<strong>连续两天高强度</strong>，而非一天强、一天弱，才符合这里的持续性观察。</p><p class="key-rule">重点警惕：新题材持续增强，同时旧题材成交活跃度、上涨广度和核心修复能力持续下降。</p><p>同时比较两个题材的<strong>成交额占全市场比例</strong>与<strong>各自昨日涨停股的当日表现</strong>，不只数涨停家数。龙头运行中一旦出现足以卡位的更强题材，重新检查连板持续性的假设。</p><details class="reading-fold explanation"><summary><span>化工与电力、金健米业的卡位过程</span><small>展开阅读</small></summary><div class="fold-content">
-<p>市场同时运行多个题材。龙头打高度、延展持续性时，要观察是否出现逻辑更正、强度更超预期、板块效应和持续性更强的新题材。个人观察标准是<strong>至少连续两天高强度</strong>，而非一天强、一天弱。</p>
-<p class="handbook-emphasis">重点警惕：新题材持续增强，同时旧题材成交活跃度、上涨广度和核心修复能力持续下降。</p>
-<p>比较两个题材各自成交额占全市场的比例、各自昨日涨停股的当日表现、涨停家数与梯队修复。新题材强而旧题材也扩张，可能是共同活跃；新强旧弱同时发生，才更贴近卡位观察。单日涨停数量不能代替连续比较。</p>
-<details class="handbook-case" id="case-jinjian"><summary>金健米业：农业被医药补涨题材卡位后的走法变化</summary><p>按个人复盘，金健米业所在农业被医药补涨题材卡位，后续转向趋势龙走法，未继续按连板龙方式推进。个股仍有强势表现，与适合连续晋级模式，是两个判断。这个案例不推出所有被卡位龙头都会转趋势，也不自动形成趋势模式买点。</p></details>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-08">08</a><a href="#source-record-10">10</a><a href="#source-record-21">21</a></div></div><div class="handbook-panel" id="volume-window"><p class="label">量能·过程与次数</p><h3>题材节奏与个股量能，允许两种配合</h3><div class="signal-pair volume-pair"><div><span class="signal-label">理想共振</span><strong>题材回流 × 龙头缩量转强</strong><p>关注抗跌与领涨是否共同体现。</p></div><div><span class="signal-label">另一种有效过程</span><strong>题材回流 × 龙头放量／爆量</strong><p>回流提供承接时机，让获利盘与抛压得到交换。</p></div></div><p>第一波主升连板要求<strong>五板及之前完成必要放量</strong>；题材二波后的补涨量能例外见<a href="#strategy-7">战法8</a>。位置越高，获利盘释放压力越大，高位首次大分歧更难承接；不能因为当天放量，就直接否定回流共振。</p><div class="experience-rule"><span>量能经验 · 重点执行提醒</span><h4>已经三个量能板，重视可能的最后窗口</h4><p>你的原始判断是“每个龙头至少三个起量或者半放量板”。若前面已有三个，五至六板可能不再给机会；在共同条件齐备时，重视第三个合格节点，通常是<strong>缩量转强确认</strong>。百花医药、津药药业与华天酒店用于提示这一点。</p><p><strong>若五板前只有两个放量板：</strong>五板可能补量、再给承接确认机会，参考传智教育。原始次数与旧版量能折算分开记录；第三个窗口是经验提醒，不能替代其他买入条件。</p></div><p><strong>小成交额分支：</strong>百花医药、传智教育、津药药业这类半放量成交额不超过5亿元的样本，可能五至六板不给机会。三板唯一性、强板块持续性已成立，完成“爆量弱转强 → 转强确认”后，在确认节点及时执行，不机械等五板。</p><details class="reading-fold explanation"><summary><span>量能次数、折算口径、小成交额样本与边界</span><small>展开阅读</small></summary><div class="fold-content">
+<ul class="rule-bullets"><li>观察变化过程：从−8%修复到−2%仍在水下，但方向改善；从+3%下跌到+0.2%仍在水上，却在走弱。水上水下只是一个参考。盘前固定同催化的核心换手股、容量代表和昨日涨停梯队，避免事后挑选弱股证明结论；修复观察时点仍需预先定义。</li></ul>
+<section class="rule-section" id="case-sanfang"><header class="rule-section-head"><h4>三房巷：唯一五板高标与题材持续性背离</h4></header>
+<ul class="rule-bullets"><li>按个人复盘，化工从三房巷首板起经历<strong>中等强度启动 → 续强 → 分化 → 分歧 → 分歧大延续</strong>。中位龙头曾领涨并带动其他个股冲击涨停，但题材也接受逻辑与持续性检验。</li>
+<li>三房巷成为市场唯一五板高标、具备抱团辨识度时，题材已经连续三天分化分歧、板块效应消退；之后冲击六板失败并走出A杀。要研究的是三进四、四进五当时能否识别风险，不能以最终下跌倒推当时结论已确定。</li>
+<li>外部：化工分歧时电力以更强强度启动，化工分歧大延续时电力再次续强。内部：三房巷最终上板，但前一日同样涨停的中位三板赤天化与首板情绪股“璐化科技”下杀深水，未见回到水上的修复。不同层级同时失去承接，是本体系回避硬上高标的依据。</li></ul>
+<p class="handbook-note">“璐化科技”保留原述，名称待核对。案例行情和逻辑证伪的独立依据尚未逐项核验；价格走弱不自动等于题材逻辑被证伪。</p></section>
+<section class="rule-section" id="case-fengfan"><header class="rule-section-head"><h4>风范股份：四板前没有建立相对领先的板块效应</h4></header><ul class="rule-bullets"><li>按个人复盘，风范股份四板及之前未出现符合要求的强板块效应，题材PK持续处于下风，未跻身主线前三的考虑范围。因此即使个股继续走高，也不属于该套龙头模式的候选。具体日期与题材排名待核对。</li></ul></section>
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-08">08</a><a href="#source-record-10">10</a><a href="#source-record-21">21</a></div></div>
+<div class="handbook-panel" id="theme-competition"><p class="label">地利·外部竞争</p><h3>防止更强题材把原方向卡掉</h3><p class="rule-lead">比较逻辑认可度、板块效应和持续性。新题材至少<strong>连续两天高强度</strong>，而非一天强、一天弱，才符合这里的持续性观察。</p><p class="key-rule">重点警惕：新题材持续增强，同时旧题材成交活跃度、上涨广度和核心修复能力持续下降。</p><p>同时比较两个题材的<strong>成交额占全市场比例</strong>与<strong>各自昨日涨停股的当日表现</strong>，不只数涨停家数。龙头运行中一旦出现足以卡位的更强题材，重新检查连板持续性的假设。</p><section class="rule-section explanation"><header class="rule-section-head"><h4><span>化工与电力、金健米业的卡位过程</span></h4></header><div class="fold-content">
+<ul class="rule-bullets"><li>市场同时运行多个题材。龙头打高度、延展持续性时，要观察是否出现逻辑更正、强度更超预期、板块效应和持续性更强的新题材。个人观察标准是<strong>至少连续两天高强度</strong>，而非一天强、一天弱。</li>
+<li>重点警惕：新题材持续增强，同时旧题材成交活跃度、上涨广度和核心修复能力持续下降。</li>
+<li>比较两个题材各自成交额占全市场的比例、各自昨日涨停股的当日表现、涨停家数与梯队修复。新题材强而旧题材也扩张，可能是共同活跃；新强旧弱同时发生，才更贴近卡位观察。单日涨停数量不能代替连续比较。</li></ul>
+<section class="rule-section" id="case-jinjian"><header class="rule-section-head"><h4>金健米业：农业被医药补涨题材卡位后的走法变化</h4></header><ul class="rule-bullets"><li>按个人复盘，金健米业所在农业被医药补涨题材卡位，后续转向趋势龙走法，未继续按连板龙方式推进。个股仍有强势表现，与适合连续晋级模式，是两个判断。这个案例不推出所有被卡位龙头都会转趋势，也不自动形成趋势模式买点。</li></ul></section>
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-08">08</a><a href="#source-record-10">10</a><a href="#source-record-21">21</a></div></div><div class="handbook-panel" id="volume-window"><p class="label">量能·过程与次数</p><h3>题材节奏与个股量能，允许两种配合</h3><div class="signal-pair volume-pair"><div><span class="signal-label">理想共振</span><strong>题材回流 × 龙头缩量转强</strong><p>关注抗跌与领涨是否共同体现。</p></div><div><span class="signal-label">另一种有效过程</span><strong>题材回流 × 龙头放量／爆量</strong><p>回流提供承接时机，让获利盘与抛压得到交换。</p></div></div><p>第一波主升连板要求<strong>五板及之前完成必要放量</strong>；题材二波后的补涨量能例外见<a href="#strategy-7">战法8</a>。位置越高，获利盘释放压力越大，高位首次大分歧更难承接；不能因为当天放量，就直接否定回流共振。</p><div class="experience-rule"><span>量能经验 · 重点执行提醒</span><h4>已经三个量能板，重视可能的最后窗口</h4><p>你的原始判断是“每个龙头至少三个起量或者半放量板”。若前面已有三个，五至六板可能不再给机会；在共同条件齐备时，重视第三个合格节点，通常是<strong>缩量转强确认</strong>。百花医药、津药药业与华天酒店用于提示这一点。</p><p><strong>若五板前只有两个放量板：</strong>五板可能补量、再给承接确认机会，参考传智教育。原始次数与旧版量能折算分开记录；第三个窗口是经验提醒，不能替代其他买入条件。</p></div><p><strong>小成交额分支：</strong>百花医药、传智教育、津药药业这类半放量成交额不超过5亿元的样本，可能五至六板不给机会。三板唯一性、强板块持续性已成立，完成“爆量弱转强 → 转强确认”后，在确认节点及时执行，不机械等五板。</p><section class="rule-section explanation"><header class="rule-section-head"><h4><span>量能次数、折算口径、小成交额样本与边界</span></h4></header><div class="fold-content">
 <h4>回流可以对应缩量转强，也可以提供放量承接</h4>
-<p>理想情形是龙头缩量转强与题材回流共振，体现抗跌与领涨性；实际也可能借题材回流放量甚至爆量，利用该节点承接消化筹码释放。两种过程都要检查题材和价格反馈，不能预设回流日必须缩量。</p>
-<p><strong>当前体系要求五板及之前完成必要放量：</strong>位置越高，获利盘释放压力通常越需要关注，高位首次大分歧可能更难承接。放量应结合价格能否维持、回落是否收窄、重新上攻是否有效；盘中用同时间累计成交比较，不能将开盘量直接与昨日全天量相比。</p>
+<ul class="rule-bullets"><li>理想情形是龙头缩量转强与题材回流共振，体现抗跌与领涨性；实际也可能借题材回流放量甚至爆量，利用该节点承接消化筹码释放。两种过程都要检查题材和价格反馈，不能预设回流日必须缩量。</li>
+<li><strong>当前体系要求五板及之前完成必要放量：</strong>位置越高，获利盘释放压力通常越需要关注，高位首次大分歧可能更难承接。放量应结合价格能否维持、回落是否收窄、重新上攻是否有效；盘中用同时间累计成交比较，不能将开盘量直接与昨日全天量相比。</li></ul>
 <div aria-label="累计观察对照表" class="handbook-table-wrap" role="region" tabindex="0"><table class="handbook-table"><thead><tr><th scope="col">累计观察</th><th scope="col">个人经验判断</th><th scope="col">参考案例与行动</th></tr></thead><tbody><tr><td data-label="累计观察">已经有三个起量／半放量板</td><td data-label="个人经验判断">后续可能加速，五至六板不再给合适机会；把第三个符合条件的板列为五板及之前的重要、可能最后的介入窗口。</td><td data-label="参考案例与行动">百花医药、津药药业；重视缩量转强确认。华天酒店也被用于强调第三个半放量板。</td></tr><tr><td data-label="累计观察">冲击五板前仅两个放量板</td><td data-label="个人经验判断">五板可能补量，再提供承接确认机会。</td><td data-label="参考案例与行动">传智教育；观察补量时的承接、题材回流及转强，不能仅凭少一次计数就认定必有买点。</td></tr></tbody></table></div>
 <p class="handbook-note"><strong>计数口径分开：</strong>本次经验原话为“每个龙头至少三个起量或者半放量板”；旧版还有“2—3个起量折算1个半放量、1—3个半放量折算1个全放量”的观察口径。原始出现次数与折算量能单位不是同一统计，暂不混算，更不能将两者拼成机械下单规则。“第三个就是最后买点”尚待统一样本验证。</p>
 <h4>小成交额龙头与较早确认</h4>
-<p>百花医药、传智教育、津药药业被记录为小成交额龙头案例；“半放量”情况下成交额不超过<strong>5亿元</strong>，五至六板可能缺少上车机会。当三板唯一性、强板块效应与持续性已成立，完成<strong>“爆量弱转强 → 转强确认”两个连续动作</strong>时，在三进四的确认节点按计划及时执行，不再机械等待五板。金额指盘中还是全天、半放量比较基准尚待统一，成交额不能直接代替流通市值。</p>
-<p>这是体系内对较早确认机会的优先级判断。担心买不到不构成独立买入条件；错过之后不得把极致缩量一字板改成买点。上述案例行情与次数仍按个人复盘口径保留。</p>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-03">03</a><a href="#source-record-12">12</a><a href="#source-record-13">13</a><a href="#source-record-14">14</a><a href="#source-record-19">19</a></div></div>
+<ul class="rule-bullets"><li>百花医药、传智教育、津药药业被记录为小成交额龙头案例；“半放量”情况下成交额不超过<strong>5亿元</strong>，五至六板可能缺少上车机会。当三板唯一性、强板块效应与持续性已成立，完成<strong>“爆量弱转强 → 转强确认”两个连续动作</strong>时，在三进四的确认节点按计划及时执行，不再机械等待五板。金额指盘中还是全天、半放量比较基准尚待统一，成交额不能直接代替流通市值。</li>
+<li>这是体系内对较早确认机会的优先级判断。担心买不到不构成独立买入条件；错过之后不得把极致缩量一字板改成买点。上述案例行情与次数仍按个人复盘口径保留。</li></ul>
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-03">03</a><a href="#source-record-12">12</a><a href="#source-record-13">13</a><a href="#source-record-14">14</a><a href="#source-record-19">19</a></div></div>
 <section aria-labelledby="theme-volume-title" class="theme-volume-models" id="theme-volume-models">
 <header class="theme-volume-head">
 <span id="october-update" class="lesson-anchor" aria-hidden="true"></span>
@@ -771,8 +771,8 @@
 </div>
 <p class="rhythm-source-note">表内红、橙买点沿用原图；绿、蓝卖点列为条件归纳。板数、量能按原图记录，未标注量能处保留“—”。</p>
 <div class="rhythm-type-list">
-<details class="reading-fold rhythm-type" id="rhythm-type-01" open>
-<summary><span class="rhythm-number">01</span><span class="rhythm-summary"><strong>加强后分歧，回流接续</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>更强 / 续强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>更强 / 续强</span></span></span></summary>
+<section class="rule-section rhythm-type" id="rhythm-type-01">
+<header class="rule-section-head"><h4><span class="rhythm-number">01</span><span class="rhythm-summary"><strong>加强后分歧，回流接续</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>更强 / 续强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>更强 / 续强</span></span></span></h4></header>
 <div class="rhythm-body">
 <p class="rhythm-key"><b>关键判断</b>回流能否接上，是持续性的检验；龙头既可量能降档转强，也可借回流完成全放量。</p>
 <div class="rhythm-table-scroll" role="region" tabindex="0" aria-label="类型01题材阶段与量能样本">
@@ -790,9 +790,9 @@
 <div><span class="rhythm-sell-label">标准卖点 · 条件失效</span><p>回流失败，且龙头失去承接、不能回封，按退出纪律处理。</p></div>
 </div>
 </div>
-</details>
-<details class="reading-fold rhythm-type" id="rhythm-type-02">
-<summary><span class="rhythm-number">02</span><span class="rhythm-summary"><strong>回流后再分歧，检验承接</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>更强 / 续强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>分歧</span></span></span></summary>
+</section>
+<section class="rule-section rhythm-type" id="rhythm-type-02">
+<header class="rule-section-head"><h4><span class="rhythm-number">02</span><span class="rhythm-summary"><strong>回流后再分歧，检验承接</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>更强 / 续强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>分歧</span></span></span></h4></header>
 <div class="rhythm-body">
 <p class="rhythm-key"><b>关键判断</b>回流是阶段确认，次日再分歧仍需观察修复；能否承接，比是否继续缩量更重要。</p>
 <div class="rhythm-table-scroll" role="region" tabindex="0" aria-label="类型02题材阶段与量能样本">
@@ -806,9 +806,9 @@
 <div><span class="rhythm-sell-label">标准卖点 · 条件失效</span><p>分歧持续扩大、修复失败并触发失效条件，执行退出。</p></div>
 </div>
 </div>
-</details>
-<details class="reading-fold rhythm-type" id="rhythm-type-03">
-<summary><span class="rhythm-number">03</span><span class="rhythm-summary"><strong>分歧即回流，次日续强</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>更强 / 续强</span><i aria-hidden="true">→</i><span>更强 / 续强</span></span></span></summary>
+</section>
+<section class="rule-section rhythm-type" id="rhythm-type-03">
+<header class="rule-section-head"><h4><span class="rhythm-number">03</span><span class="rhythm-summary"><strong>分歧即回流，次日续强</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>更强 / 续强</span><i aria-hidden="true">→</i><span>更强 / 续强</span></span></span></h4></header>
 <div class="rhythm-body">
 <p class="rhythm-key"><b>关键判断</b>前置与标准买点是两次不同确认：先看回流日回封，再看次日量能降档后的续强。</p>
 <div class="rhythm-table-scroll" role="region" tabindex="0" aria-label="类型03题材阶段与量能样本">
@@ -821,9 +821,9 @@
 <div><span class="rhythm-sell-label">标准卖点 · 条件失效</span><p>转强失败、承接破坏并触发原有退出条件，离场。</p></div>
 </div>
 </div>
-</details>
-<details class="reading-fold rhythm-type" id="rhythm-type-04">
-<summary><span class="rhythm-number">04</span><span class="rhythm-summary"><strong>高位穿越与回流切换</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>更强 / 续强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span>分歧延续</span><i aria-hidden="true">→</i><span class="is-return">回流</span></span></span></summary>
+</section>
+<section class="rule-section rhythm-type" id="rhythm-type-04">
+<header class="rule-section-head"><h4><span class="rhythm-number">04</span><span class="rhythm-summary"><strong>高位穿越与回流切换</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>更强 / 续强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span>分歧延续</span><i aria-hidden="true">→</i><span class="is-return">回流</span></span></span></h4></header>
 <div class="rhythm-body">
 <p class="rhythm-key"><b>关键判断</b>区分穿越高标与接续标的：旧核心能否保持地位，新核心是否在回流中胜出。</p>
 <div class="rhythm-table-scroll" role="region" tabindex="0" aria-label="类型04题材阶段与量能样本">
@@ -838,9 +838,9 @@
 <div><span class="rhythm-sell-label">标准卖点 · 条件失效</span><p>旧核心失去地位且修复失败，按失效处理；新核心仍须独立确认。</p></div>
 </div>
 </div>
-</details>
-<details class="reading-fold rhythm-type" id="rhythm-type-05">
-<summary><span class="rhythm-number">05</span><span class="rhythm-summary"><strong>分歧延续后回流，再续强</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span>分歧延续</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>更强 / 续强</span></span></span></summary>
+</section>
+<section class="rule-section rhythm-type" id="rhythm-type-05">
+<header class="rule-section-head"><h4><span class="rhythm-number">05</span><span class="rhythm-summary"><strong>分歧延续后回流，再续强</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span>分歧延续</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>更强 / 续强</span></span></span></h4></header>
 <div class="rhythm-body">
 <p class="rhythm-key"><b>关键判断</b>连续分歧只提供观察背景；题材真正回流、龙头仍有地位，才进入确认环节。</p>
 <div class="rhythm-table-scroll" role="region" tabindex="0" aria-label="类型05题材阶段与量能样本">
@@ -853,9 +853,9 @@
 <div><span class="rhythm-sell-label">标准卖点 · 条件失效</span><p>回流失败，龙头承接同步走弱并触发失效条件，退出。</p></div>
 </div>
 </div>
-</details>
-<details class="reading-fold rhythm-type" id="rhythm-type-06">
-<summary><span class="rhythm-number">06</span><span class="rhythm-summary"><strong>回流再分歧，二次回流</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span>分歧延续</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>分歧</span><i aria-hidden="true">→</i><span class="is-return">回流</span></span></span></summary>
+</section>
+<section class="rule-section rhythm-type" id="rhythm-type-06">
+<header class="rule-section-head"><h4><span class="rhythm-number">06</span><span class="rhythm-summary"><strong>回流再分歧，二次回流</strong><span class="rhythm-path"><span>强</span><i aria-hidden="true">→</i><span>分化 / 分歧</span><i aria-hidden="true">→</i><span>分歧延续</span><i aria-hidden="true">→</i><span class="is-return">回流</span><i aria-hidden="true">→</i><span>分歧</span><i aria-hidden="true">→</i><span class="is-return">回流</span></span></span></h4></header>
 <div class="rhythm-body">
 <p class="rhythm-key"><b>关键判断</b>第二次回流是新的验证节点；比较板块强度、核心地位和承接，不能沿用第一次结论。</p>
 <div class="rhythm-table-scroll" role="region" tabindex="0" aria-label="类型06题材阶段与量能样本">
@@ -868,7 +868,7 @@
 <div><span class="rhythm-sell-label">标准卖点 · 条件失效</span><p>二次回流失败，或核心持续负反馈并触发失效，结束持仓。</p></div>
 </div>
 </div>
-</details>
+</section>
 </div>
 <p class="rhythm-bottom-line"><strong>买在确认，卖在失效。</strong>先有题材持续性，再谈量能节点；板数与量能都不能单独构成买点。</p>
 <div class="cycle-framework" id="trend-catchup-framework" aria-labelledby="trend-catchup-title">
@@ -877,73 +877,66 @@
 <p>连板是一致性加速，一字连板体现更强的一致性。高度上升后，获利盘与畏高资金形成分歧，仍看好题材的资金可能通过趋势上涨继续参与；低位新核心则承接连板弹性。像大人和小孩各有不同的成长节奏，两类核心共同延续题材。</p>
 <ul class="cycle-boundaries" aria-label="共同适用边界"><li>题材够大</li><li>情绪够强</li><li>总龙趋势在</li><li>无强题材卡位</li><li>补涨周期轮动</li><li>大盘不崩</li><li>监管不极端</li></ul>
 <p class="cycle-rule"><strong>总龙趋势是共同前提：总龙退出，补涨也退出。</strong>总龙断板A杀、题材无二次发酵或情绪退潮时，不把三板身位直接当作补涨买点。板块效应结束后的总龙独自穿越，不参与。</p>
-<details class="reading-fold"><summary><span>持续性、市场环境与补涨切换</span><small>交易日口径与优先级</small></summary><div class="fold-content">
+<section class="rule-section"><header class="rule-section-head"><h4><span>持续性、市场环境与补涨切换</span><small>交易日口径与优先级</small></h4></header><div class="fold-content">
 <h5>从首次启动计算交易日</h5>
-<p>我的经验分类是3天小题材、5天中题材、8天大题材、12天二波大题材、30天三波超大题材。“持续性强”至少要有看向12个交易日的预期。事前根据启动消息、叙事空间和催化预期判断，带有感性成分；事中再通过走势确认。</p>
-<p>预期节奏为<strong>强启动 → 续强 → 分化／分歧 → 回流</strong>。龙头和题材连续两次分化分歧后依然回流，是我判断持续性与超预期的线索，只能事中识别。</p>
+<ul class="rule-bullets"><li>我的经验分类是3天小题材、5天中题材、8天大题材、12天二波大题材、30天三波超大题材。“持续性强”至少要有看向12个交易日的预期。事前根据启动消息、叙事空间和催化预期判断，带有感性成分；事中再通过走势确认。</li>
+<li>预期节奏为<strong>强启动 → 续强 → 分化／分歧 → 回流</strong>。龙头和题材连续两次分化分歧后依然回流，是我判断持续性与超预期的线索，只能事中识别。</li></ul>
 <h5>先看情绪和大盘</h5>
-<p>观察涨跌停家数、市场总量能，以及上证指数、深证成指是否处在下降波段。监管环境的交易反馈，看高位连板与高辨识度标的是否出现极端负反馈。</p>
+<ul class="rule-bullets"><li>观察涨跌停家数、市场总量能，以及上证指数、深证成指是否处在下降波段。监管环境的交易反馈，看高位连板与高辨识度标的是否出现极端负反馈。</li></ul>
 <h5>旧题材仍强，有补涨先做补涨</h5>
-<p>主升阶段优先前排核心，再看分支核心、补涨与后排跟风。主线确认后倾向早进，重视3—5板唯一性身位；唯一性未出现前不大仓位押注。同身位优先换手放量、节奏稳定者。模式上首选总龙二波与补涨中位，再观察高切高和首板补涨。</p>
-<p>旧题材总龙二波优先于仅连续两天强势的新题材。新题材至少连续两天强板块效应（涨停数超过15个、板块涨幅明显）只是切换候选；旧题材仍在时，要看第三天分化分歧与第四天回流。</p>
-<p>新题材扛过第三天分歧、第四天强回流，而旧题材仅勉强维持，就切换到新题材。兼有旧、新题材标签的核心，暂按当时更强题材归属，保留判断上的困难。</p>
-<p>温和退潮、高位震荡时观察补涨与切换；主线大分歧后不能再强回流，考虑切换。极端退潮不做补涨，等待退潮基本结束后再切换。</p>
-</div></details>
+<ul class="rule-bullets"><li>主升阶段优先前排核心，再看分支核心、补涨与后排跟风。主线确认后倾向早进，重视3—5板唯一性身位；唯一性未出现前不大仓位押注。同身位优先换手放量、节奏稳定者。模式上首选总龙二波与补涨中位，再观察高切高和首板补涨。</li>
+<li>旧题材总龙二波优先于仅连续两天强势的新题材。新题材至少连续两天强板块效应（涨停数超过15个、板块涨幅明显）只是切换候选；旧题材仍在时，要看第三天分化分歧与第四天回流。</li>
+<li>新题材扛过第三天分歧、第四天强回流，而旧题材仅勉强维持，就切换到新题材。兼有旧、新题材标签的核心，暂按当时更强题材归属，保留判断上的困难。</li>
+<li>温和退潮、高位震荡时观察补涨与切换；主线大分歧后不能再强回流，考虑切换。极端退潮不做补涨，等待退潮基本结束后再切换。</li></ul>
+</div></section>
 </div>
 
 <article class="cycle-method" id="strategy-5" aria-labelledby="strategy-5-title">
 <header class="cycle-method-head"><p class="label">战法6 / 总龙二波</p><h4 id="strategy-5-title">连板龙转趋势龙：龙头二波</h4><p>第一波断板后保持高位强度，题材二次发酵、新补涨出现，与总龙突破前高形成共振。</p></header>
-<dl class="cycle-method-facts">
-<div><dt>题材确认</dt><dd>题材二次发酵，第二波出现补涨周期；短线情绪好，没有更强题材卡位。</dd></div>
-<div><dt>价格确认</dt><dd><strong>突破上一波最高价＋当日相对昨收涨幅达到5%</strong>，两项同时成立，不要求涨停。5%不以上一波最高价为基准。</dd></div>
-<div><dt>量能确认</dt><dd>不低于整理期均量；总龙已有空间高度和人气辨识度。</dd></div>
-<div><dt>实际执行</dt><dd><strong>当天尾盘确认后买，不等次日再追。</strong>在最后三分钟检查突破与涨幅仍成立后执行；最终收盘结果仍可能变化。</dd></div>
-<div><dt>联动与空间</dt><dd>还需检查<strong>补涨共振、题材反馈与监管空间</strong>；价格达标不能单独覆盖这些前提。</dd></div>
-<div><dt>窗口纪律</dt><dd><strong>窗口严格，买点基本唯一确定；错过不补买、不追。</strong>不把尾盘错过变成次日高开追仓。</dd></div>
-<div class="cycle-position"><dt>仓位安排</dt><dd><strong>在计划预算内动态配置，不机械各半仓。</strong>补涨和板块效应都很强时，可提高二波首笔；次日三板有合规机会再评估切仓，详见下方复核。</dd></div>
-</dl>
-<div id="handbook-second-wave-lessons" data-october-lessons data-lesson-sections="positions" data-lesson-points="2,3" data-lesson-title="二波首笔、次日切补涨与严格尾盘窗口" data-lesson-open="true"></div>
-<p class="cycle-rule"><strong>退出看首次深水与持续走弱：</strong>首次收盘跌幅达到或超过5%，至少减掉该持仓3/4；接近风险条件也可提前走。总龙连续两天走弱，直接卖出。</p>
+<div class="strategy-premise"><strong>适用前提</strong><ul class="rule-bullets"><li>第一波断板后无连续负反馈，高位震荡；从首轮最高点计算，收盘回撤不超过12%。</li><li>题材二次发酵，第二波出现补涨；短线情绪好，无更强题材卡位。</li><li>总龙有高度与辨识度，量能不低于整理期均量；补涨共振、题材反馈与监管空间成立。</li></ul></div>
+<div class="strategy-execution-grid">
+<div id="handbook-second-wave-buy" data-october-lessons data-lesson-sections="positions" data-lesson-points="3" data-lesson-layout="inline" data-lesson-point-title="买点 · 当天尾盘确认"></div>
+<article class="strategy-rule" data-kind="sell"><h5>卖点 · 深水与持续走弱</h5><ul class="rule-bullets"><li>首次收盘跌幅达到或超过5%：至少减掉该持仓3/4；接近条件可提前走。</li><li>连续两天走弱：直接卖出，不继续依赖反抽。</li><li>低开超过4%，不能迅速回到昨收之上：卖出；题材与补涨仍强时，可按预案等水上反抽。</li><li>尾盘卖出按最后三分钟提前执行；余仓逐步减至退出，委托后核验成交。</li></ul></article>
+<div id="handbook-second-wave-lessons" data-october-lessons data-lesson-sections="positions" data-lesson-points="2" data-lesson-layout="inline" data-lesson-point-title="仓位 · 二波首笔与切补涨"></div>
+<article class="strategy-rule" data-kind="risk"><h5>失效与禁区</h5><ul class="rule-bullets"><li>5%以昨日收盘价为基准，不是比上一波最高价再涨5%；不要求当天涨停。</li><li>窗口严格：错过不补买、不追；不能因昨日买少在次日高开追加。</li><li>价格达标不覆盖题材、量能与监管条件；尾盘确认后仍有收盘变化风险。</li></ul></article>
+</div>
 <p class="cycle-rule second-wave-trigger"><strong>二波触发口径：</strong>尾盘确认价 &gt; 上一波最高价，且（尾盘确认价 ÷ 昨日收盘价 − 1）× 100% ≥ 5%。这是同一天的联合条件；既不是比前高再涨5%，也不是次日补追的依据。</p>
-<details class="reading-fold"><summary><span>总龙识别、二波基础与持仓处理</span><small>高位震荡和低开处理</small></summary><div class="fold-content">
+<section class="rule-section"><header class="rule-section-head"><h4><span>总龙识别、二波基础与持仓处理</span><small>高位震荡和低开处理</small></h4></header><div class="fold-content">
 <h5>总龙在二波启动之前识别</h5>
-<p>以题材内空间高度最高、人气榜前列与已有辨识度确认总龙。后续表现与相对地位改变时，重新判断；最早启动只是线索之一。</p>
-<p>第一波断板后没有连续负反馈，能够高位震荡，题材仍维持强度，才有等待二波的基础。高位震荡参考是从第一波最高点计算，<strong>收盘回撤不超过12%</strong>，盘中不单独按此标准判定。</p>
+<ul class="rule-bullets"><li>以题材内空间高度最高、人气榜前列与已有辨识度确认总龙。后续表现与相对地位改变时，重新判断；最早启动只是线索之一。</li>
+<li>第一波断板后没有连续负反馈，能够高位震荡，题材仍维持强度，才有等待二波的基础。高位震荡参考是从第一波最高点计算，<strong>收盘回撤不超过12%</strong>，盘中不单独按此标准判定。</li></ul>
 <h5>连板转趋势的环境</h5>
-<p>题材体量与持续性足够、短线情绪好，且没有其他强题材卡位。连板高度受到压制，但断板没有连续负反馈时，重点观察最核心个股能否转趋势。总龙通过高位震荡等待后续发酵，后续补涨与其二波、三波可能共振。</p>
+<ul class="rule-bullets"><li>题材体量与持续性足够、短线情绪好，且没有其他强题材卡位。连板高度受到压制，但断板没有连续负反馈时，重点观察最核心个股能否转趋势。总龙通过高位震荡等待后续发酵，后续补涨与其二波、三波可能共振。</li></ul>
 <h5>高开与低开</h5>
-<p>已有持仓、仍有仓位余量时，明显高开只作为强度观察；加仓必须另有预先写明的模式内触发与风险预算。不能因前一天买少或错过尾盘，在次日高开补追。此前满仓则观望。低开跌幅超过4%，且不能迅速回到水上就卖。题材和补涨仍强时可等总龙反抽到水上，但连续两天走弱直接卖，不继续依赖反抽。水上以昨收为基准。</p>
-<p>尾盘最后三分钟提前执行，也用于卖出。剩余仓位按金字塔原则逐步减少、退出；不赌反包，不把最后1/8美元的鱼尾利润作为必须完成的收益目标。</p>
+<ul class="rule-bullets"><li>已有持仓、仍有仓位余量时，明显高开只作为强度观察；加仓必须另有预先写明的模式内触发与风险预算。不能因前一天买少或错过尾盘，在次日高开补追。此前满仓则观望。低开跌幅超过4%，且不能迅速回到水上就卖。题材和补涨仍强时可等总龙反抽到水上，但连续两天走弱直接卖，不继续依赖反抽。水上以昨收为基准。</li>
+<li>尾盘最后三分钟提前执行，也用于卖出。剩余仓位按金字塔原则逐步减少、退出；不赌反包，不把最后1/8美元的鱼尾利润作为必须完成的收益目标。</li></ul>
 <h5>模式观察</h5>
-<p>我把自己对陈小群偏好龙头二波的观察，与这一框架联系起来，关注高辨识度核心再次启动时的爆发力。“龙头死于加速”提醒我防范过度一致；分歧是否健康，仍看回流与总龙趋势。</p>
-</div></details>
+<ul class="rule-bullets"><li>我把自己对陈小群偏好龙头二波的观察，与这一框架联系起来，关注高辨识度核心再次启动时的爆发力。“龙头死于加速”提醒我防范过度一致；分歧是否健康，仍看回流与总龙趋势。</li></ul>
+</div></section>
 <p class="cycle-source-note"><a href="#case-agriculture-2026">农业经典案例：总龙与两轮补涨，穿越不做 ↗</a></p>
 </article>
 
 <article class="cycle-method" id="strategy-7" aria-labelledby="strategy-7-title">
 <header class="cycle-method-head"><p class="label">战法8 / 补涨中位</p><h4 id="strategy-7-title">总龙趋势下补涨连板龙：补涨龙中位3板</h4><p>有符合条件的补涨优先做补涨，三板是主要观察与参与节点。总龙趋势在、题材效应强、板块节奏稳，补涨核心在二进三上板时形成题材内最高连板唯一性。</p></header>
-<dl class="cycle-method-facts">
-<div><dt>共同前提</dt><dd>总龙继续趋势向上，题材有持续性与强度，补涨周期能够接力。</dd></div>
-<div><dt>标准买点</dt><dd><strong>二进三上板确认＋题材内最高连板唯一</strong>；唯一性未出现前不能大仓位参与。</dd></div>
-<div><dt>竞争者失败</dt><dd>竞争者大跌淘汰后留下的唯一性，<strong>当天不买，次日转强确认才能买</strong>；观察涨停等转强表现。</dd></div>
-<div><dt>窗口与补买</dt><dd><strong>买点基本唯一确定，三板优先。</strong>错过后再出手一定要十分谨慎；3进4需更强唯一性与环境支持，不能把汉森盈利扩成普遍追高依据。</dd></div>
-<div><dt>退出联动</dt><dd><strong>总龙退出，补涨也退出。</strong>补涨仍封板，不能替代总龙趋势这个前提。</dd></div>
-<div class="cycle-position"><dt>仓位安排</dt><dd><strong>按合规三板机会动态配置。</strong>不默认必须留另一半；总龙二波已先提高首笔时，次日补涨三板有实际可成交买点再评估切仓，确认卖出成交后配置，不扩大同题材总风险。</dd></div>
-</dl>
-<div id="handbook-supplement-exit" data-october-lessons data-lesson-sections="discipline" data-lesson-points="0" data-lesson-title="补涨三板参与，四板板上兑现" data-lesson-open="true"></div>
-<p class="cycle-rule"><strong>量能例外只放在题材二波以后：</strong>新补涨股自己的第一轮连板，也可豁免半放量、全放量等节奏；连续极致缩量一字、极致二连加速，不随意参与。</p>
-<details class="reading-fold"><summary><span>三板身位、量能例外与首板补涨</span><small>区分题材大小和参与阶段</small></summary><div class="fold-content">
+<div class="strategy-premise"><strong>适用前提</strong><ul class="rule-bullets"><li>总龙继续趋势向上，题材有强度与持续性，补涨周期能够接力。</li><li>题材内最高连板唯一性成立；唯一性未出现前，不大仓位押注。</li></ul></div>
+<div class="strategy-execution-grid">
+<article class="strategy-rule" data-kind="buy"><h5>买点 · 二进三上板确认</h5><ul class="rule-bullets"><li>择日：三板优先，买点基本唯一确定。</li><li>分时：二进三上板确认，同时检查题材内最高连板唯一性。</li><li>竞争者大跌淘汰形成唯一性：当天不买，等次日转强确认。</li><li>窗口错过后谨慎；3进4仅在更强唯一性与环境支持下评估。</li></ul></article>
+<div id="handbook-supplement-exit" data-october-lessons data-lesson-sections="discipline" data-lesson-points="0" data-lesson-layout="inline" data-lesson-point-title="卖点 · 四板板上兑现"></div>
+<article class="strategy-rule" data-kind="position"><h5>仓位 · 按合规三板机会配置</h5><ul class="rule-bullets"><li>按计划预算动态分配，不默认必须预留另一半。</li><li>二波已提高首笔：次日三板有实际可成交买点，再评估切仓。</li><li>切仓先确认卖出成交；不扩大同题材总风险。</li></ul></article>
+<article class="strategy-rule" data-kind="risk"><h5>失效与禁区</h5><ul class="rule-bullets"><li>总龙退出，补涨也退出；补涨仍封板，不替代总龙趋势前提。</li><li>不排一字，不把汉森盈利扩成普遍追高依据。</li><li>量能例外仅限题材二波以后；第一波标准不放宽，连续极致缩量一字与二连加速仍回避。</li><li>常见约四板是经验范围，不是固定高度上限；模式内退出不因后来高度改写。</li></ul></article>
+</div>
+<section class="rule-section"><header class="rule-section-head"><h4><span>三板身位、量能例外与首板补涨</span><small>区分题材大小和参与阶段</small></h4></header><div class="fold-content">
 <h5>三板是辨识与参与节点</h5>
-<p>首板难以分辨后续核心，二板可能通过加速表态，三板重点看身位与唯一性，买点基本唯一确定。错过三板后，不自动借用普通龙头的四板、五板买点；3进4仅在更强唯一性与环境支持下谨慎评估。</p>
-<p>补涨高度结合总龙空间判断，约总龙高度一半、部分只到三四板，是我的经验参考；<strong>常见约四板是经验范围，不是固定高度上限。</strong>若只预期到四板，就接受这一段收益；汉森的盈利或后续高度不能扩成普遍追高依据。</p>
-<p>题材与龙头第一波发酵，量能标准不能随意放宽。同身位优先健康换手；四板及以下烂板爆量可能消化分歧，五板及以上高位爆量烂板更需谨慎。题材二波以后，部分量能节奏可放宽，但过度一致的连续极致缩量加速仍需回避。</p>
+<ul class="rule-bullets"><li>首板难以分辨后续核心，二板可能通过加速表态，三板重点看身位与唯一性，买点基本唯一确定。错过三板后，不自动借用普通龙头的四板、五板买点；3进4仅在更强唯一性与环境支持下谨慎评估。</li>
+<li>补涨高度结合总龙空间判断，约总龙高度一半、部分只到三四板，是我的经验参考；<strong>常见约四板是经验范围，不是固定高度上限。</strong>若只预期到四板，就接受这一段收益；汉森的盈利或后续高度不能扩成普遍追高依据。</li>
+<li>题材与龙头第一波发酵，量能标准不能随意放宽。同身位优先健康换手；四板及以下烂板爆量可能消化分歧，五板及以上高位爆量烂板更需谨慎。题材二波以后，部分量能节奏可放宽，但过度一致的连续极致缩量加速仍需回避。</li></ul>
 <h5>大题材看补涨周期</h5>
-<p>大的补涨是各轮核心接力的补涨周期，各轮领涨核心与分支共同维持大周期强度。题材大小、整体情绪和持续性决定它能承载多少轮；也要锚定总龙能否高位震荡、走二波或三波。</p>
-<p>小周期减少补涨、多观察切换。缺少完整二波总龙时，补涨可能只有2—4天，四板附近结束，二板又可能一字加速。不能因为到了三板就预设空间充足。</p>
+<ul class="rule-bullets"><li>大的补涨是各轮核心接力的补涨周期，各轮领涨核心与分支共同维持大周期强度。题材大小、整体情绪和持续性决定它能承载多少轮；也要锚定总龙能否高位震荡、走二波或三波。</li>
+<li>小周期减少补涨、多观察切换。缺少完整二波总龙时，补涨可能只有2—4天，四板附近结束，二板又可能一字加速。不能因为到了三板就预设空间充足。</li></ul>
 <h5>首板阶段接受随机性</h5>
-<p>首板补涨不重仓单押，若做则平铺3—5只首板或二板候选；这与唯一性确认后的核心参与分开。首板辨识困难，仍要结合题材大小、强度与持续性。</p>
-<p>医药周期的首板观察，是在我关注的监管节点前一天尝试：关注周期内此前未涨停、小盘低价、强势直线拉升、最早涨停前两名的候选，例为澳洋健康。这一具体做法不选已有二板或几天几板的票。</p>
-</div></details>
+<ul class="rule-bullets"><li>首板补涨不重仓单押，若做则平铺3—5只首板或二板候选；这与唯一性确认后的核心参与分开。首板辨识困难，仍要结合题材大小、强度与持续性。</li>
+<li>医药周期的首板观察，是在我关注的监管节点前一天尝试：关注周期内此前未涨停、小盘低价、强势直线拉升、最早涨停前两名的候选，例为澳洋健康。这一具体做法不选已有二板或几天几板的票。</li></ul>
+</div></section>
 <p class="cycle-source-note"><a href="#case-agriculture-2026">农业经典案例：总龙与两轮补涨，穿越不做 ↗</a></p>
 </article>
 
@@ -954,20 +947,20 @@
 <p>一次失败约10%的账户损失，是我的风险承受预期，实际可能因无法成交而超过。超过时接受已经发生的损失，暂停该题材，等待切换。卖单未成交时继续尝试退出，发出委托后仍需确认实际成交。</p>
 <p>首次收盘跌幅达到或超过5%时，至少减掉该持仓3/4，余仓逐步退出；接近条件可以提前走。接近我关注的监管风险位置时主动退出，原述剩余约20个百分点作为个人观察余量，不赌反包和尾部利润。</p>
 <p class="cycle-source-note">监管100%和剩余约20个百分点按对应市场、期间、指数与公告确认。正式规则使用收盘涨跌幅偏离值等口径。<a href="https://docs.static.szse.cn/www/lawrules/rule/trade/current/W020260424690713155663.pdf" target="_blank" rel="noopener">查看深交所2026年交易规则</a>。</p>
-<details class="reading-fold"><summary><span>航天、消费与农业的案例归纳</span><small>按个人复盘口径保留</small></summary><div class="fold-content">
+<section class="rule-section"><header class="rule-section-head"><h4><span>航天、消费与农业的案例归纳</span><small>按个人复盘口径保留</small></h4></header><div class="fold-content">
 <h5>航天发展与多轮补涨</h5>
-<p>我将航天发展视为总龙，再升科技、神剑股份、雷科防务、银河电子分别理解为后续第二至第五轮补涨周期核心。部分6进7断板后没有明显负反馈，转为板块趋势核心，也由此观察消费与航天高标之间的高切高。</p>
-<p>雷科防务此前已有小连板基础，银河电子的量能关系也不标准；雷科的情况类比到华电辽能第二波五连板。这些观察引出题材二波后的量能例外。</p>
+<ul class="rule-bullets"><li>我将航天发展视为总龙，再升科技、神剑股份、雷科防务、银河电子分别理解为后续第二至第五轮补涨周期核心。部分6进7断板后没有明显负反馈，转为板块趋势核心，也由此观察消费与航天高标之间的高切高。</li>
+<li>雷科防务此前已有小连板基础，银河电子的量能关系也不标准；雷科的情况类比到华电辽能第二波五连板。这些观察引出题材二波后的量能例外。</li></ul>
 <h5>神剑股份的唯一性</h5>
-<p>神剑股份与西部材料二进三竞争时，唯一性还不清楚，同时消费高标庄园股份在前。原先观察庄园三进四、庄园四进五失败后的神剑切换；庄园股份沿用原述名称。最新规则进一步检查竞争者失败的负反馈，大跌淘汰后留下的唯一性等次日转强再参与。</p>
+<ul class="rule-bullets"><li>神剑股份与西部材料二进三竞争时，唯一性还不清楚，同时消费高标庄园股份在前。原先观察庄园三进四、庄园四进五失败后的神剑切换；庄园股份沿用原述名称。最新规则进一步检查竞争者失败的负反馈，大跌淘汰后留下的唯一性等次日转强再参与。</li></ul>
 <h5>消费切换与总龙二波</h5>
-<p>2025年12月1日，茂业商业与海欣食品的切换，用来反思五板前量能不足、五板高开上板时可减半，以及次高标量能健康、缩量转强的机会；仍需确认原高标断板后题材能否延续。</p>
-<p>2026年8—9月，国芳集团与百大集团被我理解为消费总龙及第二轮发酵。在连板高度受压但情绪仍好的中等题材中，重点观察最核心龙头转趋势。</p>
+<ul class="rule-bullets"><li>2025年12月1日，茂业商业与海欣食品的切换，用来反思五板前量能不足、五板高开上板时可减半，以及次高标量能健康、缩量转强的机会；仍需确认原高标断板后题材能否延续。</li>
+<li>2026年8—9月，国芳集团与百大集团被我理解为消费总龙及第二轮发酵。在连板高度受压但情绪仍好的中等题材中，重点观察最核心龙头转趋势。</li></ul>
 <h5>农业总龙与两轮补涨</h5>
-<p>整个周期总龙是金健米业，第一补涨周期龙头是万向德农，第二补涨周期龙头是亚盛集团；第三阶段由金健米业自身穿越，穿越不做。<a href="#case-agriculture-2026">查看完整经典案例与28个日期的复盘</a>。</p>
+<ul class="rule-bullets"><li>整个周期总龙是金健米业，第一补涨周期龙头是万向德农，第二补涨周期龙头是亚盛集团；第三阶段由金健米业自身穿越，穿越不做。<a href="#case-agriculture-2026">查看完整经典案例与28个日期的复盘</a>。</li></ul>
 <h5>医药的首板补涨</h5>
-<p>澳洋健康用于观察监管风险位置前的首板表态、此前未涨停、小盘低价与最早封板。医药相对航天的补涨轮次和强度更有限，低位补强也可能转为趋势形式。</p>
-</div></details>
+<ul class="rule-bullets"><li>澳洋健康用于观察监管风险位置前的首板表态、此前未涨停、小盘低价与最早封板。医药相对航天的补涨轮次和强度更有限，低位补强也可能转为趋势形式。</li></ul>
+</div></section>
 </div>
 
 <article class="cycle-framework agriculture-cycle-case" id="case-agriculture-2026" aria-labelledby="case-agriculture-2026-title">
@@ -1393,7 +1386,7 @@
 </div></details>
 </article>
 </section>
-<details class="reading-fold"><summary><span>历史量能定义与9个周期样本</span><small>原始次数、折算单位与样本统计分开</small></summary><div class="fold-content"><div aria-labelledby="leader-volume-title" class="leader-volume-study">
+<section class="rule-section"><header class="rule-section-head"><h4><span>历史量能定义与9个周期样本</span><small>原始次数、折算单位与样本统计分开</small></h4></header><div class="fold-content"><div aria-labelledby="leader-volume-title" class="leader-volume-study">
 <div class="leader-volume-head">
 <div>
 <p class="label">龙头个股量能节奏</p>
@@ -1469,8 +1462,8 @@
               <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
 </a>
 </div>
-</div></div></details>
-<details class="reading-fold"><summary><span>主升1—3与原有建仓、加减仓框架</span><small></small></summary><div class="fold-content"><div aria-label="主升一到主升三操作节奏" class="stage-flow">
+</div></div></section>
+<section class="rule-section"><header class="rule-section-head"><h4><span>主升1—3与原有建仓、加减仓框架</span><small></small></h4></header><div class="fold-content"><div aria-label="主升一到主升三操作节奏" class="stage-flow">
 <article>
 <span>主升1：1-3板</span>
 <h3>观察与预备</h3>
@@ -1503,23 +1496,23 @@
 <li>第一次出现风险信号先减半仓，不把利润交给高位不确定性。</li>
 </ul>
 </article>
-</div></div></details>
+</div></div></section>
 </section>
 <section class="section watchlist-section" id="watchlist">
 <div class="section-head">
 <p class="label">05 / 唯一性与票池</p>
 <h2>先等唯一性，再筛选可参与的节点</h2>
 <p>二板及以上可进入背景票池做结构化分析；当前龙头模式从三板及以上开始重点观察并考虑介入。背景收集与买入资格分开。</p>
-</div><div class="handbook-panel" id="unique-entry"><p class="label">人和·身份与时间</p><h3>唯一性出现的时间，决定介入的时间</h3><p class="rule-lead">身位是核心。至少题材内唯一，最好是全市场唯一的抱团高标；三板及以上进入重点观察，主要做中位确认。</p><div class="entry-branches"><div><span>分支 A / 三板已唯一</span><h4>三进四，可前置</h4><p>强板块效应与持续性已在，完成爆量弱转强、转强确认两个动作，按确认节点执行。</p></div><div><span>分支 B / 三进四仍PK</span><h4>先看胜负，再等五板</h4><p>四板结果明确后，次日五板板上确认；竞价更强、率先上板，都不能替代竞争结果。</p></div></div><p><strong>唯一性是提高胜率、盈亏比与溢价概率的筛选目标。</strong>身份胜出与下一板能否成功仍是两件事：龙版传媒后续成功，华电能源后续失败，均须保留。</p><details class="reading-fold explanation"><summary><span>华电能源／绿发电力与三只传媒股的完整PK</span><small>展开阅读</small></summary><div class="fold-content">
-<p>龙头判断的核心是身位性：至少题材内唯一，最好跨题材具备全市场唯一身位，并有高标抱团辨识度。以唯一性提高胜率、盈亏比和次日溢价概率，是这套规则的目标，三项效果分别验证。三板及以上才进入本模式重点观察与介入判断；二板基础票池用于背景分析，不是二板买入许可。</p>
+</div><div class="handbook-panel" id="unique-entry"><p class="label">人和·身份与时间</p><h3>唯一性出现的时间，决定介入的时间</h3><p class="rule-lead">身位是核心。至少题材内唯一，最好是全市场唯一的抱团高标；三板及以上进入重点观察，主要做中位确认。</p><div class="entry-branches"><div><span>分支 A / 三板已唯一</span><h4>三进四，可前置</h4><p>强板块效应与持续性已在，完成爆量弱转强、转强确认两个动作，按确认节点执行。</p></div><div><span>分支 B / 三进四仍PK</span><h4>先看胜负，再等五板</h4><p>四板结果明确后，次日五板板上确认；竞价更强、率先上板，都不能替代竞争结果。</p></div></div><p><strong>唯一性是提高胜率、盈亏比与溢价概率的筛选目标。</strong>身份胜出与下一板能否成功仍是两件事：龙版传媒后续成功，华电能源后续失败，均须保留。</p><section class="rule-section explanation"><header class="rule-section-head"><h4><span>华电能源／绿发电力与三只传媒股的完整PK</span></h4></header><div class="fold-content">
+<ul class="rule-bullets"><li>龙头判断的核心是身位性：至少题材内唯一，最好跨题材具备全市场唯一身位，并有高标抱团辨识度。以唯一性提高胜率、盈亏比和次日溢价概率，是这套规则的目标，三项效果分别验证。三板及以上才进入本模式重点观察与介入判断；二板基础票池用于背景分析，不是二板买入许可。</li></ul>
 <div aria-label="三板阶段的状态对照表" class="handbook-table-wrap" role="region" tabindex="0"><table class="handbook-table"><thead><tr><th scope="col">三板阶段的状态</th><th scope="col">处理方式</th><th scope="col">确认边界</th></tr></thead><tbody><tr><td data-label="三板阶段的状态">仍有同身位PK</td><td data-label="处理方式">三进四竞争当天不抢先；四板结果确立后，次日冲击五板才考虑介入。</td><td data-label="确认边界">只接受下一板的板上确认，不凭竞价强、开盘强或率先上板预判胜出。</td></tr><tr><td data-label="三板阶段的状态">三板已形成唯一性</td><td data-label="处理方式">强板块效应与持续性已在，且完成“爆量弱转强 → 转强确认”，可前置到三进四。</td><td data-label="确认边界">前置的是相对等待五板的时点，不能取消身份、题材或量能确认。</td></tr><tr><td data-label="三板阶段的状态">条件至四板才齐备</td><td data-label="处理方式">四进五观察板上确认，圣阳股份作为个人复盘参考。</td><td data-label="确认边界">五板本身不保证晋级；明确的是执行条件，不是收益。</td></tr></tbody></table></div>
-<p>同板或近板的多个高标进入同一观察名单，逐日比较题材、筹码、承接及抱团地位；<strong>不再执行“两个都做、各半仓后再择强”的旧方案</strong>。传智教育与一鸣食品的AI应用／消费竞争仍保留为比较题材归属的研究案例，未确认前不因分仓而放宽唯一性门槛。</p>
-<details class="handbook-case" id="case-pk"><summary>华电能源／绿发电力，与龙版传媒／大晟文化／欢瑞世纪</summary>
-<p><strong>华电辽能周期中的竞争：</strong>华电能源有趋势龙走法，与三板同身位的绿发电力PK；两者均有放量、缩量过程，不同于中南文化的一字走法。站在当时两者都有走成龙头的可能，不能事后认定胜负已定。</p>
-<p>三进四时绿发电力开盘更强、率先上板，却炸板大幅下杀，次日接近跌停；华电能源开盘先下杀深水，待绿发电力走弱后上板。先表态、先上板不等于最终胜出。华电能源胜出后后续晋级仍失败，原述未明确是触板前失败还是回封后再次炸板。</p>
-<p><strong>三个三连板的竞争：</strong>龙版传媒、大晟文化、欢瑞世纪中，预期最低的龙版传媒胜出晋级四板；其他竞价、开盘较强者炸板下杀，缺乏承接，次日极端负反馈。按本规则，应在PK结果明确后等待次日五板板上确认；龙版传媒后续连板成功，与华电能源失败形成对照。</p>
-<p class="handbook-note">以上按个人复盘保存，尚未逐笔核验。“大声文化”已按后续订正统一为“大晟文化”。要进一步定义：对手暂时炸板与身位竞争真正结束如何区分。</p></details>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-01">01</a><a href="#source-record-02">02</a><a href="#source-record-04">04</a><a href="#source-record-05">05</a><a href="#source-record-06">06</a><a href="#source-record-13">13</a><a href="#source-record-15">15</a></div></div>
+<ul class="rule-bullets"><li>同板或近板的多个高标进入同一观察名单，逐日比较题材、筹码、承接及抱团地位；<strong>不再执行“两个都做、各半仓后再择强”的旧方案</strong>。传智教育与一鸣食品的AI应用／消费竞争仍保留为比较题材归属的研究案例，未确认前不因分仓而放宽唯一性门槛。</li></ul>
+<section class="rule-section" id="case-pk"><header class="rule-section-head"><h4>华电能源／绿发电力，与龙版传媒／大晟文化／欢瑞世纪</h4></header>
+<ul class="rule-bullets"><li><strong>华电辽能周期中的竞争：</strong>华电能源有趋势龙走法，与三板同身位的绿发电力PK；两者均有放量、缩量过程，不同于中南文化的一字走法。站在当时两者都有走成龙头的可能，不能事后认定胜负已定。</li>
+<li>三进四时绿发电力开盘更强、率先上板，却炸板大幅下杀，次日接近跌停；华电能源开盘先下杀深水，待绿发电力走弱后上板。先表态、先上板不等于最终胜出。华电能源胜出后后续晋级仍失败，原述未明确是触板前失败还是回封后再次炸板。</li>
+<li><strong>三个三连板的竞争：</strong>龙版传媒、大晟文化、欢瑞世纪中，预期最低的龙版传媒胜出晋级四板；其他竞价、开盘较强者炸板下杀，缺乏承接，次日极端负反馈。按本规则，应在PK结果明确后等待次日五板板上确认；龙版传媒后续连板成功，与华电能源失败形成对照。</li></ul>
+<p class="handbook-note">以上按个人复盘保存，尚未逐笔核验。“大声文化”已按后续订正统一为“大晟文化”。要进一步定义：对手暂时炸板与身位竞争真正结束如何区分。</p></section>
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-01">01</a><a href="#source-record-02">02</a><a href="#source-record-04">04</a><a href="#source-record-05">05</a><a href="#source-record-06">06</a><a href="#source-record-13">13</a><a href="#source-record-15">15</a></div></div>
 <div aria-label="票池入选规则" class="watchlist-summary" role="note">
 <div>
 <span>入池底线</span>
@@ -1527,7 +1520,7 @@
 </div>
 <p>重点个股选择：二板及以上，股价和市值都很合适的，才进入核心自选。</p>
 </div>
-<details class="reading-fold"><summary><span>二板背景票池的六项分析</span><small>量价、筹码、梯队、共振、题材竞争、生态</small></summary><div class="fold-content"><div aria-label="票池六项分析" class="watchlist-grid">
+<section class="rule-section"><header class="rule-section-head"><h4><span>二板背景票池的六项分析</span><small>量价、筹码、梯队、共振、题材竞争、生态</small></h4></header><div class="fold-content"><div aria-label="票池六项分析" class="watchlist-grid">
 <article>
 <span>01</span>
 <h3>量价分析</h3>
@@ -1558,7 +1551,7 @@
 <h3>短线投机生态</h3>
 <p>观察连板生态环境：高度、晋级率、炸板率、亏钱效应和资金接力意愿。</p>
 </article>
-</div></div></details>
+</div></div></section>
 </section>
 <section class="decision section" id="decision">
 <div class="section-head">
@@ -1566,7 +1559,7 @@
 <h2>先判环境，再分题材，最后选动作</h2>
 <p><strong>天时 → 地利 → 题材 → 阶段 → 个股 → 地位 → 模式 → 仓位（强天时还是弱天时）→ 买点（择日和分时）→ 卖点（择日和分时）。</strong>先过天时与地利判断，筛选题材并标注阶段，再选个股、确认地位、匹配模式；按强弱天时安排仓位与风险预算，买卖分别确认择日和分时触发条件。</p>
 </div>
-<ol class="decision-checks"><li><strong>能不能做</strong><span>接力环境和次日溢价是否支持当前模式。</span></li><li><strong>值得做谁</strong><span>题材最晚四板形成强度，核心未集体失去承接。</span></li><li><strong>何时可以做</strong><span>按模式确认：主升连板看三进四／四进五；总龙二波看前高突破；补涨中位看二进三唯一性。</span></li><li><strong>什么情况退出</strong><span>先定义失效、仓位和卖点，再执行交易。</span></li></ol><details class="reading-fold"><summary><span>三类环境动作、七维定龙与共振案例</span><small></small></summary><div class="fold-content"><div class="decision-grid">
+<ol class="decision-checks"><li><strong>能不能做</strong><span>接力环境和次日溢价是否支持当前模式。</span></li><li><strong>值得做谁</strong><span>题材最晚四板形成强度，核心未集体失去承接。</span></li><li><strong>何时可以做</strong><span>按模式确认：主升连板看三进四／四进五；总龙二波看前高突破；补涨中位看二进三唯一性。</span></li><li><strong>什么情况退出</strong><span>先定义失效、仓位和卖点，再执行交易。</span></li></ol><section class="rule-section"><header class="rule-section-head"><h4><span>三类环境动作、七维定龙与共振案例</span><small></small></h4></header><div class="fold-content"><div class="decision-grid">
 <article class="decision-card tone-green">
 <div class="card-title">
 <span>01</span>
@@ -1646,7 +1639,7 @@
 <p>旧龙仍在释放强烈负反馈时，不把新涨停或身位领先单独当成启动与买入信号。</p>
 </article>
 </div>
-</div></div></details>
+</div></div></section>
 </section>
 <section class="section" id="cycle">
 <div class="section-head">
@@ -1728,7 +1721,7 @@
 <h3>中位龙头博弈</h3>
 </div>
 </div><p class="strategy-summary">模式环境适配，题材最晚四板展现强板块效应且介入时仍有持续性；从三板起观察，按唯一性形成时点选择三进四或四进五。</p>
-<details class="reading-fold"><summary><span>完整入场、切换与退出规则</span><small></small></summary><div class="fold-content"><dl class="rule-list">
+<section class="rule-section"><header class="rule-section-head"><h4><span>完整入场、切换与退出规则</span><small></small></h4></header><div class="fold-content"><dl class="rule-list">
 <div>
 <dt>适用环境</dt>
 <dd>模式环境适配，题材最晚四板展现强板块效应且介入时仍有持续性；从三板起观察，按唯一性形成时点选择三进四或四进五。</dd>
@@ -1763,7 +1756,7 @@
                 查看浙江建投案例拆解
                 <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
 </a>
-</div></div></details>
+</div></div></section>
 </article>
 <article class="strategy-card" id="relay">
 <div class="strategy-head teal">
@@ -1775,7 +1768,7 @@
 <h3>低位1进2接力</h3>
 </div>
 </div><p class="strategy-summary">市场无高位总龙，题材散乱，情绪反复震荡，处于混沌试错阶段。</p>
-<details class="reading-fold"><summary><span>完整入场、切换与退出规则</span><small></small></summary><div class="fold-content"><dl class="rule-list">
+<section class="rule-section"><header class="rule-section-head"><h4><span>完整入场、切换与退出规则</span><small></small></h4></header><div class="fold-content"><dl class="rule-list">
 <div>
 <dt>适用环境</dt>
 <dd>市场无高位总龙，题材散乱，情绪反复震荡，处于混沌试错阶段。</dd>
@@ -1802,10 +1795,10 @@
                 打开《A股一进二战法手册》
                 <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
 </a>
-</div></div></details>
+</div></div></section>
 </article>
 </div>
-<details class="reading-fold"><summary><span>两大战法对照与逐板共振示意</span><small>保持各自适用边界，不混用买卖点</small></summary><div class="fold-content"><div aria-label="主线题材与龙头个股运行共振节奏" class="rhythm-panel">
+<section class="rule-section"><header class="rule-section-head"><h4><span>两大战法对照与逐板共振示意</span><small>保持各自适用边界，不混用买卖点</small></h4></header><div class="fold-content"><div aria-label="主线题材与龙头个股运行共振节奏" class="rhythm-panel">
 <div class="rhythm-head">
 <p class="label">龙头共振节奏</p>
 <h3>看板块分歧与个股抗跌，不只看连板数字</h3><p>下列为一种历史节奏示意，不是逐板必经路径。题材回流也可能对应龙头爆量，买点仍服从唯一性、量能确认及板块动态反馈。</p>
@@ -1850,7 +1843,7 @@
 </tr>
 </tbody>
 </table>
-</div></div></details>
+</div></div></section>
 </section>
 <section class="section" id="risk">
 <div class="section-head">
@@ -1880,7 +1873,7 @@
 <p>无题材、无人气、无资金关注的标的直接剔除；退潮期不强行博弈。</p>
 </article>
 </div>
-<div class="handbook-panel" id="leader-exclusions"><p class="label">风控·筛选</p><h3>有身位，也要通过回避条件</h3><p class="cycle-source-note">以下量能条款保留第一波主升连板口径；题材二波后的补涨按<a href="#strategy-7">战法8的量能例外</a>判断，仍回避连续极致缩量加速。</p><ul class="exclusion-list"><li><strong>环境不适配</strong><span>连板中高位负反馈重、普遍无次日溢价。</span></li><li><strong>身份或题材未过关</strong><span>同身位PK未决；四板前未建立强板块效应；题材持续衰退或被更强方向卡位。</span></li><li><strong>量能不合格</strong><span>连续三个缩量一字，五板及之前仍未完成必要放量。中南文化五连一字是复盘提醒；“万不得已”的例外尚未定义。</span></li><li><strong>历史行情过滤 <em>经验排除</em></strong><span>过去一年半内已有一波大行情，前一波“五连板以内”，再以“五板以上”大二波为目标的个股，按你的经验列入排除。</span></li></ul><p>重点防范负反馈后的A杀与不划算的风险收益。18个月规则保留原述，不擅自把“五连板以内”改为“以上”。</p><details class="reading-fold explanation"><summary><span>全部排除条件、中南文化与历史行情口径</span><small>展开阅读</small></summary><div class="fold-content">
+<div class="handbook-panel" id="leader-exclusions"><p class="label">风控·筛选</p><h3>有身位，也要通过回避条件</h3><p class="cycle-source-note">以下量能条款保留第一波主升连板口径；题材二波后的补涨按<a href="#strategy-7">战法8的量能例外</a>判断，仍回避连续极致缩量加速。</p><ul class="exclusion-list"><li><strong>环境不适配</strong><span>连板中高位负反馈重、普遍无次日溢价。</span></li><li><strong>身份或题材未过关</strong><span>同身位PK未决；四板前未建立强板块效应；题材持续衰退或被更强方向卡位。</span></li><li><strong>量能不合格</strong><span>连续三个缩量一字，五板及之前仍未完成必要放量。中南文化五连一字是复盘提醒；“万不得已”的例外尚未定义。</span></li><li><strong>历史行情过滤 <em>经验排除</em></strong><span>过去一年半内已有一波大行情，前一波“五连板以内”，再以“五板以上”大二波为目标的个股，按你的经验列入排除。</span></li></ul><p>重点防范负反馈后的A杀与不划算的风险收益。18个月规则保留原述，不擅自把“五连板以内”改为“以上”。</p><section class="rule-section explanation"><header class="rule-section-head"><h4><span>全部排除条件、中南文化与历史行情口径</span></h4></header><div class="fold-content">
 <ol>
 <li><strong>环境不适配：</strong>中高位负反馈严重、成功者也普遍无溢价，暂停连板模式。</li>
 <li><strong>身份未确认：</strong>三进四仍有同身位PK，不以竞价更强或率先封板替代竞争结果。</li>
@@ -1888,14 +1881,14 @@
 <li><strong>量能未完成：</strong>连续三个缩量一字板，到五板及之前仍不符合量能关系、缺少必要放量，原则上不参与。原述“万不得已”的例外尚未定义，不另开豁免入口。</li>
 <li><strong>历史大行情：</strong>过去一年半（约18个月）走过一波大行情、该波在“五连板以内”的龙头，个人判断其再走“五板以上”大二波较难，纳入经验排除项。原述“五连板以内”不改成“以上”；大行情、二波及五板以上是否含五板的统计定义待确认。</li>
 </ol>
-<details class="handbook-case" id="case-zhongnan"><summary>中南文化：五连一字与缺少必要换手的风险</summary><p>个人复盘以五连一字板中南文化为例：连续缩量一字，未在五板及之前完成所需量能节奏时，即使有身位也不替代换手条件。担心的是负反馈形成A杀后的潜在亏损与不划算的盈亏比。</p></details>
+<section class="rule-section" id="case-zhongnan"><header class="rule-section-head"><h4>中南文化：五连一字与缺少必要换手的风险</h4></header><ul class="rule-bullets"><li>个人复盘以五连一字板中南文化为例：连续缩量一字，未在五板及之前完成所需量能节奏时，即使有身位也不替代换手条件。担心的是负反馈形成A杀后的潜在亏损与不划算的盈亏比。</li></ul></section>
 <p class="handbook-note">“一年半历史行情”和“三个量能板”等经验过滤需要与无此历史的候选对比，并保留成功反例；仅发现大二波少，不能证明这一过滤有额外区分能力。原文“赔率太高”按潜在亏损过大、风险收益不划算记录。</p>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-07">07</a><a href="#source-record-11">11</a><a href="#source-record-17">17</a><a href="#source-record-21">21</a></div></div>
-<div class="handbook-panel" id="holding-adaptation"><p class="label">风控·持仓变化</p><h3>买入符合规则，持仓仍要响应新变化</h3><p class="rule-lead">买前筛选与买后应对，分开评价。<strong>不能拿次日才出现的信息，倒推前一天必然应该回避。</strong></p><p>金螳螂五板有强板块效应、有持续性，也没有被其他题材卡位；六板时题材自身逻辑出现问题、后排掉队，才需要临盘响应。你的判断“这类五板买点无法靠现有条件事先排除”保留在案例中。</p><p>五板前的合理放量承接，与高位失控爆量、反复炸板或断板分开；新的不利信息出现后，执行原有仓位、卖点与条件单纪律。</p><details class="reading-fold explanation"><summary><span>金螳螂：买入依据、次日变化与应对记录</span><small>展开阅读</small></summary><div class="fold-content">
-<p>买前筛选与持仓应对分别评价：买入是否符合当时可见的条件，新增不利信息出现后是否按预案处理。不能把次日才出现的证据倒用成前一天必然应当回避的理由。</p>
-<details class="handbook-case" id="case-jintang"><summary>金螳螂：五板符合条件，六板阶段出现新负反馈</summary><p>按个人复盘，金螳螂五板有强板块效应和持续性，也没有明显竞争题材卡位，现有买前条件未将其排除；冲击六板当天题材逻辑出现问题、后排掉队、情绪转弱，需要根据当天信息临盘反应。</p><p>“没办法避免”保留为个人案例判断，尚未核对是否存在更早可识别信号。记录逻辑证伪的事实依据、盘口扩散顺序及实际可执行机会，不把所有回撤都归为选股错误。本例未新增具体卖出价或阈值，继续服从现有卖点、仓位与条件单纪律。</p></details>
-<p>三至五板预期中的放量承接，与高位失控爆量、反复炸板和断板，是不同情形。允许观察回封买点，不等于取消已有持仓的减仓或退出要求；买入信号与风险信号必须按阶段、题材支持和承接状态区分。</p>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-16">16</a></div></div>
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-07">07</a><a href="#source-record-11">11</a><a href="#source-record-17">17</a><a href="#source-record-21">21</a></div></div>
+<div class="handbook-panel" id="holding-adaptation"><p class="label">风控·持仓变化</p><h3>买入符合规则，持仓仍要响应新变化</h3><p class="rule-lead">买前筛选与买后应对，分开评价。<strong>不能拿次日才出现的信息，倒推前一天必然应该回避。</strong></p><p>金螳螂五板有强板块效应、有持续性，也没有被其他题材卡位；六板时题材自身逻辑出现问题、后排掉队，才需要临盘响应。你的判断“这类五板买点无法靠现有条件事先排除”保留在案例中。</p><p>五板前的合理放量承接，与高位失控爆量、反复炸板或断板分开；新的不利信息出现后，执行原有仓位、卖点与条件单纪律。</p><section class="rule-section explanation"><header class="rule-section-head"><h4><span>金螳螂：买入依据、次日变化与应对记录</span></h4></header><div class="fold-content">
+<ul class="rule-bullets"><li>买前筛选与持仓应对分别评价：买入是否符合当时可见的条件，新增不利信息出现后是否按预案处理。不能把次日才出现的证据倒用成前一天必然应当回避的理由。</li></ul>
+<section class="rule-section" id="case-jintang"><header class="rule-section-head"><h4>金螳螂：五板符合条件，六板阶段出现新负反馈</h4></header><ul class="rule-bullets"><li>按个人复盘，金螳螂五板有强板块效应和持续性，也没有明显竞争题材卡位，现有买前条件未将其排除；冲击六板当天题材逻辑出现问题、后排掉队、情绪转弱，需要根据当天信息临盘反应。</li><li>“没办法避免”保留为个人案例判断，尚未核对是否存在更早可识别信号。记录逻辑证伪的事实依据、盘口扩散顺序及实际可执行机会，不把所有回撤都归为选股错误。本例未新增具体卖出价或阈值，继续服从现有卖点、仓位与条件单纪律。</li></ul></section>
+<ul class="rule-bullets"><li>三至五板预期中的放量承接，与高位失控爆量、反复炸板和断板，是不同情形。允许观察回封买点，不等于取消已有持仓的减仓或退出要求；买入信号与风险信号必须按阶段、题材支持和承接状态区分。</li></ul>
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-16">16</a></div></div>
 </section>
 <section class="section" id="trade">
 <div class="section-head">
@@ -1943,18 +1936,18 @@
 </dl>
 <p class="discipline-bottom-line"><strong>没有熟悉模式内买点就等待。</strong>买后复盘逐笔核对这六项，不以最后盈亏替代执行评价。<a href="#execution-upgrade">回到十步决策顺序</a></p>
 </section>
-<div class="handbook-panel" id="entry-confirmation"><p class="label">买点·两类时间分支</p><h3>高开转强可以确认，极致一字本身不买</h3><p class="rule-lead">本处主升连板买点主要为三进四、四进五；总龙二波与补涨中位分别见<a href="#strategy-5">战法6</a>、<a href="#strategy-7">战法8</a>。<strong>高开后的缩量转强确认</strong>，与<strong>极致缩量一字加速</strong>分开；高开只是信号，仍按已明确的板上或回封确认执行。</p><div class="entry-shapes"><div><span>01 / 不作为买点</span><strong>极致缩量一字加速</strong><p>板块分化后前排聚焦一字，可以体现强势，但不因此成为合适买点。</p></div><div><span>02 / 次日承接</span><strong>一字之后放量强承接</strong><p>看次日筹码交换、承接和重新转强，结合题材、唯一性与量能窗口。</p></div><div><span>03 / 当日回封</span><strong>炸板下杀后，放量承接回封</strong><p>当日已完成分歧、承接和回封确认，也可成为买点，不机械等次日。</p></div></div><p>你重视回封，是因为分歧得到承接、量能关系得到检验，获利盘与抛压经过交换，并表现出承接资金力度。具体“抛压释放充分”与“主力实力”的判断依据保留在原始解释中。</p><p><strong>华天酒店：</strong>三进四一字加速不买，同时牢记第三个半放量板的重要性。<strong>圣阳股份：</strong>保留为五板关键条件齐备后明确执行的参考。</p><details class="reading-fold explanation"><summary><span>华天酒店、四类买点形态与回封的完整解释</span><small>展开阅读</small></summary><div class="fold-content">
-<p><strong>共同前提：</strong>模式启用、题材最晚四板已展现强板块效应且当下仍有持续性、唯一身位已形成、量能合理、核心承接未触发回避。达到某个板位或某次量能计数，均不单独构成交易。</p>
+<div class="handbook-panel" id="entry-confirmation"><p class="label">买点·两类时间分支</p><h3>高开转强可以确认，极致一字本身不买</h3><p class="rule-lead">本处主升连板买点主要为三进四、四进五；总龙二波与补涨中位分别见<a href="#strategy-5">战法6</a>、<a href="#strategy-7">战法8</a>。<strong>高开后的缩量转强确认</strong>，与<strong>极致缩量一字加速</strong>分开；高开只是信号，仍按已明确的板上或回封确认执行。</p><div class="entry-shapes"><div><span>01 / 不作为买点</span><strong>极致缩量一字加速</strong><p>板块分化后前排聚焦一字，可以体现强势，但不因此成为合适买点。</p></div><div><span>02 / 次日承接</span><strong>一字之后放量强承接</strong><p>看次日筹码交换、承接和重新转强，结合题材、唯一性与量能窗口。</p></div><div><span>03 / 当日回封</span><strong>炸板下杀后，放量承接回封</strong><p>当日已完成分歧、承接和回封确认，也可成为买点，不机械等次日。</p></div></div><p>你重视回封，是因为分歧得到承接、量能关系得到检验，获利盘与抛压经过交换，并表现出承接资金力度。具体“抛压释放充分”与“主力实力”的判断依据保留在原始解释中。</p><p><strong>华天酒店：</strong>三进四一字加速不买，同时牢记第三个半放量板的重要性。<strong>圣阳股份：</strong>保留为五板关键条件齐备后明确执行的参考。</p><section class="rule-section explanation"><header class="rule-section-head"><h4><span>华天酒店、四类买点形态与回封的完整解释</span></h4></header><div class="fold-content">
+<ul class="rule-bullets"><li><strong>共同前提：</strong>模式启用、题材最晚四板已展现强板块效应且当下仍有持续性、唯一身位已形成、量能合理、核心承接未触发回避。达到某个板位或某次量能计数，均不单独构成交易。</li></ul>
 <div aria-label="形态／过程对照表" class="handbook-table-wrap" role="region" tabindex="0"><table class="handbook-table"><thead><tr><th scope="col">形态／过程</th><th scope="col">当前规则</th><th scope="col">与原有条件的关系</th></tr></thead><tbody><tr><td data-label="形态／过程">高开后的缩量转强确认</td><td data-label="当前规则">重点观察爆量弱转强之后的确认；唯一性早形成可三进四介入。</td><td data-label="与原有条件的关系">高开是观察信号，不把任意高开当成买点。高开确认与板上执行的具体衔接尚待量化；未统一前沿用已明确的板上确认。</td></tr><tr><td data-label="形态／过程">极致缩量一字加速</td><td data-label="当前规则">本身不买；板块分化后前排聚焦一字，可以作为强势表现。</td><td data-label="与原有条件的关系">强势表现不自动等于可参与的好买点。</td></tr><tr><td data-label="形态／过程">一字加速次日放量强承接</td><td data-label="当前规则">检查放量、承接与重新转强，再判断是否仍在三进四／四进五的主要窗口内。</td><td data-label="与原有条件的关系">不因次日开板就取消题材、唯一性及风险收益检查。</td></tr><tr><td data-label="形态／过程">一字加速当日炸板下杀后回封</td><td data-label="当前规则">观察一致加速 → 开板分歧 → 放量承接 → 回封转强；符合条件时可作为回封确认节点。</td><td data-label="与原有条件的关系">机会不必机械等到次日。下杀本身不是买点，未确认前不抢。</td></tr></tbody></table></div>
-<details class="handbook-case" id="case-huatian"><summary>华天酒店：三进四一字加速、第三个半放量板与后续承接</summary>
-<p>按个人复盘，华天酒店三进四是极致缩量一字加速，不属于本模式买点；缩量转强确认指高开后的确认，而非无换手的一字一致。板块分化后前排聚焦一字并无须否定，但更关注一字之后的放量强承接。</p>
-<p>案例同时被用于强调“已经有三个半放量板，第三个是五板及之前最后的重要进场点”。第三个半放量板和一字加速次日的放量承接是否为同一交易日，需按日序核对；这项经验不能成为顶一字或追逐所谓最后机会的理由。</p></details>
+<section class="rule-section" id="case-huatian"><header class="rule-section-head"><h4>华天酒店：三进四一字加速、第三个半放量板与后续承接</h4></header>
+<ul class="rule-bullets"><li>按个人复盘，华天酒店三进四是极致缩量一字加速，不属于本模式买点；缩量转强确认指高开后的确认，而非无换手的一字一致。板块分化后前排聚焦一字并无须否定，但更关注一字之后的放量强承接。</li>
+<li>案例同时被用于强调“已经有三个半放量板，第三个是五板及之前最后的重要进场点”。第三个半放量板和一字加速次日的放量承接是否为同一交易日，需按日序核对；这项经验不能成为顶一字或追逐所谓最后机会的理由。</li></ul></section>
 <h4>回封反映什么，不能直接证明什么</h4>
-<p>回封的交易解释是分歧被承接、量能节奏符合预期、获利盘与抛压经过交换，也表现出资金承接力度。可观察的是开板、成交增加、价格修复和回封；“抛压全部释放”“主力实力确定”不能仅凭一次回封证实。回封后仍可能再次开板，要结合板块反馈与既有持仓纪律。</p>
-<p><strong>圣阳股份：</strong>作为五板关键条件齐备后明确执行的个人案例保留，具体交易日和量价路径尚待逐项核验。所谓“确定性买入”指规则确认后的执行明确，不是收益保证。</p>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-15">15</a><a href="#source-record-19">19</a><a href="#source-record-20">20</a></div></div>
-<div id="handbook-one-price-discipline" data-october-lessons data-lesson-sections="discipline" data-lesson-points="1,2" data-lesson-title="一字板不排；竞价加单例外仍待核验" data-lesson-open="true"></div>
-<details class="reading-fold"><summary><span>盯盘、条件单与加减仓纪律</span><small>保留原有操作要求</small></summary><div class="fold-content"><div class="trade-grid">
+<ul class="rule-bullets"><li>回封的交易解释是分歧被承接、量能节奏符合预期、获利盘与抛压经过交换，也表现出资金承接力度。可观察的是开板、成交增加、价格修复和回封；“抛压全部释放”“主力实力确定”不能仅凭一次回封证实。回封后仍可能再次开板，要结合板块反馈与既有持仓纪律。</li>
+<li><strong>圣阳股份：</strong>作为五板关键条件齐备后明确执行的个人案例保留，具体交易日和量价路径尚待逐项核验。所谓“确定性买入”指规则确认后的执行明确，不是收益保证。</li></ul>
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-15">15</a><a href="#source-record-19">19</a><a href="#source-record-20">20</a></div></div>
+<div id="handbook-one-price-discipline" data-october-lessons data-lesson-sections="discipline" data-lesson-points="1,2" data-lesson-title="一字板不排；竞价加单例外仍待核验"></div>
+<section class="rule-section"><header class="rule-section-head"><h4><span>盯盘、条件单与加减仓纪律</span><small>保留原有操作要求</small></h4></header><div class="fold-content"><div class="trade-grid">
 <article class="trade-card trade-focus">
 <span>仓位前提</span>
 <h3>盯盘才能上重仓</h3>
@@ -1985,7 +1978,7 @@
 <p>必须为某一题材建立梯队票池，持续观察一系列题材票变化，用板块梯队反推个股与题材走势。</p>
 <strong>执行：用梯队强弱做充分判断，不只看单票分时。</strong>
 </article>
-</div></div></details>
+</div></div></section>
 </section>
 <section class="section" id="position">
 <div class="section-head">
@@ -1996,7 +1989,7 @@
 <section class="market-discipline" id="environment-position-plan" aria-labelledby="environment-position-title">
 <p class="label">当前个人计划 / 强弱环境分开</p>
 <h3 id="environment-position-title">两套天时，两套预算与退出</h3>
-<div id="handbook-entry-position" data-october-lessons data-lesson-sections="positions" data-lesson-points="0,1" data-lesson-title="首笔仓位：先定单票计划，再按天时执行" data-lesson-open="true"></div>
+<div id="handbook-entry-position" data-october-lessons data-lesson-sections="positions" data-lesson-points="0,1" data-lesson-title="首笔仓位：先定单票计划，再按天时执行"></div>
 <p class="discipline-note">以下是个人仓位计划，不是通用仓位建议或必须完成的目标。总仓与单票比例均按账户总资产计算，分别约束组合和个股；<strong>70%–80%不属于轻仓试错，弱市也不必达到这个预算。</strong></p>
 <div class="handbook-table-wrap environment-table-wrap" role="region" aria-label="强弱环境的仓位与退出计划" tabindex="0">
 <table class="handbook-table environment-table">
@@ -2015,8 +2008,8 @@
 </dl>
 <p class="discipline-bottom-line"><strong>仓位不能用来修复错误：</strong>百花与西陇摊低成本属于错误动机，爱仕达弱切换重仓属于风险错配。先定最大可承受损失，再决定数量。</p>
 </section>
-<details class="reading-fold"><summary><span>分战法与历史仓位口径</span><small>叠加限制，不覆盖天时预算</small></summary><div class="fold-content">
-<p>下表保留此前的场景参考，不作为必须持有的底仓；具体战法有更低限制时继续适用。战法6、战法8的原各半仓设想与最新动态配置见<a href="#strategy-57-execution">对应章节</a>，不推广为其他模式的默认仓位。</p>
+<section class="rule-section"><header class="rule-section-head"><h4><span>分战法与历史仓位口径</span><small>叠加限制，不覆盖天时预算</small></h4></header><div class="fold-content">
+<ul class="rule-bullets"><li>下表保留此前的场景参考，不作为必须持有的底仓；具体战法有更低限制时继续适用。战法6、战法8的原各半仓设想与最新动态配置见<a href="#strategy-57-execution">对应章节</a>，不推广为其他模式的默认仓位。</li></ul>
 <div class="matrix">
 <div class="matrix-row matrix-head">
 <span>场景</span>
@@ -2061,7 +2054,7 @@
 <span>不合格机会直接放弃。</span>
 </div>
 </div>
-</div></details>
+</div></section>
 </section>
 <section class="section" id="review">
 <div class="section-head">
@@ -2113,14 +2106,14 @@
 <article><span>每年</span><p>沉淀年度交易画像，保留有效系统，淘汰低质量动作。</p></article>
 </div>
 </div>
-<div class="handbook-panel" id="layered-validation"><p class="label">复盘·用户已采纳的分层比较</p><h3>同一批候选，逐层验证过滤效果</h3><div class="validation-stages"><div><span>A / 基准</span><strong>只要求唯一身位</strong></div><div><span>B / 题材</span><strong>加入持续性与竞争题材过滤</strong></div><div><span>C / 个股</span><strong>再加入核心负反馈与量价过滤</strong></div></div><p>候选、入场、退出与可成交假设保持一致，同时比较减少的亏损与错过的盈利。三进四、四进五分别记录；胜率、盈亏比、次日溢价分别检验。</p><details class="reading-fold explanation"><summary><span>可成交、收益期望、样本偏差与验证方法</span><small>展开阅读</small></summary><div class="fold-content">
-<p>所有候选均使用当时可见信息。固定题材归属、候选池、入场信号、退出规则、统计窗口及可成交假设，然后比较：</p>
+<div class="handbook-panel" id="layered-validation"><p class="label">复盘·用户已采纳的分层比较</p><h3>同一批候选，逐层验证过滤效果</h3><div class="validation-stages"><div><span>A / 基准</span><strong>只要求唯一身位</strong></div><div><span>B / 题材</span><strong>加入持续性与竞争题材过滤</strong></div><div><span>C / 个股</span><strong>再加入核心负反馈与量价过滤</strong></div></div><p>候选、入场、退出与可成交假设保持一致，同时比较减少的亏损与错过的盈利。三进四、四进五分别记录；胜率、盈亏比、次日溢价分别检验。</p><section class="rule-section explanation"><header class="rule-section-head"><h4><span>可成交、收益期望、样本偏差与验证方法</span></h4></header><div class="fold-content">
+<ul class="rule-bullets"><li>所有候选均使用当时可见信息。固定题材归属、候选池、入场信号、退出规则、统计窗口及可成交假设，然后比较：</li></ul>
 <div aria-label="层级对照表" class="handbook-table-wrap" role="region" tabindex="0"><table class="handbook-table"><thead><tr><th scope="col">层级</th><th scope="col">条件</th><th scope="col">需要比较的结果</th></tr></thead><tbody><tr><td data-label="层级">A</td><td data-label="条件">只要求唯一身位。</td><td data-label="需要比较的结果">建立同一候选批次的基准。</td></tr><tr><td data-label="层级">B</td><td data-label="条件">A＋题材持续性与竞争题材过滤。</td><td data-label="需要比较的结果">减少了哪些亏损，也漏掉了哪些盈利。</td></tr><tr><td data-label="层级">C</td><td data-label="条件">B＋核心股负反馈和量价过滤。</td><td data-label="需要比较的结果">比较实际收益、平均盈利／亏损、尾部亏损、成交率及机会损失。</td></tr></tbody></table></div>
-<p>三进四、四进五分别统计；区分一字与换手、ST与非ST。触板不等于可成交，卖出信号不等于按该价格成交；不使用次日最高价作默认退出价。小样本单日晋级率不当成稳定概率，规则形成后保留后续样本继续验证。</p>
-<p>唯一性减少身份竞争的不确定性，但等待到五板也可能提高成本、压缩空间。<strong>胜率、盈亏比和溢价分别验证：</strong>假设胜率70%、平均盈利5%、平均亏损15%，期望为70%×5%−30%×15%=−1%，尚未扣费。这是算术示例，不是本体系回测结果。</p>
-<p>历史行情排除项比较“18个月内有过指定大行情”与“没有该历史”的候选；量能次数同时记录成功、失败、没给成交机会的个股，避免只保留百花医药等成功样本。</p>
+<ul class="rule-bullets"><li>三进四、四进五分别统计；区分一字与换手、ST与非ST。触板不等于可成交，卖出信号不等于按该价格成交；不使用次日最高价作默认退出价。小样本单日晋级率不当成稳定概率，规则形成后保留后续样本继续验证。</li>
+<li>唯一性减少身份竞争的不确定性，但等待到五板也可能提高成本、压缩空间。<strong>胜率、盈亏比和溢价分别验证：</strong>假设胜率70%、平均盈利5%、平均亏损15%，期望为70%×5%−30%×15%=−1%，尚未扣费。这是算术示例，不是本体系回测结果。</li>
+<li>历史行情排除项比较“18个月内有过指定大行情”与“没有该历史”的候选；量能次数同时记录成功、失败、没给成交机会的个股，避免只保留百花医药等成功样本。</li></ul>
 <p class="handbook-note">行业动量研究主要讨论六至十二个月周期，不能直接验证A股三进四、四进五；交易所历史追涨风险资料也不替代当前样本。参考：<a href="https://www.aqr.com/Insights/Research/Journal-Article/Do-Industries-Explain-Momentum" rel="noopener" target="_blank">行业动量研究</a>、<a href="https://investor.szse.cn/warning/riskedu/t20120412_550505.html" rel="noopener" target="_blank">深交所风险教育资料</a>。</p>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-09">09</a><a href="#source-record-10">10</a><a href="#source-record-11">11</a><a href="#source-record-14">14</a></div></div>
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-09">09</a><a href="#source-record-10">10</a><a href="#source-record-11">11</a><a href="#source-record-14">14</a></div></div>
 <div id="handbook-expectation-study" data-october-lessons data-lesson-sections="questions" data-lesson-title="预期、情绪核心与分时：逐日验证的四个问题"></div>
 </section>
 <section class="section appendix" id="appendix">
@@ -2129,41 +2122,41 @@
 <h2>术语与版本取舍</h2>
 <p>区分当前执行规则、经验假设、案例事实和待确认口径；历史观点保留修订关系，避免并列相反的执行条款。</p>
 </div>
-<div class="handbook-panel" id="research-questions"><p class="label">术语·版本与待验证项</p><h3>把未定口径集中管理</h3><p>执行规则已经明确，以下定义继续在复盘中统一：量能计数与折算、半放量5亿元的时间口径、第三个量能板与缩量确认的关系、18个月大行情定义，以及暂停与恢复的观察窗口。</p><p>原始强调、案例叙述与整理者补充分别保留；<a href="#source-records">21条原话可逐条查看</a>，避免整理后丢失语境。</p><details class="reading-fold explanation"><summary><span>全部待统一项目与新旧规则衔接</span><small>展开阅读</small></summary><div class="fold-content">
-<p>2026-09-26的21条记录已按市场、题材、身位、量能、买点、风控与复盘整合。个人执行规则、经验假设、按回忆保存的案例和有来源的历史资料分别标明；完整核对关系见<a href="./docs/2026-09-26-integration.md">本次内容映射</a>。</p>
+<div class="handbook-panel" id="research-questions"><p class="label">术语·版本与待验证项</p><h3>把未定口径集中管理</h3><p>执行规则已经明确，以下定义继续在复盘中统一：量能计数与折算、半放量5亿元的时间口径、第三个量能板与缩量确认的关系、18个月大行情定义，以及暂停与恢复的观察窗口。</p><p>原始强调、案例叙述与整理者补充分别保留；<a href="#source-records">21条原话可逐条查看</a>，避免整理后丢失语境。</p><section class="rule-section explanation"><header class="rule-section-head"><h4><span>全部待统一项目与新旧规则衔接</span></h4></header><div class="fold-content">
+<ul class="rule-bullets"><li>2026-09-26的21条记录已按市场、题材、身位、量能、买点、风控与复盘整合。个人执行规则、经验假设、按回忆保存的案例和有来源的历史资料分别标明；完整核对关系见<a href="./docs/2026-09-26-integration.md">本次内容映射</a>。</li></ul>
 <div aria-label="待统一项目对照表" class="handbook-table-wrap" role="region" tabindex="0"><table class="handbook-table"><thead><tr><th scope="col">待统一项目</th><th scope="col">目前边界</th></tr></thead><tbody><tr><td data-label="待统一项目">唯一性</td><td data-label="目前边界">对手暂时炸板与竞争真正结束的区别；题材内唯一与市场唯一分别记录。</td></tr><tr><td data-label="待统一项目">强板块效应与前三</td><td data-label="目前边界">题材归属、涨停数、广度、成交占比、持续性与核心承接的权重及观察时点。</td></tr><tr><td data-label="待统一项目">连续两天高强度</td><td data-label="目前边界">相同统计口径，以及盘中强度与收盘强度如何衔接。</td></tr><tr><td data-label="待统一项目">起量／半放量／爆量</td><td data-label="目前边界">比较基准、起算日、原始次数与折算单位分开；第三个板为何同时属于缩量确认。</td></tr><tr><td data-label="待统一项目">五板前的最后窗口</td><td data-label="目前边界">不能用事后没有买点倒推当时可知；华天酒店第三个半放量板与一字后承接的日期关系待核验。</td></tr><tr><td data-label="待统一项目">5亿元小成交额</td><td data-label="目前边界">盘中或全天的金额口径；不能直接当作流通市值。</td></tr><tr><td data-label="待统一项目">两个转强动作</td><td data-label="目前边界">“爆量弱转强”和“转强确认”的具体时序；高开信号与板上执行的关系。</td></tr><tr><td data-label="待统一项目">回封与修复</td><td data-label="目前边界">有效承接与短暂回封、深水未修复的观察时点、确认时长及盘口标准。</td></tr><tr><td data-label="待统一项目">18个月历史行情</td><td data-label="目前边界">大行情的幅度、前一波五连板以内、二波定义、五板以上是否含五板。</td></tr><tr><td data-label="待统一项目">暂停与恢复</td><td data-label="目前边界">负反馈严重、实际溢价、样本窗口与恢复门槛；不靠单只高标判断。</td></tr><tr><td data-label="待统一项目">持仓退出</td><td data-label="目前边界">逻辑证伪事实、盘口变化时间、退出触发和成交约束；金螳螂案例未新增具体卖出阈值。</td></tr><tr><td data-label="待统一项目">案例与名称</td><td data-label="目前边界">多数个人案例尚未逐日核验；大声文化已订正为大晟文化；璐化科技保留原名待核对。</td></tr></tbody></table></div>
-<details class="handbook-case"><summary>旧口径如何与本次规则衔接</summary><ul>
+<section class="rule-section"><header class="rule-section-head"><h4>旧口径如何与本次规则衔接</h4></header><ul>
 <li>“同板或近板两个都做、各半仓择强”停止作为当前执行条款，改为同池观察、等待唯一性。首板／二板买点属于旧学习材料或其他模式，本模式从三板起观察，主要做三进四、四进五。</li>
 <li>“五板才定龙”改成按唯一性形成时间分支；“有题材通常到七板”不作为收益预设。三板已确认可前置，三进四仍PK则后置。</li>
 <li>“8家绝对底线”保留为历史数量参照，加入环境相对强度与前三排名，市场暂停条件优先。</li>
 <li>“一字次日才有买点”补充为当日开板下杀后也可能回封确认；极致缩量一字本身仍非买点。</li>
 <li>旧“总龙往往有二波”描述某些周期案例；18个月历史大行情过滤针对下一次五板以上连板目标。趋势二波、断板反包与连续五板以上不是同一指标，不能互相替代；定义尚需核对。</li>
 <li>“每个至少三个”“第三个最后买点”“唯一性保证高胜率”等原始强调作为研究命题保留，不等于统计证明。已采纳的是框架和执行边界，效果仍需验证。</li>
-</ul></details>
-<details class="handbook-case"><summary>原述与讨论补充的保留方式</summary><p>最初“但是龙头确认时不一定都会……”未完，不自行补全；“万不得已”没有具体例外；“赔率太高”按潜在亏损过大理解。盘口放量回封不能直接证实主力身份、抛压全部释放。盘前固定观察名单、同时间量价比较、实际成交与后续样本验证属于讨论方法；具体阈值未获确认，不伪装成已定规则。</p><p>若等到板块确认时龙头已封死，应允许错过；不能为了完整参与每一只龙头，取消已明确的确认条件。</p></details>
-</div></details><div class="record-links"><span>原话</span><a href="#source-record-01">01</a><a href="#source-record-06">06</a><a href="#source-record-07">07</a><a href="#source-record-11">11</a><a href="#source-record-12">12</a><a href="#source-record-14">14</a><a href="#source-record-16">16</a></div></div>
+</ul></section>
+<section class="rule-section"><header class="rule-section-head"><h4>原述与讨论补充的保留方式</h4></header><ul class="rule-bullets"><li>最初“但是龙头确认时不一定都会……”未完，不自行补全；“万不得已”没有具体例外；“赔率太高”按潜在亏损过大理解。盘口放量回封不能直接证实主力身份、抛压全部释放。盘前固定观察名单、同时间量价比较、实际成交与后续样本验证属于讨论方法；具体阈值未获确认，不伪装成已定规则。</li><li>若等到板块确认时龙头已封死，应允许错过；不能为了完整参与每一只龙头，取消已明确的确认条件。</li></ul></section>
+</div></section><div class="record-links"><span>原话</span><a href="#source-record-01">01</a><a href="#source-record-06">06</a><a href="#source-record-07">07</a><a href="#source-record-11">11</a><a href="#source-record-12">12</a><a href="#source-record-14">14</a><a href="#source-record-16">16</a></div></div>
 <div id="handbook-research-boundaries" data-october-lessons data-lesson-sections="crossing,speculative"></div>
 <div class="details-grid">
-<details>
-<summary>战法8与无龙期低位试错怎样区分？</summary>
-<p>无龙期仍按低位核心试错的允许场景执行。战法8要求总龙趋势在、题材持续性强、补涨最高连板唯一；旧题材仍强且有合适补涨时，有补涨先做补涨。新题材扛过第三天分歧、第四天强回流而旧题材转弱时切换；极端退潮先等待。<a href="#strategy-7">查看完整补涨条件</a>。</p>
-</details>
-<details>
-<summary>竞昨比≥30%怎么处理？</summary>
-<p>直接放弃。竞价资金分歧过大，容易开盘吃面。个股高开超过7%，若没有板块高潮加速预期，也不参与。</p>
-</details>
-<details>
-<summary>三种无龙期出手场景</summary>
-<p>连续冰点后新题材共振、板块分歧活口反包、独立硬逻辑趋势股缩量回踩关键均线。除此之外默认空仓。</p>
-</details>
-<details>
-<summary><span class="status-tag">待补充</span>断板反包体系</summary>
-<p>待继续补充。真正大龙头经常经历首阴、断板、反包、二波，例如浙江建投、圣龙股份、捷荣技术，都不是一路直板。</p>
-</details>
-<details>
-<summary>最终底线</summary>
-<p>严格区分两大战法的使用场景，有龙做龙，无龙接力，互不混淆、不交叉操作。一切操作优先保护本金，稳定复利大于短期暴利。</p>
-</details>
+<section class="rule-section">
+<header class="rule-section-head"><h4>战法8与无龙期低位试错怎样区分？</h4></header>
+<ul class="rule-bullets"><li>无龙期仍按低位核心试错的允许场景执行。战法8要求总龙趋势在、题材持续性强、补涨最高连板唯一；旧题材仍强且有合适补涨时，有补涨先做补涨。新题材扛过第三天分歧、第四天强回流而旧题材转弱时切换；极端退潮先等待。<a href="#strategy-7">查看完整补涨条件</a>。</li></ul>
+</section>
+<section class="rule-section">
+<header class="rule-section-head"><h4>竞昨比≥30%怎么处理？</h4></header>
+<ul class="rule-bullets"><li>直接放弃。竞价资金分歧过大，容易开盘吃面。个股高开超过7%，若没有板块高潮加速预期，也不参与。</li></ul>
+</section>
+<section class="rule-section">
+<header class="rule-section-head"><h4>三种无龙期出手场景</h4></header>
+<ul class="rule-bullets"><li>连续冰点后新题材共振、板块分歧活口反包、独立硬逻辑趋势股缩量回踩关键均线。除此之外默认空仓。</li></ul>
+</section>
+<section class="rule-section">
+<header class="rule-section-head"><h4><span class="status-tag">待补充</span>断板反包体系</h4></header>
+<ul class="rule-bullets"><li>待继续补充。真正大龙头经常经历首阴、断板、反包、二波，例如浙江建投、圣龙股份、捷荣技术，都不是一路直板。</li></ul>
+</section>
+<section class="rule-section">
+<header class="rule-section-head"><h4>最终底线</h4></header>
+<ul class="rule-bullets"><li>严格区分两大战法的使用场景，有龙做龙，无龙接力，互不混淆、不交叉操作。一切操作优先保护本金，稳定复利大于短期暴利。</li></ul>
+</section>
 </div>
 <div class="source-archive" id="source-records"><div class="subsection-heading"><span>原始思考 / 2026.09.26</span><h3>21条原话，逐条可核对</h3><p>下方保留原文、强调和未完句；正文中的姓名订正与待统一口径单独说明。2026年大唐发电的年份回复一并注明。</p></div><details class="source-collection"><summary><span>查看21条完整原话</span><small>按输入顺序逐条展开</small></summary><div class="fold-content"><details class="raw-record" id="source-record-01"><summary><span><b>01</b>身位性与题材、量能</span><small>15:54</small></summary><div class="raw-record-body"><p class="raw-text">龙头的关键点就是身位性，所以龙头买点基于题材强度和量能节奏的，但是龙头确认时不一定都会</p><a class="source-return" href="#unique-entry">查看正文整理 ↗</a></div></details><details class="raw-record" id="source-record-02"><summary><span><b>02</b>三板起观察与介入</span><small>15:54</small></summary><div class="raw-record-body"><p class="raw-text">在我们的体系中，三板及三板以上才会观察并且开始介入。现在的问题就在于题材节奏与龙头个股观察和介入怎样做的更好？</p><a class="source-return" href="#unique-entry">查看正文整理 ↗</a></div></details><details class="raw-record" id="source-record-03"><summary><span><b>03</b>唯一性、题材回流与放量节奏</span><small>15:55</small></summary><div class="raw-record-body"><p class="raw-text">当进入3板及以上的时候，题材节奏很重要，龙头身位必须具有唯一性，出现唯一性的时候往往就是一个很好的介入节点。因为龙头的量能节奏并不一定能够跟题材节奏共振，我们当然希望龙头个股缩量转强的时候与题材回流共振，这样说明龙头个股的抗跌与领涨性。但是，实际情况并不一定是这样的，龙头个股可能趁着题材回流的节点进行爆量放量，因为这个节点放量爆量之后更容易承接的住，而且个股必须在五板及之前完成放量节奏，因为高位放量更难以承接，获利盘释放压力更大。</p><a class="source-return" href="#volume-window">查看正文整理 ↗</a></div></details><details class="raw-record" id="source-record-04"><summary><span><b>04</b>专属龙头战法四个条件</span><small>15:56</small></summary><div class="raw-record-body"><p class="raw-text">所以我的专属龙头战法应该是：强板块效应（逻辑正，涨停家数多，题材持续性强），唯一性（至少题材内唯一身位，最好是题材间市场上唯一身位）抱团辨识度高标，个股量能节奏合理，中位高盈亏比（三进四四进五做的最多）</p><a class="source-return" href="#overview">查看正文整理 ↗</a></div></details><details class="raw-record" id="source-record-05"><summary><span><b>05</b>华电能源与传媒三股的同身位PK</span><small>15:56</small></summary><div class="raw-record-body"><p class="raw-text">但是同样的，我们回顾华电辽能周期的时候，你会发现当时华电能源也是一个趋势龙的走法。但是当时跟他一起竞争的是三板同身位的绿发电力，他们都是放量缩量板的走法，而不是中南文化的一字走法，所以在他们那里是可能可以产生龙头的（如果不马后炮来说）；而四板的时候，明明开盘更强甚至都首先上板的绿发电力却炸板下杀很多，而且第二天还接近跌停，这其实是很容易骗人上车的。但是华电能源开盘的时候却直接下杀至深水之后等绿发电力不行了再上板。这个就很像龙版传媒当时跟大声文化和欢瑞世纪的PK，这个很经典，三个三连板的PK，最终却是最没有预期的龙版传媒PK成功了，晋级四板，其他全都竞价开盘强，但是最终炸板下杀之后没强度没承接，第二天还给一个极致负反馈，这种非常恐怖。唯一能避免的方法，就是通过唯一性把买点后置到唯一性身位出来之后再介入，同身位在3-4板是一个很危险的事情，即使开盘竞价率先表态上板，仍然可能随时炸板下杀被其他同身位的卡掉。</p><a class="source-return" href="#case-pk">查看正文整理 ↗</a></div></details><details class="raw-record" id="source-record-06"><summary><span><b>06</b>等待唯一性与五板板上确认</span><small>16:04</small></summary><div class="raw-record-body"><p class="raw-text">唯一性保证了至少胜率高盈亏比高溢价概率高，就像华电能源跟绿发电力在3进4的时候PK出来了，但是我们只能5板的时候介入，不能在同身位存在PK的时候介入，这有很大的风险存在。同样的，欢瑞世纪 大晟文化和龙版传媒也是在3进4的时候龙版PK成功了，只有龙版在5板的时候才有介入的时机。而且这个介入的时机也只能是板上确认，因为很可能也会断板。龙版传媒是连扳成功了，但是华电能源就是失败了。</p><a class="source-return" href="#unique-entry">查看正文整理 ↗</a></div></details><details class="raw-record" id="source-record-07"><summary><span><b>07</b>连续一字与中南文化的回避</span><small>16:05</small></summary><div class="raw-record-body"><p class="raw-text">而且三个缩量一字板，在五板及之前没有符合龙头个股量能关系的万不得已不要做这种，这种负反馈A杀起来盈亏比太低了，赔率太高了。像当时的五连一字板中南文化。</p><a class="source-return" href="#leader-exclusions">查看正文整理 ↗</a></div></details><details class="raw-record" id="source-record-08"><summary><span><b>08</b>三房巷、题材卡位与后排吹哨</span><small>16:31</small></summary><div class="raw-record-body"><p class="raw-text">那为什么当时没做化工题材的三房巷呢？因为在龙头冲击高度的时候，龙头在中位开始展现领涨性带动题材其他个股冲击涨停撑起题材持续性，但同样题材本身也会迎来市场的考验，题材的逻辑慢慢被证伪之后同样也会拖累龙头个股。此时我们能看到，三房巷在首板的时候题材中强度板块效应启动-&gt;续强-&gt;分化-&gt;分歧-&gt;分歧大延续，就结束了。即使三房巷撑到了五板变成了当时市场的唯一五板高标抱团辨识度，但是题材已经经历了连续三天的分化分歧，板块效应已无。很自然，三房巷在六板的时候就直接断板开始后面走A杀的情况。这里的难点就在于，三房巷在打连扳高度的时候，4进5的节点如何不被骗上车呢？或者更广泛的3进4的节点不被偏上车呢？
 
@@ -2206,6 +2199,6 @@
 <button aria-label="回到顶部" class="backtop" id="backtop" type="button">
 <svg aria-hidden="true" viewbox="0 0 24 24"><path d="m6 15 6-6 6 6"></path></svg>
 </button>
-<script src="./assets/js/main.js?v=20260927-14"></script>
+<script src="./assets/js/main.js?v=20261006-modules"></script>
 </body>
 </html>
