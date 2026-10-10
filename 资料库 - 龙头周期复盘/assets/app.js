@@ -16,6 +16,7 @@
     title: document.getElementById("cycle-title"),
     focus: document.querySelector(".cycle-focus"),
     agricultureMode: document.getElementById("agriculture-mode-check"),
+    jinyaoCase: document.getElementById("jinyao-case-check"),
     oneLine: document.getElementById("cycle-one-line"),
     metrics: document.getElementById("metric-strip"),
     phaseLine: document.getElementById("phase-line"),
@@ -146,6 +147,8 @@
         cycle.theme,
         cycle.dateRange,
         cycle.rhythm,
+        cycle.oneLine,
+        cycle.reviewPriority,
         ...(cycle.tags || []),
         ...(leaderVolume.cycles?.[cycle.id]?.events || []).map(
           (event) => `${event.displayDate} ${event.kind} ${event.phase} ${event.board} ${event.amountYi}亿 ${event.turnover}% ${event.note}`
@@ -209,6 +212,7 @@
       } else {
         button.append(title, detail);
       }
+      if (cycle.reviewPriority) button.append(createElement("span", "cycle-item-priority", cycle.reviewPriority));
       button.addEventListener("click", () => {
         state.selectedId = cycle.id;
         history.replaceState(null, "", `#${encodeURIComponent(cycle.id)}`);
@@ -224,6 +228,7 @@
     if (els.focus) els.focus.id = cycle.id;
     const isAgriculture = cycle.id === "wanxiang-agri-2026-09";
     if (els.agricultureMode) els.agricultureMode.hidden = !isAgriculture;
+    if (els.jinyaoCase) els.jinyaoCase.hidden = cycle.id !== "jinyao-medicine-2026-04";
     setText(els.status, cycle.status);
     setText(els.range, cycle.dateRange);
     setText(els.sector, `${cycle.sector} / ${cycle.theme}`);

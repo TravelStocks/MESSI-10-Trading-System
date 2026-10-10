@@ -23,9 +23,9 @@ test('all three views consume the same lessons and retain the main rhythms plus 
   for (const file of ['index.html', 'framework-model/index.html', '资料库 - 龙头周期复盘/index.html']) {
     const html = read(file);
     assert.match(html, /data-october-lessons/);
-    assert.match(html, /assets\/data\/october-lessons.js\?v=20261006-modules/);
-    assert.match(html, /assets\/js\/october-lessons.js\?v=20261006-modules/);
-    assert.match(html, /assets\/css\/october-lessons.css\?v=20261006-modules/);
+    assert.match(html, /assets\/data\/october-lessons.js\?v=20261010-jinyao/);
+    assert.match(html, /assets\/js\/october-lessons.js\?v=20261010-jinyao/);
+    assert.match(html, /assets\/css\/october-lessons.css\?v=20261010-jinyao/);
   }
 });
 
@@ -123,7 +123,7 @@ test('integrated chapters retain every lesson exactly once without a second upda
       }
       return node;
     });
-    const browser = { window: context.window, document: { createElement: (tag) => new Element(tag), querySelectorAll: () => roots } };
+    const browser = { window: context.window, document: { createElement: (tag) => new Element(tag), querySelectorAll: (selector) => selector === '[data-october-lessons]' ? roots : [] } };
     vm.runInNewContext(read('assets/js/october-lessons.js'), browser);
     const nodes = roots.flatMap(descendants);
     const points = nodes.filter((node) => node.hasAttribute('data-lesson-point')).map((node) => node.getAttribute('data-lesson-point')).sort();
@@ -178,7 +178,7 @@ test('shared renderer makes six lessons and linked K/volume charts with function
       init() { const chart = { setOption(option) { this.option = option; }, on() {}, dispatchAction(action) { this.action = action; }, resize() {} }; charts.push(chart); return chart; },
       connect(items) { assert.equal(items.length, 3); }
     } },
-    document: { createElement: (tag) => new Element(tag), querySelectorAll: (selector) => selector === '[data-october-lessons]' ? [lessonsRoot] : [replayRoot] }
+    document: { createElement: (tag) => new Element(tag), querySelectorAll: (selector) => selector === '[data-october-lessons]' ? [lessonsRoot] : selector === '[data-agriculture-replay]' ? [replayRoot] : [] }
   };
   vm.runInNewContext(read('assets/js/october-lessons.js'), browser);
   vm.runInNewContext(read('assets/js/agriculture-replay.js'), browser);
@@ -221,4 +221,45 @@ test('only source archives and mobile navigation retain collapse controls in the
   assert.doesNotMatch(handbook, /展开阅读|各节可展开查看/);
   assert.doesNotMatch(read('assets/js/main.js'), /readingToggle|updateReadingToggle/);
   assert.equal(Object.keys(lessons.structuredPoints).length, 22);
+});
+
+test('Jinyao crossing case is visible structured content shared by handbook and cycle review', () => {
+  const sample = lessons.crossingCase;
+  assert.equal(sample.id, 'jinyao-medicine-2026-04');
+  assert.equal(sample.steps.length, 4);
+  assert.equal(sample.checks.length, 3);
+  assert.match(sample.title, /穿越活口.*身位.*题材二次爆发.*主升/);
+  const text = JSON.stringify(sample);
+  for (const term of ['03.31', '三板', '04.01', '04.02', '04.08', '没有个股穿越', '不等于医药所有其他模式', '活口不是自动买点', '金健米业', '仍待验证']) assert.ok(text.includes(term), term);
+  for (const heading of ['4', '3']) {
+    const node = new Element('section');
+    node.setAttribute('data-case-heading', heading);
+    node.setAttribute('data-case-link', '#jinyao-medicine-2026-04');
+    node.setAttribute('data-case-link-label', '津药药业完整周期');
+    vm.runInNewContext(read('assets/js/october-lessons.js'), {
+      window: context.window,
+      document: { createElement: (tag) => new Element(tag), querySelectorAll: (selector) => selector === '[data-crossing-case]' ? [node] : [] }
+    });
+    const nodes = descendants(node);
+    assert.equal(nodes.filter((item) => item.tag === 'ol').length, 1);
+    assert.equal(nodes.filter((item) => item.tag === 'li').length, 13);
+    assert.equal(nodes.filter((item) => item.tag === `h${heading}`).length, 1);
+    assert.equal(nodes.filter((item) => ['details', 'summary'].includes(item.tag)).length, 0);
+  }
+  assert.match(handbook, /id="case-jinyao-crossing" data-crossing-case/);
+  assert.match(handbook, /case-directory"><a href="#case-jinyao-crossing"/);
+  assert.match(read('资料库 - 龙头周期复盘/index.html'), /id="jinyao-case-check" data-crossing-case[^>]*hidden/);
+  assert.match(read('资料库 - 龙头周期复盘/assets/app.js'), /els\.jinyaoCase\.hidden = cycle\.id !== "jinyao-medicine-2026-04"/);
+});
+
+test('Jinyao priority does not overwrite original dated cycle evidence or ending', () => {
+  const browser = { window: {} };
+  vm.runInNewContext(read('资料库 - 龙头周期复盘/data/cycles.js'), browser);
+  vm.runInNewContext(read('资料库 - 龙头周期复盘/data/cycle-updates.js'), browser);
+  const cycle = browser.window.LEADER_CYCLE_ARCHIVE.cycles.find((item) => item.id === lessons.crossingCase.id);
+  assert.equal(cycle.reviewPriority, '重点经典 · 穿越活口主升');
+  assert.match(cycle.oneLine, /穿越成为活口.*三板取得身位.*题材二次爆发.*4\/8.*结束/);
+  assert.equal(cycle.records.length, 8);
+  assert.match(cycle.records.find((item) => item.date === '2026/3/31').raw, /板块活口：津药药业换手三板/);
+  assert.match(cycle.records.find((item) => item.date === '2026/4/8').raw, /抗监管失败/);
 });

@@ -26,6 +26,22 @@
 .rule-bullets li { padding-left: 3px; margin: 7px 0; font-size: 15px; line-height: 1.8; overflow-wrap: anywhere; }
 .rule-bullets li::marker { color: var(--muted, #5e6b63); }
 .lesson-inline { display: contents; }
+.crossing-case { margin: 24px 0; padding: 22px 0; border-block: 2px solid #226b56; letter-spacing: 0; scroll-margin-top: 110px; }
+.crossing-case[hidden] { display: none; }
+.case-study-label { color: #226b56; font-size: 12px; font-weight: 700; margin: 0 0 8px; }
+.crossing-case > :is(h3,h4) { font-size: 23px; line-height: 1.6; margin: 0 0 12px; }
+.case-study-lead { font-size: 15px; line-height: 1.85; margin: 0 0 20px; }
+.case-study-path { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; list-style: none; padding: 0; margin: 20px 0 24px; }
+.case-study-path li { min-width: 0; border-top: 2px solid #226b56; padding-top: 10px; }
+.case-study-path span { display: block; color: var(--muted); font-size: 11px; line-height: 1.7; min-height: 38px; }
+.case-study-path strong { display: block; font-size: 15px; line-height: 1.6; }
+.case-study-path p { font-size: 14px; line-height: 1.8; margin: 8px 0 0; }
+.case-study-checks { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+.case-study-checks section { min-width: 0; padding-top: 12px; border-top: 1px solid var(--line); }
+.case-study-checks :is(h4,h5) { font-size: 16px; line-height: 1.5; margin: 0 0 10px; }
+.case-study-source { font-size: 12px; color: var(--muted); line-height: 1.8; margin: 18px 0 4px; }
+.case-study-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--blue, #075fad); font-size: 14px; }
+.cycle-item .cycle-item-priority { color: #226b56; font-size: 12px; font-weight: 700; line-height: 1.6; margin-top: 6px; }
 .strategy-premise { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 18px; margin: 16px 0 24px; padding: 14px 0; border-block: 1px solid var(--line); }
 .strategy-premise > strong { font-size: 13px; color: var(--muted); padding-top: 7px; }
 .strategy-execution-grid { margin: 20px 0 24px; }
@@ -83,6 +99,9 @@
 .agri-table caption { text-align: left; font-weight: 700; padding: 12px 0; }
 .agri-evidence { border-left: 3px solid #bd434b; padding-left: 14px; }
 @media (max-width: 640px) {
+  .case-study-path { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+  .case-study-checks { grid-template-columns: 1fr; gap: 18px; }
+  .crossing-case > :is(h3,h4) { font-size: 21px; }
   .theme-volume-head h3 { font-size: 23px; }
   .lesson-rhythm { grid-template-columns: 1fr; gap: 10px; padding: 16px 0; }
   .lesson-rhythm-note { padding-left: 40px; }

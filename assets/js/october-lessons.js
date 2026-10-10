@@ -75,4 +75,30 @@
       root.append(element("p", `规则口径：本人复盘，${data.version}；经验窗口与待验证假设分开，不构成收益保证。`, "lesson-source"));
     }
   });
+  document.querySelectorAll("[data-crossing-case]").forEach((root) => {
+    const sample = data.crossingCase;
+    const heading = root.getAttribute("data-case-heading") === "4" ? "h4" : "h3";
+    root.classList.add("crossing-case");
+    root.append(element("p", sample.label, "case-study-label"), element(heading, sample.title), element("p", sample.lesson, "case-study-lead"));
+    const path = element("ol", "", "case-study-path");
+    sample.steps.forEach((step, index) => {
+      const node = element("li");
+      node.append(element("span", `0${index + 1} / ${step.date}`), element("strong", step.title), element("p", step.note));
+      path.append(node);
+    });
+    root.append(path);
+    const checks = element("div", "", "case-study-checks");
+    sample.checks.forEach((check) => {
+      const node = element("section");
+      node.append(element(heading === "h4" ? "h5" : "h4", check.title));
+      const list = element("ul", "", "rule-bullets");
+      check.points.forEach((point) => list.append(element("li", point)));
+      node.append(list);
+      checks.append(node);
+    });
+    root.append(checks, element("p", sample.source, "case-study-source"));
+    const link = element("a", root.getAttribute("data-case-link-label"), "case-study-link");
+    link.setAttribute("href", root.getAttribute("data-case-link"));
+    root.append(link);
+  });
 })();
