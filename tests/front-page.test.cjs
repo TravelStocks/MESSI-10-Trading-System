@@ -50,7 +50,7 @@ test('new anchors resolve and do not duplicate existing ids', () => {
   assert.ok(html.includes('href="#recurring-errors"'));
 });
 
-test('the eight strategy entries are ordered and retain their existing destinations', () => {
+test('the nine strategy entries are ordered and retain their existing destinations', () => {
   const entries = html.match(/<div class="hero-entry-actions">([\s\S]*?)<\/div>/)[1];
   const labels = [...entries.matchAll(/<strong>(.*?)<\/strong>/g)].map((match) => match[1].replace(/<[^>]*>/g, ''));
   assert.deepEqual(labels, [
@@ -61,7 +61,8 @@ test('the eight strategy entries are ordered and retain their existing destinati
     '战法5：补涨',
     '战法6：连板龙转趋势龙-龙头二波',
     '战法7：龙头反抽以及监管套利',
-    '战法8：总龙趋势下补涨连板龙-补涨龙中位3板'
+    '战法8：总龙趋势下补涨连板龙-补涨龙中位3板',
+    '战法9：多概念发酵低价低市值-抱团龙'
   ]);
   const destinations = [...entries.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
   assert.deepEqual(destinations, [
@@ -80,6 +81,10 @@ test('the eight strategy entries are ordered and retain their existing destinati
   assert.match(entries, /entry-pending[\s\S]*?战法5：补涨[\s\S]*?内容待补充/);
   assert.match(entries, /<span class="strategy-stage">-龙头主升3<\/span>/);
   assert.match(entries, /<span class="strategy-stage">-补涨龙中位3板<\/span>/);
+  const crowdLeader = entries.match(/<article class="entry-link entry-pending" id="strategy-9">([\s\S]*?)<\/article>/)[1];
+  assert.match(crowdLeader, /案例：九阳股份、圣阳股份/);
+  assert.match(crowdLeader, /具体规则待补充/);
+  assert.doesNotMatch(crowdLeader, /href=|查看战法/);
 });
 
 test('strategy references use the new numbers without breaking legacy anchors', () => {
