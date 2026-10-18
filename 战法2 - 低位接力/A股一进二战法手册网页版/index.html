@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A股一进二战法手册网页版</title>
+  <title>战法3：低位接力-切换｜A股一进二战法手册</title>
   <style>
     :root {
       --bg: #07070b;
@@ -640,6 +640,16 @@
       transform: translateY(0);
     }
 
+    .switch-selection { margin: 24px 0; padding: 22px 0; border-top: 2px solid var(--red); border-bottom: 1px solid var(--line); scroll-margin-top: 24px; letter-spacing: 0; }
+    .switch-selection h3 { margin: 0 0 14px; font-size: 22px; line-height: 1.5; }
+    .switch-selection h4 { margin: 20px 0 8px; font-size: 17px; }
+    .switch-selection p, .switch-selection li { color: var(--muted); font-size: 15px; line-height: 1.85; overflow-wrap: anywhere; }
+    .switch-selection strong { color: var(--text); }
+    .switch-selection ol, .switch-selection ul { padding-left: 22px; }
+    .switch-selection li { margin-bottom: 12px; }
+    .switch-selection .switch-source { font-size: 13px; }
+    .switch-selection a { text-decoration: underline; text-underline-offset: 3px; }
+
     @media (max-width: 1120px) {
       .hero-shell,
       .page-shell {
@@ -693,9 +703,9 @@
   <header class="hero">
     <div class="hero-shell">
       <section class="hero-main reveal">
-        <p class="manual-kicker">Trading Manual · A-Share Relay Setup</p>
+        <p class="manual-kicker">战法3 · 低位接力-切换</p>
         <h1>A股一进二战法认知与实战要点</h1>
-        <p class="hero-lead">这是一份按“交易手册”方式重组的网页版本，只使用你给的 Notion 页面《具体策略》里的内容来拆解。整体逻辑保持原文核心：隔日套利，二进三博弈高溢价，试错龙头，补涨优先。</p>
+        <p class="hero-lead">原手册以 Notion 页面《具体策略》为基础：隔日套利，二进三博弈高溢价，试错龙头，补涨优先。2026-10-18补充新题材切换：先看题材爆发强度，次日比较同题材竞价，第一优先、第二备选，只选前二。<a href="#switch-selection">查看切换规则</a>。</p>
         <p class="hero-quote">核心观点：一进二的核心是“拿先手”，而不是“赌妖股”。目的明确，买在启动点，为了在次日板块高潮时拥有主动权。</p>
         <div class="hero-chip-row">
           <span class="hero-chip">低位确定性优先</span>
@@ -725,7 +735,7 @@
         </div>
         <div class="side-block">
           <p class="side-label">来源说明</p>
-          <p>内容摘编并重组自 Notion 页面《具体策略》。网页仅用于教学与复盘，不构成任何投资建议。</p>
+          <p>原内容摘编自 Notion 页面《具体策略》；新题材切换规则来自本人2026-10-18补充，第三方截图推演单独标明。网页仅用于个人体系整理与复盘，不构成任何投资建议。</p>
         </div>
       </aside>
     </div>
@@ -968,6 +978,25 @@
           <span class="manual-pill pill-gold">推演卡</span>
         </div>
         <p class="section-lead">主线衰竭、新题材启动、旧题材被抽血，这些都是切换的条件。非主线和弱轮动板块则只能做最强龙头，并把离场纪律收得更紧。</p>
+        <div class="switch-selection" id="switch-selection" aria-labelledby="switch-selection-title">
+          <h3 id="switch-selection-title">新题材切换：先题材，再竞价，只选前二</h3>
+          <p><strong>本人规则：先看题材爆发强度，再看次日竞价谁最强；第一优先、第二备选，只选前二。</strong></p>
+          <ol>
+            <li><strong>首日看题材爆发强度。</strong>先判断新方向是否值得关注，再建立候选。不能只因为某只个股强，就反过来为它找题材解释。</li>
+            <li><strong>次日比较同题材、同身位竞价。</strong>题材启动后的第二天，重点比较二板候选（1进2）的前排强弱。这里不是全市场竞价排名，也不只看谁高开更多；仍按原有量能、板块联动和买点条件确认。</li>
+            <li><strong>最强优先，次强备选，只选前二。</strong>最强无法参与，且次强也符合计划条件，才考虑次强；不是必须两只都买，也不因前排买不到而向第三名及以后扩散。</li>
+            <li><strong>没有合格强票就等待，仓位仍由天时决定。</strong>“没有最强”不等于题材整体弱、排序不清时也硬选第二名。筛选规则不等于自动买入，不突破原有总风险预算。</li>
+          </ol>
+          <h4>与其他模式分开</h4>
+          <ul>
+            <li><strong>新题材低位切换：</strong>首日识别方向，次日比较1进2前排；同题材前二是候选边界。</li>
+            <li><strong>成熟龙头：</strong>仍按唯一核心要求判断，不能把切换的“第二备选”套到中高位龙头。</li>
+            <li><strong>补涨加速：</strong>2进3成功后准备次日隔夜排单，是另一类参与场景，不与新题材第二天选股混用。</li>
+          </ul>
+          <h4>第三方学习案例：截图中的“紫竹”</h4>
+          <p>评论者以9月29日题材启动、9月30日第二天为线索，推测若看好该题材，可能选择竞价最强的二板候选“紫竹”。本次只提炼“先方向、再前排”的筛选顺序，不补写截图无法辨认的具体题材，也不把简称扩展为未经核对的证券名称。</p>
+          <p class="switch-source">来源：本人2026-10-18提供的聊天截图及后续规则归纳。截图评论使用“可能”，不是董事长本人确认的买入依据；未取得其交割，不据此确认仓位、利润或策略胜率。以上为个人模式记录，不保证延续或收益。<a href="../../index.html#relay-switch">返回总系统战法3</a>。</p>
+        </div>
         <div class="card-grid">
             <article class="manual-card tone-red reveal">
               <div class="card-glow"></div>
@@ -1088,6 +1117,7 @@
   <footer class="footer">
     <div class="footer-box">
       内容摘编与重组自 Notion 页面 <a href="https://www.notion.so/3337af2f574e80179710f95b018cc385" target="_blank" rel="noreferrer">《具体策略》</a>。
+      2026-10-18的新题材切换补充来自本人规则归纳，截图评论与已核实成交分开记录。
       本网页用于教学与个人复盘，不构成任何投资建议。
     </div>
   </footer>
