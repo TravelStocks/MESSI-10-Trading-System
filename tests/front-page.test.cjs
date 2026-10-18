@@ -72,7 +72,8 @@ test('the nine strategy entries are ordered and retain their existing destinatio
     './战法3 - 机构趋势/index.html',
     '#strategy-5',
     './strategy-6-rebound/index.html',
-    '#strategy-7'
+    '#strategy-7',
+    '#strategy-9-model'
   ]);
   for (const href of destinations) {
     if (href.startsWith('#')) assert.ok(html.includes(`id="${href.slice(1)}"`), href);
@@ -81,10 +82,10 @@ test('the nine strategy entries are ordered and retain their existing destinatio
   assert.match(entries, /entry-pending[\s\S]*?战法5：补涨[\s\S]*?内容待补充/);
   assert.match(entries, /<span class="strategy-stage">-龙头主升3<\/span>/);
   assert.match(entries, /<span class="strategy-stage">-补涨龙中位3板<\/span>/);
-  const crowdLeader = entries.match(/<article class="entry-link entry-pending" id="strategy-9">([\s\S]*?)<\/article>/)[1];
+  const crowdLeader = entries.match(/<a class="entry-link entry-blue" id="strategy-9" href="#strategy-9-model">([\s\S]*?)<\/a>/)[1];
   assert.match(crowdLeader, /案例：九阳股份、圣阳股份/);
-  assert.match(crowdLeader, /具体规则待补充/);
-  assert.doesNotMatch(crowdLeader, /href=|查看战法/);
+  assert.match(crowdLeader, /查看战法/);
+  assert.doesNotMatch(crowdLeader, /具体规则待补充/);
 });
 
 test('strategy references use the new numbers without breaking legacy anchors', () => {
