@@ -56,7 +56,7 @@ test('the eight strategy entries are ordered and retain their existing destinati
   assert.deepEqual(labels, [
     '战法1：唯一性中高位连扳龙-龙头主升2',
     '战法2：进监管后反核龙头继续连扳-龙头主升3',
-    '战法3：低位接力-切换',
+    '战法3：低位接力选次日竞价最强-切换',
     '战法4：机构趋势',
     '战法5：补涨',
     '战法6：连板龙转趋势龙-龙头二波',
@@ -90,7 +90,7 @@ test('strategy references use the new numbers without breaking legacy anchors', 
   const trend = readFileSync(join(__dirname, '..', '战法3 - 机构趋势/index.html'), 'utf8');
   assert.match(trend, /<title>机构趋势｜战法4<\/title>/);
   assert.match(trend, /Strategy 04 \/ Swing Trend/);
-  assert.match(trend, /战法3 低位接力/);
+  assert.match(trend, /战法3：低位接力选次日竞价最强-切换/);
   const rebound = readFileSync(join(__dirname, '..', 'strategy-6-rebound/index.html'), 'utf8');
   assert.match(rebound, /<title>战法7：龙头反抽以及监管套利｜MESSI-10<\/title>/);
 });

@@ -11,8 +11,9 @@ const supplement = detail.match(/<div[^>]*id="switch-selection"[\s\S]*?<\/div>/)
 
 test('strategy 3 retains its legacy destination and exposes the new switching sequence', () => {
   assert.ok(existsSync(join(root, detailPath)));
-  assert.match(main, /战法3：低位接力-切换/);
-  assert.match(detail, /<title>战法3：低位接力-切换/);
+  assert.match(main, /战法3：低位接力选次日竞价最强-切换/);
+  assert.match(detail, /<title>战法3：低位接力选次日竞价最强-切换/);
+  assert.match(detail, /<h1>战法3：低位接力选次日竞价最强-切换<\/h1>/);
   for (const text of [summary, supplement]) {
     for (const phrase of ['题材爆发强度', '次日', '同题材', '同身位', '只选前二', '第一优先', '第二备选']) {
       assert.ok(text.includes(phrase), phrase);
