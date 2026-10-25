@@ -1,5 +1,5 @@
 const assert = require('node:assert/strict');
-const { readFileSync } = require('node:fs');
+const { existsSync, readFileSync } = require('node:fs');
 const { join } = require('node:path');
 const test = require('node:test');
 
@@ -44,4 +44,24 @@ test('crossing first-move notes retain timing, attribution and unresolved speech
 
 test('Notion Jiuyang model preserves stages, source and feedback direction', () => {
   for (const phrase of ['id="jiuyang-notion-model"', '3fc7af2f574e806dad8cf571c7acc23d', '第一段 / 连板主动领涨', '第二段 / 放量横盘与轮动', '第三段 / 补涨反向助攻', '不写成固定拉升顺序', '不新增机械阈值', '不自动等同战法6']) assert.ok(section.includes(phrase), phrase);
+});
+
+test('the highlighted source model comes first and distinguishes stage boundaries', () => {
+  assert.ok(section.indexOf('id="jiuyang-notion-model"') < section.indexOf('时代万恒'));
+  assert.equal((section.match(/id="jiuyang-notion-model"/g) || []).length, 1);
+  for (const phrase of ['重点必读', '主升看领涨，轮动看反推，结束看助攻', '弱市出现抱团，不等于放宽仓位',
+    '前3至4板', '首板助攻不足', '从主升转轮动，而非彻底消失', '不是次日必断的保证',
+    '不代表这一阶段不会跌停', '带刀侍卫', '趋势2 / 地位与延续', '不反向放宽第一波连板的量能条件',
+    '普通阴线不自动等于结束', '助攻结束、题材不再出现涨停、核心转阴']) {
+    assert.ok(section.includes(phrase), phrase);
+  }
+  const path = section.match(/<ol class="case-study-path"[\s\S]*?<\/ol>/)[0];
+  assert.equal((path.match(/<li>/g) || []).length, 4);
+});
+
+test('the original illustration is retained without treating sample numbers as thresholds', () => {
+  assert.match(section, /src="\.\/assets\/images\/crowd-leader-trend-notion.png" width="2048" height="1073"/);
+  assert.ok(existsSync(join(__dirname, '..', 'assets/images/crowd-leader-trend-notion.png')));
+  assert.match(section, /不强行对应九阳股份或圣阳股份/);
+  assert.match(section, /不作为本模式统一门槛/);
 });

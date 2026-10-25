@@ -389,6 +389,25 @@ body.handbook-edition { background: var(--bg); }
 
 .cycle-method-facts .cycle-position { grid-column: 1 / -1; }
 
+/* Strategy 4: highlight the source model without changing other handbook modules. */
+#strategy-9-model .crowd-transition { border-color: var(--module-link); }
+#strategy-9-model .crowd-transition h3 { font-size: 24px; line-height: 1.5; letter-spacing: 0; }
+#strategy-9-model .crowd-transition .case-study-label { color: var(--module-link); font-size: 13px; }
+#strategy-9-model .crowd-transition .case-study-path li { border-color: var(--module-link); }
+#strategy-9-model .crowd-transition .case-study-path li:last-child { border-color: #b34450; }
+.crowd-key-rule { margin: 16px 0; font-size: 21px; line-height: 1.6; color: var(--green); letter-spacing: 0; }
+#crowd-transition-guards h4 { margin: 0 0 10px; font-size: 18px; line-height: 1.6; letter-spacing: 0; }
+#crowd-transition-guards p { margin: 0; font-size: 15px; line-height: 1.85; }
+.crowd-source-figure { margin: 24px 0; }
+.crowd-source-figure > a { display: block; }
+.crowd-source-figure img { display: block; width: 100%; height: auto; }
+.crowd-source-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.crowd-source-figure figcaption a { display: inline-flex; align-items: center; min-height: 44px; margin-right: 14px; color: var(--module-link); text-decoration: underline; }
+@media (max-width: 640px) {
+  #strategy-9-model .crowd-transition h3 { font-size: 22px; }
+  .crowd-key-rule { font-size: 19px; }
+}
+
 /* Keep the stage-to-strategy source diagram readable at the full content width. */
 .cycle-stage-reference .rotation-reference-figure { margin-top: 24px; }
 .cycle-stage-reference .rotation-reference-figure img { max-width: none; }
