@@ -61,8 +61,8 @@ test('the nine strategy entries are ordered and retain their existing destinatio
     '战法5：总龙趋势下补涨连板龙-补涨龙中位3板',
     '战法6：连板龙转趋势龙-龙头二波',
     '战法7：龙头反抽以及监管套利',
-    '战法8：补涨',
-    '战法9：机构趋势'
+    '战法8：机构趋势',
+    '战法9：补涨'
   ]);
   const destinations = [...entries.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
   assert.deepEqual(destinations, [
@@ -79,7 +79,7 @@ test('the nine strategy entries are ordered and retain their existing destinatio
     if (href.startsWith('#')) assert.ok(html.includes(`id="${href.slice(1)}"`), href);
     else assert.ok(existsSync(join(__dirname, '..', href)), href);
   }
-  assert.match(entries, /entry-pending[\s\S]*?战法8：补涨[\s\S]*?内容待补充/);
+  assert.match(entries, /entry-pending[\s\S]*?战法9：补涨[\s\S]*?内容待补充/);
   assert.match(entries, /<span class="strategy-stage">-龙头主升3<\/span>/);
   assert.match(entries, /<span class="strategy-stage">-补涨龙中位3板<\/span>/);
   const crowdLeader = entries.match(/<a class="entry-link entry-blue" id="strategy-9" href="#strategy-9-model">([\s\S]*?)<\/a>/)[1];
@@ -94,13 +94,13 @@ test('strategy references use the new numbers without breaking legacy anchors', 
   assert.match(html, /id="strategy-57-execution"/);
   assert.doesNotMatch(html, /战法5[、与].*?战法7|战法5、7|战法5 \/ 总龙二波|战法7 \/ 补涨中位/);
   const trend = readFileSync(join(__dirname, '..', '战法3 - 机构趋势/index.html'), 'utf8');
-  assert.match(trend, /<title>机构趋势｜战法9<\/title>/);
-  assert.match(trend, /Strategy 09 \/ Swing Trend/);
-  assert.doesNotMatch(trend, /战法4|Strategy 04/);
+  assert.match(trend, /<title>机构趋势｜战法8<\/title>/);
+  assert.match(trend, /Strategy 08 \/ Swing Trend/);
+  assert.doesNotMatch(trend, /战法4|Strategy 04|战法9|Strategy 09/);
   const framework = readFileSync(join(__dirname, '..', 'framework-model/index.html'), 'utf8');
   assert.match(framework, /补涨龙三板 · 战法5/);
-  assert.match(framework, /趋势可对照战法9/);
-  assert.doesNotMatch(framework, /补涨龙三板 · 战法8|趋势可对照战法4/);
+  assert.match(framework, /趋势可对照战法8/);
+  assert.doesNotMatch(framework, /补涨龙三板 · 战法8|趋势可对照战法4|趋势可对照战法9/);
   assert.match(trend, /战法3：低位接力选次日竞价最强-切换/);
   const rebound = readFileSync(join(__dirname, '..', 'strategy-6-rebound/index.html'), 'utf8');
   assert.match(rebound, /<title>战法7：龙头反抽以及监管套利｜MESSI-10<\/title>/);
