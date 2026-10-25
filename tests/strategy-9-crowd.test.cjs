@@ -6,8 +6,10 @@ const test = require('node:test');
 const html = readFileSync(join(__dirname, '..', 'index.html'), 'utf8');
 const section = html.match(/<section\b[^>]*id="strategy-9-model"[\s\S]*?<\/section>/)?.[0];
 
-test('strategy 9 makes actual same-cycle development its prerequisite', () => {
+test('renumbered strategy 4 keeps its legacy anchor and same-cycle prerequisite', () => {
   assert.ok(section);
+  assert.match(section, /战法4 \/ 轮动题材与情绪抱团/);
+  assert.match(section, /<h2 id="strategy-9-title">题材发酵主升切换成轮动题材市场情绪高标锚定-抱团情绪龙<\/h2>/);
   assert.match(section, /相关概念在同一个周期内确实发酵/);
   assert.match(section, /可以先后轮动，不要求同一天一起爆发/);
   assert.match(section, /长期沉寂的概念标签不算支撑/);
@@ -24,7 +26,7 @@ test('case roles remain attributed observations, not identical trajectories', ()
   assert.match(section, /不作为已验证的资金流向或收益保证/);
 });
 
-test('strategy 9 does not invent trade triggers or borrow unrelated strategy rules', () => {
+test('strategy 4 does not invent trade triggers or borrow unrelated strategy rules', () => {
   assert.match(section, /不自动等于战法6的龙头二波/);
   assert.match(section, /不直接套用战法3的次日竞价前二买点/);
   assert.match(section, /独立买卖触发条件、仓位与失效阈值/);
