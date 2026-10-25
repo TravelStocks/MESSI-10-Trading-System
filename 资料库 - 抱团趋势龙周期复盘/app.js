@@ -40,7 +40,7 @@
     const lines=nodes.map((n,i)=>{
       const d=days.find(d=>d.date===n.date), g=primaryGroup(d);
       const textIndex=Math.round((i+.5)/nodes.length*(days.length-1));
-      const countLabel=g.count===null?`${g.theme}：未单列`:`${g.sourceTitle}\n涨停${g.count}只 · 其他${g.assistCount}只`;
+      const countLabel=current.id==='jinjian'?d.groups.map(groupText).join('\n'):(g.count===null?`${g.theme}：未单列`:`${g.sourceTitle}\n涨停${g.count}只 · 其他${g.assistCount}只`);
       return [{coord:[textIndex,hi+spread*.34],label:{show:!mobile,formatter:`${short(n.date)} · ${n.title}\n${countLabel}`,position:'start',color:i%2?'#d9ba68':'#7fe1cc',backgroundColor:'#151a18ed',padding:[5,7],fontSize:11,lineHeight:17,align:'center',width:Math.max(140,($('cycle-chart').clientWidth-110)/nodes.length-22),overflow:'break'},symbol:'none'},{coord:[n.date,d.high],symbol:'arrow',symbolSize:7}];
     });
     const series=[
@@ -81,7 +81,7 @@
     let chartIndex=0;
     $('key-nodes').innerHTML=current.nodes.map(n=>{
       const d=current.days.find(d=>d.date===n.date),g=primaryGroup(d),idx=n.chart?++chartIndex:null;
-      return `<button type="button" class="node ${selectedDate===n.date?'active':''}" data-day="${n.date}" aria-pressed="${selectedDate===n.date}"><span class="date">${n.date}${idx?` · 图中 ${idx}`:''}</span><strong>${esc(n.title)}</strong><p>${esc(current.name)} ${pct(d.pct)} · ${number(d.close)}元</p><p class="count-line">${esc(groupText(g))}</p></button>`;
+      return `<button type="button" class="node ${selectedDate===n.date?'active':''}" data-day="${n.date}" aria-pressed="${selectedDate===n.date}"><span class="date">${n.date}${idx?` · 图中 ${idx}`:''}</span><strong>${esc(n.title)}</strong><p>${esc(current.name)} ${pct(d.pct)} · ${number(d.close)}元</p><p class="count-line">${current.id==='jinjian'?d.groups.map(g=>esc(groupText(g))).join('<br>'):esc(groupText(g))}</p></button>`;
     }).join('');
   }
   function renderDay() {

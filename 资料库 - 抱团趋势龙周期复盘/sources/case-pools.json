@@ -2167,7 +2167,8 @@
       "start": "2026-08-10",
       "end": "2026-09-23",
       "themeKeys": [
-        "大农业"
+        "大农业",
+        "大消费"
       ],
       "cycleStart": "2026-08-17",
       "days": [
@@ -2183,6 +2184,139 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 11,
+              "parsedCount": 11,
+              "assistCount": 11,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "北京文化",
+                  "code": "000802",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:32:18",
+                  "reason": "《欢迎来龙餐馆》定档+影视全产业链+演艺演出",
+                  "pct": "10.07%",
+                  "amount": "4.8亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "金达威",
+                  "code": "002626",
+                  "board": "首板",
+                  "firstSeal": "09:34:03",
+                  "lastSeal": "09:34:03",
+                  "reason": "辅酶Q10+NMN概念+外销",
+                  "pct": "10.03%",
+                  "amount": "1.9亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "一鸣食品",
+                  "code": "605179",
+                  "board": "首板",
+                  "firstSeal": "09:59:45",
+                  "lastSeal": "10:02:39",
+                  "reason": "乳业+烘焙食品+冷链物流",
+                  "pct": "9.98%",
+                  "amount": "7.4亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "香飘飘",
+                  "code": "603711",
+                  "board": "首板",
+                  "firstSeal": "10:03:13",
+                  "lastSeal": "10:16:16",
+                  "reason": "软饮料+茶饮店+中报预计扭亏+出海",
+                  "pct": "10.02%",
+                  "amount": "1.2亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "华天酒店",
+                  "code": "000428",
+                  "board": "首板",
+                  "firstSeal": "10:21:24",
+                  "lastSeal": "10:21:24",
+                  "reason": "酒店+预制菜+大消费+国企改革",
+                  "pct": "9.92%",
+                  "amount": "2.2亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "源飞宠物",
+                  "code": "001222",
+                  "board": "首板",
+                  "firstSeal": "10:21:33",
+                  "lastSeal": "10:21:33",
+                  "reason": "宠物经济+海外业务+设立创投",
+                  "pct": "9.99%",
+                  "amount": "1亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "皇氏集团",
+                  "code": "002329",
+                  "board": "首板",
+                  "firstSeal": "11:07:15",
+                  "lastSeal": "11:21:03",
+                  "reason": "乳业+新式茶饮+股权转让+种源突破",
+                  "pct": "10.16%",
+                  "amount": "3亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "爱普股份",
+                  "code": "603020",
+                  "board": "首板",
+                  "firstSeal": "13:04:48",
+                  "lastSeal": "13:05:30",
+                  "reason": "香精香料+Omega-3鱼油+收购整合",
+                  "pct": "9.99%",
+                  "amount": "1.2亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "儒意电影",
+                  "code": "002739",
+                  "board": "首板",
+                  "firstSeal": "13:09:15",
+                  "lastSeal": "13:09:15",
+                  "reason": "《欢迎来龙餐馆》+暑期档+IP潮玩+院线龙头",
+                  "pct": "9.97%",
+                  "amount": "18.7亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "三柏硕",
+                  "code": "001300",
+                  "board": "首板",
+                  "firstSeal": "13:13:21",
+                  "lastSeal": "13:13:21",
+                  "reason": "蹦床龙头+健身器材+外销为主",
+                  "pct": "9.98%",
+                  "amount": "8234万",
+                  "type": "强势板"
+                },
+                {
+                  "name": "恒丰纸业",
+                  "code": "600356",
+                  "board": "首板",
+                  "firstSeal": "14:27:13",
+                  "lastSeal": "14:38:58",
+                  "reason": "卷烟纸龙头+HNB+黑龙江国资",
+                  "pct": "9.95%",
+                  "amount": "1.4亿",
+                  "type": "回封板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：猪肉价格环比大涨4.1%创年内最大涨幅，CPI数据向好驱动消费复苏 11 涨停"
             }
           ],
           "leaderGroups": [],
@@ -2207,6 +2341,73 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 5,
+              "parsedCount": 5,
+              "assistCount": 5,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "皇氏集团",
+                  "code": "002329",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:09",
+                  "lastSeal": "09:32:21",
+                  "reason": "乳业+新式茶饮+代工+种源突破",
+                  "pct": "10.09%",
+                  "amount": "2亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "一鸣食品",
+                  "code": "605179",
+                  "board": "2天2板",
+                  "firstSeal": "09:42:35",
+                  "lastSeal": "14:07:26",
+                  "reason": "乳业+烘焙食品+米制鲜食",
+                  "pct": "9.99%",
+                  "amount": "11.2亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "金发拉比",
+                  "code": "002762",
+                  "board": "3天2板",
+                  "firstSeal": "13:57:57",
+                  "lastSeal": "13:57:57",
+                  "reason": "母婴用品+摘帽+中报预计扭亏",
+                  "pct": "10.03%",
+                  "amount": "2.2亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "乔治白",
+                  "code": "002687",
+                  "board": "首板",
+                  "firstSeal": "09:43:18",
+                  "lastSeal": "09:43:18",
+                  "reason": "职业装+校服+通勤服",
+                  "pct": "9.93%",
+                  "amount": "1.7亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "安妮股份",
+                  "code": "002235",
+                  "board": "首板",
+                  "firstSeal": "13:16:42",
+                  "lastSeal": "13:16:42",
+                  "reason": "彩票印制+数据确权+防伪溯源+控制权变更",
+                  "pct": "10.02%",
+                  "amount": "3.6亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：7月份CPI同比上涨0.5% 5 涨停"
             }
           ],
           "leaderGroups": [],
@@ -2231,6 +2432,128 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 10,
+              "parsedCount": 10,
+              "assistCount": 10,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "北京文化",
+                  "code": "000802",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:45:09",
+                  "reason": "《欢迎来龙餐馆》上映+影视全产业链+半年报减亏",
+                  "pct": "10.06%",
+                  "amount": "6.6亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "皇氏集团",
+                  "code": "002329",
+                  "board": "3天3板",
+                  "firstSeal": "09:35:03",
+                  "lastSeal": "09:47:06",
+                  "reason": "乳业+新式茶饮+奶水牛种源",
+                  "pct": "9.95%",
+                  "amount": "5.1亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "一鸣食品",
+                  "code": "605179",
+                  "board": "3天3板",
+                  "firstSeal": "10:00:51",
+                  "lastSeal": "10:15:33",
+                  "reason": "乳业+烘焙食品+米制鲜食",
+                  "pct": "9.99%",
+                  "amount": "8.3亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "乐惠国际",
+                  "code": "603076",
+                  "board": "首板",
+                  "firstSeal": "09:38:14",
+                  "lastSeal": "09:50:41",
+                  "reason": "定增获批+精酿鲜啤+液态食品装备",
+                  "pct": "10.02%",
+                  "amount": "9216万",
+                  "type": "回封板"
+                },
+                {
+                  "name": "宁波中百",
+                  "code": "600857",
+                  "board": "首板",
+                  "firstSeal": "09:51:11",
+                  "lastSeal": "10:17:44",
+                  "reason": "零售+黄金+杭州金帝入主",
+                  "pct": "9.98%",
+                  "amount": "1.9亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "粤海饲料",
+                  "code": "001313",
+                  "board": "首板",
+                  "firstSeal": "13:23:42",
+                  "lastSeal": "13:23:42",
+                  "reason": "水产饲料+业绩预增+战略并购",
+                  "pct": "10.04%",
+                  "amount": "1.6亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "中兴商业",
+                  "code": "000715",
+                  "board": "首板",
+                  "firstSeal": "13:24:00",
+                  "lastSeal": "13:24:00",
+                  "reason": "百货零售+首店经济+IP经济",
+                  "pct": "9.94%",
+                  "amount": "1.5亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "安记食品",
+                  "code": "603696",
+                  "board": "首板",
+                  "firstSeal": "13:30:03",
+                  "lastSeal": "13:30:03",
+                  "reason": "大消费+调味品+一季报增长",
+                  "pct": "9.99%",
+                  "amount": "4.3亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "好想你",
+                  "code": "002582",
+                  "board": "首板",
+                  "firstSeal": "13:40:42",
+                  "lastSeal": "13:40:42",
+                  "reason": "红枣龙头+参股鸣鸣很忙+大消费",
+                  "pct": "9.96%",
+                  "amount": "5亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "今世缘",
+                  "code": "603369",
+                  "board": "首板",
+                  "firstSeal": "13:52:54",
+                  "lastSeal": "14:51:24",
+                  "reason": "白酒+渠道稳健+江苏国资",
+                  "pct": "9.99%",
+                  "amount": "13.7亿",
+                  "type": "回封板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：7月份CPI同比上涨0.5% 10 涨停"
             }
           ],
           "leaderGroups": [],
@@ -2255,6 +2578,84 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 6,
+              "parsedCount": 6,
+              "assistCount": 6,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "北京文化",
+                  "code": "000802",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:30:12",
+                  "reason": "《欢迎来龙餐馆》上映+影视全产业链+半年报减亏",
+                  "pct": "10.02%",
+                  "amount": "8.5亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "皇氏集团",
+                  "code": "002329",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "10:25:30",
+                  "reason": "乳业+新式茶饮+奶水牛种源",
+                  "pct": "10.00%",
+                  "amount": "7.2亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "一鸣食品",
+                  "code": "605179",
+                  "board": "4天4板",
+                  "firstSeal": "09:48:59",
+                  "lastSeal": "14:30:35",
+                  "reason": "乳业+谐音炒作+低温乳品",
+                  "pct": "10.00%",
+                  "amount": "8.5亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "中基健康",
+                  "code": "000972",
+                  "board": "首板",
+                  "firstSeal": "09:42:24",
+                  "lastSeal": "09:42:24",
+                  "reason": "小罐番茄酱+番茄制品+预重整延期+国企改革",
+                  "pct": "10.09%",
+                  "amount": "6016万",
+                  "type": "强势板"
+                },
+                {
+                  "name": "会稽山",
+                  "code": "601579",
+                  "board": "首板",
+                  "firstSeal": "09:55:41",
+                  "lastSeal": "09:55:41",
+                  "reason": "黄酒+大消费+年报增长",
+                  "pct": "10.03%",
+                  "amount": "3.3亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "万和电气",
+                  "code": "002543",
+                  "board": "首板",
+                  "firstSeal": "13:25:33",
+                  "lastSeal": "13:26:00",
+                  "reason": "热泵+厨卫电器+海外布局",
+                  "pct": "10.06%",
+                  "amount": "1.4亿",
+                  "type": "回封板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：7月份居民消费价格指数（CPI）同比上涨0.5% 6 涨停"
             }
           ],
           "leaderGroups": [],
@@ -2272,6 +2673,16 @@
           "groups": [
             {
               "theme": "大农业",
+              "sourceTitle": null,
+              "count": null,
+              "assistCount": null,
+              "leaderIncluded": false,
+              "stocks": [],
+              "status": "not_separately_listed",
+              "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
               "sourceTitle": null,
               "count": null,
               "assistCount": null,
@@ -2349,6 +2760,117 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：摩根大通警告下一轮全球粮食危机可能正在酝酿之中 4 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 9,
+              "parsedCount": 9,
+              "assistCount": 8,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "name": "桂发祥",
+                  "code": "002820",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "中华老字号+休闲食品+国企改革",
+                  "pct": "9.96%",
+                  "amount": "5412万",
+                  "type": "一字板"
+                },
+                {
+                  "name": "百合股份",
+                  "code": "603102",
+                  "board": "7天3板",
+                  "firstSeal": "09:32:07",
+                  "lastSeal": "09:32:52",
+                  "reason": "宠物经济+营养保健食品+半年报营收增长",
+                  "pct": "10.01%",
+                  "amount": "1.6亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "一鸣食品",
+                  "code": "605179",
+                  "board": "6天5板",
+                  "firstSeal": "10:28:46",
+                  "lastSeal": "10:28:46",
+                  "reason": "乳品+烘焙+谐音炒作",
+                  "pct": "10.00%",
+                  "amount": "11亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "金健米业",
+                  "code": "600127",
+                  "board": "首板",
+                  "firstSeal": "09:30:00",
+                  "lastSeal": "09:30:00",
+                  "reason": "粮食概念+大健康食品+湖南国资",
+                  "pct": "10.05%",
+                  "amount": "2.5亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "阳光乳业",
+                  "code": "001318",
+                  "board": "首板",
+                  "firstSeal": "09:39:51",
+                  "lastSeal": "09:39:51",
+                  "reason": "乳业+低温乳品+老字号",
+                  "pct": "9.97%",
+                  "amount": "8549万",
+                  "type": "强势板"
+                },
+                {
+                  "name": "利群股份",
+                  "code": "601366",
+                  "board": "首板",
+                  "firstSeal": "10:00:05",
+                  "lastSeal": "10:00:05",
+                  "reason": "零售连锁+食品工业+预制菜+智慧物流",
+                  "pct": "10.00%",
+                  "amount": "1亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "益民集团",
+                  "code": "600824",
+                  "board": "首板",
+                  "firstSeal": "10:06:08",
+                  "lastSeal": "10:06:08",
+                  "reason": "黄金珠宝+零售+上海国资",
+                  "pct": "9.89%",
+                  "amount": "1.3亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "TCL智家",
+                  "code": "002668",
+                  "board": "首板",
+                  "firstSeal": "10:23:06",
+                  "lastSeal": "10:33:09",
+                  "reason": "AI智慧家电+全球化布局+中报预披露",
+                  "pct": "9.96%",
+                  "amount": "6.1亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "供销大集",
+                  "code": "000564",
+                  "board": "首板",
+                  "firstSeal": "10:30:51",
+                  "lastSeal": "11:11:42",
+                  "reason": "供销社+县域消费+海南自贸港+股份回购",
+                  "pct": "10.00%",
+                  "amount": "9.6亿",
+                  "type": "分歧板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：大消费板块持续活跃 9 涨停"
             }
           ],
           "leaderGroups": [
@@ -2664,6 +3186,73 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：摩根大通预警粮食危机；猪肉价格反弹 24 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 5,
+              "parsedCount": 5,
+              "assistCount": 5,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "桂发祥",
+                  "code": "002820",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "大消费+休闲食品+国企改革",
+                  "pct": "10.04%",
+                  "amount": "5051万",
+                  "type": "一字板"
+                },
+                {
+                  "name": "一鸣食品",
+                  "code": "605179",
+                  "board": "7天6板",
+                  "firstSeal": "14:56:59",
+                  "lastSeal": "14:56:59",
+                  "reason": "乳品+烘焙+谐音炒作",
+                  "pct": "10.00%",
+                  "amount": "15.5亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "家家悦",
+                  "code": "603708",
+                  "board": "首板",
+                  "firstSeal": "09:32:59",
+                  "lastSeal": "09:46:02",
+                  "reason": "零售+门店调改+AI应用",
+                  "pct": "9.96%",
+                  "amount": "2.1亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "三江购物",
+                  "code": "601116",
+                  "board": "首板",
+                  "firstSeal": "09:48:30",
+                  "lastSeal": "09:48:30",
+                  "reason": "社区生鲜超市+大消费+阿里巴巴概念",
+                  "pct": "10.00%",
+                  "amount": "2.8亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "黑芝麻",
+                  "code": "000716",
+                  "board": "首板",
+                  "firstSeal": "10:17:33",
+                  "lastSeal": "10:17:33",
+                  "reason": "大消费+半年报预增+广西国资",
+                  "pct": "10.04%",
+                  "amount": "5.8亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：高层会议强调坚持扩大内需 5 涨停"
             }
           ],
           "leaderGroups": [
@@ -2759,6 +3348,16 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：摩根大通预警下一轮全球粮食危机 4 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": null,
+              "count": null,
+              "assistCount": null,
+              "leaderIncluded": false,
+              "stocks": [],
+              "status": "not_separately_listed",
+              "note": "来源当日未单列该题材，不等于确认零涨停。"
             }
           ],
           "leaderGroups": [
@@ -2808,6 +3407,62 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 4,
+              "parsedCount": 4,
+              "assistCount": 4,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "南京商旅",
+                  "code": "600250",
+                  "board": "首板",
+                  "firstSeal": "09:43:17",
+                  "lastSeal": "10:21:38",
+                  "reason": "国资整合+旅游+商贸+南京国资",
+                  "pct": "10.00%",
+                  "amount": "2.5亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "浙江自然",
+                  "code": "605080",
+                  "board": "首板",
+                  "firstSeal": "10:41:50",
+                  "lastSeal": "14:55:05",
+                  "reason": "露营经济+智能床垫+海外产能",
+                  "pct": "10.00%",
+                  "amount": "2.2亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "若羽臣",
+                  "code": "003010",
+                  "board": "首板",
+                  "firstSeal": "14:17:15",
+                  "lastSeal": "14:17:15",
+                  "reason": "自有品牌高增+宠物经济+中报预增",
+                  "pct": "10.00%",
+                  "amount": "4.4亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "红棉股份",
+                  "code": "000523",
+                  "board": "首板",
+                  "firstSeal": "14:22:51",
+                  "lastSeal": "14:49:27",
+                  "reason": "代糖+饮料+半年报预增+广州国资",
+                  "pct": "9.97%",
+                  "amount": "6.5亿",
+                  "type": "回封板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：大消费板块持续活跃 4 涨停"
             }
           ],
           "leaderGroups": [
@@ -2857,6 +3512,16 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": null,
+              "count": null,
+              "assistCount": null,
+              "leaderIncluded": false,
+              "stocks": [],
+              "status": "not_separately_listed",
+              "note": "来源当日未单列该题材，不等于确认零涨停。"
             }
           ],
           "leaderGroups": [],
@@ -2874,6 +3539,16 @@
           "groups": [
             {
               "theme": "大农业",
+              "sourceTitle": null,
+              "count": null,
+              "assistCount": null,
+              "leaderIncluded": false,
+              "stocks": [],
+              "status": "not_separately_listed",
+              "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
               "sourceTitle": null,
               "count": null,
               "assistCount": null,
@@ -2940,6 +3615,95 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：摩根大通预警全球粮食危机 3 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 7,
+              "parsedCount": 7,
+              "assistCount": 7,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "新华百货",
+                  "code": "600785",
+                  "board": "3天3板",
+                  "firstSeal": "09:56:50",
+                  "lastSeal": "14:00:08",
+                  "reason": "回购+新质零售+区域零售",
+                  "pct": "9.99%",
+                  "amount": "7.8亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "华天酒店",
+                  "code": "000428",
+                  "board": "首板",
+                  "firstSeal": "09:31:48",
+                  "lastSeal": "09:31:48",
+                  "reason": "酒店主业+生活服务+国资背景",
+                  "pct": "9.92%",
+                  "amount": "7679万",
+                  "type": "强势板"
+                },
+                {
+                  "name": "凯撒旅业",
+                  "code": "000796",
+                  "board": "首板",
+                  "firstSeal": "09:32:51",
+                  "lastSeal": "09:33:15",
+                  "reason": "滨海旅游+旅游服务+青岛国资",
+                  "pct": "10.00%",
+                  "amount": "1.7亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "上海九百",
+                  "code": "600838",
+                  "board": "首板",
+                  "firstSeal": "09:36:50",
+                  "lastSeal": "09:37:08",
+                  "reason": "零售+商业地产+洗染服务+上海国资",
+                  "pct": "10.01%",
+                  "amount": "1.1亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "青岛金王",
+                  "code": "002094",
+                  "board": "首板",
+                  "firstSeal": "10:36:54",
+                  "lastSeal": "10:36:54",
+                  "reason": "蜡烛香薰+美妆零售+金融投资",
+                  "pct": "10.06%",
+                  "amount": "1.9亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "捷荣技术",
+                  "code": "002855",
+                  "board": "首板",
+                  "firstSeal": "11:14:06",
+                  "lastSeal": "11:14:06",
+                  "reason": "消费电子+智能家居+亏损收窄",
+                  "pct": "10.00%",
+                  "amount": "5063万",
+                  "type": "强势板"
+                },
+                {
+                  "name": "珠海中富",
+                  "code": "000659",
+                  "board": "首板",
+                  "firstSeal": "14:02:03",
+                  "lastSeal": "14:02:03",
+                  "reason": "饮料包装+饮料代工+定增入主",
+                  "pct": "10.04%",
+                  "amount": "1.1亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：政策定调扩大内需 7 涨停"
             }
           ],
           "leaderGroups": [
@@ -3024,6 +3788,16 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：摩根大通预警全球粮食危机 3 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": null,
+              "count": null,
+              "assistCount": null,
+              "leaderIncluded": false,
+              "stocks": [],
+              "status": "not_separately_listed",
+              "note": "来源当日未单列该题材，不等于确认零涨停。"
             }
           ],
           "leaderGroups": [],
@@ -3160,6 +3934,16 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：摩根大通警告明年或爆发全球粮食危机，极端天气驱动农产品涨价预期 10 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": null,
+              "count": null,
+              "assistCount": null,
+              "leaderIncluded": false,
+              "stocks": [],
+              "status": "not_separately_listed",
+              "note": "来源当日未单列该题材，不等于确认零涨停。"
             }
           ],
           "leaderGroups": [
@@ -3343,6 +4127,73 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：地缘冲突与超强厄尔尼诺催化，食品通胀预期升温 12 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 5,
+              "parsedCount": 5,
+              "assistCount": 5,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "国芳集团",
+                  "code": "601086",
+                  "board": "首板",
+                  "firstSeal": "09:38:47",
+                  "lastSeal": "09:38:47",
+                  "reason": "半年报增长+新零售+连锁零售",
+                  "pct": "10.03%",
+                  "amount": "1.5亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "中水渔业",
+                  "code": "000798",
+                  "board": "首板",
+                  "firstSeal": "10:43:42",
+                  "lastSeal": "10:45:36",
+                  "reason": "远洋渔业+AI渔业+半年报增长",
+                  "pct": "10.00%",
+                  "amount": "3.1亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "国光连锁",
+                  "code": "605188",
+                  "board": "首板",
+                  "firstSeal": "11:14:24",
+                  "lastSeal": "11:14:24",
+                  "reason": "零售+区域龙头+商业综合体+中报增长",
+                  "pct": "10.04%",
+                  "amount": "1.5亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "上海三毛",
+                  "code": "600689",
+                  "board": "首板",
+                  "firstSeal": "13:52:21",
+                  "lastSeal": "14:26:39",
+                  "reason": "进出口贸易+安防服务+重庆国资",
+                  "pct": "9.99%",
+                  "amount": "1.2亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "嘉麟杰",
+                  "code": "002486",
+                  "board": "首板",
+                  "firstSeal": "14:00:18",
+                  "lastSeal": "14:00:18",
+                  "reason": "户外面料+运动功能面料+绿色面料",
+                  "pct": "10.07%",
+                  "amount": "2.2亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：政策释放内需潜力；板块估值处于历史低位 5 涨停"
             }
           ],
           "leaderGroups": [],
@@ -3402,6 +4253,73 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：厄尔尼诺加剧全球粮食供给扰动，催化农产品价格大涨 3 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 5,
+              "parsedCount": 5,
+              "assistCount": 5,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "国芳集团",
+                  "code": "601086",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "10:52:05",
+                  "reason": "半年报增长+新零售+连锁零售",
+                  "pct": "9.95%",
+                  "amount": "2.3亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "浔兴股份",
+                  "code": "002098",
+                  "board": "首板",
+                  "firstSeal": "09:31:18",
+                  "lastSeal": "09:31:18",
+                  "reason": "拉链业务+跨境电商+越南建厂",
+                  "pct": "9.99%",
+                  "amount": "8643万",
+                  "type": "强势板"
+                },
+                {
+                  "name": "美盈森",
+                  "code": "002303",
+                  "board": "首板",
+                  "firstSeal": "13:22:03",
+                  "lastSeal": "13:29:42",
+                  "reason": "包装一体化+消费电子包装+模切业务+海外产能",
+                  "pct": "10.06%",
+                  "amount": "4.6亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "安奈儿",
+                  "code": "002875",
+                  "board": "首板",
+                  "firstSeal": "13:41:30",
+                  "lastSeal": "13:41:30",
+                  "reason": "跨境电商+童装品牌+半年报改善",
+                  "pct": "10.02%",
+                  "amount": "1.5亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "奥康国际",
+                  "code": "603001",
+                  "board": "首板",
+                  "firstSeal": "14:08:26",
+                  "lastSeal": "14:08:26",
+                  "reason": "皮鞋制造+线上电商+半年报扭亏",
+                  "pct": "9.99%",
+                  "amount": "1.5亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：大消费板块持续活跃 5 涨停"
             }
           ],
           "leaderGroups": [],
@@ -3615,6 +4533,128 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：超强厄尔尼诺加剧减产预期，全球粮价上涨 17 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 10,
+              "parsedCount": 10,
+              "assistCount": 10,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "国芳集团",
+                  "code": "601086",
+                  "board": "3天3板",
+                  "firstSeal": "09:31:39",
+                  "lastSeal": "09:31:39",
+                  "reason": "连锁零售+新零售+半年报增长",
+                  "pct": "10.03%",
+                  "amount": "3亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "国光连锁",
+                  "code": "605188",
+                  "board": "3天2板",
+                  "firstSeal": "09:38:04",
+                  "lastSeal": "10:17:43",
+                  "reason": "零售+中报增长+商业综合体",
+                  "pct": "9.99%",
+                  "amount": "4.4亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "东百集团",
+                  "code": "600693",
+                  "board": "首板",
+                  "firstSeal": "09:35:59",
+                  "lastSeal": "09:35:59",
+                  "reason": "零售+首店经济+仓储物流+资产盘活",
+                  "pct": "9.99%",
+                  "amount": "4.5亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "茂业商业",
+                  "code": "600828",
+                  "board": "首板",
+                  "firstSeal": "09:37:28",
+                  "lastSeal": "09:37:28",
+                  "reason": "百货零售+商业REITs+商管转型",
+                  "pct": "10.08%",
+                  "amount": "6981万",
+                  "type": "强势板"
+                },
+                {
+                  "name": "新华百货",
+                  "code": "600785",
+                  "board": "首板",
+                  "firstSeal": "09:41:02",
+                  "lastSeal": "10:04:44",
+                  "reason": "股份回购+区域零售+硬折扣",
+                  "pct": "9.99%",
+                  "amount": "7.2亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "佳禾食品",
+                  "code": "605300",
+                  "board": "首板",
+                  "firstSeal": "09:50:55",
+                  "lastSeal": "09:51:19",
+                  "reason": "植物基+咖啡+业绩改善",
+                  "pct": "10.05%",
+                  "amount": "8559万",
+                  "type": "回封板"
+                },
+                {
+                  "name": "西安饮食",
+                  "code": "000721",
+                  "board": "首板",
+                  "firstSeal": "09:55:24",
+                  "lastSeal": "10:06:15",
+                  "reason": "旅游餐饮+中华老字号+降本增效",
+                  "pct": "10.00%",
+                  "amount": "4.1亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "九牧王",
+                  "code": "601566",
+                  "board": "首板",
+                  "firstSeal": "10:19:37",
+                  "lastSeal": "10:19:37",
+                  "reason": "男裤龙头+零售消费+太空裤",
+                  "pct": "10.05%",
+                  "amount": "1.4亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "古井贡酒",
+                  "code": "000596",
+                  "board": "首板",
+                  "firstSeal": "10:21:06",
+                  "lastSeal": "10:21:06",
+                  "reason": "白酒+渠道去库+国资背景",
+                  "pct": "10.00%",
+                  "amount": "7.6亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "一鸣食品",
+                  "code": "605179",
+                  "board": "首板",
+                  "firstSeal": "14:28:17",
+                  "lastSeal": "14:56:35",
+                  "reason": "大消费+净利润增长+低温乳品",
+                  "pct": "9.99%",
+                  "amount": "12.1亿",
+                  "type": "分歧板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：商务部等7部门印发消费扩容升级实施意见 10 涨停"
             }
           ],
           "leaderGroups": [
@@ -3688,6 +4728,73 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：超强厄尔尼诺影响，小麦期货创三年新高 2 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 5,
+              "parsedCount": 5,
+              "assistCount": 5,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "国芳集团",
+                  "code": "601086",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "连锁零售+新零售+半年报增长",
+                  "pct": "10.01%",
+                  "amount": "6440万",
+                  "type": "一字板"
+                },
+                {
+                  "name": "茂业商业",
+                  "code": "600828",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:45:43",
+                  "reason": "百货零售+商业REITs+商管转型",
+                  "pct": "10.07%",
+                  "amount": "2.2亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "九牧王",
+                  "code": "601566",
+                  "board": "2天2板",
+                  "firstSeal": "09:34:08",
+                  "lastSeal": "13:12:17",
+                  "reason": "男裤龙头+零售消费+太空裤",
+                  "pct": "9.98%",
+                  "amount": "4.9亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "云南旅游",
+                  "code": "002059",
+                  "board": "首板",
+                  "firstSeal": "09:50:27",
+                  "lastSeal": "14:32:51",
+                  "reason": "景区运营+文旅科技+人形机器人",
+                  "pct": "10.06%",
+                  "amount": "3.7亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "维琪科技",
+                  "code": "920176",
+                  "board": "首板",
+                  "firstSeal": "10:41:18",
+                  "lastSeal": "10:41:18",
+                  "reason": "多肽原料+化妆品原料+美妆+NMN原料",
+                  "pct": "29.99%",
+                  "amount": "2.2亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：七部门印发关于推动商品消费扩容升级的实施意见 5 涨停"
             }
           ],
           "leaderGroups": [],
@@ -3712,6 +4819,73 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 5,
+              "parsedCount": 5,
+              "assistCount": 5,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "国芳集团",
+                  "code": "601086",
+                  "board": "5天5板",
+                  "firstSeal": "09:30:37",
+                  "lastSeal": "09:42:10",
+                  "reason": "连锁零售+新零售+半年报增长",
+                  "pct": "10.00%",
+                  "amount": "7.1亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "云南旅游",
+                  "code": "002059",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "景区运营+文旅科技+人形机器人",
+                  "pct": "10.10%",
+                  "amount": "1.4亿",
+                  "type": "一字板"
+                },
+                {
+                  "name": "东百集团",
+                  "code": "600693",
+                  "board": "3天2板",
+                  "firstSeal": "13:01:57",
+                  "lastSeal": "13:01:57",
+                  "reason": "零售+首店经济+仓储物流+资产盘活",
+                  "pct": "9.96%",
+                  "amount": "15.6亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "珠免集团",
+                  "code": "600185",
+                  "board": "首板",
+                  "firstSeal": "09:44:40",
+                  "lastSeal": "09:44:40",
+                  "reason": "免税零售+海南免税+业绩扭亏",
+                  "pct": "10.00%",
+                  "amount": "2.9亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "百大集团",
+                  "code": "600865",
+                  "board": "首板",
+                  "firstSeal": "10:05:06",
+                  "lastSeal": "10:31:36",
+                  "reason": "商业零售+物业租赁+恒隆租约",
+                  "pct": "10.02%",
+                  "amount": "2.5亿",
+                  "type": "回封板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：七部门印发关于推动商品消费扩容升级的实施意见 5 涨停"
             }
           ],
           "leaderGroups": [],
@@ -3782,6 +4956,95 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：厄尔尼诺扰动粮食供给，全球粮价上涨 4 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 7,
+              "parsedCount": 7,
+              "assistCount": 7,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "百大集团",
+                  "code": "600865",
+                  "board": "2天2板",
+                  "firstSeal": "13:52:54",
+                  "lastSeal": "14:06:06",
+                  "reason": "商业零售+物业租赁+恒隆租约",
+                  "pct": "9.98%",
+                  "amount": "6亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "会稽山",
+                  "code": "601579",
+                  "board": "首板",
+                  "firstSeal": "09:34:49",
+                  "lastSeal": "09:40:34",
+                  "reason": "高端黄酒+云集系列+爽酒",
+                  "pct": "10.01%",
+                  "amount": "4亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "古越龙山",
+                  "code": "600059",
+                  "board": "首板",
+                  "firstSeal": "09:47:10",
+                  "lastSeal": "14:43:22",
+                  "reason": "高端黄酒+年轻化产品+全国化布局",
+                  "pct": "10.06%",
+                  "amount": "6.6亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "华天酒店",
+                  "code": "000428",
+                  "board": "首板",
+                  "firstSeal": "09:58:57",
+                  "lastSeal": "09:58:57",
+                  "reason": "旅游酒店+文体旅融合+生活服务",
+                  "pct": "10.09%",
+                  "amount": "2.8亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "海欣食品",
+                  "code": "002702",
+                  "board": "首板",
+                  "firstSeal": "10:42:27",
+                  "lastSeal": "10:42:27",
+                  "reason": "速冻食品+山姆渠道+营收增长+海峡两岸",
+                  "pct": "10.00%",
+                  "amount": "1.5亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "安记食品",
+                  "code": "603696",
+                  "board": "首板",
+                  "firstSeal": "10:45:04",
+                  "lastSeal": "14:46:58",
+                  "reason": "调味品+海峡两岸+智能制造",
+                  "pct": "10.04%",
+                  "amount": "5亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "源飞宠物",
+                  "code": "001222",
+                  "board": "首板",
+                  "firstSeal": "13:50:42",
+                  "lastSeal": "13:50:42",
+                  "reason": "宠物食品+海外产能+自有品牌",
+                  "pct": "9.97%",
+                  "amount": "1.8亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：消费扩容政策出台；中秋国庆假期催化 7 涨停"
             }
           ],
           "leaderGroups": [],
@@ -3951,6 +5214,128 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：地缘局势和极端天气推动8月全球食品价格指数创2022年以来新高 13 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 10,
+              "parsedCount": 10,
+              "assistCount": 10,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "百大集团",
+                  "code": "600865",
+                  "board": "3天3板",
+                  "firstSeal": "09:30:01",
+                  "lastSeal": "09:30:01",
+                  "reason": "商业零售+物业租赁+恒隆租约",
+                  "pct": "10.04%",
+                  "amount": "2.2亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "海欣食品",
+                  "code": "002702",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "速冻食品+山姆渠道+营收增长+海峡两岸",
+                  "pct": "9.98%",
+                  "amount": "5852万",
+                  "type": "一字板"
+                },
+                {
+                  "name": "安记食品",
+                  "code": "603696",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:43",
+                  "lastSeal": "09:31:55",
+                  "reason": "调味品+智能制造+海峡两岸",
+                  "pct": "9.98%",
+                  "amount": "2.6亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "华天酒店",
+                  "code": "000428",
+                  "board": "2天2板",
+                  "firstSeal": "09:46:27",
+                  "lastSeal": "09:46:27",
+                  "reason": "酒店主业+文体旅融合+国资背景",
+                  "pct": "10.02%",
+                  "amount": "5.2亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "国芳集团",
+                  "code": "601086",
+                  "board": "7天6板",
+                  "firstSeal": "09:31:27",
+                  "lastSeal": "09:40:51",
+                  "reason": "连锁零售+新零售+半年报增长",
+                  "pct": "10.04%",
+                  "amount": "8.1亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "中百集团",
+                  "code": "000759",
+                  "board": "首板",
+                  "firstSeal": "09:44:33",
+                  "lastSeal": "10:01:09",
+                  "reason": "商业零售+硬折扣+本地生活",
+                  "pct": "10.06%",
+                  "amount": "8.6亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "中央商场",
+                  "code": "600280",
+                  "board": "首板",
+                  "firstSeal": "09:44:40",
+                  "lastSeal": "09:44:40",
+                  "reason": "百货零售+罗森便利+门店调改",
+                  "pct": "9.94%",
+                  "amount": "1.3亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "桂林旅游",
+                  "code": "000978",
+                  "board": "首板",
+                  "firstSeal": "09:52:33",
+                  "lastSeal": "10:34:06",
+                  "reason": "AI文旅+低空经济+景区旅游",
+                  "pct": "9.97%",
+                  "amount": "4.2亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "新华百货",
+                  "code": "600785",
+                  "board": "首板",
+                  "firstSeal": "10:55:12",
+                  "lastSeal": "13:06:30",
+                  "reason": "区域零售+硬折扣+股票回购",
+                  "pct": "10.00%",
+                  "amount": "9.1亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "宁波中百",
+                  "code": "600857",
+                  "board": "首板",
+                  "firstSeal": "13:34:53",
+                  "lastSeal": "13:36:23",
+                  "reason": "商业零售+黄金珠宝+杭州金帝入主",
+                  "pct": "10.01%",
+                  "amount": "4.1亿",
+                  "type": "回封板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：商务部等七部门印发《关于推动商品消费扩容升级的实施意见》 10 涨停"
             }
           ],
           "leaderGroups": [
@@ -4101,6 +5486,73 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：全球食品价格指数创两年新高，ICE原糖创16个月新高 9 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 5,
+              "parsedCount": 5,
+              "assistCount": 5,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "爱仕达",
+                  "code": "002403",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:34:03",
+                  "reason": "人形机器人+工业机器人+炊具小家电",
+                  "pct": "9.99%",
+                  "amount": "5.9亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "百大集团",
+                  "code": "600865",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "商业零售+恒隆租约+物业租赁",
+                  "pct": "10.01%",
+                  "amount": "5884万",
+                  "type": "一字板"
+                },
+                {
+                  "name": "海欣食品",
+                  "code": "002702",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:36:39",
+                  "reason": "速冻食品+山姆渠道+营收增长+海峡两岸",
+                  "pct": "10.05%",
+                  "amount": "6亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "中百集团",
+                  "code": "000759",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:06",
+                  "lastSeal": "09:30:48",
+                  "reason": "商业零售+硬折扣+本地生活",
+                  "pct": "10.00%",
+                  "amount": "4.5亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "大连友谊",
+                  "code": "000679",
+                  "board": "首板",
+                  "firstSeal": "14:14:06",
+                  "lastSeal": "14:14:06",
+                  "reason": "新零售+大连零售+拟国资入主",
+                  "pct": "10.08%",
+                  "amount": "1.1亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：七部门印发关于推动商品消费扩容升级的实施意见 5 涨停"
             }
           ],
           "leaderGroups": [],
@@ -4237,6 +5689,84 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：全球食品价格指数创新高，厄尔尼诺催化板块预期 10 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 6,
+              "parsedCount": 6,
+              "assistCount": 6,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "百大集团",
+                  "code": "600865",
+                  "board": "5天5板",
+                  "firstSeal": "09:32:21",
+                  "lastSeal": "09:47:20",
+                  "reason": "商业零售+恒隆租约+物业租赁",
+                  "pct": "9.97%",
+                  "amount": "10.4亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "中百集团",
+                  "code": "000759",
+                  "board": "3天3板",
+                  "firstSeal": "09:33:30",
+                  "lastSeal": "09:59:18",
+                  "reason": "商业零售+硬折扣+本地生活",
+                  "pct": "10.00%",
+                  "amount": "15.4亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "桂林旅游",
+                  "code": "000978",
+                  "board": "3天3板",
+                  "firstSeal": "13:06:24",
+                  "lastSeal": "13:06:24",
+                  "reason": "AI文旅+景区旅游+票务整合",
+                  "pct": "9.99%",
+                  "amount": "10.1亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "瑞尔特",
+                  "code": "002790",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "智能卫浴+适老卫浴+冲水组件",
+                  "pct": "10.01%",
+                  "amount": "1.7亿",
+                  "type": "一字板"
+                },
+                {
+                  "name": "会稽山",
+                  "code": "601579",
+                  "board": "4天2板",
+                  "firstSeal": "09:51:10",
+                  "lastSeal": "13:38:07",
+                  "reason": "高端黄酒+云集系列+爽酒",
+                  "pct": "10.00%",
+                  "amount": "8.2亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "友好集团",
+                  "code": "600778",
+                  "board": "首板",
+                  "firstSeal": "10:05:08",
+                  "lastSeal": "10:05:08",
+                  "reason": "零售+业绩增长+便利店扩张",
+                  "pct": "9.93%",
+                  "amount": "2.9亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：七部门印发关于推动商品消费扩容升级的实施意见 6 涨停"
             }
           ],
           "leaderGroups": [],
@@ -4296,6 +5826,51 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：厄尔尼诺致农产品价格上涨 3 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 3,
+              "parsedCount": 3,
+              "assistCount": 3,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "桂林旅游",
+                  "code": "000978",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:38:03",
+                  "reason": "AI文旅+景区旅游+游船票务",
+                  "pct": "9.99%",
+                  "amount": "7.7亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "瑞尔特",
+                  "code": "002790",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "智能卫浴+适老卫浴+冲水组件",
+                  "pct": "10.01%",
+                  "amount": "6572万",
+                  "type": "一字板"
+                },
+                {
+                  "name": "南宁百货",
+                  "code": "600712",
+                  "board": "首板",
+                  "firstSeal": "13:08:13",
+                  "lastSeal": "13:08:13",
+                  "reason": "百货零售+中报扭亏+降本增效",
+                  "pct": "9.98%",
+                  "amount": "4.6亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：商务部等七部门发文推动商品消费扩容升级 3 涨停"
             }
           ],
           "leaderGroups": [],
@@ -4320,6 +5895,51 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 3,
+              "parsedCount": 3,
+              "assistCount": 3,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "瑞尔特",
+                  "code": "002790",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "智能卫浴+适老产品+冲水组件",
+                  "pct": "10.05%",
+                  "amount": "9916万",
+                  "type": "一字板"
+                },
+                {
+                  "name": "九阳股份",
+                  "code": "002242",
+                  "board": "首板",
+                  "firstSeal": "10:09:30",
+                  "lastSeal": "13:19:48",
+                  "reason": "厨房小家电+太空厨房设备+海外拓展",
+                  "pct": "10.06%",
+                  "amount": "3.1亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "天目湖",
+                  "code": "603136",
+                  "board": "首板",
+                  "firstSeal": "14:14:48",
+                  "lastSeal": "14:14:48",
+                  "reason": "一站式文旅+国资赋能",
+                  "pct": "9.98%",
+                  "amount": "3.2亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：大消费板块活跃 3 涨停"
             }
           ],
           "leaderGroups": [],
@@ -4344,6 +5964,62 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 4,
+              "parsedCount": 4,
+              "assistCount": 4,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "桂林旅游",
+                  "code": "000978",
+                  "board": "6天5板",
+                  "firstSeal": "09:30:09",
+                  "lastSeal": "14:26:27",
+                  "reason": "AI文旅+核心景区+游船票务",
+                  "pct": "10.03%",
+                  "amount": "16.9亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "欧亚集团",
+                  "code": "600697",
+                  "board": "首板",
+                  "firstSeal": "09:33:33",
+                  "lastSeal": "09:33:51",
+                  "reason": "零售+免税申请+国企",
+                  "pct": "10.05%",
+                  "amount": "1.2亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "陕西金叶",
+                  "code": "000812",
+                  "board": "首板",
+                  "firstSeal": "13:04:21",
+                  "lastSeal": "13:04:21",
+                  "reason": "烟草配套+教育事业+股权转让",
+                  "pct": "10.11%",
+                  "amount": "1.8亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "国芳集团",
+                  "code": "601086",
+                  "board": "首板",
+                  "firstSeal": "14:44:23",
+                  "lastSeal": "14:44:23",
+                  "reason": "连锁零售+场景改造+半年报增长",
+                  "pct": "10.03%",
+                  "amount": "18.5亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：七部门发文推动商品消费扩容升级 4 涨停"
             }
           ],
           "leaderGroups": [],
@@ -4361,6 +6037,16 @@
           "groups": [
             {
               "theme": "大农业",
+              "sourceTitle": null,
+              "count": null,
+              "assistCount": null,
+              "leaderIncluded": false,
+              "stocks": [],
+              "status": "not_separately_listed",
+              "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
               "sourceTitle": null,
               "count": null,
               "assistCount": null,
@@ -4392,6 +6078,95 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 7,
+              "parsedCount": 7,
+              "assistCount": 7,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "会稽山",
+                  "code": "601579",
+                  "board": "2天2板",
+                  "firstSeal": "09:55:25",
+                  "lastSeal": "10:13:58",
+                  "reason": "高端黄酒+兰亭+全国化扩张",
+                  "pct": "10.02%",
+                  "amount": "6.8亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "三夫户外",
+                  "code": "002780",
+                  "board": "首板",
+                  "firstSeal": "09:47:12",
+                  "lastSeal": "09:47:12",
+                  "reason": "户外品牌运营+X-BIONIC+ODLO代理",
+                  "pct": "10.03%",
+                  "amount": "1亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "金枫酒业",
+                  "code": "600616",
+                  "board": "首板",
+                  "firstSeal": "09:55:46",
+                  "lastSeal": "13:18:04",
+                  "reason": "黄酒主业+渠道拓展+半年报减亏",
+                  "pct": "9.91%",
+                  "amount": "2.7亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "古越龙山",
+                  "code": "600059",
+                  "board": "首板",
+                  "firstSeal": "10:04:20",
+                  "lastSeal": "10:14:44",
+                  "reason": "黄酒主业+高端化+全国化",
+                  "pct": "10.02%",
+                  "amount": "5.5亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "京华激光",
+                  "code": "603607",
+                  "board": "首板",
+                  "firstSeal": "13:00:41",
+                  "lastSeal": "13:00:41",
+                  "reason": "IP卡牌+激光防伪+烟草包装",
+                  "pct": "10.00%",
+                  "amount": "3亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "洪兴股份",
+                  "code": "001209",
+                  "board": "首板",
+                  "firstSeal": "13:17:30",
+                  "lastSeal": "13:17:48",
+                  "reason": "家居服+跨境电商+半年报增长",
+                  "pct": "10.01%",
+                  "amount": "8085万",
+                  "type": "回封板"
+                },
+                {
+                  "name": "西麦食品",
+                  "code": "002956",
+                  "board": "首板",
+                  "firstSeal": "13:41:51",
+                  "lastSeal": "13:41:51",
+                  "reason": "燕麦食品+食养粉+中报增长",
+                  "pct": "9.99%",
+                  "amount": "1.7亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：大消费板块活跃 7 涨停"
             }
           ],
           "leaderGroups": [],
@@ -4462,6 +6237,51 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：厄尔尼诺强化粮价上行预期 4 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 3,
+              "parsedCount": 3,
+              "assistCount": 3,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "华纺股份",
+                  "code": "600448",
+                  "board": "首板",
+                  "firstSeal": "10:06:31",
+                  "lastSeal": "10:08:22",
+                  "reason": "纺织印染+绿色印染+国企背景",
+                  "pct": "9.90%",
+                  "amount": "2.3亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "大连圣亚",
+                  "code": "600593",
+                  "board": "首板",
+                  "firstSeal": "10:30:35",
+                  "lastSeal": "10:30:35",
+                  "reason": "旅游经营+海洋公园+业绩扭亏",
+                  "pct": "10.01%",
+                  "amount": "4.3亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "龙头股份",
+                  "code": "600630",
+                  "board": "首板",
+                  "firstSeal": "10:43:01",
+                  "lastSeal": "11:15:46",
+                  "reason": "纺织服装+上海国资+中报增长",
+                  "pct": "10.07%",
+                  "amount": "3.3亿",
+                  "type": "回封板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：大消费板块活跃 3 涨停"
             }
           ],
           "leaderGroups": [
@@ -4511,6 +6331,128 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 10,
+              "parsedCount": 10,
+              "assistCount": 10,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "华纺股份",
+                  "code": "600448",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "纺织印染+绿色印染+国企背景",
+                  "pct": "9.94%",
+                  "amount": "1.7亿",
+                  "type": "一字板"
+                },
+                {
+                  "name": "龙头股份",
+                  "code": "600630",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:23",
+                  "lastSeal": "09:34:11",
+                  "reason": "纺织服装+跨境电商+上海国资",
+                  "pct": "9.95%",
+                  "amount": "3.3亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "会稽山",
+                  "code": "601579",
+                  "board": "4天3板",
+                  "firstSeal": "09:42:07",
+                  "lastSeal": "09:43:04",
+                  "reason": "高端黄酒+兰亭+全国化扩张",
+                  "pct": "10.02%",
+                  "amount": "7.3亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "陕西旅游",
+                  "code": "603402",
+                  "board": "首板",
+                  "firstSeal": "09:45:19",
+                  "lastSeal": "09:45:19",
+                  "reason": "次新股+旅游演艺+旅游索道+陕西国资",
+                  "pct": "10.01%",
+                  "amount": "2.6亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "国光连锁",
+                  "code": "605188",
+                  "board": "首板",
+                  "firstSeal": "09:50:36",
+                  "lastSeal": "09:51:00",
+                  "reason": "零售主业+商业综合体+业绩增长",
+                  "pct": "9.97%",
+                  "amount": "2.3亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "国芳集团",
+                  "code": "601086",
+                  "board": "首板",
+                  "firstSeal": "09:53:17",
+                  "lastSeal": "13:12:02",
+                  "reason": "连锁零售+场景改造+业绩增长",
+                  "pct": "10.00%",
+                  "amount": "17.4亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "浙江正特",
+                  "code": "001238",
+                  "board": "首板",
+                  "firstSeal": "10:08:51",
+                  "lastSeal": "10:17:54",
+                  "reason": "户外家具+星空篷+跨境电商",
+                  "pct": "9.99%",
+                  "amount": "4157万",
+                  "type": "回封板"
+                },
+                {
+                  "name": "双枪科技",
+                  "code": "001211",
+                  "board": "首板",
+                  "firstSeal": "10:11:51",
+                  "lastSeal": "10:11:51",
+                  "reason": "日用餐厨具+竹基禾塑+以竹代塑",
+                  "pct": "9.99%",
+                  "amount": "1.2亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "七 匹 狼",
+                  "code": "002029",
+                  "board": "首板",
+                  "firstSeal": "10:13:03",
+                  "lastSeal": "10:34:45",
+                  "reason": "男装夹克+投资半导体及机器人+海峡两岸",
+                  "pct": "10.02%",
+                  "amount": "3.5亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "上海九百",
+                  "code": "600838",
+                  "board": "首板",
+                  "firstSeal": "10:44:43",
+                  "lastSeal": "10:51:15",
+                  "reason": "零售+商业地产+洗染服务+上海国资",
+                  "pct": "9.99%",
+                  "amount": "1.9亿",
+                  "type": "回封板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：中秋国庆出行预定量增长；商品消费扩容政策预期 10 涨停"
             }
           ],
           "leaderGroups": [
@@ -4617,6 +6559,150 @@
               ],
               "status": "source_reported",
               "catalyst": "大农业 ：厄尔尼诺催化粮食涨价；猪肉周期反转预期 5 涨停"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 12,
+              "parsedCount": 12,
+              "assistCount": 12,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "龙头股份",
+                  "code": "600630",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "11:01:55",
+                  "reason": "纺织服装+跨境电商+上海国资",
+                  "pct": "10.01%",
+                  "amount": "4.2亿",
+                  "type": "T字板"
+                },
+                {
+                  "name": "华纺股份",
+                  "code": "600448",
+                  "board": "3天3板",
+                  "firstSeal": "09:31:00",
+                  "lastSeal": "14:06:33",
+                  "reason": "纺织印染+外贸出口+绿色印染",
+                  "pct": "9.89%",
+                  "amount": "9.4亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "会稽山",
+                  "code": "601579",
+                  "board": "5天4板",
+                  "firstSeal": "11:18:48",
+                  "lastSeal": "11:18:48",
+                  "reason": "高端黄酒+兰亭+全国化扩张",
+                  "pct": "9.99%",
+                  "amount": "11.8亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "国芳集团",
+                  "code": "601086",
+                  "board": "2天2板",
+                  "firstSeal": "09:36:54",
+                  "lastSeal": "09:47:27",
+                  "reason": "连锁零售+场景改造+业绩增长",
+                  "pct": "10.02%",
+                  "amount": "10.9亿",
+                  "type": "回封板"
+                },
+                {
+                  "name": "奥康国际",
+                  "code": "603001",
+                  "board": "2天2板",
+                  "firstSeal": "09:36:56",
+                  "lastSeal": "13:50:59",
+                  "reason": "股权转让+皮鞋皮具+业绩扭亏",
+                  "pct": "9.97%",
+                  "amount": "3.2亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "美盈森",
+                  "code": "002303",
+                  "board": "4天2板",
+                  "firstSeal": "09:30:15",
+                  "lastSeal": "09:30:15",
+                  "reason": "包装一体化+消费电子包装+模切业务+海外产能",
+                  "pct": "10.00%",
+                  "amount": "2.1亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "大连圣亚",
+                  "code": "600593",
+                  "board": "3天2板",
+                  "firstSeal": "09:51:05",
+                  "lastSeal": "14:30:53",
+                  "reason": "旅游经营+海洋公园+业绩扭亏",
+                  "pct": "10.01%",
+                  "amount": "7.4亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "新华百货",
+                  "code": "600785",
+                  "board": "首板",
+                  "firstSeal": "09:53:10",
+                  "lastSeal": "09:53:10",
+                  "reason": "零售+智能家居+股份回购",
+                  "pct": "9.98%",
+                  "amount": "3.1亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "泰慕士",
+                  "code": "001234",
+                  "board": "首板",
+                  "firstSeal": "10:05:12",
+                  "lastSeal": "10:05:12",
+                  "reason": "针织服装+服装贴牌+广州国资入主",
+                  "pct": "10.01%",
+                  "amount": "8786万",
+                  "type": "强势板"
+                },
+                {
+                  "name": "南宁百货",
+                  "code": "600712",
+                  "board": "首板",
+                  "firstSeal": "10:33:09",
+                  "lastSeal": "14:30:48",
+                  "reason": "百货零售+平陆运河+扭亏为盈",
+                  "pct": "10.09%",
+                  "amount": "4.2亿",
+                  "type": "分歧板"
+                },
+                {
+                  "name": "皇台酒业",
+                  "code": "000995",
+                  "board": "首板",
+                  "firstSeal": "13:01:09",
+                  "lastSeal": "13:01:09",
+                  "reason": "白酒+区域品牌+线上渠道",
+                  "pct": "9.96%",
+                  "amount": "1.3亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "宁波中百",
+                  "code": "600857",
+                  "board": "首板",
+                  "firstSeal": "13:08:47",
+                  "lastSeal": "13:08:47",
+                  "reason": "商业零售+黄金珠宝+杭州金帝入主",
+                  "pct": "10.01%",
+                  "amount": "1.9亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：中秋国庆长假将至，政策明确消费扩容升级目标 12 涨停"
             }
           ],
           "leaderGroups": [
@@ -4666,6 +6752,40 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 2,
+              "parsedCount": 2,
+              "assistCount": 2,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "泰慕士",
+                  "code": "001234",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:00",
+                  "lastSeal": "09:30:00",
+                  "reason": "针织服装+服装贴牌+广州国资入主",
+                  "pct": "10.00%",
+                  "amount": "1.3亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "一鸣食品",
+                  "code": "605179",
+                  "board": "首板",
+                  "firstSeal": "10:43:02",
+                  "lastSeal": "10:43:02",
+                  "reason": "低温乳品+大消费+业绩改善",
+                  "pct": "10.00%",
+                  "amount": "6.9亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：大消费板块活跃 2 涨停"
             }
           ],
           "leaderGroups": [],
@@ -4690,6 +6810,51 @@
               "stocks": [],
               "status": "not_separately_listed",
               "note": "来源当日未单列该题材，不等于确认零涨停。"
+            },
+            {
+              "theme": "大消费",
+              "sourceTitle": "大消费",
+              "count": 3,
+              "parsedCount": 3,
+              "assistCount": 3,
+              "leaderIncluded": false,
+              "stocks": [
+                {
+                  "name": "泰慕士",
+                  "code": "001234",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "针织服装+贴牌加工+广州国资",
+                  "pct": "10.02%",
+                  "amount": "8960万",
+                  "type": "一字板"
+                },
+                {
+                  "name": "华茂股份",
+                  "code": "000850",
+                  "board": "首板",
+                  "firstSeal": "09:31:36",
+                  "lastSeal": "09:31:36",
+                  "reason": "纺织主业+矿业整合+国企改革+“华”字辈",
+                  "pct": "9.93%",
+                  "amount": "1.2亿",
+                  "type": "强势板"
+                },
+                {
+                  "name": "保龄宝",
+                  "code": "002286",
+                  "board": "首板",
+                  "firstSeal": "10:12:54",
+                  "lastSeal": "10:12:54",
+                  "reason": "功能糖+乳果糖原料药+膳食纤维",
+                  "pct": "10.06%",
+                  "amount": "3.4亿",
+                  "type": "强势板"
+                }
+              ],
+              "status": "source_reported",
+              "catalyst": "大消费 ：大消费板块持续活跃 3 涨停"
             }
           ],
           "leaderGroups": [],
