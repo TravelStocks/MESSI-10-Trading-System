@@ -554,6 +554,18 @@ body.handbook-edition { background: var(--bg); }
 #handbook-order small, #execution-upgrade-title small { display: block; max-width: 160px; color: var(--muted); font-size: 14px; line-height: 1.6; white-space: normal; }
 .redline-jump { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 18px; color: #a32835; font-size: 15px; font-weight: 650; }
 .redline-jump:hover { text-decoration: underline; text-underline-offset: 4px; }
+.review-module-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 16px 0; }
+.review-module-nav .redline-jump { margin-top: 0; }
+.review-module-nav a { color: var(--module-link); text-decoration: underline; text-underline-offset: 4px; }
+.review-note-list { list-style: none; margin: 0; padding: 0; }
+.review-note-list > li { min-width: 0; padding: 20px 0; border-top: 1px solid var(--line); scroll-margin-top: 136px; }
+.review-note-list h3, .review-note-list h4 { margin: 0 0 8px; font-size: 20px; line-height: 1.6; }
+.review-note-list p { margin: 8px 0; line-height: 1.85; overflow-wrap: anywhere; }
+.review-source { color: var(--muted); font-size: 14px; line-height: 1.85; overflow-wrap: anywhere; }
+.review-source a { color: var(--module-link); text-decoration: underline; text-underline-offset: 3px; }
+.content > .learned-experience { padding: 28px 12px; border: 0; border-top: 3px solid var(--green); border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; box-shadow: none; }
+.weekly-error-additions, .weekly-model-lessons { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.weekly-model-lessons .review-source { margin: 8px 0 0; }
 .content > .recurring-errors { padding: 28px 12px; border: 0; border-top: 3px solid #ae2f3a; border-bottom: 1px solid #e4c8cb; border-radius: 0; background: transparent; box-shadow: none; }
 .recurring-errors, .recurring-errors * { letter-spacing: 0; }
 .recurring-errors .section-head .label { color: #a32835; }
