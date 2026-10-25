@@ -46,3 +46,14 @@ test('new anchors are unique and handbook cross-links resolve', () => {
   assert.match(supplement, /href="\.\.\/\.\.\/index.html#relay-switch"/);
   assert.match(detail, /href="#switch-selection"/);
 });
+
+test('switching exit separates theme persistence, intraday failure and waiting limits', () => {
+  for (const page of [main, detail]) {
+    for (const phrase of ['id="switching-entry-exit"', '不是必须等满两天', '前排抗跌领涨', '换手回封', 'T+1', '分化次日按实际状态判断']) {
+      assert.ok(page.includes(phrase), phrase);
+    }
+  }
+  assert.ok(detail.includes('“宝龙科技”是名称待核的观察票'));
+  assert.ok(detail.includes('原口述“吉大振华”按交割中的吉大正元整理'));
+  assert.ok(detail.includes('不取消分化日排前二一字的独立分支'));
+});

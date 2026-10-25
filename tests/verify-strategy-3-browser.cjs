@@ -43,7 +43,8 @@ async function main() {
         assert.ok(result.text.includes('只选前二') && result.text.includes('第一优先'));
         await (await page.$(selector)).screenshot({ path: join(output, `${name}-${width}.png`) });
         if (name === 'detail') {
-          await page.click('#switch-selection a');
+          assert.ok(await page.$('#switching-entry-exit'));
+          await page.click('#switch-selection a[href="../../index.html#relay-switch"]');
           await page.waitForFunction(() => location.hash === '#relay-switch');
           assert.ok(await page.$('#relay-switch'));
         }
