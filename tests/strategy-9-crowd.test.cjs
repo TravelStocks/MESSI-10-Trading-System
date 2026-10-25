@@ -34,3 +34,10 @@ test('strategy 4 does not invent trade triggers or borrow unrelated strategy rul
   assert.doesNotMatch(section, /<details\b|\d+%|无脑|必涨|稳赚/);
   assert.match(section, /href="#resources"/);
 });
+
+test('crossing first-move notes retain timing, attribution and unresolved speech', () => {
+  assert.match(section, /id="crowding-crossing-first-move"/);
+  for (const phrase of ['择日争取先手', '分时看承接', '新华传媒', '九阳股份', '零轴是两个不同参照', '不适合后手追入', '该日期的月份', '不新增或改写交割收益', '不把低吸变成无条件摊低成本']) {
+    assert.ok(section.includes(phrase), phrase);
+  }
+});
