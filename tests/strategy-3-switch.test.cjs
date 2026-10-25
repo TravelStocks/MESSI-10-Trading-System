@@ -48,7 +48,7 @@ test('new anchors are unique and handbook cross-links resolve', () => {
 });
 
 test('switching exit separates theme persistence, intraday failure and waiting limits', () => {
-  for (const page of [main, detail]) {
+  for (const page of [detail]) {
     for (const phrase of ['id="switching-entry-exit"', '不是必须等满两天', '前排抗跌领涨', '换手回封', 'T+1', '分化次日按实际状态判断']) {
       assert.ok(page.includes(phrase), phrase);
     }
@@ -56,4 +56,12 @@ test('switching exit separates theme persistence, intraday failure and waiting l
   assert.ok(detail.includes('“宝龙科技”是名称待核的观察票'));
   assert.ok(detail.includes('原口述“吉大振华”按交割中的吉大正元整理'));
   assert.ok(detail.includes('不取消分化日排前二一字的独立分支'));
+});
+
+test('full switching-exit lesson lives in strategy 3 handbook, not a standalone home panel', () => {
+  assert.ok(summary.includes('id="switching-entry-exit"'));
+  assert.ok(summary.includes(`${detailPath}#switching-entry-exit`));
+  assert.doesNotMatch(main, /<section[^>]*id="switching-entry-exit"/);
+  assert.ok(detail.includes('切换失败及时退出：题材助攻与核心承接一起看'));
+  assert.ok(detail.includes('买入看最强方向能否续强，持有看梯队是否延续'));
 });
