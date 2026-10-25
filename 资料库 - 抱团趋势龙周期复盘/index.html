@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c1b18">
+  <meta name="description" content="抱团趋势龙周期归纳：国芳集团、金健米业、一鸣食品、九阳股份。把个股日K、题材轮动、涨停数量与助攻名单放在同一条时间轴上复盘。">
+  <title>抱团趋势龙周期归纳 · MESSI-10</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%231c1b18'/%3E%3Ctext x='5' y='28' fill='%23dbad4f' font-size='23'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="../assets/vendor/echarts-6.0.0.min.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#cases">跳到个股案例</a>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="mark">M10.</span> 周期研究档案</a>
+  <nav aria-label="页面导航"><a href="#path">周期路径</a><a href="#cases">四股案例</a><a href="#ledger">逐日证据</a><a href="#method">原文归纳</a><a href="../资料库 - 龙头周期复盘/index.html">题材主升龙 ↗</a></nav>
+</header>
+<main id="main">
+  <section class="hero wrap">
+    <div class="hero-copy"><p class="eyebrow">MESSI-10 / 资料库 / 02</p><h1>抱团趋势龙<br><span>周期归纳</span></h1><p class="hero-lead">主升看领涨，轮动看反推，结束看助攻。</p><p class="hero-desc">沿着同一条时间轴，看核心如何从带领题材，走到由题材助攻维持趋势。每个节点都回到<strong>个股、题材、涨停数量</strong>三个事实。</p><a class="primary-link" href="#cases">进入四股联动复盘 <span>↓</span></a></div>
+    <aside class="hero-note"><div class="note-top"><span>本页的阅读方式</span><span>01 — 04</span></div><ol><li><span>01</span><div><strong>谁在涨？</strong><p>核心个股的日 K、连板与换手。</p></div></li><li><span>02</span><div><strong>什么题材在撑？</strong><p>同周期内实际发酵的方向。</p></div></li><li><span>03</span><div><strong>还有多少助攻？</strong><p>题材涨停总数与剔除核心后的数量。</p></div></li><li><span>04</span><div><strong>角色何时改变？</strong><p>主动领涨 → 分歧 → 反推 → 衰退。</p></div></li></ol><p class="note-foot">核心身份要与题材反馈一起读。</p></aside>
+  </section>
+
+  <section class="wrap section" id="path">
+    <div class="section-head"><div><p class="eyebrow">01 / 周期骨架</p><h2>题材从主升转为轮动，<br class="mobile-hide">核心从领涨转为情绪锚。</h2></div><p>依据指定 Notion 与交易手册整理。以下是观察顺序；个股是否走完全部阶段，回到案例证据确认。</p></div>
+    <ol class="phase-path">
+      <li><span>01 / 环境</span><h3>弱市聚焦</h3><p>震荡或下行、量能萎缩，题材轮动快。原文启动特征：低位、低价、低市值。</p><small>看市场与起点</small></li>
+      <li><span>02 / 主升1</span><h3>连板领涨</h3><p>主动性、人气与身位突出；前3—4板容易加速，题材有跟随涨停。</p><small>核心 → 题材</small></li>
+      <li><span>03 / 转折</span><h3>放量分歧</h3><p>题材涨停减少，领涨性减弱。核心放量换手，题材热度尚未完全消失。</p><small>主升 → 轮动</small></li>
+      <li><span>04 / 趋势1—2</span><h3>助攻反推</h3><p>补涨先走强，再反推高辨识度核心；助攻强弱影响加速或震荡推进。</p><small>题材 → 核心</small></li>
+      <li><span>05 / 结束观察</span><h3>助攻断档</h3><p>题材不再出现涨停，核心同步转弱或收出大阴线，检查抱团是否瓦解。</p><small>助攻 + 承接</small></li>
+    </ol>
+  </section>
+
+  <section class="wrap section" id="cases">
+    <div class="section-head"><div><p class="eyebrow">02 / 四股同框研究</p><h2>把“抱团”落到每一天。</h2></div><p>切换个股；点击关键节点、图中的日期或逐日记录，联动查看题材数量与涨停名单。</p></div>
+    <div class="case-tabs" id="case-tabs" role="tablist" aria-label="选择个股案例"></div>
+    <article class="case-panel" id="case-panel" role="tabpanel" tabindex="0">
+      <header class="case-heading"><div><p class="eyebrow" id="case-meta"></p><h3 id="case-name"></h3><p id="case-thesis"></p></div><div id="case-topics" class="topic-tags"></div></header>
+      <div class="case-summary" id="case-summary"></div>
+      <div class="phase-strip" id="phase-strip" aria-label="当前个股阶段与日期"></div>
+      <div class="chart-shell"><div class="chart-heading"><div><strong id="chart-title">个股 × 成交量 × 题材涨停</strong><p>同一交易日对齐 · 日K不复权 · 点击查看当日明细</p></div><button class="small-button dark" id="reset-zoom" type="button">还原全周期</button></div><div id="cycle-chart" role="img" aria-label="个股日K、成交量和题材涨停数量联动图"></div><div class="chart-footer" id="chart-source"></div></div>
+      <div class="nodes-head"><h4>关键节点标注</h4><span>节点是复盘整理；数量可追溯到当日记录。</span></div>
+      <div class="key-nodes" id="key-nodes"></div>
+      <div class="day-detail" id="day-detail" aria-live="polite"></div>
+    </article>
+  </section>
+
+  <section class="wrap section" id="ledger">
+    <div class="section-head"><div><p class="eyebrow">03 / 逐日证据账本</p><h2 id="ledger-title">每一天，都有对应题材。</h2></div><p>“题材合计”含该分组内的核心；“其他涨停”剔除核心后去重，用于观察助攻。“未单列”与0只分开显示。多个题材分别列示，不直接相加。</p></div>
+    <div class="ledger-tools"><label for="day-filter">查找日期或个股 <input id="day-filter" type="search" placeholder="例如：08-27、万向德农"></label><span id="ledger-status"></span></div>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="逐日个股与题材明细"><table><thead><tr><th>交易日</th><th>核心表现</th><th>题材 / 涨停合计 / 其他涨停</th><th>节点记录</th><th>名单</th></tr></thead><tbody id="ledger-body"></tbody></table></div>
+    <p class="data-note" id="coverage-note"></p>
+  </section>
+
+  <section class="wrap section" id="method">
+    <div class="section-head"><div><p class="eyebrow">04 / 从原文归纳</p><h2>同一只龙头，<br>两种带动关系。</h2></div><p>模式说明摘自你指定的资料。阶段与行情事实分别呈现，保持原文的研究语境。</p></div>
+    <div class="method-grid"><article class="method-card"><span class="eyebrow">主升段 / 主动领涨</span><h3>先建立辨识度</h3><blockquote>“主动性：自己最主动，前面3-4个板都容易缩量顶情绪”</blockquote><p>原文同时看领涨性、市场人气和最高身位。对应到图中，要核对核心加速时题材是否仍有跟随，涨停数量是在增加还是收缩。</p></article><article class="method-card"><span class="eyebrow">过渡段 / 放量分歧</span><h3>题材结束主升，热度仍在</h3><blockquote>“题材主升结束但不是彻底结束，仍有若干个股涨停维持题材热度”</blockquote><p>核心断板或换手后，观察后排是否仍有涨停、是否出现新的补涨核心。放量横盘与承接失守应分别记录。</p></article><article class="method-card"><span class="eyebrow">趋势段 / 反推助攻</span><h3>小弟先涨，再看大哥</h3><blockquote>“自身辨识度出来了，但是领涨性缺乏，经常是小弟先涨后带动大哥再涨！”</blockquote><p>用日期、题材、助攻数量和封板时间核对这条关系。仅有同日上涨，不能独立证明资金先后或因果；有分时记录时再判断谁先发动。</p></article><article class="method-card"><span class="eyebrow">结束观察 / 题材与核心</span><h3>助攻衰退，核心同步转弱</h3><blockquote>“小弟结束，龙头也就结束了，龙头大阴线基本宣告结束！”</blockquote><p>这保留为原文的结束观察。单日阴线、某个分组未收录，都不能直接替代“题材没有涨停”的核实。</p></article></div>
+    <div class="comparison"><h3>与题材主升龙，怎样对应着看</h3><div class="table-scroll"><table><thead><tr><th>观察维度</th><th>题材主升龙</th><th>抱团趋势龙</th></tr></thead><tbody><tr><td>主要关系</td><td>题材持续发酵，龙头领涨与梯队共振</td><td>已有辨识度留存，轮动题材与补涨反推核心</td></tr><tr><td>逐日重点</td><td>涨停扩散、晋级梯队、唯一性、量能</td><td>题材仍有多少涨停、谁在助攻、核心是否承接</td></tr><tr><td>量能理解</td><td>按原连板阶段核对量能节奏</td><td>原文在趋势2强调地位，不把这一点反向套到首波连板</td></tr><tr><td>模式边界</td><td>按题材主升路径判断</td><td>不自动等同二波买点；补涨、核心趋势与独自穿越分开复盘</td></tr></tbody></table></div></div>
+    <details class="original-image"><summary>展开你提供的参考图 · 保留原图标注</summary><figure><a href="../assets/images/crowd-leader-trend-notion.png" target="_blank" rel="noopener"><img src="../assets/images/crowd-leader-trend-notion.png" alt="用户提供的弱市龙头抱团示意图，按K线标注农业和消费助攻数量" width="2048" height="1073" loading="lazy"></a><figcaption>原图的股票名称与日期未完整标明，图上的“23只、4只、0只”等仅保留为原图信息，不移植成四个案例的数据。</figcaption></figure></details>
+  </section>
+
+  <section class="wrap section sources" id="sources"><div><p class="eyebrow">来源与口径</p><h2>从原文到可核对的记录。</h2></div><ol><li><a href="https://app.notion.com/p/3fc7af2f574e806dad8cf571c7acc23d?source=copy_link" target="_blank" rel="noopener">Notion《连扳转趋势的抱团龙头股》↗</a><p>周期骨架与原文摘录；从指定页面的本地同步副本读取。</p></li><li><a href="../index.html#strategy-9-model">MESSI-10 · 战法4与九阳案例 ↗</a><p>题材主升转轮动、补涨反推与抱团情绪锚的模式归纳。</p></li><li><a href="../资料库 - 龙头周期复盘/index.html">资料库 · 龙头周期复盘 ↗</a><p>页面风格、题材节奏与已有农业案例数据。</p></li><li id="evidence-sources"></li></ol><p class="data-note">历史周期研究与个人笔记整理。统计范围、数据缺口和阶段判断以各案例说明为准；案例不代表固定走势。</p></section>
+</main>
+<footer class="wrap"><span>MESSI-10 / 抱团趋势龙周期归纳</span><a href="#main">返回顶部 ↑</a><span>整理日期 2026.10.25</span></footer>
+<noscript><p class="wrap">启用 JavaScript 可查看四股图表和逐日记录；周期归纳与来源仍可直接阅读。</p></noscript>
+</body>
+</html>
