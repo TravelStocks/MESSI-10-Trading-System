@@ -55,7 +55,8 @@ async function main() {
       assert.equal(bounds.textOverflow, 0);
       assert.equal(bounds.rows, 3);
       await (await page.$('#strategy-9-model')).screenshot({ path: join(output, `detail-${width}.png`) });
-      await page.click('#strategy-9-model a');
+      await (await page.$('#jiuyang-notion-model')).screenshot({ path: join(output, `jiuyang-notion-${width}.png`) });
+      await page.click('#strategy-9-model a[href="#resources"]');
       await page.waitForFunction(() => location.hash === '#resources');
       console.log(JSON.stringify({ width, passed: true }));
     }
