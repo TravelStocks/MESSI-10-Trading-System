@@ -19,3 +19,14 @@ test('knowledge addition preserves distinct anchors', () => {
     assert.equal(ids.length, new Set(ids).size);
   }
 });
+
+test('differentiation-day turnover entry is not restricted to divergence-day reseals', () => {
+  for (const page of [main, detail]) {
+    assert(page.includes('分化日有一字助攻时，也可以尝试辨识度前排的换手板'));
+    assert(page.includes('不是只能排一字'));
+  }
+  assert(detail.includes('不要求先发生炸板'));
+  assert(detail.includes('并非必须等到分歧日'));
+  assert(detail.includes('换手板同样按前二候选'));
+  assert(detail.includes('若进入分歧'));
+});
