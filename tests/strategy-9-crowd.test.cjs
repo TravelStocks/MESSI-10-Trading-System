@@ -41,3 +41,7 @@ test('crossing first-move notes retain timing, attribution and unresolved speech
     assert.ok(section.includes(phrase), phrase);
   }
 });
+
+test('Notion Jiuyang model preserves stages, source and feedback direction', () => {
+  for (const phrase of ['id="jiuyang-notion-model"', '3fc7af2f574e806dad8cf571c7acc23d', '第一段 / 连板主动领涨', '第二段 / 放量横盘与轮动', '第三段 / 补涨反向助攻', '不写成固定拉升顺序', '不新增机械阈值', '不自动等同战法6']) assert.ok(section.includes(phrase), phrase);
+});
