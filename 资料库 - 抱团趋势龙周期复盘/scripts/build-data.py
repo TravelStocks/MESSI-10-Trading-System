@@ -6,6 +6,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'sources'
 market = json.loads((SOURCE / 'market-data.json').read_text(encoding='utf-8'))
 pools = json.loads((SOURCE / 'case-pools.json').read_text(encoding='utf-8'))
+review = json.loads((SOURCE / 'supplemental-review.json').read_text(encoding='utf-8'))
+review_by_day = {(r['date'], r['theme']): r for r in review['records']}
 
 META = {
  'guofang': {
@@ -21,7 +23,7 @@ META = {
    ['2026-09-04','断板 · 消费仍有热度','核心收涨3.60%，成交量130.56万手；消费7只，不能把断板直接视作题材消失。',True],
    ['2026-09-07','反包 · 消费10只','核心重新涨停，大消费9只其他涨停提供同题材观察。',True],
    ['2026-09-14','趋势再板 · 助攻3只','大消费4只含国芳；此前9月8—11日以震荡抬升为主。',True],
-   ['2026-09-15','承接失守','核心跌10.01%；来源没有单列大消费，不补写成零助攻。',False],
+   ['2026-09-15','承接失守','核心跌10.01%；原站未单列大消费，当日完整池复核补录见下方名单。',False],
    ['2026-09-21','后续反弹 · 另段观察','两连板修复，大消费12只含核心；这不改变9月15—16日的下跌事实。',False]
   ]
  },
@@ -34,7 +36,7 @@ META = {
   'nodes':[
    ['2026-08-18','二板 · 农业扩散','源站大农业24只含金健；剔除核心为23只，和截图中“小弟”口径要区分。',True],
    ['2026-08-19','三板 · 一字缩量','农业4只含核心，助攻3只；成交量较前日减少。',False],
-   ['2026-08-20','四板 · 爆量分歧','成交量278.61万手，农业未单列；金健当天归入其他概念，不能拿其他概念9只当农业助攻。',True],
+   ['2026-08-20','四板 · 爆量分歧','成交量278.61万手；金健当天归入其他概念，已从完整池逐股补录农业相关股票，不把其他概念整组9只直接算作农业。',True],
    ['2026-08-25','烂板 · 农业重现','农业3只含核心，其他两只构成同题材涨停观察。',False],
    ['2026-08-27','反包 · 农业回流','农业10只含核心，剔除核心9只；与万向德农补涨节点联读。',True],
    ['2026-09-01','趋势再板','农业题材与核心共同回流，具体助攻名单见当日明细。',True],
@@ -56,7 +58,7 @@ META = {
    ['2026-08-12','二段三板 · 消费10只','消费10只含一鸣，其他9只；后排名单与首次封板时间可展开。',True],
    ['2026-08-14','断板回撤 · 仍需后续验证','收跌4.55%，后续8月17—18日仍有涨停，不直接标为最终结束。',False],
    ['2026-08-18','尾盘回封 · 助攻4只','大消费5只含核心；一鸣首次及最后封板均在14:56:59，封板较晚。',True],
-   ['2026-08-19','一字跌停 · 承接失守','开高低收同价34.75元、跌10%；消费未单列，不等于已证实零助攻。',False]
+   ['2026-08-19','一字跌停 · 承接失守','开高低收同价34.75元、跌10%；原站未单列消费，当日完整池已按涨停原因复核补录。',False]
   ]
  },
  'jiuyang': {
@@ -88,11 +90,26 @@ for p in pools['cases']:
     days=[]
     for k in m['days']:
         d={**k,**by_date[k['date']]}
+        groups=[]
+        for g in d['groups']:
+            if g['count'] is not None:
+                groups.append(g)
+                continue
+            r=review_by_day[(d['date'],g['theme'])]
+            codes={s['code'] for s in r['stocks']}
+            assert len(codes)==r['count']==len(r['stocks'])
+            assert r['reviewedStockCount']>0
+            groups.append({**g,'count':len(codes),'assistCount':len(codes-{p['code']}),
+              'leaderIncluded':p['code'] in codes,'stocks':r['stocks'],'status':'pool_reviewed',
+              'originalStatus':g['status'],'reviewStatus':r['status'],
+              'reviewedStockCount':r['reviewedStockCount'],
+              'note':'源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。'})
+        d['groups']=groups
         d['annotation']=notes.get(k['date'])
         d['phase']=next((r[2] for r in metadata['phases'] if r[0]<=k['date']<=r[1]),'启动前观察')
         days.append(d)
     cases.append({**{k:v for k,v in p.items() if k!='days'},**metadata,'nodes':nodes,'marketSource':{k:v for k,v in m.items() if k!='days'},'days':days})
-data={'title':'抱团趋势龙周期归纳','updatedAt':'2026-10-25','countDefinition':pools['countDefinition'],'sourceUrl':pools['sourceUrl'],'cases':cases}
+data={'title':'抱团趋势龙周期归纳','updatedAt':'2026-10-25','countDefinition':'有单列题材沿用源站分组；未单列日期从完整源池按当日明确涨停原因逐股复核补录，并单独标记。合计可能含核心，其他涨停按证券代码剔除核心。0仅为源池内按本页归类规则无匹配，不宣称市场全量为0。','sourceUrl':pools['sourceUrl'],'reviewSource':'sources/supplemental-review.json','cases':cases}
 (ROOT/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
 (ROOT/'data.js').write_text('window.CROWD_CYCLES = '+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf-8')
 print(f'Built {len(cases)} cases / {sum(len(c["days"]) for c in cases)} days')

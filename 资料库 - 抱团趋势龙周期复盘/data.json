@@ -1,8 +1,9 @@
 {
   "title": "抱团趋势龙周期归纳",
   "updatedAt": "2026-10-25",
-  "countDefinition": "题材涨停数按源站当日概念分组，包含该组内龙头；同组其他涨停数为总数减去当日确实在该组涨停名单内的龙头。",
+  "countDefinition": "有单列题材沿用源站分组；未单列日期从完整源池按当日明确涨停原因逐股复核补录，并单独标记。合计可能含核心，其他涨停按证券代码剔除核心。0仅为源池内按本页归类规则无匹配，不宣称市场全量为0。",
   "sourceUrl": "https://www.duanxianxia.com/web/fupan",
+  "reviewSource": "sources/supplemental-review.json",
   "cases": [
     {
       "id": "guofang",
@@ -85,7 +86,7 @@
         {
           "date": "2026-09-15",
           "title": "承接失守",
-          "note": "核心跌10.01%；来源没有单列大消费，不补写成零助攻。",
+          "note": "核心跌10.01%；原站未单列大消费，当日完整池复核补录见下方名单。",
           "chart": false
         },
         {
@@ -221,12 +222,55 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:39:09",
+                  "reason": "黄金珠宝+黄金涨价+年报增长",
+                  "pct": "10.06%",
+                  "type": "T字板",
+                  "originalGroup": "有色金属/小金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002631",
+                  "name": "德尔未来",
+                  "board": "首板",
+                  "firstSeal": "14:34:54",
+                  "lastSeal": "14:34:54",
+                  "reason": "石墨烯+家居+半年报预计减亏",
+                  "pct": "10.03%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600785",
+                  "name": "新华百货",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "回购+新质零售+区域零售",
+                  "pct": "10.06%",
+                  "type": "一字板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“新质零售、区域零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 54
             }
           ],
           "leaderGroups": [],
@@ -257,12 +301,68 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 4,
+              "assistCount": 4,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "黄金珠宝+黄金涨价+年报增长",
+                  "pct": "9.99%",
+                  "type": "一字板",
+                  "originalGroup": "贵金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002084",
+                  "name": "海鸥住工",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "控制权拟变更+装配式厨卫+越南制造",
+                  "pct": "10.03%",
+                  "type": "一字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“装配式厨卫”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002277",
+                  "name": "友阿股份",
+                  "board": "首板",
+                  "firstSeal": "09:35:06",
+                  "lastSeal": "14:44:54",
+                  "reason": "功率半导体+重组+零售+机器人",
+                  "pct": "10.09%",
+                  "type": "分歧板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600785",
+                  "name": "新华百货",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:31:16",
+                  "reason": "回购+新质零售+区域零售",
+                  "pct": "9.96%",
+                  "type": "T字板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“新质零售、区域零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 46
             }
           ],
           "leaderGroups": [],
@@ -408,12 +508,107 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 7,
+              "assistCount": 7,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "5天5板",
+                  "firstSeal": "10:00:24",
+                  "lastSeal": "10:02:24",
+                  "reason": "黄金珠宝+珠宝加工+客户拓展",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "有色金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝、珠宝加工”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "000428",
+                  "name": "华天酒店",
+                  "board": "2天2板",
+                  "firstSeal": "09:39:06",
+                  "lastSeal": "09:39:06",
+                  "reason": "旅游酒店+生活服务+国资背景",
+                  "pct": "9.95%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“旅游酒店”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002084",
+                  "name": "海鸥住工",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "控制权拟变更+装配式厨卫+越南制造",
+                  "pct": "10.11%",
+                  "type": "一字板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“装配式厨卫”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002094",
+                  "name": "青岛金王",
+                  "board": "2天2板",
+                  "firstSeal": "10:27:39",
+                  "lastSeal": "10:27:39",
+                  "reason": "CIPS+蜡烛香薰+美妆零售+金融投资",
+                  "pct": "9.92%",
+                  "type": "强势板",
+                  "originalGroup": "大金融",
+                  "basis": "原涨停理由明确列出“零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002418",
+                  "name": "康盛股份",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "液冷+智算中心+家电制冷",
+                  "pct": "10.12%",
+                  "type": "一字板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家电制冷”，符合本页大消费复核规则。",
+                  "boundary": "家电与科技制冷交叉，非单一消费逻辑"
+                },
+                {
+                  "code": "002721",
+                  "name": "金一文化",
+                  "board": "首板",
+                  "firstSeal": "09:56:18",
+                  "lastSeal": "09:59:51",
+                  "reason": "黄金珠宝+数字货币+AI应用+海淀国资",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "有色金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603615",
+                  "name": "茶花股份",
+                  "board": "首板",
+                  "firstSeal": "13:18:47",
+                  "lastSeal": "13:18:47",
+                  "reason": "电子元器件分销+家居用品+业绩扭亏",
+                  "pct": "9.99%",
+                  "type": "强势板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家居用品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 52
             }
           ],
           "leaderGroups": [],
@@ -444,12 +639,107 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 7,
+              "assistCount": 7,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "6天6板",
+                  "firstSeal": "09:32:24",
+                  "lastSeal": "09:35:36",
+                  "reason": "黄金珠宝+珠宝加工+客户拓展",
+                  "pct": "10.04%",
+                  "type": "回封板",
+                  "originalGroup": "有色金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝、珠宝加工”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002084",
+                  "name": "海鸥住工",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "控制权拟变更+装配式厨卫+越南制造",
+                  "pct": "10.02%",
+                  "type": "一字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“装配式厨卫”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002418",
+                  "name": "康盛股份",
+                  "board": "3天3板",
+                  "firstSeal": "09:34:15",
+                  "lastSeal": "09:46:42",
+                  "reason": "液冷+家电制冷+铜合金",
+                  "pct": "10.09%",
+                  "type": "回封板",
+                  "originalGroup": "液冷",
+                  "basis": "原涨停理由明确列出“家电制冷”，符合本页大消费复核规则。",
+                  "boundary": "家电与科技制冷交叉，非单一消费逻辑"
+                },
+                {
+                  "code": "600127",
+                  "name": "金健米业",
+                  "board": "9天6板",
+                  "firstSeal": "09:35:16",
+                  "lastSeal": "09:36:10",
+                  "reason": "粮油食品+大健康食品+湖南国企",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“粮油食品、大健康食品”，符合本页大消费复核规则。",
+                  "boundary": "粮油加工与农业交叉"
+                },
+                {
+                  "code": "600162",
+                  "name": "香江控股",
+                  "board": "首板",
+                  "firstSeal": "10:06:21",
+                  "lastSeal": "10:06:21",
+                  "reason": "中报减亏+数据中心业务+家居商贸",
+                  "pct": "9.93%",
+                  "type": "强势板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家居商贸”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603237",
+                  "name": "五芳斋",
+                  "board": "首板",
+                  "firstSeal": "09:30:06",
+                  "lastSeal": "09:30:06",
+                  "reason": "利润增长+食品餐饮+精品商超",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“食品餐饮、精品商超”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603900",
+                  "name": "莱绅通灵",
+                  "board": "首板",
+                  "firstSeal": "09:39:59",
+                  "lastSeal": "09:40:35",
+                  "reason": "黄金珠宝+艺术珠宝+黄金租赁",
+                  "pct": "10.02%",
+                  "type": "回封板",
+                  "originalGroup": "有色金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 77
             }
           ],
           "leaderGroups": [],
@@ -1889,12 +2179,55 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "001216",
+                  "name": "华瓷股份",
+                  "board": "首板",
+                  "firstSeal": "09:30:15",
+                  "lastSeal": "09:30:15",
+                  "reason": "氧化锆+MLCC+日用陶瓷出口",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "MLCC",
+                  "basis": "原涨停理由明确列出“日用陶瓷”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002631",
+                  "name": "德尔未来",
+                  "board": "首板",
+                  "firstSeal": "10:28:51",
+                  "lastSeal": "11:09:24",
+                  "reason": "半导体设备+石墨烯+大家居",
+                  "pct": "10.02%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“大家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "601579",
+                  "name": "会稽山",
+                  "board": "首板",
+                  "firstSeal": "09:44:04",
+                  "lastSeal": "09:55:04",
+                  "reason": "高端黄酒+兰亭+业绩增长",
+                  "pct": "10.00%",
+                  "type": "分歧板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“高端黄酒”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 32
             }
           ],
           "leaderGroups": [],
@@ -1909,7 +2242,7 @@
           "annotation": {
             "date": "2026-09-15",
             "title": "承接失守",
-            "note": "核心跌10.01%；来源没有单列大消费，不补写成零助攻。",
+            "note": "核心跌10.01%；原站未单列大消费，当日完整池复核补录见下方名单。",
             "chart": false
           },
           "phase": "承接失守"
@@ -2664,7 +2997,7 @@
         {
           "date": "2026-08-20",
           "title": "四板 · 爆量分歧",
-          "note": "成交量278.61万手，农业未单列；金健当天归入其他概念，不能拿其他概念9只当农业助攻。",
+          "note": "成交量278.61万手；金健当天归入其他概念，已从完整池逐股补录农业相关股票，不把其他概念整组9只直接算作农业。",
           "chart": true
         },
         {
@@ -2732,12 +3065,107 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 7,
+              "assistCount": 7,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002141",
+                  "name": "贤丰控股",
+                  "board": "首板",
+                  "firstSeal": "09:59:06",
+                  "lastSeal": "10:14:18",
+                  "reason": "覆铜板+拟布局PCB+动物保健",
+                  "pct": "9.98%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“动物保健”，符合本页大农业复核规则。",
+                  "boundary": "动物保健投入品，原理由未拆分畜牧/宠物用途"
+                },
+                {
+                  "code": "002329",
+                  "name": "皇氏集团",
+                  "board": "首板",
+                  "firstSeal": "11:07:15",
+                  "lastSeal": "11:21:03",
+                  "reason": "乳业+新式茶饮+股权转让+种源突破",
+                  "pct": "10.16%",
+                  "type": "回封板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“种源突破”，符合本页大农业复核规则。",
+                  "boundary": "乳业种源/畜牧育种交叉"
+                },
+                {
+                  "code": "002696",
+                  "name": "百洋股份",
+                  "board": "首板",
+                  "firstSeal": "09:58:33",
+                  "lastSeal": "10:06:36",
+                  "reason": "水产饲料+鱼粉涨价+青岛国资",
+                  "pct": "10.04%",
+                  "type": "回封板",
+                  "originalGroup": "养殖业",
+                  "basis": "原涨停理由明确列出“水产饲料”，符合本页大农业复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002783",
+                  "name": "凯龙股份",
+                  "board": "首板",
+                  "firstSeal": "10:19:18",
+                  "lastSeal": "10:35:03",
+                  "reason": "民爆+化肥+湖北国资",
+                  "pct": "10.05%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“化肥”，符合本页大农业复核规则。",
+                  "boundary": "农业投入品"
+                },
+                {
+                  "code": "600227",
+                  "name": "赤天化",
+                  "board": "首板",
+                  "firstSeal": "09:50:56",
+                  "lastSeal": "10:03:38",
+                  "reason": "甲醇+尿素+煤化工+中报预计扭亏",
+                  "pct": "9.88%",
+                  "type": "回封板",
+                  "originalGroup": "化工",
+                  "basis": "原涨停理由明确列出“尿素”，符合本页大农业复核规则。",
+                  "boundary": "尿素/化工交叉，未拆分农用与工业用途"
+                },
+                {
+                  "code": "603151",
+                  "name": "邦基科技",
+                  "board": "首板",
+                  "firstSeal": "10:45:57",
+                  "lastSeal": "10:45:57",
+                  "reason": "猪饲料+生猪养殖+股东人数减少",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "养殖业",
+                  "basis": "原涨停理由明确列出“猪饲料、生猪养殖”，符合本页大农业复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "605033",
+                  "name": "美邦股份",
+                  "board": "首板",
+                  "firstSeal": "09:41:36",
+                  "lastSeal": "09:42:45",
+                  "reason": "农药+半年报增长+西部大开发",
+                  "pct": "9.99%",
+                  "type": "回封板",
+                  "originalGroup": "化工",
+                  "basis": "原涨停理由明确列出“农药”，符合本页大农业复核规则。",
+                  "boundary": "农业投入品"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 99
             },
             {
               "theme": "大消费",
@@ -2901,12 +3329,29 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002329",
+                  "name": "皇氏集团",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:09",
+                  "lastSeal": "09:32:21",
+                  "reason": "乳业+新式茶饮+代工+种源突破",
+                  "pct": "10.09%",
+                  "type": "回封板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“种源突破”，符合本页大农业复核规则。",
+                  "boundary": "乳业种源/畜牧育种交叉"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 58
             },
             {
               "theme": "大消费",
@@ -3004,12 +3449,55 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000048",
+                  "name": "京基智农",
+                  "board": "首板",
+                  "firstSeal": "09:36:42",
+                  "lastSeal": "11:23:36",
+                  "reason": "机器人+算力+生猪养殖",
+                  "pct": "9.98%",
+                  "type": "分歧板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“生猪养殖”，符合本页大农业复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "001313",
+                  "name": "粤海饲料",
+                  "board": "首板",
+                  "firstSeal": "13:23:42",
+                  "lastSeal": "13:23:42",
+                  "reason": "水产饲料+业绩预增+战略并购",
+                  "pct": "10.04%",
+                  "type": "强势板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“水产饲料”，符合本页大农业复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002329",
+                  "name": "皇氏集团",
+                  "board": "3天3板",
+                  "firstSeal": "09:35:03",
+                  "lastSeal": "09:47:06",
+                  "reason": "乳业+新式茶饮+奶水牛种源",
+                  "pct": "9.95%",
+                  "type": "分歧板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“奶水牛种源”，符合本页大农业复核规则。",
+                  "boundary": "乳业种源/畜牧育种交叉"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 92
             },
             {
               "theme": "大消费",
@@ -3162,12 +3650,29 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002329",
+                  "name": "皇氏集团",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "10:25:30",
+                  "reason": "乳业+新式茶饮+奶水牛种源",
+                  "pct": "10.00%",
+                  "type": "T字板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“奶水牛种源”，符合本页大农业复核规则。",
+                  "boundary": "乳业种源/畜牧育种交叉"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 59
             },
             {
               "theme": "大消费",
@@ -3276,22 +3781,68 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 63
             },
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002418",
+                  "name": "康盛股份",
+                  "board": "首板",
+                  "firstSeal": "09:31:00",
+                  "lastSeal": "09:31:33",
+                  "reason": "算力+液冷+家电",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家电”，符合本页大消费复核规则。",
+                  "boundary": "家电与科技制冷交叉，非单一消费逻辑"
+                },
+                {
+                  "code": "002820",
+                  "name": "桂发祥",
+                  "board": "首板",
+                  "firstSeal": "11:07:24",
+                  "lastSeal": "11:07:24",
+                  "reason": "中华老字号+大消费+国企改革",
+                  "pct": "9.98%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“大消费”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600186",
+                  "name": "莲花控股",
+                  "board": "首板",
+                  "firstSeal": "10:02:56",
+                  "lastSeal": "11:10:14",
+                  "reason": "算力租赁+阶跃星辰+类ABF膜+调味品",
+                  "pct": "9.97%",
+                  "type": "回封板",
+                  "originalGroup": "算力租赁",
+                  "basis": "原涨停理由明确列出“调味品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 63
             }
           ],
           "leaderGroups": [],
@@ -3995,12 +4546,120 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 8,
+              "assistCount": 7,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "000505",
+                  "name": "京粮控股",
+                  "board": "3天3板",
+                  "firstSeal": "09:31:33",
+                  "lastSeal": "09:31:33",
+                  "reason": "粮食概念+油脂加工+国企改革",
+                  "pct": "10.01%",
+                  "type": "强势板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“粮食概念、油脂加工”，符合本页大消费复核规则。",
+                  "boundary": "粮油加工与农业交叉"
+                },
+                {
+                  "code": "001338",
+                  "name": "永顺泰",
+                  "board": "首板",
+                  "firstSeal": "09:45:15",
+                  "lastSeal": "14:18:57",
+                  "reason": "粮食概念+麦芽+啤酒+国企",
+                  "pct": "10.06%",
+                  "type": "分歧板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“粮食概念、啤酒”，符合本页大消费复核规则。",
+                  "boundary": "麦芽/啤酒属性，饮料原料交叉"
+                },
+                {
+                  "code": "002543",
+                  "name": "万和电气",
+                  "board": "首板",
+                  "firstSeal": "13:51:57",
+                  "lastSeal": "13:51:57",
+                  "reason": "热泵+厨卫电器+海外布局",
+                  "pct": "10.03%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“厨卫电器”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600127",
+                  "name": "金健米业",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "粮食安全+粮油加工+湖南国资",
+                  "pct": "9.99%",
+                  "type": "一字板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“粮油加工”，符合本页大消费复核规则。",
+                  "boundary": "粮油加工与农业交叉"
+                },
+                {
+                  "code": "603102",
+                  "name": "百合股份",
+                  "board": "9天4板",
+                  "firstSeal": "09:32:33",
+                  "lastSeal": "09:32:33",
+                  "reason": "宠物经济+营养保健食品+半年报营收增长",
+                  "pct": "10.00%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“营养保健食品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603366",
+                  "name": "日出东方",
+                  "board": "首板",
+                  "firstSeal": "11:01:13",
+                  "lastSeal": "11:01:13",
+                  "reason": "中报扣非净利增长+储能+厨卫电器",
+                  "pct": "9.94%",
+                  "type": "强势板",
+                  "originalGroup": "业绩增长",
+                  "basis": "原涨停理由明确列出“厨卫电器”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603801",
+                  "name": "志邦家居",
+                  "board": "首板",
+                  "firstSeal": "09:32:38",
+                  "lastSeal": "09:33:49",
+                  "reason": "定制家居+整家一体化+老房焕新+海外业务",
+                  "pct": "10.05%",
+                  "type": "回封板",
+                  "originalGroup": "地产产业链",
+                  "basis": "原涨停理由明确列出“定制家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603848",
+                  "name": "好太太",
+                  "board": "首板",
+                  "firstSeal": "09:36:16",
+                  "lastSeal": "10:05:19",
+                  "reason": "半年报增长+智能家居+智能晾晒",
+                  "pct": "9.98%",
+                  "type": "回封板",
+                  "originalGroup": "业绩增长",
+                  "basis": "原涨停理由明确列出“家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 36
             }
           ],
           "leaderGroups": [
@@ -4061,12 +4720,55 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 3,
+              "assistCount": 2,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "001277",
+                  "name": "速达股份",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:00",
+                  "lastSeal": "09:37:27",
+                  "reason": "煤炭设备后市场+农机+高管增持",
+                  "pct": "10.01%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“农机”，符合本页大农业复核规则。",
+                  "boundary": "农机设备，非种植养殖本体"
+                },
+                {
+                  "code": "600127",
+                  "name": "金健米业",
+                  "board": "4天4板",
+                  "firstSeal": "09:31:06",
+                  "lastSeal": "13:04:27",
+                  "reason": "粮食安全+粮油加工+大健康食品+湖南国资",
+                  "pct": "9.97%",
+                  "type": "分歧板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“粮食安全、粮油加工”，符合本页大农业复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "601118",
+                  "name": "海南橡胶",
+                  "board": "首板",
+                  "firstSeal": "10:17:29",
+                  "lastSeal": "13:33:50",
+                  "reason": "天然橡胶龙头+海南自贸区+国企改革",
+                  "pct": "9.93%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“天然橡胶”，符合本页大农业复核规则。",
+                  "boundary": "天然橡胶农林原料，原理由未拆分种植/加工/贸易"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 79
             },
             {
               "theme": "大消费",
@@ -4162,7 +4864,7 @@
           "annotation": {
             "date": "2026-08-20",
             "title": "四板 · 爆量分歧",
-            "note": "成交量278.61万手，农业未单列；金健当天归入其他概念，不能拿其他概念9只当农业助攻。",
+            "note": "成交量278.61万手；金健当天归入其他概念，已从完整池逐股补录农业相关股票，不把其他概念整组9只直接算作农业。",
             "chart": true
           },
           "phase": "连板领涨"
@@ -4183,22 +4885,68 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 54
             },
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:39:09",
+                  "reason": "黄金珠宝+黄金涨价+年报增长",
+                  "pct": "10.06%",
+                  "type": "T字板",
+                  "originalGroup": "有色金属/小金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002631",
+                  "name": "德尔未来",
+                  "board": "首板",
+                  "firstSeal": "14:34:54",
+                  "lastSeal": "14:34:54",
+                  "reason": "石墨烯+家居+半年报预计减亏",
+                  "pct": "10.03%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600785",
+                  "name": "新华百货",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "回购+新质零售+区域零售",
+                  "pct": "10.06%",
+                  "type": "一字板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“新质零售、区域零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 54
             }
           ],
           "leaderGroups": [],
@@ -4229,22 +4977,108 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002041",
+                  "name": "登海种业",
+                  "board": "首板",
+                  "firstSeal": "09:44:12",
+                  "lastSeal": "09:44:12",
+                  "reason": "转基因+玉米种业+粮食概念",
+                  "pct": "10.04%",
+                  "type": "强势板",
+                  "originalGroup": "医药",
+                  "basis": "原涨停理由明确列出“转基因、玉米种业、粮食概念”，符合本页大农业复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "300313",
+                  "name": "天山生物",
+                  "board": "首板",
+                  "firstSeal": "10:58:42",
+                  "lastSeal": "10:58:42",
+                  "reason": "肉牛全产业链+活畜销售增长+摘帽",
+                  "pct": "20.00%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“肉牛全产业链、活畜销售”，符合本页大农业复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 46
             },
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 4,
+              "assistCount": 4,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "黄金珠宝+黄金涨价+年报增长",
+                  "pct": "9.99%",
+                  "type": "一字板",
+                  "originalGroup": "贵金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002084",
+                  "name": "海鸥住工",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "控制权拟变更+装配式厨卫+越南制造",
+                  "pct": "10.03%",
+                  "type": "一字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“装配式厨卫”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002277",
+                  "name": "友阿股份",
+                  "board": "首板",
+                  "firstSeal": "09:35:06",
+                  "lastSeal": "14:44:54",
+                  "reason": "功率半导体+重组+零售+机器人",
+                  "pct": "10.09%",
+                  "type": "分歧板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600785",
+                  "name": "新华百货",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:31:16",
+                  "reason": "回购+新质零售+区域零售",
+                  "pct": "9.96%",
+                  "type": "T字板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“新质零售、区域零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 46
             }
           ],
           "leaderGroups": [],
@@ -4510,12 +5344,107 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 7,
+              "assistCount": 7,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "5天5板",
+                  "firstSeal": "10:00:24",
+                  "lastSeal": "10:02:24",
+                  "reason": "黄金珠宝+珠宝加工+客户拓展",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "有色金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝、珠宝加工”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "000428",
+                  "name": "华天酒店",
+                  "board": "2天2板",
+                  "firstSeal": "09:39:06",
+                  "lastSeal": "09:39:06",
+                  "reason": "旅游酒店+生活服务+国资背景",
+                  "pct": "9.95%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“旅游酒店”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002084",
+                  "name": "海鸥住工",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "控制权拟变更+装配式厨卫+越南制造",
+                  "pct": "10.11%",
+                  "type": "一字板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“装配式厨卫”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002094",
+                  "name": "青岛金王",
+                  "board": "2天2板",
+                  "firstSeal": "10:27:39",
+                  "lastSeal": "10:27:39",
+                  "reason": "CIPS+蜡烛香薰+美妆零售+金融投资",
+                  "pct": "9.92%",
+                  "type": "强势板",
+                  "originalGroup": "大金融",
+                  "basis": "原涨停理由明确列出“零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002418",
+                  "name": "康盛股份",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "液冷+智算中心+家电制冷",
+                  "pct": "10.12%",
+                  "type": "一字板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家电制冷”，符合本页大消费复核规则。",
+                  "boundary": "家电与科技制冷交叉，非单一消费逻辑"
+                },
+                {
+                  "code": "002721",
+                  "name": "金一文化",
+                  "board": "首板",
+                  "firstSeal": "09:56:18",
+                  "lastSeal": "09:59:51",
+                  "reason": "黄金珠宝+数字货币+AI应用+海淀国资",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "有色金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603615",
+                  "name": "茶花股份",
+                  "board": "首板",
+                  "firstSeal": "13:18:47",
+                  "lastSeal": "13:18:47",
+                  "reason": "电子元器件分销+家居用品+业绩扭亏",
+                  "pct": "9.99%",
+                  "type": "强势板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家居用品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 52
             }
           ],
           "leaderGroups": [],
@@ -4668,12 +5597,107 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 7,
+              "assistCount": 6,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "6天6板",
+                  "firstSeal": "09:32:24",
+                  "lastSeal": "09:35:36",
+                  "reason": "黄金珠宝+珠宝加工+客户拓展",
+                  "pct": "10.04%",
+                  "type": "回封板",
+                  "originalGroup": "有色金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝、珠宝加工”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002084",
+                  "name": "海鸥住工",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "控制权拟变更+装配式厨卫+越南制造",
+                  "pct": "10.02%",
+                  "type": "一字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“装配式厨卫”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002418",
+                  "name": "康盛股份",
+                  "board": "3天3板",
+                  "firstSeal": "09:34:15",
+                  "lastSeal": "09:46:42",
+                  "reason": "液冷+家电制冷+铜合金",
+                  "pct": "10.09%",
+                  "type": "回封板",
+                  "originalGroup": "液冷",
+                  "basis": "原涨停理由明确列出“家电制冷”，符合本页大消费复核规则。",
+                  "boundary": "家电与科技制冷交叉，非单一消费逻辑"
+                },
+                {
+                  "code": "600127",
+                  "name": "金健米业",
+                  "board": "9天6板",
+                  "firstSeal": "09:35:16",
+                  "lastSeal": "09:36:10",
+                  "reason": "粮油食品+大健康食品+湖南国企",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“粮油食品、大健康食品”，符合本页大消费复核规则。",
+                  "boundary": "粮油加工与农业交叉"
+                },
+                {
+                  "code": "600162",
+                  "name": "香江控股",
+                  "board": "首板",
+                  "firstSeal": "10:06:21",
+                  "lastSeal": "10:06:21",
+                  "reason": "中报减亏+数据中心业务+家居商贸",
+                  "pct": "9.93%",
+                  "type": "强势板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家居商贸”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603237",
+                  "name": "五芳斋",
+                  "board": "首板",
+                  "firstSeal": "09:30:06",
+                  "lastSeal": "09:30:06",
+                  "reason": "利润增长+食品餐饮+精品商超",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“食品餐饮、精品商超”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603900",
+                  "name": "莱绅通灵",
+                  "board": "首板",
+                  "firstSeal": "09:39:59",
+                  "lastSeal": "09:40:35",
+                  "reason": "黄金珠宝+艺术珠宝+黄金租赁",
+                  "pct": "10.02%",
+                  "type": "回封板",
+                  "originalGroup": "有色金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 77
             }
           ],
           "leaderGroups": [
@@ -5613,12 +6637,42 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "600108",
+                  "name": "亚盛集团",
+                  "board": "首板",
+                  "firstSeal": "09:40:55",
+                  "lastSeal": "10:13:19",
+                  "reason": "玉米制种+现代农业+甘肃国资",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“玉米制种、现代农业”，符合本页大农业复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600479",
+                  "name": "千金药业",
+                  "board": "7天5板",
+                  "firstSeal": "14:53:37",
+                  "lastSeal": "14:53:37",
+                  "reason": "女性健康+创新药+药材种植+中报增长",
+                  "pct": "10.03%",
+                  "type": "强势板",
+                  "originalGroup": "医药",
+                  "basis": "原涨停理由明确列出“药材种植”，符合本页大农业复核规则。",
+                  "boundary": "药材种植/医药交叉，非粮食种植"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 44
             },
             {
               "theme": "大消费",
@@ -6761,12 +7815,29 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "603336",
+                  "name": "宏辉果蔬",
+                  "board": "首板",
+                  "firstSeal": "13:55:13",
+                  "lastSeal": "13:55:13",
+                  "reason": "创新药+果蔬供应链+速冻食品+苏州国资",
+                  "pct": "10.03%",
+                  "type": "强势板",
+                  "originalGroup": "医药",
+                  "basis": "原涨停理由明确列出“果蔬供应链”，符合本页大农业复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 40
             },
             {
               "theme": "大消费",
@@ -6842,12 +7913,29 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002141",
+                  "name": "贤丰控股",
+                  "board": "首板",
+                  "firstSeal": "10:19:09",
+                  "lastSeal": "13:50:51",
+                  "reason": "覆铜板+拟布局PCB+动物保健",
+                  "pct": "9.94%",
+                  "type": "回封板",
+                  "originalGroup": "PCB产业链",
+                  "basis": "原涨停理由明确列出“动物保健”，符合本页大农业复核规则。",
+                  "boundary": "动物保健投入品，原理由未拆分畜牧/宠物用途"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 55
             },
             {
               "theme": "大消费",
@@ -6934,22 +8022,68 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 32
             },
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "001216",
+                  "name": "华瓷股份",
+                  "board": "首板",
+                  "firstSeal": "09:30:15",
+                  "lastSeal": "09:30:15",
+                  "reason": "氧化锆+MLCC+日用陶瓷出口",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "MLCC",
+                  "basis": "原涨停理由明确列出“日用陶瓷”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002631",
+                  "name": "德尔未来",
+                  "board": "首板",
+                  "firstSeal": "10:28:51",
+                  "lastSeal": "11:09:24",
+                  "reason": "半导体设备+石墨烯+大家居",
+                  "pct": "10.02%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“大家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "601579",
+                  "name": "会稽山",
+                  "board": "首板",
+                  "firstSeal": "09:44:04",
+                  "lastSeal": "09:55:04",
+                  "reason": "高端黄酒+兰亭+业绩增长",
+                  "pct": "10.00%",
+                  "type": "分歧板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“高端黄酒”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 32
             }
           ],
           "leaderGroups": [],
@@ -6985,12 +8119,81 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 5,
+              "assistCount": 5,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000592",
+                  "name": "平潭发展",
+                  "board": "首板",
+                  "firstSeal": "10:17:51",
+                  "lastSeal": "10:17:51",
+                  "reason": "海峡两岸+林业+林板一体化",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "海峡两岸",
+                  "basis": "原涨停理由明确列出“林业”，符合本页大农业复核规则。",
+                  "boundary": "林业，宽口径农林牧渔"
+                },
+                {
+                  "code": "000731",
+                  "name": "四川美丰",
+                  "board": "首板",
+                  "firstSeal": "11:00:09",
+                  "lastSeal": "11:11:09",
+                  "reason": "化肥尿素+车用尿素+回购",
+                  "pct": "10.06%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“化肥尿素、尿素”，符合本页大农业复核规则。",
+                  "boundary": "尿素/化工交叉，未拆分农用与工业用途；农业投入品"
+                },
+                {
+                  "code": "002383",
+                  "name": "合众思壮",
+                  "board": "首板",
+                  "firstSeal": "09:42:09",
+                  "lastSeal": "09:43:45",
+                  "reason": "北斗导航+商业航天+农机",
+                  "pct": "9.97%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“农机”，符合本页大农业复核规则。",
+                  "boundary": "农机设备，非种植养殖本体"
+                },
+                {
+                  "code": "002679",
+                  "name": "福建金森",
+                  "board": "首板",
+                  "firstSeal": "10:32:51",
+                  "lastSeal": "10:32:51",
+                  "reason": "海峡两岸+林业主业+国有控股+中报亏损收窄",
+                  "pct": "10.05%",
+                  "type": "强势板",
+                  "originalGroup": "海峡两岸",
+                  "basis": "原涨停理由明确列出“林业”，符合本页大农业复核规则。",
+                  "boundary": "林业，宽口径农林牧渔"
+                },
+                {
+                  "code": "600371",
+                  "name": "万向德农",
+                  "board": "首板",
+                  "firstSeal": "09:40:23",
+                  "lastSeal": "09:40:23",
+                  "reason": "转基因玉米+玉米种业+新品研发",
+                  "pct": "9.98%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“转基因玉米、玉米种业”，符合本页大农业复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 89
             },
             {
               "theme": "大消费",
@@ -7262,12 +8465,29 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 1,
+              "assistCount": 0,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "600127",
+                  "name": "金健米业",
+                  "board": "2天2板",
+                  "firstSeal": "10:41:56",
+                  "lastSeal": "14:24:17",
+                  "reason": "粮油食品+健康食品+粮食储备",
+                  "pct": "9.98%",
+                  "type": "分歧板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“粮油食品、粮食储备”，符合本页大农业复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 78
             },
             {
               "theme": "大消费",
@@ -7712,12 +8932,42 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002141",
+                  "name": "贤丰控股",
+                  "board": "首板",
+                  "firstSeal": "09:35:45",
+                  "lastSeal": "14:41:03",
+                  "reason": "覆铜板+印制电路板+动物保健",
+                  "pct": "10.07%",
+                  "type": "分歧板",
+                  "originalGroup": "PCB产业链",
+                  "basis": "原涨停理由明确列出“动物保健”，符合本页大农业复核规则。",
+                  "boundary": "动物保健投入品，原理由未拆分畜牧/宠物用途"
+                },
+                {
+                  "code": "600479",
+                  "name": "千金药业",
+                  "board": "首板",
+                  "firstSeal": "14:55:58",
+                  "lastSeal": "14:55:58",
+                  "reason": "女性健康+创新药+药材种植+中报增长",
+                  "pct": "9.97%",
+                  "type": "回封板",
+                  "originalGroup": "医药",
+                  "basis": "原涨停理由明确列出“药材种植”，符合本页大农业复核规则。",
+                  "boundary": "药材种植/医药交叉，非粮食种植"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 63
             },
             {
               "theme": "大消费",
@@ -7782,12 +9032,29 @@
             {
               "theme": "大农业",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "600371",
+                  "name": "万向德农",
+                  "board": "首板",
+                  "firstSeal": "13:16:02",
+                  "lastSeal": "13:16:02",
+                  "reason": "玉米种业+转基因玉米+新品研发",
+                  "pct": "9.99%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“玉米种业、转基因玉米”，符合本页大农业复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 51
             },
             {
               "theme": "大消费",
@@ -7931,7 +9198,7 @@
         {
           "date": "2026-08-19",
           "title": "一字跌停 · 承接失守",
-          "note": "开高低收同价34.75元、跌10%；消费未单列，不等于已证实零助攻。",
+          "note": "开高低收同价34.75元、跌10%；原站未单列消费，当日完整池已按涨停原因复核补录。",
           "chart": false
         }
       ],
@@ -8050,12 +9317,29 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "603221",
+                  "name": "爱丽家居",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "拟收购欧康诺+股权转让+PVC弹性地板+Home Depot供应链",
+                  "pct": "10.04%",
+                  "type": "一字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“PVC弹性地板”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 121
             }
           ],
           "leaderGroups": [],
@@ -8086,12 +9370,68 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 4,
+              "assistCount": 4,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002515",
+                  "name": "金字火腿",
+                  "board": "首板",
+                  "firstSeal": "10:04:24",
+                  "lastSeal": "10:23:21",
+                  "reason": "光通信芯片+特色肉制品+火腿",
+                  "pct": "9.95%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“特色肉制品、火腿”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002575",
+                  "name": "群兴玩具",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "算力租赁+腾讯合作+酒类销售",
+                  "pct": "10.02%",
+                  "type": "一字板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“酒类销售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603221",
+                  "name": "爱丽家居",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "拟收购欧康诺+存储测试设备+PVC弹性地板",
+                  "pct": "9.98%",
+                  "type": "一字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“PVC弹性地板”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "605155",
+                  "name": "西大门",
+                  "board": "首板",
+                  "firstSeal": "13:02:42",
+                  "lastSeal": "13:02:42",
+                  "reason": "跨境电商+建筑节能+遮阳龙头",
+                  "pct": "9.99%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“跨境电商”，符合本页大消费复核规则。",
+                  "boundary": "电商渠道属性，理由未给出全部终端品类"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 46
             }
           ],
           "leaderGroups": [],
@@ -8122,12 +9462,81 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 5,
+              "assistCount": 5,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "首板",
+                  "firstSeal": "09:50:15",
+                  "lastSeal": "09:50:15",
+                  "reason": "黄金珠宝+黄金涨价+自行车",
+                  "pct": "10.08%",
+                  "type": "强势板",
+                  "originalGroup": "有色金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002713",
+                  "name": "东易日盛",
+                  "board": "首板",
+                  "firstSeal": "09:53:06",
+                  "lastSeal": "09:53:06",
+                  "reason": "算力中心集成+数字化家装+摘帽",
+                  "pct": "10.02%",
+                  "type": "强势板",
+                  "originalGroup": "算力租赁",
+                  "basis": "原涨停理由明确列出“数字化家装”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002762",
+                  "name": "金发拉比",
+                  "board": "首板",
+                  "firstSeal": "09:47:42",
+                  "lastSeal": "09:47:42",
+                  "reason": "母婴用品+摘帽+中报扭亏",
+                  "pct": "10.04%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“母婴用品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603221",
+                  "name": "爱丽家居",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "拟收购欧康诺+存储测试设备+PVC弹性地板",
+                  "pct": "10.03%",
+                  "type": "一字板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“PVC弹性地板”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "605299",
+                  "name": "舒华体育",
+                  "board": "首板",
+                  "firstSeal": "09:30:00",
+                  "lastSeal": "09:30:00",
+                  "reason": "体育产业+中报预增+健身器材",
+                  "pct": "9.98%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“健身器材”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 116
             }
           ],
           "leaderGroups": [],
@@ -8158,12 +9567,42 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000417",
+                  "name": "合百集团",
+                  "board": "首板",
+                  "firstSeal": "14:54:06",
+                  "lastSeal": "14:54:06",
+                  "reason": "间接投资长鑫科技+百货零售+合肥国资",
+                  "pct": "10.03%",
+                  "type": "强势板",
+                  "originalGroup": "半导体",
+                  "basis": "原涨停理由明确列出“百货零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603221",
+                  "name": "爱丽家居",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "拟收购欧康诺+存储测试设备+PVC弹性地板",
+                  "pct": "9.98%",
+                  "type": "一字板",
+                  "originalGroup": "公告/并购重组",
+                  "basis": "原涨停理由明确列出“PVC弹性地板”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 40
             }
           ],
           "leaderGroups": [],
@@ -9173,12 +10612,94 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 6,
+              "assistCount": 6,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002291",
+                  "name": "遥望科技",
+                  "board": "首板",
+                  "firstSeal": "13:26:45",
+                  "lastSeal": "13:26:45",
+                  "reason": "AI应用+直播电商+业绩扭亏+剥离鞋业",
+                  "pct": "9.92%",
+                  "type": "强势板",
+                  "originalGroup": "AI应用",
+                  "basis": "原涨停理由明确列出“直播电商”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002348",
+                  "name": "高乐股份",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "签署算力大单+AI玩具+塑胶玩具",
+                  "pct": "9.98%",
+                  "type": "一字板",
+                  "originalGroup": "算力租赁",
+                  "basis": "原涨停理由明确列出“AI玩具、塑胶玩具”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "300592",
+                  "name": "华凯易佰",
+                  "board": "首板",
+                  "firstSeal": "13:21:21",
+                  "lastSeal": "13:21:21",
+                  "reason": "拟收购半导体+跨境电商+AI应用+回购",
+                  "pct": "19.97%",
+                  "type": "强势板",
+                  "originalGroup": "并购重组/股权转让",
+                  "basis": "原涨停理由明确列出“跨境电商”，符合本页大消费复核规则。",
+                  "boundary": "电商渠道属性，理由未给出全部终端品类"
+                },
+                {
+                  "code": "600186",
+                  "name": "莲花控股",
+                  "board": "首板",
+                  "firstSeal": "11:19:50",
+                  "lastSeal": "11:19:50",
+                  "reason": "算力租赁+阶跃星辰+调味品+业绩预增",
+                  "pct": "10.05%",
+                  "type": "强势板",
+                  "originalGroup": "算力租赁",
+                  "basis": "原涨停理由明确列出“调味品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600712",
+                  "name": "南宁百货",
+                  "board": "4天2板",
+                  "firstSeal": "11:05:58",
+                  "lastSeal": "11:11:40",
+                  "reason": "零售+中报预计扭亏+国企改革",
+                  "pct": "9.96%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603661",
+                  "name": "恒林股份",
+                  "board": "首板",
+                  "firstSeal": "13:03:14",
+                  "lastSeal": "13:04:41",
+                  "reason": "培育钻石+投资GPU公司+家居用品+出口",
+                  "pct": "9.99%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家居用品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 138
             }
           ],
           "leaderGroups": [],
@@ -9214,12 +10735,55 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002348",
+                  "name": "高乐股份",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "13:00:09",
+                  "reason": "签署算力大单+AI玩具+塑胶玩具",
+                  "pct": "9.98%",
+                  "type": "T字板",
+                  "originalGroup": "算力租赁",
+                  "basis": "原涨停理由明确列出“AI玩具、塑胶玩具”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002721",
+                  "name": "金一文化",
+                  "board": "首板",
+                  "firstSeal": "10:28:33",
+                  "lastSeal": "10:28:39",
+                  "reason": "AI应用+数字货币+黄金珠宝+海淀国资",
+                  "pct": "9.88%",
+                  "type": "回封板",
+                  "originalGroup": "AI应用",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603201",
+                  "name": "常润股份",
+                  "board": "首板",
+                  "firstSeal": "09:32:52",
+                  "lastSeal": "09:47:34",
+                  "reason": "汽车电子+收购达峰智能+回购+跨境电商",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "汽车产业链/无人驾驶",
+                  "basis": "原涨停理由明确列出“跨境电商”，符合本页大消费复核规则。",
+                  "boundary": "电商渠道属性，理由未给出全部终端品类"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 103
             }
           ],
           "leaderGroups": [],
@@ -9250,12 +10814,55 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002721",
+                  "name": "金一文化",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "数字货币+黄金珠宝+海淀国资",
+                  "pct": "10.11%",
+                  "type": "一字板",
+                  "originalGroup": "金融科技",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600127",
+                  "name": "金健米业",
+                  "board": "首板",
+                  "firstSeal": "11:26:29",
+                  "lastSeal": "11:27:05",
+                  "reason": "粮食概念+大健康食品+湖南国资",
+                  "pct": "9.98%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“粮食概念、大健康食品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603221",
+                  "name": "爱丽家居",
+                  "board": "10天10板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:31:15",
+                  "reason": "复牌+拟收购欧康诺+存储测试+PVC地板",
+                  "pct": "9.98%",
+                  "type": "T字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“PVC地板”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 79
             }
           ],
           "leaderGroups": [],
@@ -9960,12 +11567,55 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002418",
+                  "name": "康盛股份",
+                  "board": "首板",
+                  "firstSeal": "09:31:00",
+                  "lastSeal": "09:31:33",
+                  "reason": "算力+液冷+家电",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家电”，符合本页大消费复核规则。",
+                  "boundary": "家电与科技制冷交叉，非单一消费逻辑"
+                },
+                {
+                  "code": "002820",
+                  "name": "桂发祥",
+                  "board": "首板",
+                  "firstSeal": "11:07:24",
+                  "lastSeal": "11:07:24",
+                  "reason": "中华老字号+大消费+国企改革",
+                  "pct": "9.98%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“大消费”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600186",
+                  "name": "莲花控股",
+                  "board": "首板",
+                  "firstSeal": "10:02:56",
+                  "lastSeal": "11:10:14",
+                  "reason": "算力租赁+阶跃星辰+类ABF膜+调味品",
+                  "pct": "9.97%",
+                  "type": "回封板",
+                  "originalGroup": "算力租赁",
+                  "basis": "原涨停理由明确列出“调味品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 63
             }
           ],
           "leaderGroups": [],
@@ -10286,12 +11936,120 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 8,
+              "assistCount": 8,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000505",
+                  "name": "京粮控股",
+                  "board": "3天3板",
+                  "firstSeal": "09:31:33",
+                  "lastSeal": "09:31:33",
+                  "reason": "粮食概念+油脂加工+国企改革",
+                  "pct": "10.01%",
+                  "type": "强势板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“粮食概念、油脂加工”，符合本页大消费复核规则。",
+                  "boundary": "粮油加工与农业交叉"
+                },
+                {
+                  "code": "001338",
+                  "name": "永顺泰",
+                  "board": "首板",
+                  "firstSeal": "09:45:15",
+                  "lastSeal": "14:18:57",
+                  "reason": "粮食概念+麦芽+啤酒+国企",
+                  "pct": "10.06%",
+                  "type": "分歧板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“粮食概念、啤酒”，符合本页大消费复核规则。",
+                  "boundary": "麦芽/啤酒属性，饮料原料交叉"
+                },
+                {
+                  "code": "002543",
+                  "name": "万和电气",
+                  "board": "首板",
+                  "firstSeal": "13:51:57",
+                  "lastSeal": "13:51:57",
+                  "reason": "热泵+厨卫电器+海外布局",
+                  "pct": "10.03%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“厨卫电器”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600127",
+                  "name": "金健米业",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "粮食安全+粮油加工+湖南国资",
+                  "pct": "9.99%",
+                  "type": "一字板",
+                  "originalGroup": "大农业",
+                  "basis": "原涨停理由明确列出“粮油加工”，符合本页大消费复核规则。",
+                  "boundary": "粮油加工与农业交叉"
+                },
+                {
+                  "code": "603102",
+                  "name": "百合股份",
+                  "board": "9天4板",
+                  "firstSeal": "09:32:33",
+                  "lastSeal": "09:32:33",
+                  "reason": "宠物经济+营养保健食品+半年报营收增长",
+                  "pct": "10.00%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“营养保健食品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603366",
+                  "name": "日出东方",
+                  "board": "首板",
+                  "firstSeal": "11:01:13",
+                  "lastSeal": "11:01:13",
+                  "reason": "中报扣非净利增长+储能+厨卫电器",
+                  "pct": "9.94%",
+                  "type": "强势板",
+                  "originalGroup": "业绩增长",
+                  "basis": "原涨停理由明确列出“厨卫电器”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603801",
+                  "name": "志邦家居",
+                  "board": "首板",
+                  "firstSeal": "09:32:38",
+                  "lastSeal": "09:33:49",
+                  "reason": "定制家居+整家一体化+老房焕新+海外业务",
+                  "pct": "10.05%",
+                  "type": "回封板",
+                  "originalGroup": "地产产业链",
+                  "basis": "原涨停理由明确列出“定制家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603848",
+                  "name": "好太太",
+                  "board": "首板",
+                  "firstSeal": "09:36:16",
+                  "lastSeal": "10:05:19",
+                  "reason": "半年报增长+智能家居+智能晾晒",
+                  "pct": "9.98%",
+                  "type": "回封板",
+                  "originalGroup": "业绩增长",
+                  "basis": "原涨停理由明确列出“家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 36
             }
           ],
           "leaderGroups": [],
@@ -10306,7 +12064,7 @@
           "annotation": {
             "date": "2026-08-19",
             "title": "一字跌停 · 承接失守",
-            "note": "开高低收同价34.75元、跌10%；消费未单列，不等于已证实零助攻。",
+            "note": "开高低收同价34.75元、跌10%；原站未单列消费，当日完整池已按涨停原因复核补录。",
             "chart": false
           },
           "phase": "承接失守"
@@ -10409,12 +12167,55 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000017",
+                  "name": "深中华A",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:39:09",
+                  "reason": "黄金珠宝+黄金涨价+年报增长",
+                  "pct": "10.06%",
+                  "type": "T字板",
+                  "originalGroup": "有色金属/小金属",
+                  "basis": "原涨停理由明确列出“黄金珠宝”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002631",
+                  "name": "德尔未来",
+                  "board": "首板",
+                  "firstSeal": "14:34:54",
+                  "lastSeal": "14:34:54",
+                  "reason": "石墨烯+家居+半年报预计减亏",
+                  "pct": "10.03%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600785",
+                  "name": "新华百货",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "回购+新质零售+区域零售",
+                  "pct": "10.06%",
+                  "type": "一字板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“新质零售、区域零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 54
             }
           ],
           "leaderGroups": [],
@@ -10564,42 +12365,148 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "001216",
+                  "name": "华瓷股份",
+                  "board": "首板",
+                  "firstSeal": "09:30:15",
+                  "lastSeal": "09:30:15",
+                  "reason": "氧化锆+MLCC+日用陶瓷出口",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "MLCC",
+                  "basis": "原涨停理由明确列出“日用陶瓷”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002631",
+                  "name": "德尔未来",
+                  "board": "首板",
+                  "firstSeal": "10:28:51",
+                  "lastSeal": "11:09:24",
+                  "reason": "半导体设备+石墨烯+大家居",
+                  "pct": "10.02%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“大家居”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "601579",
+                  "name": "会稽山",
+                  "board": "首板",
+                  "firstSeal": "09:44:04",
+                  "lastSeal": "09:55:04",
+                  "reason": "高端黄酒+兰亭+业绩增长",
+                  "pct": "10.00%",
+                  "type": "分歧板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“高端黄酒”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 32
             },
             {
               "theme": "机器人",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002362",
+                  "name": "汉王科技",
+                  "board": "首板",
+                  "firstSeal": "09:35:45",
+                  "lastSeal": "09:36:00",
+                  "reason": "AI应用+具身智能+AI终端",
+                  "pct": "9.99%",
+                  "type": "回封板",
+                  "originalGroup": "AI应用/网络安全",
+                  "basis": "原涨停理由明确列出“具身智能”，符合本页机器人复核规则。",
+                  "boundary": "具身智能交叉属性"
+                },
+                {
+                  "code": "002882",
+                  "name": "金龙羽",
+                  "board": "首板",
+                  "firstSeal": "09:30:06",
+                  "lastSeal": "09:30:06",
+                  "reason": "固态电池+机器人电池+特种电缆",
+                  "pct": "9.99%",
+                  "type": "强势板",
+                  "originalGroup": "固态电池",
+                  "basis": "原涨停理由明确列出“机器人电池”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603082",
+                  "name": "北自科技",
+                  "board": "首板",
+                  "firstSeal": "11:00:07",
+                  "lastSeal": "11:25:55",
+                  "reason": "人形机器人+智能物流+资产收购",
+                  "pct": "10.00%",
+                  "type": "分歧板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“人形机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 32
             },
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002631",
+                  "name": "德尔未来",
+                  "board": "首板",
+                  "firstSeal": "10:28:51",
+                  "lastSeal": "11:09:24",
+                  "reason": "半导体设备+石墨烯+大家居",
+                  "pct": "10.02%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“大家居”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 32
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 32
             }
           ],
           "leaderGroups": [],
@@ -10719,12 +12626,68 @@
             {
               "theme": "机器人",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 4,
+              "assistCount": 4,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "001326",
+                  "name": "联域股份",
+                  "board": "首板",
+                  "firstSeal": "13:11:00",
+                  "lastSeal": "13:35:27",
+                  "reason": "机器人+植物照明+LED照明+业绩增长",
+                  "pct": "9.99%",
+                  "type": "分歧板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002957",
+                  "name": "科瑞技术",
+                  "board": "首板",
+                  "firstSeal": "11:16:06",
+                  "lastSeal": "11:18:12",
+                  "reason": "光模块设备+半导体设备+人形机器人",
+                  "pct": "10.01%",
+                  "type": "回封板",
+                  "originalGroup": "光通信",
+                  "basis": "原涨停理由明确列出“人形机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603082",
+                  "name": "北自科技",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:41",
+                  "lastSeal": "11:01:38",
+                  "reason": "玻纤+具身智能+智能物流+资产收购",
+                  "pct": "10.01%",
+                  "type": "分歧板",
+                  "originalGroup": "PCB产业链",
+                  "basis": "原涨停理由明确列出“具身智能”，符合本页机器人复核规则。",
+                  "boundary": "具身智能交叉属性"
+                },
+                {
+                  "code": "605566",
+                  "name": "福莱蒽特",
+                  "board": "首板",
+                  "firstSeal": "09:37:35",
+                  "lastSeal": "09:39:56",
+                  "reason": "分散染料+服务器采购+机器人皮肤",
+                  "pct": "10.01%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“机器人皮肤”，符合本页机器人复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 89
             },
             {
               "theme": "地产产业链",
@@ -10774,12 +12737,15 @@
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 89
             }
           ],
           "leaderGroups": [],
@@ -10933,22 +12899,42 @@
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002285",
+                  "name": "世联行",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:24",
+                  "lastSeal": "10:21:18",
+                  "reason": "房地产服务+大资管+珠海国资",
+                  "pct": "10.04%",
+                  "type": "分歧板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“房地产服务”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 47
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 47
             }
           ],
           "leaderGroups": [],
@@ -11224,12 +13210,29 @@
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002005",
+                  "name": "德豪润达",
+                  "board": "首板",
+                  "firstSeal": "10:48:18",
+                  "lastSeal": "13:29:24",
+                  "reason": "LED封装+车载照明+小家电",
+                  "pct": "9.92%",
+                  "type": "回封板",
+                  "originalGroup": "玻璃/LED",
+                  "basis": "原涨停理由明确列出“小家电”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 78
             }
           ],
           "leaderGroups": [],
@@ -11615,12 +13618,42 @@
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002614",
+                  "name": "奥佳华",
+                  "board": "首板",
+                  "firstSeal": "09:30:00",
+                  "lastSeal": "09:30:00",
+                  "reason": "股份转让+具身智能+智能按摩椅+大健康品牌",
+                  "pct": "10.04%",
+                  "type": "强势板",
+                  "originalGroup": "机器人/汽车产业链",
+                  "basis": "原涨停理由明确列出“智能按摩椅”，符合本页家电复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002860",
+                  "name": "星帅尔",
+                  "board": "首板",
+                  "firstSeal": "09:31:54",
+                  "lastSeal": "09:48:24",
+                  "reason": "光伏组件+家电零部件+高效电机",
+                  "pct": "9.99%",
+                  "type": "分歧板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“家电零部件”，符合本页家电复核规则。",
+                  "boundary": "家电专用配套，非整机"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 103
             }
           ],
           "leaderGroups": [],
@@ -11797,12 +13830,42 @@
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002290",
+                  "name": "禾盛新材",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "参股CPU+算力+家电复材",
+                  "pct": "10.00%",
+                  "type": "一字板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“家电复材”，符合本页家电复核规则。",
+                  "boundary": "家电专用配套，非整机"
+                },
+                {
+                  "code": "002614",
+                  "name": "奥佳华",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "股份转让+健康机器人+按摩椅+“华”字辈",
+                  "pct": "10.08%",
+                  "type": "一字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“按摩椅”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 63
             }
           ],
           "leaderGroups": [],
@@ -11878,12 +13941,94 @@
             {
               "theme": "机器人",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 6,
+              "assistCount": 6,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000910",
+                  "name": "大亚圣象",
+                  "board": "4天4板",
+                  "firstSeal": "09:30:39",
+                  "lastSeal": "09:30:39",
+                  "reason": "七腾机器人+PCB概念+铝板带+电池箔",
+                  "pct": "10.01%",
+                  "type": "强势板",
+                  "originalGroup": "PCB产业链",
+                  "basis": "原涨停理由明确列出“机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002541",
+                  "name": "鸿路钢构",
+                  "board": "首板",
+                  "firstSeal": "14:12:51",
+                  "lastSeal": "14:12:51",
+                  "reason": "钢结构+焊接机器人+智能制造+重大合同",
+                  "pct": "10.00%",
+                  "type": "强势板",
+                  "originalGroup": "地产产业链",
+                  "basis": "原涨停理由明确列出“焊接机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002614",
+                  "name": "奥佳华",
+                  "board": "3天3板",
+                  "firstSeal": "09:31:09",
+                  "lastSeal": "10:20:51",
+                  "reason": "股份转让+健康机器人+按摩椅+“华”字辈",
+                  "pct": "10.03%",
+                  "type": "分歧板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“健康机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002819",
+                  "name": "东方中科",
+                  "board": "首板",
+                  "firstSeal": "11:12:12",
+                  "lastSeal": "11:12:12",
+                  "reason": "网络分析仪+半导体测试+具身智能",
+                  "pct": "9.98%",
+                  "type": "强势板",
+                  "originalGroup": "仪器仪表",
+                  "basis": "原涨停理由明确列出“具身智能”，符合本页机器人复核规则。",
+                  "boundary": "具身智能交叉属性"
+                },
+                {
+                  "code": "600503",
+                  "name": "华丽家族",
+                  "board": "3天3板",
+                  "firstSeal": "09:43:56",
+                  "lastSeal": "14:56:38",
+                  "reason": "房地产开发+机器人+创新药+“华”字辈",
+                  "pct": "10.11%",
+                  "type": "分歧板",
+                  "originalGroup": "地产产业链",
+                  "basis": "原涨停理由明确列出“机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600843",
+                  "name": "上工申贝",
+                  "board": "首板",
+                  "firstSeal": "09:30:47",
+                  "lastSeal": "13:21:56",
+                  "reason": "低空经济+机器人缝制+智能制造",
+                  "pct": "9.97%",
+                  "type": "回封板",
+                  "originalGroup": "航天/低空经济",
+                  "basis": "原涨停理由明确列出“机器人缝制”，符合本页机器人复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 51
             },
             {
               "theme": "地产产业链",
@@ -11955,12 +14100,29 @@
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002614",
+                  "name": "奥佳华",
+                  "board": "3天3板",
+                  "firstSeal": "09:31:09",
+                  "lastSeal": "10:20:51",
+                  "reason": "股份转让+健康机器人+按摩椅+“华”字辈",
+                  "pct": "10.03%",
+                  "type": "分歧板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“按摩椅”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 51
             }
           ],
           "leaderGroups": [],
@@ -12158,22 +14320,56 @@
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "600802",
+                  "name": "福建水泥",
+                  "board": "2天2板",
+                  "firstSeal": "14:24:13",
+                  "lastSeal": "14:24:13",
+                  "reason": "海峡两岸+福建国资+水泥",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "海峡两岸",
+                  "basis": "原涨停理由明确列出“水泥”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 52
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002614",
+                  "name": "奥佳华",
+                  "board": "4天4板",
+                  "firstSeal": "09:30:57",
+                  "lastSeal": "09:31:30",
+                  "reason": "股份转让+具身智能+按摩椅+“华”字辈",
+                  "pct": "10.04%",
+                  "type": "回封板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“按摩椅”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 52
             }
           ],
           "leaderGroups": [],
@@ -12350,12 +14546,29 @@
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 1,
+              "assistCount": 0,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "002242",
+                  "name": "九阳股份",
+                  "board": "首板",
+                  "firstSeal": "09:31:15",
+                  "lastSeal": "09:36:15",
+                  "reason": "机器人+太空科技+厨房小家电",
+                  "pct": "10.01%",
+                  "type": "分歧板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“厨房小家电”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 33
             }
           ],
           "leaderGroups": [
@@ -12606,12 +14819,29 @@
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 1,
+              "assistCount": 0,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "002242",
+                  "name": "九阳股份",
+                  "board": "2天2板",
+                  "firstSeal": "09:30:30",
+                  "lastSeal": "09:30:30",
+                  "reason": "厨房小家电+炒菜机器人+太空科技",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "地产产业链",
+                  "basis": "原涨停理由明确列出“厨房小家电”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 57
             }
           ],
           "leaderGroups": [
@@ -12868,12 +15098,29 @@
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 1,
+              "assistCount": 0,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "002242",
+                  "name": "九阳股份",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:49:30",
+                  "reason": "厨房小家电+机器人投资+太空科技",
+                  "pct": "10.04%",
+                  "type": "T字板",
+                  "originalGroup": "地产产业链",
+                  "basis": "原涨停理由明确列出“厨房小家电”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 52
             }
           ],
           "leaderGroups": [
@@ -12996,12 +15243,55 @@
             {
               "theme": "机器人",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 3,
+              "assistCount": 2,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "002242",
+                  "name": "九阳股份",
+                  "board": "4天4板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "厨房小家电+机器人投资+太空科技",
+                  "pct": "10.00%",
+                  "type": "一字板",
+                  "originalGroup": "家电",
+                  "basis": "原涨停理由明确列出“机器人投资”，符合本页机器人复核规则。",
+                  "boundary": "机器人投资属性，非认定整机生产"
+                },
+                {
+                  "code": "600400",
+                  "name": "红豆股份",
+                  "board": "首板",
+                  "firstSeal": "10:38:39",
+                  "lastSeal": "14:22:57",
+                  "reason": "服装+养老机器人",
+                  "pct": "10.03%",
+                  "type": "分歧板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“养老机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "601956",
+                  "name": "东贝集团",
+                  "board": "首板",
+                  "firstSeal": "09:49:37",
+                  "lastSeal": "09:49:37",
+                  "reason": "制冷压缩机+机器人电机+高效变频",
+                  "pct": "9.96%",
+                  "type": "强势板",
+                  "originalGroup": "家电",
+                  "basis": "原涨停理由明确列出“机器人电机”，符合本页机器人复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 43
             },
             {
               "theme": "地产产业链",
@@ -13342,12 +15632,29 @@
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 1,
+              "assistCount": 0,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "002242",
+                  "name": "九阳股份",
+                  "board": "5天5板",
+                  "firstSeal": "09:30:27",
+                  "lastSeal": "13:28:51",
+                  "reason": "机器人投资+厨房小家电+内容电商",
+                  "pct": "10.04%",
+                  "type": "分歧板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“厨房小家电”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 69
             }
           ],
           "leaderGroups": [
@@ -13408,12 +15715,94 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 6,
+              "assistCount": 5,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "002242",
+                  "name": "九阳股份",
+                  "board": "6天6板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "10:45:12",
+                  "reason": "机器人投资+厨房小家电+产品创新",
+                  "pct": "9.98%",
+                  "type": "T字板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“厨房小家电”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002264",
+                  "name": "新 华 都",
+                  "board": "首板",
+                  "firstSeal": "10:12:12",
+                  "lastSeal": "14:23:39",
+                  "reason": "AI营销+电商酒类+直播电商",
+                  "pct": "10.00%",
+                  "type": "分歧板",
+                  "originalGroup": "AI应用/传媒",
+                  "basis": "原涨停理由明确列出“电商酒类、直播电商”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600693",
+                  "name": "东百集团",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "光芯片收购+光探测芯片+商业零售",
+                  "pct": "10.04%",
+                  "type": "一字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“商业零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603336",
+                  "name": "宏辉果蔬",
+                  "board": "首板",
+                  "firstSeal": "13:39:30",
+                  "lastSeal": "13:39:30",
+                  "reason": "创新药+果蔬供应链+速冻食品+苏州国资",
+                  "pct": "10.00%",
+                  "type": "强势板",
+                  "originalGroup": "医药",
+                  "basis": "原涨停理由明确列出“果蔬供应链、速冻食品”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603992",
+                  "name": "松霖科技",
+                  "board": "首板",
+                  "firstSeal": "10:22:40",
+                  "lastSeal": "10:34:25",
+                  "reason": "机器人+智能硬件+智能厨卫+半年报增长",
+                  "pct": "9.98%",
+                  "type": "回封板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“智能厨卫”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "605136",
+                  "name": "丽人丽妆",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "化妆品电商+海外总代+业绩扭亏",
+                  "pct": "9.96%",
+                  "type": "一字板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“化妆品电商”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 46
             },
             {
               "theme": "机器人",
@@ -13463,22 +15852,69 @@
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "603992",
+                  "name": "松霖科技",
+                  "board": "首板",
+                  "firstSeal": "10:22:40",
+                  "lastSeal": "10:34:25",
+                  "reason": "机器人+智能硬件+智能厨卫+半年报增长",
+                  "pct": "9.98%",
+                  "type": "回封板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“智能厨卫”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "605287",
+                  "name": "德才股份",
+                  "board": "4天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "AI漫剧+火山引擎合作+建筑装饰",
+                  "pct": "10.00%",
+                  "type": "一字板",
+                  "originalGroup": "AI应用/传媒",
+                  "basis": "原涨停理由明确列出“建筑装饰”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 46
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 1,
+              "assistCount": 0,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "002242",
+                  "name": "九阳股份",
+                  "board": "6天6板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "10:45:12",
+                  "reason": "机器人投资+厨房小家电+产品创新",
+                  "pct": "9.98%",
+                  "type": "T字板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“厨房小家电”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 46
             }
           ],
           "leaderGroups": [
@@ -13733,32 +16169,134 @@
             {
               "theme": "机器人",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 4,
+              "assistCount": 4,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002917",
+                  "name": "金奥博",
+                  "board": "首板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:36:48",
+                  "reason": "拟收购+民爆+西藏客户+机器人概念",
+                  "pct": "10.00%",
+                  "type": "T字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“机器人概念”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603386",
+                  "name": "骏亚科技",
+                  "board": "首板",
+                  "firstSeal": "11:10:14",
+                  "lastSeal": "11:10:14",
+                  "reason": "PCB+高多层HDI+人形机器人",
+                  "pct": "10.01%",
+                  "type": "强势板",
+                  "originalGroup": "PCB产业链",
+                  "basis": "原涨停理由明确列出“人形机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603466",
+                  "name": "风语筑",
+                  "board": "首板",
+                  "firstSeal": "13:01:53",
+                  "lastSeal": "13:01:53",
+                  "reason": "AI视频+数字展示+具身智能+人工智能教育",
+                  "pct": "9.97%",
+                  "type": "强势板",
+                  "originalGroup": "AI应用",
+                  "basis": "原涨停理由明确列出“具身智能”，符合本页机器人复核规则。",
+                  "boundary": "具身智能交叉属性"
+                },
+                {
+                  "code": "605058",
+                  "name": "澳弘电子",
+                  "board": "17天10板",
+                  "firstSeal": "10:20:07",
+                  "lastSeal": "10:36:58",
+                  "reason": "PCB+AI服务器电源+具身智能",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "PCB产业链",
+                  "basis": "原涨停理由明确列出“具身智能”，符合本页机器人复核规则。",
+                  "boundary": "具身智能交叉属性"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 67
             },
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002811",
+                  "name": "郑中设计",
+                  "board": "3天2板",
+                  "firstSeal": "13:52:51",
+                  "lastSeal": "13:52:51",
+                  "reason": "半导体投资+室内设计+软装增长",
+                  "pct": "9.98%",
+                  "type": "强势板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“室内设计、软装”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002949",
+                  "name": "华阳国际",
+                  "board": "首板",
+                  "firstSeal": "11:28:48",
+                  "lastSeal": "11:28:48",
+                  "reason": "AI设计+建筑设计+城市更新",
+                  "pct": "9.98%",
+                  "type": "强势板",
+                  "originalGroup": "AI应用",
+                  "basis": "原涨停理由明确列出“建筑设计、城市更新”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600802",
+                  "name": "福建水泥",
+                  "board": "首板",
+                  "firstSeal": "09:33:54",
+                  "lastSeal": "13:03:00",
+                  "reason": "水泥熟料+重点工程+福建国资",
+                  "pct": "9.98%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“水泥熟料”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 67
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 67
             }
           ],
           "leaderGroups": [],
@@ -13828,32 +16366,96 @@
             {
               "theme": "机器人",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "603992",
+                  "name": "松霖科技",
+                  "board": "3天2板",
+                  "firstSeal": "14:52:24",
+                  "lastSeal": "14:52:24",
+                  "reason": "服务机器人+大健康硬件+智能厨卫",
+                  "pct": "10.01%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 36
             },
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000573",
+                  "name": "粤宏远Ａ",
+                  "board": "首板",
+                  "firstSeal": "10:57:57",
+                  "lastSeal": "11:02:15",
+                  "reason": "东莞地产+再生铅+产业转型",
+                  "pct": "9.90%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“东莞地产”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603992",
+                  "name": "松霖科技",
+                  "board": "3天2板",
+                  "firstSeal": "14:52:24",
+                  "lastSeal": "14:52:24",
+                  "reason": "服务机器人+大健康硬件+智能厨卫",
+                  "pct": "10.01%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“智能厨卫”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 36
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002860",
+                  "name": "星帅尔",
+                  "board": "2天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "资产收购+精密刀具+家电零部件",
+                  "pct": "10.01%",
+                  "type": "一字板",
+                  "originalGroup": "并购重组",
+                  "basis": "原涨停理由明确列出“家电零部件”，符合本页家电复核规则。",
+                  "boundary": "家电专用配套，非整机"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 36
             }
           ],
           "leaderGroups": [],
@@ -13973,32 +16575,109 @@
             {
               "theme": "机器人",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "603386",
+                  "name": "骏亚科技",
+                  "board": "3天2板",
+                  "firstSeal": "09:58:25",
+                  "lastSeal": "09:58:25",
+                  "reason": "PCB+高多层HDI+人形机器人",
+                  "pct": "9.99%",
+                  "type": "强势板",
+                  "originalGroup": "PCB产业链",
+                  "basis": "原涨停理由明确列出“人形机器人”，符合本页机器人复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 36
             },
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002543",
+                  "name": "万和电气",
+                  "board": "首板",
+                  "firstSeal": "09:38:00",
+                  "lastSeal": "13:50:18",
+                  "reason": "热水采暖+空气能热泵+海外布局",
+                  "pct": "10.06%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“热水采暖、空气能热泵”，符合本页地产产业链复核规则。",
+                  "boundary": "热泵/采暖设备，未拆分家用与商用"
+                },
+                {
+                  "code": "600668",
+                  "name": "尖峰集团",
+                  "board": "首板",
+                  "firstSeal": "10:06:05",
+                  "lastSeal": "11:24:38",
+                  "reason": "医药+水泥熟料+原料药",
+                  "pct": "10.06%",
+                  "type": "回封板",
+                  "originalGroup": "医药",
+                  "basis": "原涨停理由明确列出“水泥熟料”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "605003",
+                  "name": "众望布艺",
+                  "board": "首板",
+                  "firstSeal": "11:18:10",
+                  "lastSeal": "13:44:04",
+                  "reason": "装饰面料+外销+股权激励",
+                  "pct": "10.00%",
+                  "type": "回封板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“装饰面料”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 36
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002543",
+                  "name": "万和电气",
+                  "board": "首板",
+                  "firstSeal": "09:38:00",
+                  "lastSeal": "13:50:18",
+                  "reason": "热水采暖+空气能热泵+海外布局",
+                  "pct": "10.06%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“热水采暖、空气能热泵”，符合本页家电复核规则。",
+                  "boundary": "热泵/采暖设备，未拆分家用与商用"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 36
             }
           ],
           "leaderGroups": [],
@@ -14029,12 +16708,42 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002614",
+                  "name": "奥佳华",
+                  "board": "首板",
+                  "firstSeal": "10:25:45",
+                  "lastSeal": "10:25:45",
+                  "reason": "按摩椅+智能按摩+机器人",
+                  "pct": "10.04%",
+                  "type": "强势板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“按摩椅”，符合本页大消费复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603955",
+                  "name": "大千生态",
+                  "board": "首板",
+                  "firstSeal": "10:28:12",
+                  "lastSeal": "10:28:12",
+                  "reason": "宠物消费+生态建设+文旅运营",
+                  "pct": "9.99%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“宠物消费、文旅运营”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 61
             },
             {
               "theme": "机器人",
@@ -14128,22 +16837,95 @@
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 4,
+              "assistCount": 4,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "000573",
+                  "name": "粤宏远Ａ",
+                  "board": "3天2板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "股权收购+精密传动+高端自动化+东莞地产",
+                  "pct": "10.10%",
+                  "type": "一字板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“东莞地产”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002949",
+                  "name": "华阳国际",
+                  "board": "4天2板",
+                  "firstSeal": "09:49:42",
+                  "lastSeal": "09:49:42",
+                  "reason": "微短剧+低空规划+建筑设计+AI设计",
+                  "pct": "10.04%",
+                  "type": "强势板",
+                  "originalGroup": "传媒",
+                  "basis": "原涨停理由明确列出“建筑设计”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600668",
+                  "name": "尖峰集团",
+                  "board": "2天2板",
+                  "firstSeal": "09:31:26",
+                  "lastSeal": "15:00:00",
+                  "reason": "医药+原料药+水泥熟料",
+                  "pct": "10.01%",
+                  "type": "回封板",
+                  "originalGroup": "医药",
+                  "basis": "原涨停理由明确列出“水泥熟料”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600802",
+                  "name": "福建水泥",
+                  "board": "4天2板",
+                  "firstSeal": "10:01:06",
+                  "lastSeal": "10:13:57",
+                  "reason": "水泥熟料+重点工程+福建国资",
+                  "pct": "10.06%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“水泥熟料”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 61
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002614",
+                  "name": "奥佳华",
+                  "board": "首板",
+                  "firstSeal": "10:25:45",
+                  "lastSeal": "10:25:45",
+                  "reason": "按摩椅+智能按摩+机器人",
+                  "pct": "10.04%",
+                  "type": "强势板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“按摩椅”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 61
             }
           ],
           "leaderGroups": [],
@@ -14363,22 +17145,28 @@
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 46
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 46
             }
           ],
           "leaderGroups": [],
@@ -14664,22 +17452,95 @@
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "603366",
+                  "name": "日出东方",
+                  "board": "首板",
+                  "firstSeal": "13:26:11",
+                  "lastSeal": "14:11:17",
+                  "reason": "空气能热泵+储能+太阳能光热",
+                  "pct": "9.96%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“空气能热泵”，符合本页地产产业链复核规则。",
+                  "boundary": "热泵/采暖设备，未拆分家用与商用"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 54
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 4,
+              "assistCount": 3,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "002242",
+                  "name": "九阳股份",
+                  "board": "首板",
+                  "firstSeal": "09:32:39",
+                  "lastSeal": "10:14:57",
+                  "reason": "机器人投资+厨房小家电+豆浆机+“羊”字辈",
+                  "pct": "10.01%",
+                  "type": "分歧板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“厨房小家电”，符合本页家电复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "002403",
+                  "name": "爱仕达",
+                  "board": "首板",
+                  "firstSeal": "10:23:33",
+                  "lastSeal": "11:26:27",
+                  "reason": "人形机器人+工业机器人+炊具小家电",
+                  "pct": "9.96%",
+                  "type": "回封板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“炊具小家电”，符合本页家电复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "603366",
+                  "name": "日出东方",
+                  "board": "首板",
+                  "firstSeal": "13:26:11",
+                  "lastSeal": "14:11:17",
+                  "reason": "空气能热泵+储能+太阳能光热",
+                  "pct": "9.96%",
+                  "type": "回封板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“空气能热泵”，符合本页家电复核规则。",
+                  "boundary": "热泵/采暖设备，未拆分家用与商用"
+                },
+                {
+                  "code": "603657",
+                  "name": "春光科技",
+                  "board": "首板",
+                  "firstSeal": "11:26:00",
+                  "lastSeal": "11:26:00",
+                  "reason": "家庭机器人+清洁电器+小米客户",
+                  "pct": "10.01%",
+                  "type": "强势板",
+                  "originalGroup": "机器人",
+                  "basis": "原涨停理由明确列出“清洁电器”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 54
             }
           ],
           "leaderGroups": [
@@ -14885,22 +17746,82 @@
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 3,
+              "assistCount": 3,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "002811",
+                  "name": "郑中设计",
+                  "board": "首板",
+                  "firstSeal": "10:04:48",
+                  "lastSeal": "10:30:36",
+                  "reason": "半导体入股+AI设计+室内设计",
+                  "pct": "10.02%",
+                  "type": "回封板",
+                  "originalGroup": "算力/半导体产业链",
+                  "basis": "原涨停理由明确列出“室内设计”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600802",
+                  "name": "福建水泥",
+                  "board": "7天3板",
+                  "firstSeal": "09:41:55",
+                  "lastSeal": "09:41:55",
+                  "reason": "水泥熟料+重点工程+福建国资",
+                  "pct": "10.00%",
+                  "type": "强势板",
+                  "originalGroup": "海峡两岸",
+                  "basis": "原涨停理由明确列出“水泥熟料”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600838",
+                  "name": "上海九百",
+                  "board": "首板",
+                  "firstSeal": "09:45:54",
+                  "lastSeal": "13:59:09",
+                  "reason": "商业地产+商贸零售+洗染服务",
+                  "pct": "10.05%",
+                  "type": "回封板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“商业地产”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 50
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
-              "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "count": 1,
+              "assistCount": 0,
+              "leaderIncluded": true,
+              "stocks": [
+                {
+                  "code": "002242",
+                  "name": "九阳股份",
+                  "board": "2天2板",
+                  "firstSeal": "14:24:15",
+                  "lastSeal": "14:30:57",
+                  "reason": "机器人投资+厨房小家电+豆浆机+“羊”字辈",
+                  "pct": "10.02%",
+                  "type": "分歧板",
+                  "originalGroup": "机器人/端侧AI",
+                  "basis": "原涨停理由明确列出“厨房小家电”，符合本页家电复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 50
             }
           ],
           "leaderGroups": [
@@ -14961,12 +17882,29 @@
             {
               "theme": "大消费",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "600838",
+                  "name": "上海九百",
+                  "board": "2天2板",
+                  "firstSeal": "10:52:37",
+                  "lastSeal": "10:52:37",
+                  "reason": "商贸零售+商业地产+洗染服务",
+                  "pct": "10.01%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“商贸零售”，符合本页大消费复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 33
             },
             {
               "theme": "机器人",
@@ -15137,22 +18075,42 @@
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "600838",
+                  "name": "上海九百",
+                  "board": "2天2板",
+                  "firstSeal": "10:52:37",
+                  "lastSeal": "10:52:37",
+                  "reason": "商贸零售+商业地产+洗染服务",
+                  "pct": "10.01%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“商业地产”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 33
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 0,
+              "assistCount": 0,
               "leaderIncluded": false,
               "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "reviewed_zero",
+              "reviewedStockCount": 33
             }
           ],
           "leaderGroups": [],
@@ -15773,22 +18731,69 @@
             {
               "theme": "地产产业链",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 2,
+              "assistCount": 2,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "600094",
+                  "name": "大名城",
+                  "board": "首板",
+                  "firstSeal": "11:17:41",
+                  "lastSeal": "11:17:41",
+                  "reason": "房地产开发+低空经济+算力运营+6G通信",
+                  "pct": "10.03%",
+                  "type": "强势板",
+                  "originalGroup": "其他概念",
+                  "basis": "原涨停理由明确列出“房地产开发”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                },
+                {
+                  "code": "600838",
+                  "name": "上海九百",
+                  "board": "3天3板",
+                  "firstSeal": "09:25:00",
+                  "lastSeal": "09:25:00",
+                  "reason": "商贸零售+商业地产+洗染服务",
+                  "pct": "10.00%",
+                  "type": "一字板",
+                  "originalGroup": "大消费",
+                  "basis": "原涨停理由明确列出“商业地产”，符合本页地产产业链复核规则。",
+                  "boundary": ""
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 82
             },
             {
               "theme": "家电",
               "sourceTitle": null,
-              "count": null,
-              "assistCount": null,
+              "count": 1,
+              "assistCount": 1,
               "leaderIncluded": false,
-              "stocks": [],
-              "status": "not_separately_listed",
-              "note": "来源当日未单列该题材，不等于确认零涨停。"
+              "stocks": [
+                {
+                  "code": "603677",
+                  "name": "奇精机械",
+                  "board": "首板",
+                  "firstSeal": "09:44:00",
+                  "lastSeal": "10:22:00",
+                  "reason": "机器人零部件+光模块+洗衣机离合器",
+                  "pct": "9.99%",
+                  "type": "回封板",
+                  "originalGroup": "机器人/物理AI",
+                  "basis": "原涨停理由明确列出“洗衣机离合器”，符合本页家电复核规则。",
+                  "boundary": "家电专用配套，非整机"
+                }
+              ],
+              "status": "pool_reviewed",
+              "note": "源站未单列，已依据当天完整涨停池的明确涨停原因逐股补录；0仅限本页规则与源池范围。",
+              "originalStatus": "not_separately_listed",
+              "reviewStatus": "supplemented",
+              "reviewedStockCount": 82
             }
           ],
           "leaderGroups": [],

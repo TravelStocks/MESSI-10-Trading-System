@@ -7,10 +7,10 @@
   <meta name="description" content="抱团趋势龙周期归纳：国芳集团、金健米业、一鸣食品、九阳股份。把个股日K、题材轮动、涨停数量与助攻名单放在同一条时间轴上复盘。">
   <title>抱团趋势龙周期归纳 · MESSI-10</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%231c1b18'/%3E%3Ctext x='5' y='28' fill='%23dbad4f' font-size='23'%3EM%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261025-daily">
   <script defer src="../assets/vendor/echarts-6.0.0.min.js"></script>
-  <script defer src="data.js"></script>
-  <script defer src="app.js"></script>
+  <script defer src="data.js?v=20261025-daily"></script>
+  <script defer src="app.js?v=20261025-daily"></script>
 </head>
 <body>
 <a class="skip" href="#cases">跳到个股案例</a>
@@ -36,13 +36,18 @@
   </section>
 
   <section class="wrap section" id="cases">
-    <div class="section-head"><div><p class="eyebrow">02 / 四股同框研究</p><h2>把“抱团”落到每一天。</h2></div><p>切换个股；点击关键节点、图中的日期或逐日记录，联动查看题材数量与涨停名单。</p></div>
+    <div class="section-head"><div><p class="eyebrow">02 / 四股同框研究</p><h2>把“抱团”落到每一天。</h2></div><p>每个交易日一列，日期、个股表现、题材数量与下方K线对齐。横向滚动逐日阅读，点击日期查看完整名单。</p></div>
     <div class="case-tabs" id="case-tabs" role="tablist" aria-label="选择个股案例"></div>
     <article class="case-panel" id="case-panel" role="tabpanel" tabindex="0">
       <header class="case-heading"><div><p class="eyebrow" id="case-meta"></p><h3 id="case-name"></h3><p id="case-thesis"></p></div><div id="case-topics" class="topic-tags"></div></header>
       <div class="case-summary" id="case-summary"></div>
       <div class="phase-strip" id="phase-strip" aria-label="当前个股阶段与日期"></div>
-      <div class="chart-shell"><div class="chart-heading"><div><strong id="chart-title">个股 × 成交量 × 题材涨停</strong><p>同一交易日对齐 · 日K不复权 · 点击查看当日明细</p></div><button class="small-button dark" id="reset-zoom" type="button">还原全周期</button></div><div id="cycle-chart" role="img" aria-label="个股日K、成交量和题材涨停数量联动图"></div><div class="chart-footer" id="chart-source"></div></div>
+      <div class="chart-shell">
+        <div class="chart-heading"><div><strong id="chart-title">个股 × 成交量 × 题材涨停</strong><p id="chart-hint">每天一列 · 横向滚动查看全部日期 · 点击日期展开名单</p></div><div class="chart-controls" aria-label="图表显示方式"><button class="small-button dark" id="daily-view" type="button" aria-pressed="true">逐日标注</button><button class="small-button dark" id="overview-view" type="button" aria-pressed="false">全周期概览</button></div></div>
+        <div class="chart-navigation"><button type="button" class="small-button dark" id="previous-days" aria-label="向前查看五个交易日">← 前5日</button><span id="chart-range"></span><button type="button" class="small-button dark" id="next-days" aria-label="向后查看五个交易日">后5日 →</button></div>
+        <div class="chart-scroll" id="chart-scroll" tabindex="0" role="region" aria-label="可横向滚动的每日标注与K线"><div id="chart-canvas"><div id="daily-chart-labels" class="daily-chart-labels" aria-label="全部交易日数据"></div><div id="cycle-chart" role="img" aria-label="个股日K、成交量和题材涨停数量联动图"></div></div></div>
+        <div class="chart-footer" id="chart-source"></div>
+      </div>
       <div class="nodes-head"><h4>关键节点标注</h4><span>节点是复盘整理；数量可追溯到当日记录。</span></div>
       <div class="key-nodes" id="key-nodes"></div>
       <div class="day-detail" id="day-detail" aria-live="polite"></div>
@@ -50,7 +55,7 @@
   </section>
 
   <section class="wrap section" id="ledger">
-    <div class="section-head"><div><p class="eyebrow">03 / 逐日证据账本</p><h2 id="ledger-title">每一天，都有对应题材。</h2></div><p>“题材合计”含该分组内的核心；“其他涨停”剔除核心后去重，用于观察助攻。“未单列”与0只分开显示。多个题材分别列示，不直接相加。</p></div>
+    <div class="section-head"><div><p class="eyebrow">03 / 逐日证据账本</p><h2 id="ledger-title">每一天，都有对应题材。</h2></div><p>有单列题材沿用源站分组；没有单列的日期，从当天完整涨停池逐股复核补录，并标记依据。0只表示本页规则在该日源池内未找到匹配股票。</p></div>
     <div class="ledger-tools"><label for="day-filter">查找日期或个股 <input id="day-filter" type="search" placeholder="例如：08-27、万向德农"></label><span id="ledger-status"></span></div>
     <div class="table-scroll" tabindex="0" role="region" aria-label="逐日个股与题材明细"><table><thead><tr><th>交易日</th><th>核心表现</th><th>题材 / 涨停合计 / 其他涨停</th><th>节点记录</th><th>名单</th></tr></thead><tbody id="ledger-body"></tbody></table></div>
     <p class="data-note" id="coverage-note"></p>
