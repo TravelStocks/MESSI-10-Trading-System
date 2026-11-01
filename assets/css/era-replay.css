@@ -1,0 +1,35 @@
+.era-standard { border-top: 3px solid #a72d41; }
+.era-standard > h4 { font-size: 23px; }
+.era-signal-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; margin: 20px 0; }
+.era-signal-pair > section { min-width: 0; border-top: 2px solid #b53445; padding-top: 12px; }
+.era-signal-pair > section + section { border-color: #216ea2; }
+.era-signal-pair h5 { margin: 0 0 8px; font-size: 18px; line-height: 1.6; }
+.era-signal-pair p { font-size: 14px; line-height: 1.8; margin: 0; }
+.era-replay { min-width: 0; margin-top: 22px; }
+.era-replay figure { margin: 0; padding-block: 18px; border-top: 1px solid var(--line); }
+.era-replay figcaption { font-size: 16px; font-weight: 650; margin-bottom: 12px; }
+.era-theme-chart { width: 100%; height: 270px; }
+.era-stock-chart { width: 100%; height: 450px; }
+.era-chart-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin: 12px 0; }
+.era-range { display: flex; flex-wrap: wrap; gap: 6px; }
+.era-range button { min-height: 40px; padding: 8px 10px; border: 1px solid #c4cdd5; border-radius: 3px; background: #fff; color: #243641; font: inherit; font-size: 12px; cursor: pointer; }
+.era-range button[aria-pressed="true"] { border-color: #226b56; background: #226b56; color: #fff; }
+.era-actual-toggle { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; font-size: 13px; }
+.era-range button:focus-visible, .era-actual-toggle:focus-within { outline: 2px solid #267bb1; outline-offset: 3px; }
+.era-selection { font-size: 13px; min-height: 48px; line-height: 1.8; margin: 8px 0; }
+.era-evidence-wrap { overflow-x: auto; max-width: 100%; margin: 18px 0; }
+.era-evidence { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 13px; }
+.era-evidence caption { text-align: left; font-size: 15px; font-weight: 650; padding: 10px 0; }
+.era-evidence :is(th,td) { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; line-height: 1.8; }
+.era-evidence th { background: #f2f5f7; white-space: nowrap; }
+.era-evidence-wrap .era-fills { min-width: 440px; }
+.era-replay .weekly-source { margin-bottom: 14px; }
+.era-source-links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.era-source-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; }
+@media (max-width: 640px) {
+  .era-signal-pair { grid-template-columns: 1fr; gap: 18px; }
+  .era-theme-chart { height: 250px; }
+  .era-stock-chart { height: 400px; }
+  .era-range { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); width: 100%; }
+  .era-range button:last-child { grid-column: 1 / -1; }
+}

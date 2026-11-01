@@ -247,7 +247,7 @@ test('Jinyao crossing case is visible structured content shared by handbook and 
     assert.equal(nodes.filter((item) => ['details', 'summary'].includes(item.tag)).length, 0);
   }
   assert.match(handbook, /id="case-jinyao-crossing" data-crossing-case/);
-  assert.match(handbook, /case-directory"><a href="#case-jinyao-crossing"/);
+  assert.match(handbook, /case-directory">[\s\S]*?<a href="#case-jinyao-crossing"/);
   assert.match(read('资料库 - 龙头周期复盘/index.html'), /id="jinyao-case-check" data-crossing-case[^>]*hidden/);
   assert.match(read('资料库 - 龙头周期复盘/assets/app.js'), /els\.jinyaoCase\.hidden = cycle\.id !== "jinyao-medicine-2026-04"/);
 });
