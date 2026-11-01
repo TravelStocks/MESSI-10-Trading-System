@@ -23,7 +23,7 @@ test('all three views consume the same lessons and retain the main rhythms plus 
   for (const file of ['index.html', 'framework-model/index.html', '资料库 - 龙头周期复盘/index.html']) {
     const html = read(file);
     assert.match(html, /data-october-lessons/);
-    assert.match(html, /assets\/data\/october-lessons.js\?v=20261010-jinyao/);
+    assert.match(html, /assets\/data\/october-lessons.js\?v=20261101/);
     assert.match(html, /assets\/js\/october-lessons.js\?v=20261010-jinyao/);
     assert.match(html, /assets\/css\/october-lessons.css\?v=20261010-jinyao/);
   }

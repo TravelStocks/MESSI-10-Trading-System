@@ -1,0 +1,38 @@
+.content > .section.weekly-focus { border: 0; border-block: 3px solid #ad3043; border-radius: 0; margin: 22px 0 32px; padding: 24px 12px; letter-spacing: 0; background: transparent; box-shadow: none; }
+.weekly-focus-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px 20px; }
+.weekly-priority { color: #a22b3d; font-size: 13px; font-weight: 700; margin: 0 0 12px; }
+.weekly-focus-heading a { font-size: 12px; min-height: 44px; display: inline-flex; align-items: center; }
+.weekly-focus h2 { font-size: 28px; line-height: 1.5; margin: 0 0 12px; letter-spacing: 0; }
+.weekly-focus-lead { font-size: 16px; line-height: 1.85; max-width: 850px; }
+.weekly-mode-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 26px; margin: 24px 0; }
+.weekly-mode-grid > section { min-width: 0; padding-top: 12px; border-top: 2px solid #8593a0; background: transparent; }
+.weekly-mode-grid > section:last-child { border-color: #226b56; }
+.weekly-mode-grid h3 { font-size: 17px; line-height: 1.5; margin: 0 0 12px; }
+.weekly-budget { min-height: 86px; display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin: 0 0 8px; }
+.weekly-budget strong { font-size: 30px; line-height: 1.4; color: #226b56; }
+.weekly-budget span { font-size: 12px; line-height: 1.6; color: var(--muted); }
+.weekly-critical { border-left: 3px solid #ad3043; padding: 2px 0 2px 14px; margin: 18px 0; font-size: 15px; line-height: 1.85; }
+.weekly-source { color: var(--muted); font-size: 12px; line-height: 1.85; margin: 16px 0 0; overflow-wrap: anywhere; }
+.weekly-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 10px; }
+.weekly-links a { min-height: 44px; display: inline-flex; align-items: center; font-size: 14px; }
+.weekly-rules { border-top: 1px solid var(--line); margin: 26px 0; padding: 22px 0 0; background: transparent; scroll-margin-top: 116px; letter-spacing: 0; }
+.weekly-rules > :is(h3,h4) { font-size: 22px; line-height: 1.6; margin: 0 0 16px; }
+.weekly-rules :is(h4,h5) { letter-spacing: 0; }
+.weekly-rules .lesson-point-grid > section { min-width: 0; }
+.weekly-rules .lesson-point-grid :is(h4,h5) { font-size: 16px; line-height: 1.6; margin: 10px 0; }
+.weekly-wave-steps { list-style: none; padding: 0; margin: 20px 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px 24px; }
+.weekly-wave-steps li { border-top: 2px solid #236c57; padding-top: 12px; min-width: 0; }
+.weekly-wave-steps h5 { font-size: 16px; line-height: 1.5; margin: 0 0 8px; }
+.weekly-wave-steps p { font-size: 14px; line-height: 1.85; margin: 0; }
+.weekly-entry-case { border-top: 1px solid var(--line); padding: 18px 0; margin-top: 18px; scroll-margin-top: 116px; }
+.weekly-entry-case > h4 { font-size: 18px; line-height: 1.6; margin: 0 0 12px; }
+.weekly-budget-rules { border-top: 2px solid #ad3043; }
+.weekly-focus :is(a,section,li), .weekly-rules :is(a,section,li) { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .weekly-focus { margin-top: 18px; padding-block: 20px; }
+  .weekly-focus h2 { font-size: 23px; }
+  .weekly-mode-grid, .weekly-wave-steps { grid-template-columns: 1fr; gap: 20px; }
+  .weekly-budget { min-height: 0; margin-bottom: 12px; }
+  .weekly-mode-grid { margin-block: 20px; }
+  .weekly-rules > :is(h3,h4) { font-size: 20px; }
+}
