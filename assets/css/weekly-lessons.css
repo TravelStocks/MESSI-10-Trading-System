@@ -28,6 +28,8 @@
 .weekly-entry-case > h4 { font-size: 18px; line-height: 1.6; margin: 0 0 12px; }
 .weekly-budget-rules { border-top: 2px solid #ad3043; }
 .weekly-focus :is(a,section,li), .weekly-rules :is(a,section,li) { overflow-wrap: anywhere; }
+.weekly-wave-steps h4 { font-size: 16px; line-height: 1.6; margin: 0 0 8px; }
+#buy-preflight-20261106 .weekly-wave-steps { grid-template-columns: repeat(2,minmax(0,1fr)); }
 @media (max-width: 640px) {
   .weekly-focus { margin-top: 18px; padding-block: 20px; }
   .weekly-focus h2 { font-size: 23px; }
@@ -35,4 +37,5 @@
   .weekly-budget { min-height: 0; margin-bottom: 12px; }
   .weekly-mode-grid { margin-block: 20px; }
   .weekly-rules > :is(h3,h4) { font-size: 20px; }
+  #buy-preflight-20261106 .weekly-wave-steps { grid-template-columns: 1fr; }
 }

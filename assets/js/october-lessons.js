@@ -57,9 +57,9 @@
         row.append(element(inline || heading === "h4" ? "h5" : "h4", root.getAttribute("data-lesson-point-title") || title));
         if (section.id === "positions" && index === 0) {
           const allocation = element("div", "", "lesson-allocation");
-          [["强天时 · 首笔", data.entryAllocation.strong], ["弱天时 · 首笔", data.entryAllocation.weak]].forEach(([label, value]) => {
+          data.currentAllocation.tiers.forEach(({ label, value }) => {
             const column = element("div");
-            column.append(element("span", label), element("strong", `${value}%`), element("small", data.entryAllocation.basis));
+            column.append(element("span", label), element("strong", value), element("small", data.currentAllocation.basis));
             allocation.append(column);
           });
           row.append(allocation);

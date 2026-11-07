@@ -23,21 +23,22 @@ test('all three views consume the same lessons and retain the main rhythms plus 
   for (const file of ['index.html', 'framework-model/index.html', '资料库 - 龙头周期复盘/index.html']) {
     const html = read(file);
     assert.match(html, /data-october-lessons/);
-    assert.match(html, /assets\/data\/october-lessons.js\?v=20261101/);
-    assert.match(html, /assets\/js\/october-lessons.js\?v=20261010-jinyao/);
+    assert.match(html, /assets\/data\/october-lessons.js\?v=20261106/);
+    assert.match(html, /assets\/js\/october-lessons.js\?v=20261106/);
     assert.match(html, /assets\/css\/october-lessons.css\?v=20261010-jinyao/);
   }
 });
 
-test('80/50 is a fraction of planned stock allocation, with caps and the same-day wave window retained', () => {
+test('80/50 retains its historical denominator while current confirmation tiers and wave window remain distinct', () => {
   const text = JSON.stringify(lessons.sections.find((section) => section.id === 'positions'));
-  assert.match(text, /该票计划仓位的80%.*该票计划仓位的50%/);
-  assert.equal(0.4 * 0.5, 0.2);
-  assert.ok(Math.abs(0.8 * 0.8 - 0.64) < 1e-12);
-  assert.match(text, /账户20%/);
-  assert.match(text, /账户64%/);
-  assert.match(text, /同题材总风险/);
-  assert.match(text, /具体.*比例|固定比例/);
+  assert.equal(lessons.entryAllocation.basis, '该票计划仓位');
+  assert.equal(lessons.entryAllocation.strong, 80);
+  assert.equal(lessons.entryAllocation.weak, 50);
+  assert.match(lessons.entryAllocation.status, /历史.*替代/);
+  assert.match(text, /旧80%／50%计划首笔仅存历史/);
+  assert.match(text, /非主模式合计20%/);
+  assert.match(text, /PK未决不参与优先/);
+  assert.match(text, /最大亏损|风险预算/);
   assert.match(text, /当天尾盘确认后买/);
   assert.match(handbook, /70%–80%/);
   assert.match(handbook, /30%–40%/);

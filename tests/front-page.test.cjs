@@ -118,8 +118,10 @@ test('the new regulated-leader strategy separates its stage and preserves the fi
   const page = readFileSync(join(__dirname, '..', 'strategy-2-regulated-leader/index.html'), 'utf8');
   assert.match(page, /进监管后反核龙头继续连扳-龙头主升3/);
   assert.match(page, /第一天没拿先手就不要参与主升3/);
-  assert.match(page, /独立买卖与仓位细则仍待补充/);
-  assert.match(page, /反核当天，最后的唯一择日窗口/);
+  assert.match(page, /首日确认≤50%，次日退出/);
+  assert.match(page, /严重异动.*泛泛绕监管/);
+  assert.match(page, /具体反核判定、函件核验及损失预算仍须写全/);
+  assert.match(page, /监管函首日，第一次反核上板确认/);
   assert.match(page, /竞价就要买，板上是最后买点/);
   assert.match(page, /战法7.*?首次调整/);
   assert.match(page, /href="\.\.\/index.html#resources"/);

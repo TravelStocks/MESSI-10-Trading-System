@@ -16,24 +16,23 @@ const review = between('weekly-review-checks', 'handbook-expectation-study');
 test('super-priority mode discipline is the first module after the ten-step headline', () => {
   assert.ok(html.indexOf('id="handbook-order"') < html.indexOf('id="mode-focus-priority"'));
   assert.ok(html.indexOf('id="mode-focus-priority"') < html.indexOf('id="framework-entry"'));
-  assert.match(priority, /超重点.*2026\.11\.01/);
+  assert.match(priority, /超重点.*2026\.11\.06/);
   assert.match(priority, /少才是根本点.*题材龙/);
   assert.equal((priority.match(/weekly-budget/g) || []).length, 3);
-  assert.match(priority, /≤10%/);
+  assert.match(priority, /合计≤20%/);
   assert.match(priority, /≤20%/);
-  assert.match(priority, /具体|新上限未定/);
+  assert.match(priority, /首次上板确认.*次日退出/);
   assert.ok((html.match(/class="toc-link" href="#mode-focus-priority"/g) || []).length === 2);
   assert.equal((html.match(/<h1\b/g) || []).length, 1);
 });
 
 test('new mode caps do not multiply across stocks or turn planned entry into account allocation', () => {
-  assert.match(budgets, /账户资产比例/);
-  assert.match(budgets, /单票还是同类模式合计.*待确认/);
-  assert.match(budgets, /不能.*多票重复/);
+  assert.match(budgets, /账户总资产/);
+  assert.match(budgets, /共用额度，不是每只各20%/);
   assert.match(budgets, /该票计划仓位为分母/);
-  assert.match(budgets, /新.*总上限、首笔比例未定/);
+  assert.match(budgets, /固定首笔已被确认分档替代/);
   assert.match(budgets, /已有利润、强度延续/);
-  assert.match(budgets, /取更低上限/);
+  assert.match(budgets, /取更低风险上限/);
   assert.match(priority, /不等于账户满仓/);
   const browser = { window: {} };
   vm.runInNewContext(read('assets/data/october-lessons.js'), browser);
@@ -41,13 +40,14 @@ test('new mode caps do not multiply across stocks or turn planned entry into acc
   assert.equal(lessons.entryAllocation.basis, '该票计划仓位');
   assert.equal(lessons.entryAllocation.strong, 80);
   assert.equal(lessons.entryAllocation.weak, 50);
-  assert.match(JSON.stringify(lessons.structuredPoints['positions:0']), /10%.*20%.*待确认/);
+  assert.match(JSON.stringify(lessons.structuredPoints['positions:0']), /非主模式合计≤20%/);
+  assert.match(lessons.entryAllocation.status, /历史版本/);
   assert.match(JSON.stringify(lessons.structuredPoints['positions:1']), /已有利润、强度延续/);
   for (const file of ['index.html', 'framework-model/index.html', '资料库 - 龙头周期复盘/index.html']) {
-    assert.match(read(file), /data\/october-lessons.js\?v=20261101/);
+    assert.match(read(file), /data\/october-lessons.js\?v=20261106/);
   }
-  assert.match(read('framework-model/index.html'), /超重点.*2026\.11\.01/);
-  assert.match(read('战法2 - 低位接力/A股一进二战法手册网页版/index.html'), /最多账户一成仓位（10%）/);
+  assert.match(read('framework-model/index.html'), /超重点.*2026\.11\.06/);
+  assert.match(read('战法2 - 低位接力/A股一进二战法手册网页版/index.html'), /合格切换最高账户20%/);
   assert.match(html, /id="weekly-lessons-20261030"/);
 });
 
@@ -71,7 +71,7 @@ test('wave and leader lessons retain support checks, hypothesis and exit boundar
   for (const term of ['起浪', '分歧', '接浪', '孤浪', '浪退', '广度', '梯队', '带动', '质量']) assert.ok(waves.includes(term), term);
   assert.match(waves, /不机械.*第三天必买/);
   assert.match(waves, /本人假说/);
-  assert.match(waves, /不能.*绕过.*10%.*20%/);
+  assert.match(waves, /不能.*绕过.*非主模式共用20%/);
   assert.match(waves, /市场属性是待检验解释/);
   assert.match(waves, /五板不必然.*新龙出现前也可能下跌/);
   assert.match(waves, /后续回封不证明此前减仓错误/);
@@ -93,7 +93,7 @@ test('new rules are always visible with valid section and source links', () => {
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]));
   for (const module of [priority, budgets, opportunities, waves, review]) {
     assert.doesNotMatch(module, /<details|<summary/);
-    assert.ok(module.includes(source));
+    assert.ok(module.includes(source) || module.includes('2026-11-02_2026-11-06/'));
     for (const [, hash] of module.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(hash), hash);
   }
   assert.match(read('assets/css/weekly-lessons.css'), /@media \(max-width: 640px\)/);
