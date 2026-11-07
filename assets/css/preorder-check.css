@@ -1,0 +1,27 @@
+.content > .preorder-check { border-block: 4px solid #a72d41; margin: 0 0 36px; padding: 22px 0 20px; scroll-margin-top: 116px; letter-spacing: 0; }
+.preorder-kicker { margin: 0 0 8px; color: #9d283c; font-size: 13px; font-weight: 700; }
+.preorder-head h2 { margin: 0 0 20px; font-size: 28px; line-height: 1.5; letter-spacing: 0; }
+.preorder-head h2 span { display: inline-block; }
+.preorder-questions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 28px; border-top: 1px solid #d8dde1; }
+.preorder-question { display: grid; grid-template-columns: 22px 26px minmax(0,1fr); align-items: start; gap: 10px; min-width: 0; padding: 18px 0; border-bottom: 1px solid #d8dde1; cursor: pointer; }
+.preorder-question input { width: 20px; height: 20px; margin: 5px 0 0; accent-color: #9d283c; cursor: pointer; }
+.preorder-number { padding-top: 2px; color: #9d283c; font: 600 15px/1.8 Consolas,monospace; }
+.preorder-question strong { display: block; margin-bottom: 7px; font-size: 17px; line-height: 1.65; font-weight: 700; }
+.preorder-question > span:last-child > span { display: block; font-size: 14px; line-height: 1.85; color: #46545e; }
+.preorder-question input:focus-visible, .preorder-actions button:focus-visible { outline: 2px solid #216ea2; outline-offset: 4px; }
+.preorder-question:has(input:checked) .preorder-number { color: #46545e; }
+.preorder-actions { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; min-height: 60px; }
+.preorder-actions output { font-size: 14px; font-weight: 600; color: #46545e; }
+.preorder-actions button { min-height: 44px; padding: 8px 14px; border: 1px solid #bac3ca; border-radius: 4px; color: #263741; background: #fff; font: inherit; font-size: 13px; cursor: pointer; }
+.preorder-actions button:hover { background: #f1f4f6; }
+.preorder-stop { border-left: 3px solid #a72d41; padding-left: 12px; margin: 6px 0 12px; font-size: 14px; line-height: 1.85; }
+.preorder-stop strong { color: #9d283c; }
+.preorder-links { display: flex; flex-wrap: wrap; gap: 0 22px; }
+.preorder-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; }
+@media (max-width: 640px) {
+  .content > .preorder-check { padding-top: 18px; margin-bottom: 28px; }
+  .preorder-head h2 { font-size: 23px; margin-bottom: 16px; }
+  .preorder-questions { grid-template-columns: 1fr; }
+  .preorder-question { grid-template-columns: 22px 22px minmax(0,1fr); gap: 8px; padding: 14px 0; }
+  .preorder-question strong { font-size: 16px; }
+}

@@ -7,12 +7,13 @@ const html = readFileSync(join(__dirname, '..', 'index.html'), 'utf8');
 const steps = ['天时', '地利', '题材', '阶段', '个股', '地位', '模式', '仓位（强天时还是弱天时）', '买点（择日和分时）', '卖点（择日和分时）'];
 const section = html.match(/<section\b[^>]*id="recurring-errors"[\s\S]*?<\/section>/)[0];
 
-test('the annotated ten-step order is the first headline and precedes the error guards', () => {
+test('the annotated ten-step order stays intact below the top buy check and precedes the error guards', () => {
   const headline = html.match(/<h1 id="handbook-order">([\s\S]*?)<\/h1>/)[1];
   const labels = [...headline.matchAll(/<span\b[^>]*>([\s\S]*?)<\/span>/g)]
     .map((match) => match[1].replace(/<i[^>]*>[\s\S]*?<\/i>/g, '').replace(/<[^>]*>/g, '').trim());
   assert.deepEqual(labels, steps);
   assert.equal((html.match(/<h1\b/g) || []).length, 1);
+  assert.ok(html.indexOf('id="preorder-check"') < html.indexOf('id="handbook-order"'));
   assert.ok(html.indexOf('id="handbook-order"') < html.indexOf('id="recurring-errors"'));
   assert.ok(html.indexOf('id="recurring-errors"') < html.indexOf('id="execution-upgrade"'));
 });
