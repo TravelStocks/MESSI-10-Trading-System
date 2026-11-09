@@ -1,0 +1,23 @@
+.healthy-turnover { border-top: 3px solid #226b56; }
+.healthy-turnover .turnover-lead { font-size: 17px; line-height: 1.9; margin: 0 0 12px; }
+.turnover-premise { border-left: 3px solid #246fa2; padding-left: 14px; line-height: 1.85; margin: 18px 0; }
+.turnover-six { margin: 20px 0; }
+.turnover-six > section { border-top: 1px solid var(--line); padding-top: 14px; }
+.healthy-turnover .turnover-six h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.7; }
+.turnover-six h4 span { display: inline-block; margin-right: 10px; color: #246fa2; font-size: 13px; }
+.turnover-six p, .turnover-support p { font-size: 14px; line-height: 1.85; margin: 0; }
+.turnover-support { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin: 22px 0; }
+.turnover-support > section { min-width: 0; border-top: 2px solid #8593a0; padding-top: 12px; }
+.turnover-support > section:nth-child(2) { border-color: #246fa2; }
+.turnover-support > section:nth-child(3) { border-color: #a72d41; }
+.healthy-turnover .turnover-support h4 { font-size: 16px; line-height: 1.6; margin: 0 0 8px; }
+.turnover-actions { margin: 22px 0; }
+.healthy-turnover .turnover-reference { margin: 24px 0; padding-top: 18px; border-top: 1px solid var(--line); }
+.turnover-reference figcaption { margin-bottom: 14px; font-size: 16px; font-weight: 650; }
+.turnover-reference a { display: block; width: 100%; max-width: 680px; margin-inline: auto; }
+.turnover-reference img { display: block; width: 100%; max-width: 680px; height: auto; }
+.turnover-reference p { font-size: 12px; line-height: 1.85; color: var(--muted); }
+@media (max-width: 640px) {
+  .turnover-support { grid-template-columns: 1fr; gap: 18px; }
+  .healthy-turnover .turnover-lead { font-size: 16px; }
+}
