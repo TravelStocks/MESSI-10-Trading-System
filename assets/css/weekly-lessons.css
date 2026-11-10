@@ -30,6 +30,10 @@
 .weekly-focus :is(a,section,li), .weekly-rules :is(a,section,li) { overflow-wrap: anywhere; }
 .weekly-wave-steps h4 { font-size: 16px; line-height: 1.6; margin: 0 0 8px; }
 #buy-preflight-20261106 .weekly-wave-steps { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.leader-rules-list { margin: 18px 0; }
+.leader-rules-list > div { display: grid; grid-template-columns: 86px minmax(0,1fr); align-items: start; gap: 18px; min-height: 56px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.leader-rules-list dt { font-size: 14px; color: #246fa2; font-weight: 600; line-height: 1.8; }
+.leader-rules-list dd { margin: 0; font-size: 17px; font-weight: 650; line-height: 1.7; }
 @media (max-width: 640px) {
   .weekly-focus { margin-top: 18px; padding-block: 20px; }
   .weekly-focus h2 { font-size: 23px; }
