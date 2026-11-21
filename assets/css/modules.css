@@ -58,6 +58,10 @@ body.handbook-edition { background: var(--bg); }
 #resources .section-head h2 { font-size: clamp(28px,2.7vw,40px); }
 #resources .hero-entry { max-width: none; display: block; margin: 0; padding: 0; background: none; box-shadow: none; border: 0; }
 #resources .hero-entry-actions { gap: 16px; margin: 0 0 20px; }
+#resources .mode-focus-note { display: block; margin: 0 0 18px; color: var(--ink); line-height: 1.75; }
+#resources .mode-rank { display: block; color: #175b46; font-size: 14px; font-weight: 700; }
+#resources .entry-link:has(.mode-rank) { border-top: 3px solid #57917c; }
+#resources .entry-link:first-child:has(.mode-rank) { border-color: #48826e; background: #f1f7f3; }
 #resources .entry-link { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; min-height: 178px; padding: 26px; border: 1px solid #e7e7ec; border-radius: 20px; background: #f5f5f7; color: var(--ink); box-shadow: none; transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
 #resources .entry-link > span:first-child { gap: 10px; }
 #resources .entry-link strong { font-size: 23px; font-weight: 650; line-height: 1.35; letter-spacing: 0; }

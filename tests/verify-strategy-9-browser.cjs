@@ -31,7 +31,7 @@ async function main() {
           width: el.clientWidth, scroll: el.scrollWidth, textOverflow };
       }));
       assert.deepEqual(cards.map(card => Number(card.title.match(/^战法(\d+)/)[1])), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
-      assert.equal(cards[3].title, '战法4：题材发酵主升切换成轮动题材市场情绪高标锚定-抱团情绪龙');
+      assert.equal(cards[2].title, '战法3：题材发酵主升切换成轮动题材市场情绪高标锚定-抱团情绪龙');
       assert.equal(cards[7].title, '战法8：机构趋势');
       assert.equal(cards[8].title, '战法9：补涨');
       for (const card of cards) {

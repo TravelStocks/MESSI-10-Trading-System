@@ -54,13 +54,15 @@ test('new anchors resolve and do not duplicate existing ids', () => {
 test('the nine strategy entries are ordered and retain their existing destinations', () => {
   const entries = html.match(/<div class="hero-entry-actions">([\s\S]*?)<\/div>/)[1];
   const labels = [...entries.matchAll(/<strong>(.*?)<\/strong>/g)].map((match) => match[1].replace(/<[^>]*>/g, ''));
+  assert.deepEqual([...entries.matchAll(/class="mode-rank">([^<]+)</g)].map(m => m[1]),
+    ['主模式 · 80%', '次模式 · 12%', '次模式 · 6%', '次模式 · 2%']);
   assert.deepEqual(labels, [
     '战法1：唯一性中高位连扳龙-龙头主升2',
-    '战法2：进监管后反核龙头继续连扳-龙头主升3',
-    '战法3：低位接力选次日竞价最强-切换',
-    '战法4：题材发酵主升切换成轮动题材市场情绪高标锚定-抱团情绪龙',
-    '战法5：总龙趋势下补涨连板龙-补涨龙中位3板',
-    '战法6：连板龙转趋势龙-龙头二波',
+    '战法2：连板龙转趋势龙-龙头二波',
+    '战法3：题材发酵主升切换成轮动题材市场情绪高标锚定-抱团情绪龙',
+    '战法4：总龙趋势下补涨连板龙-补涨龙中位3板',
+    '战法5：进监管后反核龙头继续连扳-龙头主升3',
+    '战法6：低位接力选次日竞价最强-切换',
     '战法7：龙头反抽以及监管套利',
     '战法8：机构趋势',
     '战法9：补涨'
@@ -68,11 +70,11 @@ test('the nine strategy entries are ordered and retain their existing destinatio
   const destinations = [...entries.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
   assert.deepEqual(destinations, [
     './战法1 - 龙头信仰/龙头信仰-阅读版.html',
-    './strategy-2-regulated-leader/index.html',
-    './战法2 - 低位接力/A股一进二战法手册网页版/index.html',
+    '#strategy-5',
     '#strategy-9-model',
     '#strategy-7',
-    '#strategy-5',
+    './strategy-2-regulated-leader/index.html',
+    './战法2 - 低位接力/A股一进二战法手册网页版/index.html',
     './strategy-6-rebound/index.html',
     './战法3 - 机构趋势/index.html'
   ]);
@@ -90,19 +92,19 @@ test('the nine strategy entries are ordered and retain their existing destinatio
 });
 
 test('strategy references use the new numbers without breaking legacy anchors', () => {
-  assert.match(html, /id="strategy-5"[\s\S]*?战法6 \/ 总龙二波/);
-  assert.match(html, /id="strategy-7"[\s\S]*?战法5 \/ 补涨中位/);
+  assert.match(html, /id="strategy-5"[\s\S]*?战法2 \/ 总龙二波/);
+  assert.match(html, /id="strategy-7"[\s\S]*?战法4 \/ 补涨中位/);
   assert.match(html, /id="strategy-57-execution"/);
-  assert.doesNotMatch(html, /战法5[、与].*?战法7|战法5、7|战法5 \/ 总龙二波|战法7 \/ 补涨中位/);
+  assert.doesNotMatch(html, /战法4[、与].*?战法7|战法4、7|战法4 \/ 总龙二波|战法7 \/ 补涨中位/);
   const trend = readFileSync(join(__dirname, '..', '战法3 - 机构趋势/index.html'), 'utf8');
   assert.match(trend, /<title>机构趋势｜战法8<\/title>/);
   assert.match(trend, /Strategy 08 \/ Swing Trend/);
-  assert.doesNotMatch(trend, /战法4|Strategy 04|战法9|Strategy 09/);
+  assert.doesNotMatch(trend, /战法3|Strategy 04|战法9|Strategy 09/);
   const framework = readFileSync(join(__dirname, '..', 'framework-model/index.html'), 'utf8');
-  assert.match(framework, /补涨龙三板 · 战法5/);
+  assert.match(framework, /补涨龙三板 · 战法4/);
   assert.match(framework, /趋势可对照战法8/);
-  assert.doesNotMatch(framework, /补涨龙三板 · 战法8|趋势可对照战法4|趋势可对照战法9/);
-  assert.match(trend, /战法3：低位接力选次日竞价最强-切换/);
+  assert.doesNotMatch(framework, /补涨龙三板 · 战法8|趋势可对照战法3|趋势可对照战法9/);
+  assert.match(trend, /战法6：低位接力选次日竞价最强-切换/);
   const rebound = readFileSync(join(__dirname, '..', 'strategy-6-rebound/index.html'), 'utf8');
   assert.match(rebound, /<title>战法7：龙头反抽以及监管套利｜MESSI-10<\/title>/);
 });

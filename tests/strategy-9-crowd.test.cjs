@@ -8,7 +8,7 @@ const section = html.match(/<section\b[^>]*id="strategy-9-model"[\s\S]*?<\/secti
 
 test('renumbered strategy 4 keeps its legacy anchor and same-cycle prerequisite', () => {
   assert.ok(section);
-  assert.match(section, /战法4 \/ 轮动题材与情绪抱团/);
+  assert.match(section, /战法3 \/ 轮动题材与情绪抱团/);
   assert.match(section, /<h2 id="strategy-9-title">题材发酵主升切换成轮动题材市场情绪高标锚定-抱团情绪龙<\/h2>/);
   assert.match(section, /相关概念在同一个周期内确实发酵/);
   assert.match(section, /可以先后轮动，不要求同一天一起爆发/);
@@ -27,8 +27,8 @@ test('case roles remain attributed observations, not identical trajectories', ()
 });
 
 test('strategy 4 does not invent trade triggers or borrow unrelated strategy rules', () => {
-  assert.match(section, /不自动等于战法6的龙头二波/);
-  assert.match(section, /不直接套用战法3的次日竞价前二买点/);
+  assert.match(section, /不自动等于战法2的龙头二波/);
+  assert.match(section, /不直接套用战法6的次日竞价前二买点/);
   assert.match(section, /独立买卖触发条件、仓位与失效阈值/);
   assert.match(section, /数值边界尚未提供，暂不补造/);
   const latestCap = section.match(/<p class="weekly-critical" id="crowd-position-cap">[\s\S]*?<\/p>/)?.[0];
@@ -47,7 +47,7 @@ test('crossing first-move notes retain timing, attribution and unresolved speech
 });
 
 test('Notion Jiuyang model preserves stages, source and feedback direction', () => {
-  for (const phrase of ['id="jiuyang-notion-model"', '3fc7af2f574e806dad8cf571c7acc23d', '第一段 / 连板主动领涨', '第二段 / 放量横盘与轮动', '第三段 / 补涨反向助攻', '不写成固定拉升顺序', '不新增机械阈值', '不自动等同战法6']) assert.ok(section.includes(phrase), phrase);
+  for (const phrase of ['id="jiuyang-notion-model"', '3fc7af2f574e806dad8cf571c7acc23d', '第一段 / 连板主动领涨', '第二段 / 放量横盘与轮动', '第三段 / 补涨反向助攻', '不写成固定拉升顺序', '不新增机械阈值', '不自动等同战法2']) assert.ok(section.includes(phrase), phrase);
 });
 
 test('the highlighted source model comes first and distinguishes stage boundaries', () => {

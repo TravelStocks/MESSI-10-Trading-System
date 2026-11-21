@@ -62,7 +62,7 @@ test('five opportunity cases separate intraday triggers, exits and actual record
   assert.match(opportunities, /买回.*新仓/);
   assert.match(opportunities, /17\.88.*17\.92/);
   assert.match(opportunities, /13:00—13:05，不是早盘/);
-  assert.match(opportunities, /不凭“二波”名称认定符合战法6/);
+  assert.match(opportunities, /不凭“二波”名称认定符合战法2/);
   assert.match(opportunities, /T\+1/);
   assert.match(opportunities, /不等于可成交、已实现或账户收益/);
 });
