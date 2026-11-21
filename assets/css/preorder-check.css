@@ -6,6 +6,18 @@
 .preorder-gate p { margin: 0; line-height: 1.7; }
 .preorder-gate .preorder-gate-rule { margin: 4px 0; color: #a01f34; font-size: 20px; }
 .preorder-gate p:last-child { font-size: 14px; }
+.compound-reminder { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 20px; align-items: center; padding: 0 0 20px; margin-bottom: 20px; border-bottom: 1px solid #d8dde1; scroll-margin-top: 100px; }
+.compound-copy h2 { font-size: 21px; line-height: 1.45; margin: 0 0 10px; }
+.compound-copy p:not(.preorder-kicker) { font-size: 14px; line-height: 1.7; margin: 6px 0; }
+.compound-copy .compound-note, .compound-gallery p { color: #515f67; }
+.compound-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px 10px; align-items: end; }
+.compound-gallery figure, .compound-gallery p { margin: 0; }
+.compound-gallery a { display: block; background: white; border: 1px solid #d8dde1; cursor: zoom-in; }
+.compound-gallery img { width: 100%; height: 155px; display: block; object-fit: contain; }
+.compound-gallery figcaption, .compound-gallery p { font-size: 12px; line-height: 1.5; }
+.compound-gallery figcaption { padding-top: 4px; }
+.compound-gallery p { grid-column: 1/-1; }
+@media (max-width: 800px) { .compound-reminder { grid-template-columns: 1fr; gap: 10px; } }
 .preorder-questions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 28px; border-top: 1px solid #d8dde1; }
 .preorder-question { display: grid; grid-template-columns: 22px 26px minmax(0,1fr); align-items: start; gap: 10px; min-width: 0; padding: 18px 0; border-bottom: 1px solid #d8dde1; cursor: pointer; }
 .preorder-question input { width: 20px; height: 20px; margin: 5px 0 0; accent-color: #9d283c; cursor: pointer; }
