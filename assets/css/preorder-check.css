@@ -2,6 +2,10 @@
 .preorder-kicker { margin: 0 0 8px; color: #9d283c; font-size: 13px; font-weight: 700; }
 .preorder-head h2 { margin: 0 0 20px; font-size: 28px; line-height: 1.5; letter-spacing: 0; }
 .preorder-head h2 span { display: inline-block; }
+.preorder-gate { margin: 0 0 20px; padding: 14px 18px; border-left: 4px solid #a72d41; background: #fff4f4; }
+.preorder-gate p { margin: 0; line-height: 1.7; }
+.preorder-gate .preorder-gate-rule { margin: 4px 0; color: #a01f34; font-size: 20px; }
+.preorder-gate p:last-child { font-size: 14px; }
 .preorder-questions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 28px; border-top: 1px solid #d8dde1; }
 .preorder-question { display: grid; grid-template-columns: 22px 26px minmax(0,1fr); align-items: start; gap: 10px; min-width: 0; padding: 18px 0; border-bottom: 1px solid #d8dde1; cursor: pointer; }
 .preorder-question input { width: 20px; height: 20px; margin: 5px 0 0; accent-color: #9d283c; cursor: pointer; }
