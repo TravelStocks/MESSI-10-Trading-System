@@ -503,7 +503,7 @@ body.handbook-edition { background: var(--bg); }
 .execution-chain > li > span { display: block; margin-bottom: 8px; color: var(--green); font-size: 12px; font-weight: 650; }
 .execution-chain strong { font-size: 17px; line-height: 1.65; }
 .execution-chain p { margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.85; }
-.execution-chain .index-wave-check { color: #b42318; font-weight: 700; }
+.execution-chain .index-wave-check, .worldview-signal-list .index-wave-check { color: #b42318; font-weight: 700; }
 .execution-lessons { margin: 26px 0 12px; }
 .execution-lessons > div { min-width: 0; padding: 16px 0; border-top: 1px solid #dce3de; }
 .execution-lessons dt { color: var(--ink); font-size: 18px; font-weight: 700; line-height: 1.65; }
