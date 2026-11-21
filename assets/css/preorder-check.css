@@ -7,7 +7,9 @@
 .preorder-gate .preorder-gate-rule { margin: 4px 0; color: #a01f34; font-size: 20px; }
 .preorder-gate p:last-child { font-size: 14px; }
 .compound-reminder { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 20px; align-items: center; padding: 0 0 20px; margin-bottom: 20px; border-bottom: 1px solid #d8dde1; scroll-margin-top: 100px; }
-.compound-copy h2 { font-size: 21px; line-height: 1.45; margin: 0 0 10px; }
+#pretrade-reminders { scroll-margin-top: 100px; }
+#pretrade-reminders-title { font-size: 24px; line-height: 1.5; margin: 0 0 16px; }
+.compound-copy h3 { font-size: 21px; line-height: 1.45; margin: 0 0 10px; }
 .compound-copy p:not(.preorder-kicker) { font-size: 14px; line-height: 1.7; margin: 6px 0; }
 .compound-copy .compound-note, .compound-gallery p { color: #515f67; }
 .compound-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px 10px; align-items: end; }
