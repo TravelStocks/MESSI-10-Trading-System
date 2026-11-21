@@ -234,6 +234,15 @@
     setText(els.sector, `${cycle.sector} / ${cycle.theme}`);
     setText(els.title, cycle.name);
     setText(els.oneLine, cycle.oneLine);
+    const evidenceNav = document.getElementById("cycle-evidence-links");
+    const cases = [...document.querySelectorAll(".evidence-case[data-cycle]")].filter(item => item.dataset.cycle === cycle.id);
+    evidenceNav.hidden = !cases.length;
+    evidenceNav.replaceChildren(...cases.map(item => {
+      const link = document.createElement("a");
+      link.href = "#" + item.id;
+      link.textContent = item.querySelector("summary strong").textContent + " · 买点核验";
+      return link;
+    }));
 
     const analysis = leaderVolume.cycles?.[cycle.id] || {};
     const combination = getCycleCombination(cycle);
@@ -1211,6 +1220,15 @@
   }
 
   arrangeSections();
+  function revealEvidence() {
+    const item = document.getElementById(location.hash.slice(1));
+    if (item?.matches(".evidence-case")) {
+      item.open = true;
+      item.scrollIntoView({ block: "start" });
+    }
+  }
+  window.addEventListener("hashchange", revealEvidence);
+  window.addEventListener("load", revealEvidence, { once: true });
   bindControls();
   render();
   window.addEventListener("load", () => {
