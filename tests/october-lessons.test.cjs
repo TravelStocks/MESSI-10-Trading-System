@@ -216,7 +216,7 @@ test('two execution models expose buy, sell, allocation and invalidation modules
 
 test('only source archives and mobile navigation retain collapse controls in the handbook', () => {
   for (const [tag] of handbook.matchAll(/<details\b[^>]*>/g)) {
-    assert.match(tag, /mobile-contents|redline-evidence|source-collection|raw-record|agriculture-day|agriculture-daily-records/, tag);
+    assert.match(tag, /mobile-contents|redline-evidence|source-collection|raw-record|agriculture-day|agriculture-daily-records|signal-source/, tag);
   }
   assert.doesNotMatch(handbook, /id="readingToggle"/);
   assert.doesNotMatch(handbook, /展开阅读|各节可展开查看/);

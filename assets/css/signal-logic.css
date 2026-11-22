@@ -1,0 +1,22 @@
+.signal-logic { padding: 24px 0; margin-bottom: 24px; border-block: 1px solid #d8dde1; line-height: 1.8; letter-spacing: 0; overflow-wrap: anywhere; scroll-margin-top: 130px; }
+.signal-logic h3 { font-size: 24px; line-height: 1.5; margin: 0 0 8px; }
+.signal-logic h4 { font-size: 17px; line-height: 1.6; margin: 0 0 8px; }
+.signal-logic p { font-size: 14px; }
+.signal-logic .signal-lead { font-size: 18px; font-weight: 700; color: #197260; }
+.signal-definitions, .signal-quadrants { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; margin: 22px 0; }
+.signal-definitions > div, .signal-quadrants > section { min-width: 0; border-top: 2px solid #81909c; padding-top: 12px; }
+.signal-definitions dt { font-weight: 700; color: #246fa2; }
+.signal-definitions dd { margin: 6px 0 0; font-size: 14px; }
+.signal-quadrants .signal-both { border-color: #197260; }
+.signal-quadrants > section:nth-child(2) { border-color: #a72d41; }
+.signal-quadrants > section:nth-child(3) { border-color: #946600; }
+.signal-quadrants p { margin-bottom: 0; }
+.signal-application { border-block: 1px solid #d8dde1; padding: 18px 0; }
+.signal-application ol { padding-left: 24px; }
+.signal-application li { margin: 10px 0; font-size: 14px; }
+.signal-source { margin-top: 20px; }
+.signal-source summary { cursor: pointer; font-weight: 700; padding: 10px 0; }
+.signal-source figure { max-width: 680px; margin: 16px auto; }
+.signal-source img { width: 100%; height: auto; display: block; }
+.signal-source figcaption, .signal-logic .signal-source-link { color: #53616a; font-size: 12px; }
+@media(max-width:640px) { .signal-definitions, .signal-quadrants { grid-template-columns: 1fr; gap: 16px; } .signal-logic h3 { font-size: 21px; } }
