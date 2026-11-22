@@ -1,6 +1,6 @@
 #leader-study { margin: 0 0 32px; border-top: 3px solid #17634f; padding: 20px 0 0; }
 .study-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 8px 18px; flex-wrap: wrap; }
-.study-heading h3 { margin: 4px 0; font-size: 24px; }
+.study-heading h2 { margin: 4px 0; font-size: 24px; }
 .study-heading output { color: #17634f; font-weight: 700; font-variant-numeric: tabular-nums; }
 .study-intro { margin: 8px 0 16px; }
 #leader-study ol { padding: 0; margin: 0 0 14px; list-style: none; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); column-gap: 24px; }
