@@ -379,12 +379,12 @@
     ["强 → 强 → 弱 → 强", "续强后回流", "第四个节点是回流，不一定是周期第四天。", {
       "lixin-power-2026-07": "7/17启动，7/20加强，7/21分化，7/22回流。",
       "haya-medicine-2026-07": "7/10启动，7/13弱延续，7/14换龙，7/15再回流；第二段是延续，并非加速。",
-      "wanxiang-agri-2026-09": "8/27启动后续强，8/31大分化，9/1回流；个股买点在这一段回流之前。",
+      "wanxiang-agri-2026-09": "8/27启动后续强，8/31五板遇题材大分化，标左侧；9/1六板随题材超强回流，标右侧。",
       "datang-power-2026-05": "5/6至5/7连续回流，5/8分化，5/11再回流。",
       "jinyao-medicine-2026-04": "穿越活口已有身位，3/30续强，3/31分化，4/1回流。"
     }],
     ["强 → 弱 → 弱 → 强", "连续走弱后修复", "连续两次承压后，分清题材修复与个股确认。", {
-      "chuanzhi-ai-2026-08": "7/28延续，7/29分化，7/30分歧，7/31回流；个股7/29一字确认，不假定成交。",
+      "chuanzhi-ai-2026-08": "7/28延续，7/29分化；7/30四板分歧标左侧，7/31五板随题材超强回流，标右侧。",
       "baihua-medicine-2026-08": "8/4二次爆发，8/5大分歧，8/6弱轮动中换龙，8/7强回流。"
     }],
     ["一直不弱", "持续强分支", "没有明显转弱时不硬找回流；仍要核验量能、地位与退出条件。", {
@@ -397,9 +397,26 @@
     return p ? [p.displayDate, p.board, p.title].filter(Boolean).join(" · ") : "待核";
   }
 
+  // The user's rhythm entries are distinct from the historical chairman-model trade plan.
+  const rhythmEntryDates = {
+    "wanxiang-agri-2026-09": ["2026-08-31", "2026-09-01"],
+    "chuanzhi-ai-2026-08": ["2026-07-30", "2026-07-31"]
+  };
+  function rhythmEntryPlan(id) {
+    const series = leaderVolume.cycles[id];
+    const dates = rhythmEntryDates[id];
+    if (!dates) return series.tradePlan;
+    const points = dates.map(date => {
+      const day = series.boardVolume.days.find(item => item.date === date);
+      return day && { date, displayDate: day.displayDate, board: day.board, title: day.phase };
+    });
+    return { preBuy: points[0], standardBuy: points[1] };
+  }
+
   function renderBoardChain(cycle) {
     const series = leaderVolume.cycles[cycle.id];
     const days = series.boardVolume.days;
+    const plan = rhythmEntryPlan(cycle.id);
     const chain = createElement("ol", "strength-case-chain");
     chain.setAttribute("aria-label", cycle.leader + "：龙头板位、题材阶段、涨停家数与个股成交额");
     for (const day of days) {
@@ -431,7 +448,7 @@
       volume.append(createElement("span", "", "成交额 " + amount), createElement("span", "", comparison));
       node.append(volume);
       for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
-        if (series.tradePlan?.[key]?.date === day.date) node.append(createElement("b", "rhythm-marker " + key, side));
+        if (plan?.[key]?.date === day.date) node.append(createElement("b", "rhythm-marker " + key, side));
       }
       chain.append(node);
     }
@@ -450,7 +467,7 @@
       for (const [id, segment] of Object.entries(samples)) {
         const cycle = cycles.find(c => c.id === id);
         if (!cycle) continue;
-        const plan = leaderVolume.cycles?.[id]?.tradePlan;
+        const plan = rhythmEntryPlan(id);
         const row = createElement("div", "rhythm-sample");
         const name = createElement("a", "", cycle.leader);
         name.href = "#" + id;
