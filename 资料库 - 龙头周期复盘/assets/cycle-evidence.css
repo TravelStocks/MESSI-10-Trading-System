@@ -13,7 +13,9 @@
 .evidence-body dd { margin: 0; }
 .rhythm-family { padding: 14px 0; border-top: 1px solid var(--line); }
 .rhythm-overview { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,200px),1fr)); gap: 8px 18px; margin: 12px 0 20px; }
-.rhythm-overview a { display: grid; gap: 3px; padding: 8px 0; border-top: 2px solid var(--green-deep); text-decoration: none; color: var(--green-deep); }
+.rhythm-overview-group > a { display: grid; gap: 3px; padding: 8px 0; border-top: 2px solid var(--green-deep); text-decoration: none; color: var(--green-deep); }
+.rhythm-case-links { display: flex; flex-wrap: wrap; gap: 2px 12px; margin: 0; padding: 0; list-style: none; }
+.rhythm-case-links a { display: inline-block; padding: 3px 0; color: var(--blue); font-size: 14px; text-underline-offset: 3px; }
 .rhythm-overview small { color: var(--muted); font-size: 13px; }
 .rhythm-overview strong { font-size: 18px; }
 .rhythm-overview a:is(:hover,:focus-visible) strong { text-decoration: underline; }
@@ -22,7 +24,6 @@
 .rhythm-family small { color: var(--muted); font-size: 12px; }
 .rhythm-sample { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; padding: 9px 0; border-top: 1px dotted var(--line); font-size: 14px; }
 .rhythm-sample a { font-weight: 700; }
-.rhythm-jumps { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; margin: 12px 0; font-size: 14px; }
 .strength-case-chain li > .rhythm-marker.exit { color: #8c2231; background: #ffe2e5; }
 .rhythm-track[id] { scroll-margin-top: 1rem; }
 .rhythm-sample small { margin-left: 8px; }

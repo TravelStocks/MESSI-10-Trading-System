@@ -483,7 +483,11 @@
       const jump = createElement("a");
       jump.href = "#" + group.id;
       jump.append(createElement("small", "", "0" + (i + 1) + " / " + label), createElement("strong", "", path));
-      overview.append(jump);
+      const entry = createElement("div", "rhythm-overview-group");
+      const caseList = createElement("ul", "rhythm-case-links");
+      caseList.setAttribute("aria-label", path + "的龙头案例");
+      entry.append(jump, caseList);
+      overview.append(entry);
       group.append(createElement("small", "", "0" + (i + 1) + " / " + label),
         createElement("h3", "", path), createElement("p", "", note));
       const extras = (window.RHYTHM_CASE_STUDIES || []).filter(c => c.family === i + 1);
@@ -519,7 +523,12 @@
           row.append(point);
         }
         const sample = createElement("article", "rhythm-track");
-        if (extra) sample.id = "rhythm-" + id;
+        sample.id = "rhythm-" + id;
+        const caseLink = createElement("a", "", cycle.leader);
+        caseLink.href = "#" + sample.id;
+        const listItem = createElement("li");
+        listItem.append(caseLink);
+        caseList.append(listItem);
         sample.append(row, renderBoardChain(cycle, days, plan, startDate));
         group.append(sample);
       }
