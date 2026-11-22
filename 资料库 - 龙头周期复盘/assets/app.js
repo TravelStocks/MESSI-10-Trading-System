@@ -374,7 +374,7 @@
   // Representative theme segments; stock entry dates come from the separate trade-plan archive.
   const rhythmTypes = [
     ["强 → 弱 → 强", "分化后回流", "先看分化时谁能抗住，再看回流时谁主动。", {
-      "shengyang-compute-2026-04": "4/10启动，4/13分化，4/14回流；随后又走一次分化与回流。"
+      "shengyang-compute-2026-04": "4/10启动，4/13三板分化标左侧，4/14四板超强回流标右侧；随后又走一次分化与回流。"
     }],
     ["强 → 强 → 弱 → 强", "续强后回流", "第四个节点是回流，不一定是周期第四天。", {
       "lixin-power-2026-07": "7/17启动，7/20加强，7/21分化，7/22回流。",
@@ -399,6 +399,7 @@
 
   // The user's rhythm entries are distinct from the historical chairman-model trade plan.
   const rhythmEntryDates = {
+    "shengyang-compute-2026-04": ["2026-04-13", "2026-04-14"],
     "wanxiang-agri-2026-09": ["2026-08-31", "2026-09-01"],
     "chuanzhi-ai-2026-08": ["2026-07-30", "2026-07-31"]
   };
