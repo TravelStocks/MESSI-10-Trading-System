@@ -8,8 +8,9 @@ const html = read('index.html');
 const script = read('assets/js/preorder-check.js');
 const check = html.slice(html.indexOf('id="preorder-check"'), html.indexOf('<div class="handbook-intro">'));
 
-test('the four-question buy check is the first main module, above the ten-step title', () => {
-  assert.match(html, /<main class="content" id="main-content">\s*<section class="preorder-check"/);
+test('the four-question buy check follows the risk gate and remains above the ten-step title', () => {
+  assert.match(html, /<main class="content" id="main-content">\s*<section class="trading-discipline"/);
+  assert.ok(html.indexOf('id="trading-discipline-lists"') < html.indexOf('id="preorder-check"'));
   assert.ok(html.indexOf('id="preorder-check"') < html.indexOf('id="handbook-order"'));
   assert.ok(html.indexOf('id="preorder-check"') < html.indexOf('id="mode-focus-priority"'));
   assert.equal((check.match(/type="checkbox"/g) || []).length, 4);

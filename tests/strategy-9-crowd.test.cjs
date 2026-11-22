@@ -32,9 +32,10 @@ test('strategy 4 does not invent trade triggers or borrow unrelated strategy rul
   assert.match(section, /独立买卖触发条件、仓位与失效阈值/);
   assert.match(section, /数值边界尚未提供，暂不补造/);
   const latestCap = section.match(/<p class="weekly-critical" id="crowd-position-cap">[\s\S]*?<\/p>/)?.[0];
-  assert.match(latestCap, /2026\.11\.06.*非主模式共用账户20%/);
+  assert.match(latestCap, /2026\.11\.22.*共用原账户20%/);
   assert.match(latestCap, /不是每只或每类分别两成/);
-  assert.match(latestCap, /监管函首日50%.*不能机械叠加/);
+  assert.match(latestCap, /监管反核列少做、仅限首日且最多两成/);
+  assert.match(latestCap, /切换新开仓预算0/);
   assert.doesNotMatch(section.replace(latestCap, ''), /<details\b|\d+%|无脑|必涨|稳赚/);
   assert.match(section, /href="#resources"/);
 });

@@ -45,13 +45,14 @@ test('account tiers replace fixed first-entry fractions and preserve the undecid
   assert.doesNotMatch(html, /主升3是冲击200%的异动阶段/);
 });
 
-test('non-main modes share 20 percent while first regulatory-letter confirmation is a nonadditive exception', () => {
+test('allowed non-main modes share the cap while switching is banned and regulatory entries are capped at 20 percent', () => {
   assert.match(budget, /非主模式.*合计≤20%/);
-  assert.match(budget, /共用额度，不是每只各20%/);
-  assert.match(budget, /监管函首日.*50%/);
+  assert.match(budget, /共用原额度，不是每只各20%/);
+  assert.match(budget, /监管反核 · 少做且≤20%/);
+  assert.match(budget, /切换已列禁忌/);
   assert.match(budget, /第一次反核上板确认/);
   assert.match(budget, /次日马上退出/);
-  assert.match(budget, /不能与其他额度机械相加/);
+  assert.match(budget, /不与其他额度机械相加/);
   assert.match(budget, /严重异动/);
   const regulatory = read('strategy-2-regulated-leader/index.html');
   assert.match(regulatory, /首日确认≤50%，次日退出/);
@@ -67,7 +68,7 @@ test('catch-up entries require confirmed status on board three and remove the ol
   assert.match(catchup, /共用非主模式额度/);
   assert.doesNotMatch(catchup, /3进4仅在更强|3进4需更强/);
   const allocation = section('strategy-57-execution', 'case-agriculture-2026');
-  assert.match(allocation, /共用非主模式账户20%额度/);
+  assert.match(allocation, /共用原非主模式账户20%额度/);
   assert.match(allocation, /撤销旧/);
 });
 

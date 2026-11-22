@@ -16,7 +16,7 @@ const review = between('weekly-review-checks', 'handbook-expectation-study');
 test('super-priority mode discipline is the first module after the ten-step headline', () => {
   assert.ok(html.indexOf('id="handbook-order"') < html.indexOf('id="mode-focus-priority"'));
   assert.ok(html.indexOf('id="mode-focus-priority"') < html.indexOf('id="framework-entry"'));
-  assert.match(priority, /超重点.*2026\.11\.06/);
+  assert.match(priority, /超重点.*2026\.11\.22/);
   assert.match(priority, /少才是根本点.*题材龙/);
   assert.equal((priority.match(/weekly-budget/g) || []).length, 3);
   assert.match(priority, /合计≤20%/);
@@ -28,7 +28,7 @@ test('super-priority mode discipline is the first module after the ten-step head
 
 test('new mode caps do not multiply across stocks or turn planned entry into account allocation', () => {
   assert.match(budgets, /账户总资产/);
-  assert.match(budgets, /共用额度，不是每只各20%/);
+  assert.match(budgets, /共用原额度，不是每只各20%/);
   assert.match(budgets, /该票计划仓位为分母/);
   assert.match(budgets, /固定首笔已被确认分档替代/);
   assert.match(budgets, /已有利润、强度延续/);
