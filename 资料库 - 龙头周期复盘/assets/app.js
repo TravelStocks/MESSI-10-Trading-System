@@ -371,6 +371,62 @@
     });
   }
 
+  // Representative theme segments; stock entry dates come from the separate trade-plan archive.
+  const rhythmTypes = [
+    ["强 → 弱 → 强", "分化后回流", "先看分化时谁能抗住，再看回流时谁主动。", {
+      "shengyang-compute-2026-04": "4/10启动，4/13分化，4/14回流；随后又走一次分化与回流。"
+    }],
+    ["强 → 强 → 弱 → 强", "续强后回流", "第四个节点是回流，不一定是周期第四天。", {
+      "lixin-power-2026-07": "7/17启动，7/20加强，7/21分化，7/22回流。",
+      "haya-medicine-2026-07": "7/10启动，7/13弱延续，7/14换龙，7/15再回流；第二段是延续，并非加速。",
+      "wanxiang-agri-2026-09": "8/27启动后续强，8/31大分化，9/1回流；个股买点在这一段回流之前。",
+      "datang-power-2026-05": "5/6至5/7连续回流，5/8分化，5/11再回流。",
+      "jinyao-medicine-2026-04": "穿越活口已有身位，3/30续强，3/31分化，4/1回流。"
+    }],
+    ["强 → 弱 → 弱 → 强", "连续走弱后修复", "连续两次承压后，分清题材修复与个股确认。", {
+      "chuanzhi-ai-2026-08": "7/28延续，7/29分化，7/30分歧，7/31回流；个股7/29一字确认，不假定成交。",
+      "baihua-medicine-2026-08": "8/4二次爆发，8/5大分歧，8/6弱轮动中换龙，8/7强回流。"
+    }],
+    ["一直不弱", "持续强分支", "没有明显转弱时不硬找回流；仍要核验量能、地位与退出条件。", {
+      "huadian-power-2026-03": "指3/17至3/20：启动、超强回流后小分化仍有承接。3/18一字确认不等于能成交；3/23确有转弱。"
+    }]
+  ];
+
+  function rhythmBuyLabel(plan, key) {
+    const p = plan?.[key];
+    return p ? [p.displayDate, p.board, p.title].filter(Boolean).join(" · ") : "待核";
+  }
+
+  function renderRhythmIndex() {
+    const root = document.getElementById("rhythm-case-index");
+    const names = (archive.patterns?.strengthLongCombos || []).flatMap(path =>
+      path.examples.split(/[，,、]/).map(name => [name.trim(), path.code]));
+    const pathCodes = new Map(names);
+    rhythmTypes.forEach(([path, label, note, samples], i) => {
+      const group = createElement("section", "rhythm-family");
+      group.append(createElement("small", "", "0" + (i + 1) + " / " + label),
+        createElement("h3", "", path), createElement("p", "", note));
+      for (const [id, segment] of Object.entries(samples)) {
+        const cycle = cycles.find(c => c.id === id);
+        if (!cycle) continue;
+        const plan = leaderVolume.cycles?.[id]?.tradePlan;
+        const row = createElement("div", "rhythm-sample");
+        const name = createElement("a", "", cycle.leader);
+        name.href = "#" + id;
+        const identity = createElement("div");
+        identity.append(name, createElement("small", "", pathCodes.get(cycle.leader)), createElement("p", "", segment));
+        row.append(identity);
+        for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
+          const point = createElement("div");
+          point.append(createElement("b", "", side), createElement("span", "", rhythmBuyLabel(plan,key)));
+          row.append(point);
+        }
+        group.append(row);
+      }
+      root.append(group);
+    });
+  }
+
   function renderPatterns() {
     if (!els.ruleGrid) return;
     const patterns = archive.patterns || {};
@@ -457,8 +513,9 @@
 
             const caseCycle = createElement("section", "strength-case-cycle");
             const caseHead = createElement("header", "strength-case-head");
+            const family = rhythmTypes.find(type => Object.hasOwn(type[3], cycle.id));
             caseHead.append(
-              createElement("strong", "", cycle.leader),
+              createElement("strong", "", cycle.leader + (family ? " · " + family[0] : "")),
               createElement("span", "", `${cycle.sector} · ${cycle.dateRange}`)
             );
 
@@ -489,6 +546,10 @@
                 );
               }
               node.appendChild(context);
+              const plan = leaderVolume.cycles?.[cycle.id]?.tradePlan;
+              for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
+                if (plan?.[key]?.displayDate === record.date) node.append(createElement("b", "rhythm-marker", side));
+              }
               caseChain.appendChild(node);
             });
 
@@ -1220,6 +1281,7 @@
   }
 
   arrangeSections();
+  renderRhythmIndex();
   function revealEvidence() {
     const item = document.getElementById(location.hash.slice(1));
     if (item?.matches(".evidence-case")) {

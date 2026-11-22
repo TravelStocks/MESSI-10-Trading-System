@@ -11,6 +11,21 @@
 .evidence-body dl { display: grid; grid-template-columns: 8em minmax(0,1fr); gap: 10px 14px; }
 .evidence-body dt { font-weight: 650; }
 .evidence-body dd { margin: 0; }
+.rhythm-family { padding: 14px 0; border-top: 1px solid var(--line); }
+.rhythm-family h3 { margin: 4px 0; color: var(--green-deep); font-size: 20px; }
+.rhythm-family p { margin: 3px 0; line-height: 1.65; }
+.rhythm-family small { color: var(--muted); font-size: 12px; }
+.rhythm-sample { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; padding: 9px 0; border-top: 1px dotted var(--line); font-size: 14px; }
+.rhythm-sample a { font-weight: 700; }
+.rhythm-sample small { margin-left: 8px; }
+.rhythm-sample b, .rhythm-sample span { display: block; line-height: 1.65; }
+.rhythm-sample b { color: var(--blue); font-size: 13px; }
+.rhythm-archive > summary { padding: 14px 0; font-weight: 700; cursor: pointer; border-block: 1px solid var(--line); }
+.strength-case-chain .rhythm-marker { color: var(--green-deep); }
+@media (max-width: 700px) {
+  .rhythm-sample { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 5px 12px; }
+  .rhythm-sample > div:first-child { grid-column: 1/-1; }
+}
 @media(max-width: 640px) {
   .evidence-case summary span { display: block; margin-left: 18px; }
   .evidence-body dl { display: block; }
