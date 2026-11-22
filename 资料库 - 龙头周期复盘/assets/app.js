@@ -397,6 +397,39 @@
     return p ? [p.displayDate, p.board, p.title].filter(Boolean).join(" · ") : "待核";
   }
 
+  function renderBoardChain(cycle) {
+    const series = leaderVolume.cycles[cycle.id];
+    const days = series.boardVolume.days;
+    const chain = createElement("ol", "strength-case-chain");
+    chain.setAttribute("aria-label", cycle.leader + "：龙头板位 × 题材阶段 × 涨停家数");
+    for (const day of days) {
+      const record = cycle.records.find(r => r.date === day.displayDate);
+      const daily = dailyLimitUps.cycles[cycle.id]?.records[day.displayDate];
+      // The July 16 power/storage close group is archived separately from the cycle window.
+      const leadIn = cycle.id === "lixin-power-2026-07" && day.date === "2026-07-16";
+      const count = daily?.count ?? (leadIn ? 3 : null);
+      const plate = daily?.plate || (leadIn ? "电力/储能" : cycle.sector);
+      const phase = record?.phase || (leadIn ? "轮动爆发前" : "阶段待核");
+      const rhythm = record?.intensity && !phase.includes(record.intensity) ? phase + " · " + record.intensity : phase;
+      const board = day.isBoardDay ? (day.board === "1板" ? "首板" : day.board) :
+        (cycle.id === "huadian-power-2026-03" && day.date === "2026-03-26" ? "冲九板未封" : "断板");
+      const node = document.createElement("li");
+      node.dataset.direction = day.isBoardDay ? record?.direction || "neutral" : "down";
+      node.dataset.date = day.date;
+      node.dataset.sealed = String(day.isBoardDay);
+      const context = createElement("small", "strength-case-context");
+      context.append(createElement("em", "", plate), createElement("span", "", rhythm),
+        createElement("span", "strength-case-limit-count", Number.isFinite(count) ? "涨停 " + count + "家" : "涨停家数待核"));
+      node.append(createElement("span", "strength-case-index", day.date.slice(5).replace("-", "/")),
+        createElement("b", "", cycle.leader + " " + board), context);
+      for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
+        if (series.tradePlan?.[key]?.date === day.date) node.append(createElement("b", "rhythm-marker", side));
+      }
+      chain.append(node);
+    }
+    return chain;
+  }
+
   function renderRhythmIndex() {
     const root = document.getElementById("rhythm-case-index");
     const names = (archive.patterns?.strengthLongCombos || []).flatMap(path =>
@@ -421,7 +454,9 @@
           point.append(createElement("b", "", side), createElement("span", "", rhythmBuyLabel(plan,key)));
           row.append(point);
         }
-        group.append(row);
+        const sample = createElement("article", "rhythm-track");
+        sample.append(row, renderBoardChain(cycle));
+        group.append(sample);
       }
       root.append(group);
     });
@@ -519,39 +554,7 @@
               createElement("span", "", `${cycle.sector} · ${cycle.dateRange}`)
             );
 
-            const caseChain = createElement("ol", "strength-case-chain");
-            (cycle.records || []).forEach((record, index) => {
-              const boardRecord = (cycle.limitBoard?.items || []).find((item) => item.date === record.date);
-              const dailyLimitUp = dailyLimitUps.cycles?.[cycle.id]?.records?.[record.date];
-              const board = boardRecord?.board || record.board || "—";
-              const rhythm =
-                record.intensity && !String(record.phase || "").includes(record.intensity)
-                  ? `${record.phase} - ${record.intensity}`
-                  : record.phase || record.intensity || "待确认";
-              const node = document.createElement("li");
-              node.dataset.direction = record.direction || "neutral";
-              node.append(
-                createElement("span", "strength-case-index", String(index + 1).padStart(2, "0")),
-                createElement("b", "", `${cycle.leader} ${board}`)
-              );
-
-              const context = createElement("small", "strength-case-context");
-              context.append(
-                createElement("em", "", cycle.sector),
-                createElement("span", "", rhythm)
-              );
-              if (Number.isFinite(dailyLimitUp?.count)) {
-                context.append(
-                  createElement("span", "strength-case-limit-count", `涨停 ${dailyLimitUp.count}家`)
-                );
-              }
-              node.appendChild(context);
-              const plan = leaderVolume.cycles?.[cycle.id]?.tradePlan;
-              for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
-                if (plan?.[key]?.displayDate === record.date) node.append(createElement("b", "rhythm-marker", side));
-              }
-              caseChain.appendChild(node);
-            });
+            const caseChain = renderBoardChain(cycle);
 
             caseCycle.append(caseHead, caseChain);
             caseTracks.appendChild(caseCycle);

@@ -20,6 +20,8 @@
 .rhythm-sample small { margin-left: 8px; }
 .rhythm-sample b, .rhythm-sample span { display: block; line-height: 1.65; }
 .rhythm-sample b { color: var(--blue); font-size: 13px; }
+.rhythm-track { margin-bottom: 16px; }
+.rhythm-track .strength-case-chain { grid-template-columns: repeat(auto-fit,minmax(min(135px,100%),1fr)); }
 .rhythm-archive > summary { padding: 14px 0; font-weight: 700; cursor: pointer; border-block: 1px solid var(--line); }
 .strength-case-chain .rhythm-marker { color: var(--green-deep); }
 @media (max-width: 700px) {
