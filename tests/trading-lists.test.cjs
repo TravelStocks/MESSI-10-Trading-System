@@ -12,6 +12,10 @@ test('risk reminder, three questions and three lists precede the old buy checks'
   assert.equal((block.match(/class="trading-list trading-list-/g) || []).length, 3);
   const stops = block.match(/<ol class="discipline-four-stops">([\s\S]*?)<\/ol>/)[1];
   assert.deepEqual([...stops.matchAll(/<li>(.*?)<\/li>/g)].map(m => m[1]), ['不抢未定龙', '不做被动跟风', '不在弱天时左侧重仓', '不为回本放宽纪律']);
+  const priority = block.match(/<ol class="primary-mode-priority">([\s\S]*?)<\/ol>/)[1];
+  assert.deepEqual([...priority.matchAll(/<b>(.*?)<\/b>/g)].map(m => m[1]), ['80%', '12%', '6%', '2%']);
+  assert.deepEqual([...priority.matchAll(/<strong>(.*?)<\/strong>/g)].map(m => m[1]), ['题材第一波主升二阶段连板龙', '龙头二波：突破平台或反包板', '抱团龙：反包或突破平台，须为主动核心', '补涨三板龙：确认地位，不延伸为四板盲接']);
+  assert.match(block, /不是单笔仓位比例或开仓指令/);
 });
 
 test('worldview uses the canonical list and obsolete risk allowances are removed', () => {
