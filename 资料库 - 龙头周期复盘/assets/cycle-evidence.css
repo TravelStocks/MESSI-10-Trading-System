@@ -23,7 +23,10 @@
 .rhythm-track { margin-bottom: 16px; }
 .rhythm-track .strength-case-chain { grid-template-columns: repeat(auto-fit,minmax(min(135px,100%),1fr)); }
 .rhythm-archive > summary { padding: 14px 0; font-weight: 700; cursor: pointer; border-block: 1px solid var(--line); }
-.strength-case-chain .rhythm-marker { color: var(--green-deep); }
+.board-turnover { display: grid; gap: 2px; border-top: 1px solid var(--line); margin-top: 6px; padding-top: 5px; font: 600 12px/1.5 var(--sans); font-variant-numeric: tabular-nums; }
+.strength-case-chain li > .rhythm-marker, .rhythm-sample .rhythm-marker { display: inline-block; border-radius: 3px; padding: 2px 6px; font-weight: 700; }
+.strength-case-chain li > .preBuy, .rhythm-sample .preBuy { color: #763e08; background: #ffe6bd; }
+.strength-case-chain li > .standardBuy, .rhythm-sample .standardBuy { color: #144c83; background: #d9ecff; }
 @media (max-width: 700px) {
   .rhythm-sample { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 5px 12px; }
   .rhythm-sample > div:first-child { grid-column: 1/-1; }

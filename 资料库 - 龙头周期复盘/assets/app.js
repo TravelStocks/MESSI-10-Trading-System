@@ -401,7 +401,7 @@
     const series = leaderVolume.cycles[cycle.id];
     const days = series.boardVolume.days;
     const chain = createElement("ol", "strength-case-chain");
-    chain.setAttribute("aria-label", cycle.leader + "：龙头板位 × 题材阶段 × 涨停家数");
+    chain.setAttribute("aria-label", cycle.leader + "：龙头板位、题材阶段、涨停家数与个股成交额");
     for (const day of days) {
       const record = cycle.records.find(r => r.date === day.displayDate);
       const daily = dailyLimitUps.cycles[cycle.id]?.records[day.displayDate];
@@ -422,8 +422,16 @@
         createElement("span", "strength-case-limit-count", Number.isFinite(count) ? "涨停 " + count + "家" : "涨停家数待核"));
       node.append(createElement("span", "strength-case-index", day.date.slice(5).replace("-", "/")),
         createElement("b", "", cycle.leader + " " + board), context);
+      const volume = createElement("div", "board-turnover");
+      const amount = Number.isFinite(day.amount) ? (day.amount / 1e8).toFixed(2) + " 亿" : "待核";
+      const ratio = day.previousRatio;
+      const comparison = Number.isFinite(ratio) && ratio > 0
+        ? (ratio > 1 ? "放量" : ratio < 1 ? "缩量" : "持平") + " · " + ratio.toFixed(2) + " 倍"
+        : "较前日待核";
+      volume.append(createElement("span", "", "成交额 " + amount), createElement("span", "", comparison));
+      node.append(volume);
       for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
-        if (series.tradePlan?.[key]?.date === day.date) node.append(createElement("b", "rhythm-marker", side));
+        if (series.tradePlan?.[key]?.date === day.date) node.append(createElement("b", "rhythm-marker " + key, side));
       }
       chain.append(node);
     }
@@ -451,7 +459,7 @@
         row.append(identity);
         for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
           const point = createElement("div");
-          point.append(createElement("b", "", side), createElement("span", "", rhythmBuyLabel(plan,key)));
+          point.append(createElement("b", "rhythm-marker " + key, side), createElement("span", "", rhythmBuyLabel(plan,key)));
           row.append(point);
         }
         const sample = createElement("article", "rhythm-track");
