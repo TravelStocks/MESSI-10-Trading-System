@@ -17,6 +17,9 @@
 .rhythm-family small { color: var(--muted); font-size: 12px; }
 .rhythm-sample { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; padding: 9px 0; border-top: 1px dotted var(--line); font-size: 14px; }
 .rhythm-sample a { font-weight: 700; }
+.rhythm-jumps { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; margin: 12px 0; font-size: 14px; }
+.strength-case-chain li > .rhythm-marker.exit { color: #8c2231; background: #ffe2e5; }
+.rhythm-track[id] { scroll-margin-top: 1rem; }
 .rhythm-sample small { margin-left: 8px; }
 .rhythm-sample b, .rhythm-sample span { display: block; line-height: 1.65; }
 .rhythm-sample b { color: var(--blue); font-size: 13px; }

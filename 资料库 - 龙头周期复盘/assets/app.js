@@ -427,28 +427,26 @@
     return { preBuy: points[0], standardBuy: points[1] };
   }
 
-  function renderBoardChain(cycle) {
-    const series = leaderVolume.cycles[cycle.id];
-    const days = series.boardVolume.days;
-    const plan = rhythmEntryPlan(cycle.id);
+  function renderBoardChain(cycle, days = leaderVolume.cycles[cycle.id].boardVolume.days,
+    plan = rhythmEntryPlan(cycle.id), startDate = rhythmStartDates[cycle.id]) {
     const chain = createElement("ol", "strength-case-chain");
     chain.setAttribute("aria-label", cycle.leader + "：龙头板位、题材阶段、涨停家数与个股成交额");
     for (const day of days) {
       const record = cycle.records.find(r => r.date === day.displayDate);
-      const daily = dailyLimitUps.cycles[cycle.id]?.records[day.displayDate];
+      const daily = day.theme || dailyLimitUps.cycles[cycle.id]?.records[day.displayDate];
       // The July 16 power/storage close group is archived separately from the cycle window.
       const leadIn = cycle.id === "lixin-power-2026-07" && day.date === "2026-07-16";
       const count = daily?.count ?? (leadIn ? 3 : null);
       const plate = daily?.plate || (leadIn ? "电力/储能" : cycle.sector);
-      const phase = record?.phase || (leadIn ? "轮动爆发前" : "阶段待核");
+      const phase = day.theme?.phase || record?.phase || (leadIn ? "轮动爆发前" : "阶段待核");
       const rhythm = record?.intensity && !phase.includes(record.intensity) ? phase + " · " + record.intensity : phase;
       const board = day.isBoardDay ? (day.board === "1板" ? "首板" : day.board) :
-        (cycle.id === "huadian-power-2026-03" && day.date === "2026-03-26" ? "冲九板未封" : "断板");
+        (day.terminal || (cycle.id === "huadian-power-2026-03" && day.date === "2026-03-26" ? "冲九板未封" : "断板"));
       const node = document.createElement("li");
       node.dataset.direction = day.isBoardDay ? record?.direction || "neutral" : "down";
       node.dataset.date = day.date;
       node.dataset.sealed = String(day.isBoardDay);
-      if (day.date === rhythmStartDates[cycle.id]) {
+      if (day.date === startDate) {
         node.classList.add("rhythm-start-day");
         node.append(createElement("span", "rhythm-start-flag", "节奏起点 · 第1节点"));
       }
@@ -465,8 +463,8 @@
         : "较前日待核";
       volume.append(createElement("span", "", "成交额 " + amount), createElement("span", "", comparison));
       node.append(volume);
-      for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
-        if (plan?.[key]?.date === day.date) node.append(createElement("b", "rhythm-marker " + key, side));
+      for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"], ["exit", "卖点"]]) {
+        if (plan?.[key]?.date === day.date) node.append(createElement("b", "rhythm-marker " + key, plan[key].badge || side));
       }
       chain.append(node);
     }
@@ -482,27 +480,41 @@
       const group = createElement("section", "rhythm-family");
       group.append(createElement("small", "", "0" + (i + 1) + " / " + label),
         createElement("h3", "", path), createElement("p", "", note));
-      for (const [id, segment] of Object.entries(samples)) {
-        const cycle = cycles.find(c => c.id === id);
+      const extras = (window.RHYTHM_CASE_STUDIES || []).filter(c => c.family === i + 1);
+      for (const [id, segment, extra] of [...Object.entries(samples), ...extras.map(c => [c.id, c.note, c])]) {
+        const cycle = extra ? { id, leader: extra.name, records: [] } : cycles.find(c => c.id === id);
         if (!cycle) continue;
-        const plan = rhythmEntryPlan(id);
+        const days = extra ? extra.rows.map(([md, n, plate, count, phase, amount, previousRatio]) =>
+          ({ date: "2026-" + md, displayDate: md.replace("-", "/"), board: n + "板", isBoardDay: n > 0,
+            terminal: extra.terminal, theme: { plate, count, phase }, amount: amount * 1e8, previousRatio })) : leaderVolume.cycles[id].boardVolume.days;
+        const startDate = extra ? "2026-" + extra.start : rhythmStartDates[id];
+        const plan = extra ? {} : rhythmEntryPlan(id);
+        if (extra) {
+          for (const [key, point, label] of [["preBuy",extra.left,"左侧"],["standardBuy",extra.right,"右侧"],["exit",extra.exit,"卖点"]]) {
+            if (!point) continue;
+            const d = days.find(day => day.date === "2026-" + point[0]);
+            plan[key] = { date: d.date, displayDate: d.displayDate, title: point[1], badge: label + " · " + point[1] };
+          }
+        }
         const row = createElement("div", "rhythm-sample");
         const name = createElement("a", "", cycle.leader);
-        name.href = "#" + id;
+        name.href = extra ? "https://travelstocks.github.io/weekly-monthly-quarterly-yearly-trading-review/" + extra.source : "#" + id;
         const identity = createElement("div");
-        identity.append(name, createElement("small", "", pathCodes.get(cycle.leader)));
-        const start = leaderVolume.cycles[id].boardVolume.days.find(d => d.date === rhythmStartDates[id]);
+        identity.append(name, createElement("small", "", extra ? days[0].displayDate + " 至 " + days.at(-1).displayDate : pathCodes.get(cycle.leader)));
+        const start = days.find(d => d.date === startDate);
         if (start) identity.append(createElement("p", "rhythm-start-summary",
           "节奏起点：" + start.displayDate + " · " + (start.board === "1板" ? "首板" : start.board)));
         identity.append(createElement("p", "", segment));
         row.append(identity);
         for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
           const point = createElement("div");
-          point.append(createElement("b", "rhythm-marker " + key, side), createElement("span", "", rhythmBuyLabel(plan,key)));
+          point.append(createElement("b", "rhythm-marker " + key, extra ? (key === "preBuy" ? "左侧节点" : "右侧节点") : side),
+            createElement("span", "", extra && !plan[key] ? "未标买点" : rhythmBuyLabel(plan,key)));
           row.append(point);
         }
         const sample = createElement("article", "rhythm-track");
-        sample.append(row, renderBoardChain(cycle));
+        if (extra) sample.id = "rhythm-" + id;
+        sample.append(row, renderBoardChain(cycle, days, plan, startDate));
         group.append(sample);
       }
       root.append(group);
