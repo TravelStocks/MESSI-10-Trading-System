@@ -12,6 +12,11 @@
 .evidence-body dt { font-weight: 650; }
 .evidence-body dd { margin: 0; }
 .rhythm-family { padding: 14px 0; border-top: 1px solid var(--line); }
+.rhythm-overview { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,200px),1fr)); gap: 8px 18px; margin: 12px 0 20px; }
+.rhythm-overview a { display: grid; gap: 3px; padding: 8px 0; border-top: 2px solid var(--green-deep); text-decoration: none; color: var(--green-deep); }
+.rhythm-overview small { color: var(--muted); font-size: 13px; }
+.rhythm-overview strong { font-size: 18px; }
+.rhythm-overview a:is(:hover,:focus-visible) strong { text-decoration: underline; }
 .rhythm-family h3 { margin: 4px 0; color: var(--green-deep); font-size: 20px; }
 .rhythm-family p { margin: 3px 0; line-height: 1.65; }
 .rhythm-family small { color: var(--muted); font-size: 12px; }

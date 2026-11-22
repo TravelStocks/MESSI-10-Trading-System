@@ -473,11 +473,17 @@
 
   function renderRhythmIndex() {
     const root = document.getElementById("rhythm-case-index");
+    const overview = document.querySelector(".rhythm-overview");
     const names = (archive.patterns?.strengthLongCombos || []).flatMap(path =>
       path.examples.split(/[，,、]/).map(name => [name.trim(), path.code]));
     const pathCodes = new Map(names);
     rhythmTypes.forEach(([path, label, note, samples], i) => {
       const group = createElement("section", "rhythm-family");
+      group.id = "rhythm-family-" + (i + 1);
+      const jump = createElement("a");
+      jump.href = "#" + group.id;
+      jump.append(createElement("small", "", "0" + (i + 1) + " / " + label), createElement("strong", "", path));
+      overview.append(jump);
       group.append(createElement("small", "", "0" + (i + 1) + " / " + label),
         createElement("h3", "", path), createElement("p", "", note));
       const extras = (window.RHYTHM_CASE_STUDIES || []).filter(c => c.family === i + 1);
