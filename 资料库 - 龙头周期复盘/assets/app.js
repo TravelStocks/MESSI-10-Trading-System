@@ -392,17 +392,17 @@
     }]
   ];
 
-  // First theme node in the classified segment, not necessarily the stock's first board.
-  const rhythmStartDates = {
-    "shengyang-compute-2026-04": "2026-04-10",
-    "lixin-power-2026-07": "2026-07-17",
-    "haya-medicine-2026-07": "2026-07-10",
-    "wanxiang-agri-2026-09": "2026-08-27",
-    "datang-power-2026-05": "2026-05-06",
-    "jinyao-medicine-2026-04": "2026-03-27",
-    "chuanzhi-ai-2026-08": "2026-07-28",
-    "baihua-medicine-2026-08": "2026-08-04",
-    "huadian-power-2026-03": "2026-03-17"
+  // Explicit review dates: neither the board number nor the change in limit-up count defines a node.
+  const rhythmDates = {
+    "shengyang-compute-2026-04": ["04-10","04-13","04-14"],
+    "lixin-power-2026-07": ["07-17","07-20","07-21","07-22"],
+    "haya-medicine-2026-07": ["07-10","07-13","07-14","07-15"],
+    "wanxiang-agri-2026-09": ["08-27","08-28","08-31","09-01"],
+    "datang-power-2026-05": ["05-06","05-07","05-08","05-11"],
+    "jinyao-medicine-2026-04": ["03-27","03-30","03-31","04-01"],
+    "chuanzhi-ai-2026-08": ["07-28","07-29","07-30","07-31"],
+    "baihua-medicine-2026-08": ["08-04","08-05","08-06","08-07"],
+    "huadian-power-2026-03": ["03-17","03-18","03-19","03-20"]
   };
 
   function rhythmBuyLabel(plan, key) {
@@ -428,7 +428,9 @@
   }
 
   function renderBoardChain(cycle, days = leaderVolume.cycles[cycle.id].boardVolume.days,
-    plan = rhythmEntryPlan(cycle.id), startDate = rhythmStartDates[cycle.id]) {
+    plan = rhythmEntryPlan(cycle.id), dates = rhythmDates[cycle.id],
+    path = rhythmTypes.find(type => Object.hasOwn(type[3], cycle.id))?.[0]) {
+    const strengths = path === "一直不弱" ? dates.map(() => "强") : path.split(" → ");
     const chain = createElement("ol", "strength-case-chain");
     chain.setAttribute("aria-label", cycle.leader + "：龙头板位、题材阶段、涨停家数与个股成交额");
     for (const day of days) {
@@ -446,9 +448,16 @@
       node.dataset.direction = day.isBoardDay ? record?.direction || "neutral" : "down";
       node.dataset.date = day.date;
       node.dataset.sealed = String(day.isBoardDay);
-      if (day.date === startDate) {
-        node.classList.add("rhythm-start-day");
-        node.append(createElement("span", "rhythm-start-flag", "节奏起点 · 第1节点"));
+      const step = dates.indexOf(day.date.slice(5));
+      if (step >= 0) {
+        const state = strengths[step];
+        const badge = createElement("span", "rhythm-node", (step === 0 ? "节奏起点 · " : "") + "第" + (step + 1) + "节点 · " + state);
+        badge.dataset.state = state;
+        if (step === 0) {
+          node.classList.add("rhythm-start-day");
+          badge.classList.add("rhythm-start-flag");
+        }
+        node.append(badge);
       }
       const context = createElement("small", "strength-case-context");
       context.append(createElement("em", "", plate), createElement("span", "", rhythm),
@@ -497,7 +506,8 @@
         const days = extra ? extra.rows.map(([md, n, plate, count, phase, amount, previousRatio]) =>
           ({ date: "2026-" + md, displayDate: md.replace("-", "/"), board: n + "板", isBoardDay: n > 0,
             terminal: extra.terminal, theme: { plate, count, phase }, amount: amount * 1e8, previousRatio })) : leaderVolume.cycles[id].boardVolume.days;
-        const startDate = extra ? "2026-" + extra.start : rhythmStartDates[id];
+        const dates = extra ? extra.nodes : rhythmDates[id];
+        const startDate = "2026-" + dates[0];
         const plan = extra ? {} : rhythmEntryPlan(id);
         if (extra) {
           for (const [key, point, label] of [["preBuy",extra.left,"左侧"],["standardBuy",extra.right,"右侧"],["exit",extra.exit,"卖点"]]) {
@@ -529,7 +539,7 @@
         const listItem = createElement("li");
         listItem.append(caseLink);
         caseList.append(listItem);
-        sample.append(row, renderBoardChain(cycle, days, plan, startDate));
+        sample.append(row, renderBoardChain(cycle, days, plan, dates, path));
         group.append(sample);
       }
       root.append(group);

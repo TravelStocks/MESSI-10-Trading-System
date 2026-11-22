@@ -3,7 +3,7 @@
 // Families refer to the named segment, not to the stock's entire run.
 window.RHYTHM_CASE_STUDIES = [
   {
-    id: "era-battery", name: "时代万恒", family: 1, start: "09-29",
+    id: "era-battery", name: "时代万恒", family: 1, nodes: ["09-29","09-30","10-08"],
     note: "锂电池从二板才启动：12家 → 6家 → 9家。三板分化只观察；四板由龙头主动上板带回流，是本例买点。五板一字不假定能加仓，六板炸板兑现，后来回封不取消卖点。",
     source: "2026-10-26_2026-10-30/", right: ["10-08","四板上板"], exit: ["10-12","六板炸板兑现"],
     rows: [
@@ -17,7 +17,7 @@ window.RHYTHM_CASE_STUDIES = [
     ]
   },
   {
-    id: "daye-robot", name: "大业股份", family: 2, start: "10-19",
+    id: "daye-robot", name: "大业股份", family: 2, nodes: ["10-19","10-20","10-21","10-22"],
     note: "首波限定10/16至10/26。二板、三板机器人扩散，四板收窄、五板回流，六板扩大到43家。10/23的早盘修复与午后封板是同一天的两个观察点，不是两次实际成交。",
     source: "2026-10-26_2026-10-30/", left: ["10-23","上穿零轴候选，成交未核"], right: ["10-23","09:50首根五分K收复昨收；午后上板"], exit: ["10-26","冲板未封，兑现观察"], terminal: "冲七板未封",
     rows: [
@@ -31,7 +31,7 @@ window.RHYTHM_CASE_STUDIES = [
     ]
   },
   {
-    id: "longban-media", name: "龙版传媒", family: 3, start: "09-01",
+    id: "longban-media", name: "龙版传媒", family: 3, nodes: ["09-01","09-02","09-03","09-04"],
     note: "首板AI应用/漫剧爆发。取二板起的一段：16家 → 4家 → 4家 → 7家。四板放量仍在争唯一，五板缩量转强是本人复盘的确认点；六板才出现明显高开缺口，不是同一个触发。",
     source: "research/market-theme-leader-2026/#longban", left: ["09-03","四板放量观察，PK未决不进"], right: ["09-04","五板转强，须盘中确认"],
     rows: [
@@ -45,7 +45,7 @@ window.RHYTHM_CASE_STUDIES = [
     ]
   },
   {
-    id: "mindong-power", name: "闽东电力", family: 3, start: "09-10",
+    id: "mindong-power", name: "闽东电力", family: 3, nodes: ["09-10","09-11","09-14","09-15"],
     note: "取二板至五板：电力8家 → 5家 → 4家 → 7家。五板题材回流但个股爆量，六板有小缺口，不等于弱天时下已确认承接。作为反例，不标无条件买点。",
     source: "research/market-theme-leader-2026/#mindong", right: ["09-16","六板候选：指数企稳与电力回流未确认则放弃"],
     rows: [
@@ -59,7 +59,7 @@ window.RHYTHM_CASE_STUDIES = [
     ]
   },
   {
-    id: "xiangyang-robot", name: "襄阳轴承", family: 2, start: "10-23",
+    id: "xiangyang-robot", name: "襄阳轴承", family: 2, nodes: ["10-23","10-26","10-27","10-28"],
     note: "从10/23二板起算：强 → 强 → 弱 → 强。机器人涨停从43家降至28家，三板这天仍计续强；四板收窄至16家才记分化，五板回流至31家。四板尾盘首仓、五板早盘加仓；10/29盘中触及六板但收盘未封。",
     source: "2026-10-26_2026-10-30/", left: ["10-27","四板尾盘首仓"], right: ["10-28","五板回流加仓"], exit: ["10-29","盘中板价卖出首轮持仓"], terminal: "冲六板未封",
     rows: [
@@ -72,8 +72,8 @@ window.RHYTHM_CASE_STUDIES = [
     ]
   },
   {
-    id: "minfa-solar", name: "闽发铝业", family: 4, start: "11-03",
-    note: "持续强只指11/3至11/5：光伏2家 → 6家 → 17家。五板时已降至6家，T字回封是个股事件，不是板块继续加强。六、七板已改归其他概念，其家数不可接作光伏强度。",
+    id: "minfa-solar", name: "闽发铝业", family: 3, nodes: ["11-05","11-06","11-09","11-10"],
+    note: "按本人复盘口径，从11/5四板起算：四板强、五板弱、六板弱、七板强。五板个股T字回封，不等于题材续强。六、七板原始家数属于“其他概念”，不与前面的光伏家数连算。",
     source: "research/market-theme-leader-2026/#minfa", right: ["11-06","五板T字回封候选，须核天时和助攻"],
     rows: [
       ["11-02",1,"算力/半导体产业链",16,"尚非光伏段",1.4220,0.9253],
