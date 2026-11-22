@@ -24,6 +24,9 @@
 .rhythm-track .strength-case-chain { grid-template-columns: repeat(auto-fit,minmax(min(135px,100%),1fr)); }
 .rhythm-archive > summary { padding: 14px 0; font-weight: 700; cursor: pointer; border-block: 1px solid var(--line); }
 .board-turnover { display: grid; gap: 2px; border-top: 1px solid var(--line); margin-top: 6px; padding-top: 5px; font: 600 12px/1.5 var(--sans); font-variant-numeric: tabular-nums; }
+.strength-case-chain li.rhythm-start-day { outline: 2px solid #563777; outline-offset: -2px; }
+.rhythm-start-flag { display: inline-block; margin-bottom: 4px; padding: 2px 6px; background: #563777; color: white; border-radius: 3px; font: 700 12px/1.5 var(--sans); }
+.rhythm-sample .rhythm-start-summary { color: #563777; font-weight: 700; }
 .strength-case-chain li > .rhythm-marker, .rhythm-sample .rhythm-marker { display: inline-block; border-radius: 3px; padding: 2px 6px; font-weight: 700; }
 .strength-case-chain li > .preBuy, .rhythm-sample .preBuy { color: #763e08; background: #ffe6bd; }
 .strength-case-chain li > .standardBuy, .rhythm-sample .standardBuy { color: #144c83; background: #d9ecff; }

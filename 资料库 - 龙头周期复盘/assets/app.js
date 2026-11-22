@@ -392,6 +392,19 @@
     }]
   ];
 
+  // First theme node in the classified segment, not necessarily the stock's first board.
+  const rhythmStartDates = {
+    "shengyang-compute-2026-04": "2026-04-10",
+    "lixin-power-2026-07": "2026-07-17",
+    "haya-medicine-2026-07": "2026-07-10",
+    "wanxiang-agri-2026-09": "2026-08-27",
+    "datang-power-2026-05": "2026-05-06",
+    "jinyao-medicine-2026-04": "2026-03-27",
+    "chuanzhi-ai-2026-08": "2026-07-28",
+    "baihua-medicine-2026-08": "2026-08-04",
+    "huadian-power-2026-03": "2026-03-17"
+  };
+
   function rhythmBuyLabel(plan, key) {
     const p = plan?.[key];
     return p ? [p.displayDate, p.board, p.title].filter(Boolean).join(" · ") : "待核";
@@ -435,6 +448,10 @@
       node.dataset.direction = day.isBoardDay ? record?.direction || "neutral" : "down";
       node.dataset.date = day.date;
       node.dataset.sealed = String(day.isBoardDay);
+      if (day.date === rhythmStartDates[cycle.id]) {
+        node.classList.add("rhythm-start-day");
+        node.append(createElement("span", "rhythm-start-flag", "节奏起点 · 第1节点"));
+      }
       const context = createElement("small", "strength-case-context");
       context.append(createElement("em", "", plate), createElement("span", "", rhythm),
         createElement("span", "strength-case-limit-count", Number.isFinite(count) ? "涨停 " + count + "家" : "涨停家数待核"));
@@ -473,7 +490,11 @@
         const name = createElement("a", "", cycle.leader);
         name.href = "#" + id;
         const identity = createElement("div");
-        identity.append(name, createElement("small", "", pathCodes.get(cycle.leader)), createElement("p", "", segment));
+        identity.append(name, createElement("small", "", pathCodes.get(cycle.leader)));
+        const start = leaderVolume.cycles[id].boardVolume.days.find(d => d.date === rhythmStartDates[id]);
+        if (start) identity.append(createElement("p", "rhythm-start-summary",
+          "节奏起点：" + start.displayDate + " · " + (start.board === "1板" ? "首板" : start.board)));
+        identity.append(createElement("p", "", segment));
         row.append(identity);
         for (const [key, side] of [["preBuy", "左侧 · 前置"], ["standardBuy", "右侧 · 确认"]]) {
           const point = createElement("div");
