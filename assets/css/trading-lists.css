@@ -17,6 +17,7 @@
 .trading-list h4 { color: var(--list-color); font-size: 22px; line-height: 1.5; margin: 0; }
 .trading-list .list-verdict { color: var(--list-color); font-weight: 700; margin: 4px 0 12px; font-size: 14px; }
 .trading-list ul { margin: 0; padding-left: 22px; }
+.trading-list .discipline-four-stops { border-top: 1px solid #d8dde1; margin: 16px 0 0; padding: 10px 0 0 24px; }
 .trading-list li { margin: 7px 0; font-weight: 600; }
 .trading-list p, .trading-entry-rules p, .discipline-version { font-size: 14px; }
 .trading-entry-rules { border-top: 1px solid #d8dde1; margin-top: 18px; padding-top: 12px; }

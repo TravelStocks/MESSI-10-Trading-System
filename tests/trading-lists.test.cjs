@@ -10,6 +10,8 @@ test('risk reminder, three questions and three lists precede the old buy checks'
   const block = html.slice(html.indexOf('id="trading-discipline"'), html.indexOf('id="preorder-check"'));
   for (const phrase of ['风控才是股市存活的生命线', '不是周内高点回撤', '第一问触线', '本周停止新开仓', '禁忌清单', '少做清单', '主做清单', '同身位PK', '低身位卡高身位PK', '补涨三板龙', '反包板', '金额 × 1/4', '缺证据标待核']) assert.ok(block.includes(phrase), phrase);
   assert.equal((block.match(/class="trading-list trading-list-/g) || []).length, 3);
+  const stops = block.match(/<ol class="discipline-four-stops">([\s\S]*?)<\/ol>/)[1];
+  assert.deepEqual([...stops.matchAll(/<li>(.*?)<\/li>/g)].map(m => m[1]), ['不抢未定龙', '不做被动跟风', '不在弱天时左侧重仓', '不为回本放宽纪律']);
 });
 
 test('worldview uses the canonical list and obsolete risk allowances are removed', () => {
