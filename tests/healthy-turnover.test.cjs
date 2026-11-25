@@ -45,6 +45,6 @@ test('related knowledge links resolve and the first pre-order module stays in pl
     const source = html.slice(html.indexOf(`id="${id}"`), html.indexOf(`id="${id}"`) + 800);
     assert.match(source, /href="#healthy-turnover"/);
   }
-  assert.match(html, /<main class="content" id="main-content">\s*<section id="leader-study"[^>]*>(?:(?!<\/section>)[\s\S])*<\/section>\s*<section class="trading-discipline"/);
+  assert.match(html, /<main class="content" id="main-content">\s*<section id="leader-essence"[^>]*>(?:(?!<\/section>)[\s\S])*<\/section>\s*<section id="leader-study"[^>]*>(?:(?!<\/section>)[\s\S])*<\/section>\s*<section class="trading-discipline"/);
   assert.match(read('assets/css/healthy-turnover.css'), /@media \(max-width: 640px\)/);
 });

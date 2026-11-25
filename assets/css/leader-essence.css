@@ -1,0 +1,15 @@
+#leader-essence { padding: 18px 0 24px; border-top: 3px solid #17634f; scroll-margin-top: 80px; line-height: 1.65; }
+#leader-essence h2 { margin: 3px 0 10px; font-size: 30px; }
+#leader-essence h3 { margin: 5px 0; font-size: 19px; }
+#leader-essence p { margin: 6px 0 10px; }
+.essence-rule strong, .essence-foot b { color: #98273b; }
+.essence-paths { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+.essence-paths article { border-top: 2px solid #17634f; padding-top: 10px; }
+.essence-paths article + article { border-color: #27649a; }
+.essence-paths small { font-weight: 700; color: #425665; }
+.essence-secondary, .essence-foot { border-top: 1px solid #d6dce0; padding-top: 8px; }
+.essence-weather { margin: 8px 0; }
+.essence-weather div { display: grid; grid-template-columns: 6em 1fr; gap: 12px; padding: 6px 0; border-top: 1px solid #d6dce0; }
+.essence-weather dt { font-weight: 700; }
+.essence-weather dd { margin: 0; }
+@media (max-width: 680px) { .essence-paths { grid-template-columns: 1fr; } .essence-weather div { grid-template-columns: 4em 1fr; gap: 6px; } }

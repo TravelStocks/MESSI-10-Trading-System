@@ -23,7 +23,7 @@ test('framework summary mirrors all five lines without changing the raw framewor
   assert.match(framework, /href="\.\.\/index.html#leader-rules"/);
   const ids = [...html.matchAll(/id="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(ids.length, new Set(ids).size);
-  assert.match(html, /<main class="content" id="main-content">\s*<section id="leader-study"[^>]*>(?:(?!<\/section>)[\s\S])*<\/section>\s*<section class="trading-discipline"/);
+  assert.match(html, /<main class="content" id="main-content">\s*<section id="leader-essence"[^>]*>(?:(?!<\/section>)[\s\S])*<\/section>\s*<section id="leader-study"[^>]*>(?:(?!<\/section>)[\s\S])*<\/section>\s*<section class="trading-discipline"/);
   assert.match(read('assets/css/weekly-lessons.css'), /\.leader-rules-list > div[^}]*minmax\(0,1fr\)/);
 });
 
